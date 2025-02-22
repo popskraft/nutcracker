@@ -1,0 +1,14 @@
+- id: "20"
+  title: "Superior Protection"
+  description: "8mil thickness provides exceptional protection against chemicals and contaminants"
+  image: "/images/image20.jpg"
+
+- id: "21"
+  title: "Extended Durability"
+  description: "Designed for long-lasting use, reducing the need for frequent replacements"
+  image: "/images/image21.jpg"
+
+- id: "22"
+  title: "Cost-Effective"
+  description: "Higher quality means fewer glove changes and better value for money"
+  image: "/images/image22.jpg"

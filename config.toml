@@ -3,7 +3,7 @@ title = "Nutcracker Products"
 languageCode = "en-us"
 
 # Theme configuration
-theme = "" # Using custom layouts from Carrd template
+theme = "main"
 
 # Site parameters
 [params]

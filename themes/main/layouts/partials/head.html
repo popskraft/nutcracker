@@ -1,0 +1,28 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light only" />
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+    <meta property="og:type" content="website" />
+    {{ with .Site.Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?display=swap&family=Wix+Madefor+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700" rel="stylesheet" type="text/css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ "images/favicon.png" | relURL }}" />
+    <link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | relURL }}" />
+    
+    <!-- Styles -->
+    {{ $style := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    <noscript>
+        {{ $noscript := resources.Get "css/noscript.css" | resources.Minify | resources.Fingerprint }}
+        <link rel="stylesheet" href="{{ $noscript.RelPermalink }}" />
+    </noscript>
+</head>

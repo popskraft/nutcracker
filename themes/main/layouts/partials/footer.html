@@ -1,0 +1,11 @@
+<footer id="footer">
+    <div class="container">
+        <div class="wrapper">
+            <div class="inner">
+                <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{{ $js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.RelPermalink }}"></script>

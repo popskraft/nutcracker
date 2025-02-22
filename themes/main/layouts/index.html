@@ -1,0 +1,72 @@
+{{ define "main" }}
+<section id="home-section">
+    <div id="pageHeader" class="container columns">
+        <div class="wrapper">
+            <div class="inner">
+                <div>
+                    <h1 id="text02">{{ .Site.Params.slogan | default "Secret Gear Of Silent Heroes" }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Showcase -->
+    <div id="container37" class="container columns">
+        <div class="wrapper">
+            <div class="inner">
+                {{ range .Site.Data.products }}
+                <div>
+                    <div id="image{{ .id }}" class="style4 image full">
+                        <a href="{{ .url }}" class="frame">
+                            <img src="{{ .image }}" alt="{{ .title }}" />
+                        </a>
+                    </div>
+                    <p id="text{{ .textId }}" class="style13">
+                        <a href="{{ .url }}">{{ .title }}</a>
+                    </p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div id="benefitsContent" class="style8 container columns">
+        <div class="wrapper">
+            <div class="inner">
+                {{ range .Site.Data.benefits }}
+                <div>
+                    <div id="image{{ .id }}" class="style2 image">
+                        <img src="{{ .image }}" alt="{{ .title }}" />
+                    </div>
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Price Section -->
+    <div id="savingsPrice" class="style15 container default">
+        <div class="wrapper">
+            <div class="inner">
+                <h3 id="text16" class="style5">outstanding price</h3>
+                <h3 id="text52"><span style="color: #FF5500">$4</span>.99</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div id="articleContentTop" class="style6 container default">
+        <div class="wrapper">
+            <div class="inner">
+                {{ with .Site.Data.content.main }}
+                <p id="text01" class="style8">{{ .description }}</p>
+                <hr id="divider11" class="style1">
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
