@@ -1,0 +1,68 @@
+baseURL = "/"
+title = "Nutcracker Products"
+languageCode = "en-us"
+
+# Theme configuration
+theme = "" # Using custom layouts from Carrd template
+
+# Site parameters
+[params]
+  description = "Professional Hand Cleaner and Products"
+  author = "Nutcracker Team"
+  mainSections = ["products"]
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "products"
+    name = "Products"
+    url = "/products/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "wholesale"
+    name = "Wholesale"
+    url = "/wholesale/"
+    weight = 4
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allows HTML in markdown
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+# Performance optimization
+[minify]
+  minifyOutput = true
+
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+
+[server]
+  [[server.headers]]
+    for = "/**"
+    [server.headers.values]
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"
+      X-Content-Type-Options = "nosniff"
+      Referrer-Policy = "strict-origin-when-cross-origin"

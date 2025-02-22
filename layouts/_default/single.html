@@ -1,0 +1,20 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<article class="content-single">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.video }}
+    <div class="video-container">
+        <video controls>
+            <source src="{{ . }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    {{ end }}
+    <div class="content">
+        {{ .Content }}
+    </div>
+    <div class="metadata">
+        <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+    </div>
+</article>
+{{ end }}
