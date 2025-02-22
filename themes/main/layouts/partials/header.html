@@ -1,20 +1,42 @@
 <header id="header">
-    <div id="siteHeaderStatic" class="container columns">
-        <div class="wrapper">
-            <div class="inner">
-                <div>
-                    <a href="{{ "/" | relURL }}" id="logo" class="image">
-                        <img src="{{ "images/logoHeader.svg" | relURL }}" alt="{{ .Site.Title }}" />
-                    </a>
-                </div>
-                <div>
-                    <nav>
-                        {{ range .Site.Menus.main }}
-                        <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
-                        {{ end }}
-                    </nav>
-                </div>
-            </div>
+  <div id="siteHeaderStatic" class="container columns">
+    <div class="wrapper">
+      <div class="inner">
+        <div>
+          <div id="image06" class="image">
+            <a href="https://nutcrackerpro.com/" class="frame"><img src="assets/images/image06.svg" alt="Logo" /></a>
+          </div>
         </div>
+        <div>
+          <ul id="links03" class="style1 links">
+            <li class="n01">
+              <a href="#benefits">Benefits</a>
+            </li>
+            <li class="n02">
+              <a href="#savings">Great savings</a>
+            </li>
+            <li class="n03">
+              <a href="#faq">F.A.Q.</a>
+            </li>
+            <li class="n04">
+              <a href="#contact">Contact</a>
+            </li>
+            <li class="n05">
+              <a href="https://nutcrackerpro.com/">All Products</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul id="buttons02" class="style3 buttons">
+            <li>
+              <a href="#contacts" class="button n01" role="button"><svg aria-labelledby="buttons02-icon-1-title">
+                  <title id="buttons02-icon-1-title">Arrow Down (Light)</title>
+                  <use xlink:href="assets/icons.svg#arrow-down-light"></use>
+                </svg><span class="label">Get in touch</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </header>

@@ -1,28 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="color-scheme" content="light only" />
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
-    
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="{{ .Site.Title }}" />
-    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
-    <meta property="og:type" content="website" />
-    {{ with .Site.Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?display=swap&family=Wix+Madefor+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700" rel="stylesheet" type="text/css" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ "images/favicon.png" | relURL }}" />
-    <link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | relURL }}" />
-    
-    <!-- Styles -->
-    {{ $style := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-    <noscript>
-        {{ $noscript := resources.Get "css/noscript.css" | resources.Minify | resources.Fingerprint }}
-        <link rel="stylesheet" href="{{ $noscript.RelPermalink }}" />
-    </noscript>
+<title>Nutcracker All</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light only" />
+<meta name="description" content="Template" />
+<meta property="og:site_name" content="Nutcracker All" />
+<meta property="og:title" content="Nutcracker All" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Template" />
+<link
+  href="https://fonts.googleapis.com/css2?display=swap&family=Wix+Madefor+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700"
+  rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/png" href="{{ "assets/images/favicon.png" | relURL }}" />
+{{ with resources.Get "main.css" }}
+{{ $styles := . | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" />
+{{ end }}
+<noscript>
+  {{ with resources.Get "assets/noscript.css" }}
+  {{ $noscript := . | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $noscript.Permalink }}" integrity="{{ $noscript.Data.Integrity }}" />
+  {{ end }}
+</noscript>
+<!-- qweoqwupeoiqwuewqe -->
+<style>
+  @media (min-width: 737px) and (max-width: 1680px) {
+    body {
+      font-size: 105%;
+      /* font-size: clamp(calc(0.875rem* 1.25), 1.25vw, 5rem); */
+    }
+  }
+
+  /* Collapsed FAQ */
+  .collapse {
+    cursor: pointer;
+  }
+
+  .collapse .collapse-target-self,
+  .collapse .collapse-parent {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+  }
+
+  .collapse:not(.show) .collapse-target-self,
+  .collapse:not(.show) .collapse-parent {
+    margin-bottom: -1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .collapse.show .collapse-target-self,
+  .collapse.show .collapse-parent {
+    opacity: 1;
+    height: auto;
+  }
+
+  .collapse:not(.show)>.wrapper>.inner> :nth-child(1) {
+    width: 100% !important;
+  }
+</style><!-- mnbnbxmbzxmncbzxc -->
+<!-- qweoqwupeoiqwuewqe -->
+<script defer>
+  const htmlElement = document.querySelector('html');
+
+  function throttle(func, limit) {
+    let inThrottle;
+    return function () {
+      if (!inThrottle) {
+        func.apply(this, arguments);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    };
+  }
+
+  window.addEventListener('scroll', throttle(() => {
+    if (window.pageYOffset > 0) {
+      htmlElement.classList.add('scrolled');
+    } else {
+      htmlElement.classList.remove('scrolled');
+    }
+  }, 200)); // Throttle scroll event to once every 200ms
+</script><!-- mnbnbxmbzxmncbzxc -->
+
+{{ partial "schema-org" . }}
+
 </head>
