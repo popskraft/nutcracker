@@ -19,16 +19,17 @@ This is a Hugo-based website for Nutcracker products, converted from a Carrd tem
 ```
 nutcracker/
 ├── archetypes/          # Content templates
-│   └── videos.md        # Template for video content
 ├── assets/             # Process-needed assets (SASS, JS)
 ├── content/            # Main content directory
-│   └── videos/         # Video content and metadata
+│   └── nitrile-gloves.md # Product content
 ├── data/              # Site data files
 ├── layouts/           # HTML templates
-│   └── _default/      # Default template files
-│       ├── baseof.html # Base template
-│       ├── list.html   # List template (video listing)
-│       └── single.html # Single template (individual video)
+│   ├── _default/      # Default template files
+│   │   ├── baseof.html # Base template
+│   │   ├── list.html   # List template (video listing)
+│   │   └── single.html # Single template (individual video)
+│   └── partials/      # Template partials
+│       ├── coverSlider.html # Slider partial
 ├── static/            # Static assets
 │   ├── css/           # Stylesheets
 │   │   └── main.css   # Main stylesheet
@@ -63,6 +64,44 @@ To create new content:
 - Ensure responsive design works on all devices
 - Optimize for maximum performance
 - Implement proper asset optimization
+
+## Image Processing Pattern
+
+A standard image processing pattern has been established for handling images in Hugo templates:
+
+1. Retrieve image from front matter parameters:
+   ```go-html-template
+   {{ with .Page.Params.coverImage }}
+     {{ $image := resources.Get . }}
+     {{ with $image }}
+       {{ $filter := images.UnsharpMask .5 .5 0 }}
+       {{ $processed := $image.Filter $filter }}
+       {{ $final := $processed.Fill "756x756 webp picture Center" }}
+       <img 
+         src="{{ $final.RelPermalink }}" 
+         alt="Image description" 
+         title="Image title"
+         loading="eager"
+       />
+     {{ end }}
+   {{ end }}
+   ```
+
+2. Key components:
+   - Double with-check pattern for safe processing
+   - UnsharpMask filter for image enhancement
+   - WebP format for better compression
+   - Eager loading for above-the-fold images
+   - Fill command with dimensions and positioning
+
+3. Front matter structure:
+   ```yaml
+   coverImage: "images/example.png"
+   ```
+
+## Slider Functionality
+
+The slider functionality has been refactored to dynamically pull images from the front matter of product pages. It only displays when the page type is "product" and images are defined. This enhances flexibility and maintainability of the slider component.
 
 ## File Naming Conventions
 - Content files: lowercase with hyphens (e.g., `product-name.md`)

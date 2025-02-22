@@ -6,9 +6,23 @@
       </div>
       <div>
         <div id="coverSliderImageDesctop" class="image full" data-visibility="desktop">
-          <a href="https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil" class="frame"><img
-              src="assets/images/coverSliderImageDesctop.png" alt="Disposable Nitrile 8mil Gloves"
-              title="Order the Product" /></a>
+          <a href="https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil" class="frame">
+            {{ $page := .Page }}
+            {{ with .Page.Params.coverImage }}
+              {{ $image := resources.Get . }}
+              {{ with $image }}
+                {{ $filter := images.UnsharpMask .5 .5 0 }}
+                {{ $processed := $image.Filter $filter }}
+                {{ $final := $processed.Fill "756x756 webp picture Center" }}
+                <img 
+                  src="{{ $final.RelPermalink }}" 
+                  alt="{{ $page.Params.coverImageAlt }}" 
+                  title="{{ $page.Params.coverImageTitle }} {{ $page.Params.coverImageAlt | default $page.Title }}"
+                  loading="eager"
+                />
+              {{ end }}
+            {{ end }}
+          </a>
         </div>
       </div>
     </div>
@@ -18,7 +32,7 @@
   <div class="wrapper">
     <div class="inner">
       <div id="coverSliderImageMobile" class="image" data-visibility="mobile">
-        <span class="frame"><img src="assets/images/coverSliderImageMobile.png" alt=""
+        <span class="frame"><img src="/images/coverSliderImageMobile.png" alt=""
             title="Order the Cleaner" /></span>
       </div>
     </div>
@@ -38,13 +52,13 @@
             <a href="https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil" class="button n01"
               role="button"><svg aria-labelledby="buttons21-icon-1-title">
                 <title id="buttons21-icon-1-title">Cart (Alt)</title>
-                <use xlink:href="assets/icons.svg#cart-alt"></use>
+                <use xlink:href="/icons.svg#cart-alt"></use>
               </svg><span class="label">Buy Gloves</span></a>
           </li>
           <li>
             <a href="#wholesale" class="button n02" role="button"><svg aria-labelledby="buttons21-icon-2-title">
                 <title id="buttons21-icon-2-title">Form</title>
-                <use xlink:href="assets/icons.svg#form"></use>
+                <use xlink:href="/icons.svg#form"></use>
               </svg><span class="label">Wholesale Inquiry</span></a>
           </li>
         </ul>

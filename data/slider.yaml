@@ -1,0 +1,16 @@
+images:
+  - src: "images/coverSlider-94d36aab.jpg"
+    position: "center"
+    motion: "none"
+    speed: 1
+    caption: "Nutcracker Professional Hand Cleaner"
+  - src: "images/coverSlider-4bfb4893.jpg"
+    position: "center"
+    motion: "none"
+    speed: 1
+    caption: "Nutcracker Professional Hand Cleaner"
+  - src: "images/coverSlider-76da13cd.jpg"
+    position: "center"
+    motion: "none"
+    speed: 1
+    caption: "Nutcracker Professional Hand Cleaner"

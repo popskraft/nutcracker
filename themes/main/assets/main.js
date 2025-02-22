@@ -3803,53 +3803,7 @@
 		
 			};
 	
-	// Container: coverSlider.
-		(function() {
-		
-			var $target, $slideshowBackground;
-		
-			$target = $('#coverSlider');
-		
-			$slideshowBackground = document.createElement('div');
-				$slideshowBackground.className = 'slideshow-background';
-				$target.insertBefore($slideshowBackground, $target.firstChild);
-		
-			new slideshowBackground('coverSlider', {
-				target: '#coverSlider > .slideshow-background',
-				wait: 0,
-				defer: false,
-				order: 'default',
-				transition: {
-					style: 'crossfade',
-					speed: 875,
-					delay: 5000,
-				},
-				images: [
-					{
-						src: 'assets/images/coverSlider-94d36aab.jpg',
-						position: 'center',
-						motion: 'none',
-						speed: 1,
-						caption: 'Nutcracker Professional Hand Cleaner',
-					},
-					{
-						src: 'assets/images/coverSlider-4bfb4893.jpg',
-						position: 'center',
-						motion: 'none',
-						speed: 1,
-						caption: 'Nutcracker Professional Hand Cleaner',
-					},
-					{
-						src: 'assets/images/coverSlider-76da13cd.jpg',
-						position: 'center',
-						motion: 'none',
-						speed: 1,
-						caption: 'Nutcracker Professional Hand Cleaner',
-					},
-				]
-			});
-		
-		})();
+
 	
 	// Initialize "On Visible" animations.
 		onvisible.add('h1.style1, h2.style1, h3.style1, p.style1', { style: 'zoom-in', speed: 750, intensity: 9, threshold: 1, delay: 0, replay: false });
@@ -3858,8 +3812,8 @@
 		onvisible.add('hr.style1', { style: 'fade-right', speed: 625, intensity: 10, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.image.style1', { style: 'bounce-up', speed: 750, intensity: 10, threshold: 1, delay: 125, replay: false });
 		onvisible.add('hr.style6', { style: 'fade-right', speed: 625, intensity: 10, threshold: 1, delay: 0, replay: false });
+		onvisible.add('h1.style18, h2.style18, h3.style18, p.style18', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.image.style4', { style: 'pop-in', speed: 500, intensity: 3, threshold: 1, delay: 0, replay: false });
-		onvisible.add('h1.style13, h2.style13, h3.style13, p.style13', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.gallery.style2', { style: 'pop-in', speed: 1000, intensity: 5, threshold: 3, delay: 0, stagger: 125, staggerSelector: ':scope ul > li', replay: false });
 		onvisible.add('.buttons.style5', { style: 'flip-right', speed: 1000, intensity: 5, threshold: 1, delay: 0, stagger: 125, staggerSelector: ':scope > li', replay: false });
 		onvisible.add('.gallery.style3', { style: 'pop-in', speed: 1000, intensity: 5, threshold: 3, delay: 0, stagger: 125, staggerSelector: ':scope ul > li', replay: false });
@@ -3869,6 +3823,7 @@
 		onvisible.add('#coverSliderImageDesctop', { style: 'pop-in', speed: 750, intensity: 10, threshold: 2, delay: 500, replay: false });
 		onvisible.add('#coverSliderImageMobile', { style: 'pop-in', speed: 750, intensity: 10, threshold: 2, delay: 500, replay: false });
 		onvisible.add('.container.style4', { style: 'pop-in', speed: 375, intensity: 5, threshold: 1, delay: 0, replay: false });
+		onvisible.add('.image.style2', { style: 'pop-in', speed: 500, intensity: 3, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style11, h2.style11, h3.style11, p.style11', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style8, h2.style8, h3.style8, p.style8', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style16, h2.style16, h3.style16, p.style16', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
@@ -3877,9 +3832,9 @@
 		onvisible.add('h1.style15, h2.style15, h3.style15, p.style15', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style14, h2.style14, h3.style14, p.style14', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 125, replay: false });
 		onvisible.add('.image.style3', { style: 'zoom-in', speed: 750, intensity: 9, threshold: 1, delay: 0, replay: false });
-		onvisible.add('.image.style2', { style: 'pop-in', speed: 500, intensity: 3, threshold: 1, delay: 0, replay: false });
 		onvisible.add('#text52', { style: 'fade-up', speed: 1000, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('#image04', { style: 'zoom-in', speed: 750, intensity: 9, threshold: 1, delay: 0, replay: false });
+		onvisible.add('h1.style13, h2.style13, h3.style13, p.style13', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style9, h2.style9, h3.style9, p.style9', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.list.style3', { style: 'fade-up', speed: 750, intensity: 5, threshold: 2, delay: 0, stagger: 125, staggerSelector: ':scope ul > li, :scope ol > li', replay: false });
 		onvisible.add('.buttons.style3', { style: 'flip-right', speed: 750, intensity: 5, threshold: 1, delay: 0, stagger: 125, staggerSelector: ':scope > li', replay: false });
