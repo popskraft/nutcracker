@@ -2,45 +2,47 @@
   <div class="wrapper">
     <div class="inner">
       <div>
-        <div id="image18" class="style2 image">
-          <span class="frame"><img src="/images/image18.jpg" alt="8mil Nitrile Disposable Gloves" /></span>
+        {{ with .Page.Params.benefitsImages }}
+          {{ range . }}
+          {{ $item := . }}
+          <div class="style2 image">
+            {{ with resources.Get .image }}
+              {{ $image := . }}
+              {{ $filter := images.UnsharpMask .5 .5 0 }}
+              {{ $processed := $image.Filter $filter }}
+              {{ $final := $processed.Resize "756x webp picture Center" }}
+              <span class="frame">
+                <img 
+                  src="{{ $final.RelPermalink }}" 
+                  alt="{{ $item.alt | default ($.Page.Title | markdownify | plainify) }}"
+                  title="{{ $item.title | default ($.Page.Title | markdownify | plainify) }}"  
+                  loading="lazy"
+                />
+              </span>
+            {{ end }}
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ with .Page.Params.benefitsBlocks }}
+        {{ $total := len . }}
+        {{ $firstCol := add (div $total 2) (mod $total 2) }}
+        {{ $blocks := . }}
+        <div>
+          {{ range $index, $block := first $firstCol $blocks }}
+            <h2 class="style5">{{ $block.title }}</h2>
+            <p class="style3">{{ $block.text | markdownify }}</p>
+            {{ if ne (add $index 1) $firstCol }}<hr class="style1">{{ end }}
+          {{ end }}
         </div>
-        <div id="image32" class="style2 image">
-          <span class="frame"><img src="/images/image32.jpg" alt="8mil Nitrile Disposable Gloves" /></span>
+        <div>
+          {{ range $index, $block := after $firstCol $blocks }}
+            <h2 class="style5">{{ $block.title }}</h2>
+            <p class="style3">{{ $block.text | markdownify }}</p>
+            {{ if ne (add $index 1) (sub $total $firstCol) }}<hr class="style1">{{ end }}
+          {{ end }}
         </div>
-      </div>
-      <div>
-        <h2 id="text79" class="style5">Exceptional Cost Savings</h2>
-        <p id="text108" class="style3"><strong>Bulk Price of $4.99</strong> — roughly half the average market price
-          allows workers to replace gloves more often without straining budgets. This means improved hygiene and better
-          overall protection.</p>
-        <hr id="divider19" class="style1">
-        <h2 id="text109" class="style5">Enhanced Durability and Protection</h2>
-        <p id="text110" class="style3">The 8-mil thickness and puncture-resistant nitrile material stand up to sharp
-          parts and tools. Technicians can work confidently around oil and chemicals without gloves tearing prematurely.
-        </p>
-        <hr id="divider20" class="style1">
-        <h2 id="text111" class="style5">Trusted Safety and Regulatory Compliance</h2>
-        <p id="text112" class="style3">FDA, 510K, ASTM, CE approved, ensuring these gloves meet rigorous safety and
-          quality standards. Automotive service centers can confidently comply with regulations while providing superior
-          hand protection.</p>
-        <hr id="divider21" class="style1">
-      </div>
-      <div>
-        <h2 id="text113" class="style5">Versatile Sizing Options</h2>
-        <p id="text114" class="style3">Offering four sizes (M, L, XL, and XXL) ensures each technician gets a proper
-          fit, reducing the risk of gloves that are too loose or too tight — thereby improving both safety and comfort.
-        </p>
-        <hr id="divider22" class="style1">
-        <h2 id="text115" class="style5">All-Day Comfort and Allergen-Free</h2>
-        <p id="text116" class="style3">Latex-free construction eliminates the risk of latex-related allergies. The
-          ergonomic fit reduces hand fatigue, making it easier for staff to wear gloves consistently throughout their
-          shifts.</p>
-        <hr id="divider24" class="style1">
-        <h2 id="text117" class="style5">Unrestricted Movement</h2>
-        <p id="text118" class="style3">Despite the heavier 8-mil build, the gloves are designed to not restrict
-          movement, allowing technicians to handle small fasteners and delicate components with ease and dexterity.</p>
-      </div>
+      {{ end }}
     </div>
   </div>
 </div>

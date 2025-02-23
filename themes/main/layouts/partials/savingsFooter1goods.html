@@ -1,0 +1,39 @@
+<div id="savingsFooter1goods" class="style13 container columns">
+  <div class="wrapper">
+    <div class="inner">
+      <span></span>
+      {{ range $index, $product := first 1 .Page.Params.products }}
+      <div>
+        <div id="image07" class="style2 image" style="opacity: 1;">
+          {{ with resources.Get $product.image }}
+            {{ $image := . }}
+            {{ $filter := images.UnsharpMask .5 .5 0 }}
+            {{ $processed := $image.Filter $filter }}
+            {{ $final := $processed.Resize "715x webp picture Center" }}
+            <a href="{{ $product.productLink }}" class="frame">
+              <img 
+                src="{{ $final.RelPermalink }}" 
+                alt="{{ $product.imageAlt | default $product.imageTitle }}" 
+                title="{{ $product.imageTitle | default $product.imageAlt }}"
+                loading="lazy"
+              >
+            </a>
+          {{ end }}
+        </div>
+        {{ with $product.priceText }}
+        <p id="text75" class="style6" style="opacity: 1; transform: none;">{{ . | markdownify }}</p>
+        {{ end }}
+        <ul id="buttons17" class="style7 buttons">
+          <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
+            <a href="{{ $product.productLink }}" class="button n01" role="button">{{ $product.buttonText | default "Buy now" }}</a>
+          </li>
+          <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
+            <a href="#wholesale" class="button n02" role="button">Wholesale</a>
+          </li>
+        </ul>
+      </div>
+      {{ end }}
+      <span></span>
+    </div>
+  </div>
+</div>

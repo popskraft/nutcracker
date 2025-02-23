@@ -2,19 +2,24 @@
   <div class="wrapper">
     <div class="inner">
       <ul id="buttons05" class="style2 buttons">
+        {{ if .Page.Params.productLink }}
         <li>
-          <a href="https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil" class="button n01"
-            role="button"><svg aria-labelledby="buttons05-icon-1-title">
+          <a href="{{ .Page.Params.productLink }}" class="button n01" role="button">
+            <svg aria-labelledby="buttons05-icon-1-title">
               <title id="buttons05-icon-1-title">Cart (Alt)</title>
               <use xlink:href="/icons.svg#cart-alt"></use>
-            </svg><span class="label">Buy Gloves</span></a>
+            </svg><span class="label">{{ .Page.Params.buttonCartText | default "Buy Gloves" | markdownify }}</span></a>
         </li>
+        {{ end }}
+        {{ if .Page.Params.wholesaleLink }}
         <li>
-          <a href="#wholesale" class="button n02" role="button"><svg aria-labelledby="buttons05-icon-2-title">
+          <a href="{{ .Page.Params.wholesaleLink }}" class="button n02" role="button">
+            <svg aria-labelledby="buttons05-icon-2-title">
               <title id="buttons05-icon-2-title">Form</title>
               <use xlink:href="/icons.svg#form"></use>
-            </svg><span class="label">Wholesale Inquiry</span></a>
+            </svg><span class="label">{{ .Page.Params.buttonWholesaleText | default "Wholesale Inquiry" | markdownify }}</span></a>
         </li>
+        {{ end }}
       </ul>
       <hr id="divider15" class="style2">
     </div>

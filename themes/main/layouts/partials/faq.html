@@ -1,84 +1,25 @@
-         <div id="faqHeader" class="style16 container default">
-            <div class="wrapper">
-              <div class="inner">
-                <hr id="divider08" class="style3">
-                <h2 id="text57" class="style1">Nutcracker Pro <span style="color: #FFB800">Questions</span></h2>
-              </div>
-            </div>
-          </div>
-          <div id="container05" class="style12 collapse container columns">
-            <div class="wrapper">
-              <div class="inner">
-                <div>
-                  <p id="text06" class="style2"><span style="color: #FFB800">Q.</span> How do you ensure the
-                    professional-grade quality of your products?</p>
-                </div>
-                <div>
-                  <p id="text09" class="style6 collapse-target">Every tool undergoes extensive durability testing in
-                    real-world conditions, reflecting our commitment to the “silent heroes” who rely on equipment day in
-                    and day out. This thorough process ensures each product can handle the intense demands of
-                    professional maintenance and service.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="container22" class="style12 collapse container columns">
-            <div class="wrapper">
-              <div class="inner">
-                <div>
-                  <p id="text60" class="style2"><span style="color: #FFB800">Q.</span> Are your prices truly lower
-                    compared to other suppliers?</p>
-                </div>
-                <div>
-                  <p id="text78" class="style6 collapse-target">Absolutely. Our streamlined operations allow us to offer
-                    professional-grade tools at prices consistently 20%-70% below the market average, delivering
-                    unmatched savings without sacrificing quality.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="container11" class="style12 collapse container columns">
-            <div class="wrapper">
-              <div class="inner">
-                <div>
-                  <p id="text18" class="style2"><span style="color: #FFB800">Q.</span> Will high-demand items be in
-                    stock when I need them?</p>
-                </div>
-                <div>
-                  <p id="text36" class="style6 collapse-target">Yes. We maintain robust, optimized inventory levels on
-                    essential products. By monitoring real-time demand trends, we ensure that your staple items are
-                    almost always available.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="container12" class="style12 collapse container columns">
-            <div class="wrapper">
-              <div class="inner">
-                <div>
-                  <p id="text37" class="style2"><span style="color: #FFB800">Q.</span> What makes your procurement
-                    process more efficient?</p>
-                </div>
-                <div>
-                  <p id="text39" class="style6 collapse-target">Our user-friendly online platform streamlines bulk
-                    ordering and offers quick reordering options. We also provide transparent bulk-pricing tiers, making
-                    it easier to plan your purchasing budget and avoid any downtime.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="container23" class="style12 collapse container columns">
-            <div class="wrapper">
-              <div class="inner">
-                <div>
-                  <p id="text38" class="style2"><span style="color: #FFB800">Q.</span> What do you mean by a
-                    “value-driven partnership”?</p>
-                </div>
-                <div>
-                  <p id="text77" class="style6 collapse-target">We want to be more than a vendor — we aim to be your
-                    long-term partner in maintenance success. With dedicated account management we help you optimize
-                    your operations and maximize your budget over the long run.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+{{ if .Page.Params.faq }}
+{{ $faq := .Page.Params.faq }}
+<div id="faqHeader" class="style16 container default">
+  <div class="wrapper">
+    <div class="inner">
+      <hr id="divider08" class="style3">
+      <h2 id="text57" class="style1" style="opacity: 1; transform: none;">{{ $faq.title | safeHTML }}</h2>
+    </div>
+  </div>
+</div>
+{{ range $index, $question := $faq.questions }}
+<div id="container{{ add 1 $index }}" class="style12 collapse container columns">
+  <div class="wrapper">
+    <div class="inner" style="opacity: 1; transform: none;">
+      <div>
+        <p id="text{{ add 1 $index }}" class="style2"><span style="color: #FFB800">Q.</span> {{ $question.question }}</p>
+      </div>
+      <div class="collapse-parent">
+        <p id="text{{ add 100 $index }}" class="style6 collapse-target">{{ $question.answer | safeHTML }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ end }}

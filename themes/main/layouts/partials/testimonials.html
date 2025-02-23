@@ -1,8 +1,10 @@
+{{ $testimonials := .Page.Params.testimonials }}
+{{ if $testimonials }}
 <div id="testimonialsHeader" class="container default">
   <div class="wrapper">
     <div class="inner">
       <hr id="divider23" class="style5">
-      <h2 id="text05" class="style5">Customer reviews</h2>
+      <h2 id="text05" class="style5" style="opacity: 1; transform: none;">{{ $testimonials.title | default "Customer reviews" }}</h2>
       <hr id="divider04" class="style3">
     </div>
   </div>
@@ -11,63 +13,33 @@
 <div id="testimonials" class="style14 container columns">
   <div class="wrapper">
     <div class="inner">
-      <div>
-        <div id="image10" class="style1 image">
-          <span class="frame"><img src="/images/image10.svg" alt="Stars" /></span>
+      {{ $total := len $testimonials.items }}
+      {{ $perColumn := div (add $total 2) 3 }}
+      
+      {{ range $colIndex := (seq 3) }}
+        {{ $start := mul (sub $colIndex 1) $perColumn }}
+        {{ $nextEnd := mul $colIndex $perColumn }}
+        {{ $end := $nextEnd }}
+        {{ if gt $nextEnd $total }}
+          {{ $end = $total }}
+        {{ end }}
+        
+        <div>
+          {{ range $index, $review := (first (sub $end $start) (after $start $testimonials.items)) }}
+            {{ if gt $index 0 }}
+            <hr class="style6 full screen" style="opacity: 1; transform: none;">
+            {{ end }}
+            <div id="image{{ add 10 $index }}" class="style1 image" style="opacity: 1;">
+              <span class="frame"><img src="{{ $review.stars | default "/images/stars.svg" | relURL }}" alt="Stars"></span>
+            </div>
+            <h2 id="text{{ add 90 $index }}" class="style2">{{ $review.name }}</h2>
+            <p id="text{{ add 85 $index }}" class="style3" style="opacity: 1; transform: none;">{{ $review.text }}</p>
+          {{ end }}
         </div>
-        <h2 id="text92" class="style2">Steffen</h2>
-        <p id="text91" class="style3">These gloves are super strong, and I love the textured grip. I use them
-          for everything from oil changes to cleaning the garage. They’re thick enough that I don’t have to
-          worry about them ripping, yet I can still move my fingers easily. Great purchase for the price!</p>
-        <hr id="divider13" class="style6 full screen">
-        <div id="image11" class="style1 image">
-          <span class="frame"><img src="/images/image11.svg" alt="Stars" /></span>
-        </div>
-        <h2 id="text86" class="style2">Christopher R</h2>
-        <p id="text89" class="style3">I was used to 6-mil gloves before, but these 8-mil ones are on another
-          level. They’re thick enough to resist snags and punctures on sharp edges, but I can still do
-          detailed tasks. True to size, too I got a Large, and they fit perfectly. Highly recommended if you
-          need serious durability.</p>
-      </div>
-      <div>
-        <div id="image12" class="style1 image">
-          <span class="frame"><img src="/images/image12.svg" alt="Stars" /></span>
-        </div>
-        <h2 id="text90" class="style2">David Perez</h2>
-        <p id="text95" class="style3">These gloves are impressively tough for automotive work, but I wish they
-          were even more durable. They hold up to most tasks, including handling chemicals like brake cleaner,
-          although I sometimes experience minor tears when working in really tight spaces. Overall, they’re
-          still better than most disposable gloves I’ve tried.</p>
-        <hr id="divider14" class="style6 full screen">
-        <div id="image13" class="style1 image">
-          <span class="frame"><img src="/images/image13.svg" alt="Stars" /></span>
-        </div>
-        <h2 id="text94" class="style2">TOW</h2>
-        <p id="text87" class="style3">I’m impressed with how strong these gloves are. I’ve caught them on
-          rough metal, and they didn’t tear. They do make my hands sweat after a while, but that’s expected
-          with thick gloves. Overall, these are perfect for mechanics who need a solid grip and robust
-          protection.</p>
-      </div>
-      <div>
-        <div id="image14" class="style1 image">
-          <span class="frame"><img src="/images/image14.svg" alt="Stars" /></span>
-        </div>
-        <h2 id="text20" class="style2">Joseph</h2>
-        <p id="text26" class="style3">I used to rip gloves every few minutes working on cars, so I’d go
-          through piles of cheap nitrile. Then I tried these they’re strong and fit my hands snugly. I did a
-          full brake job without a single rip. Finally, gloves that don’t leave me with greasy hands!</p>
-        <hr id="divider12" class="style6 full screen">
-        <div id="image15" class="style1 image">
-          <span class="frame"><img src="/images/image15.svg" alt="Stars" /></span>
-        </div>
-        <h2 id="text88" class="style2">Brandon</h2>
-        <p id="text93" class="style3">I bought these gloves for post-processing my 3D resin prints, and
-          they’ve been fantastic. They fit snugly without cutting off circulation, and the material is tough
-          enough to handle occasional contact with sharp edges. So far, I haven’t had a single puncture. I’ll
-          definitely purchase again.</p>
-      </div>
+      {{ end }}
     </div>
   </div>
 </div>
 
 <hr id="divider09" class="style5">
+{{ end }}

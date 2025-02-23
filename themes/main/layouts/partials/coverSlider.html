@@ -2,12 +2,11 @@
   <div class="wrapper">
     <div class="inner">
       <div>
-        <h1 id="text08" class="style7">Disposable Nitrile <strong>8mil Gloves</strong></h1>
+        <h1 id="text08" class="style7">{{ .Page.Title | markdownify }}</h1>
       </div>
       <div>
         <div id="coverSliderImageDesctop" class="image full" data-visibility="desktop">
           <a href="https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil" class="frame">
-            {{ $page := .Page }}
             {{ with .Page.Params.coverImage }}
               {{ $image := resources.Get . }}
               {{ with $image }}
@@ -16,8 +15,8 @@
                 {{ $final := $processed.Fill "756x756 webp picture Center" }}
                 <img 
                   src="{{ $final.RelPermalink }}" 
-                  alt="{{ $page.Params.coverImageAlt }}" 
-                  title="{{ $page.Params.coverImageTitle }} {{ $page.Params.coverImageAlt | default $page.Title }}"
+                  alt="{{ $.Page.Params.coverImageAlt }}" 
+                  title="{{ $.Page.Params.coverImageTitle }} {{ $.Page.Params.coverImageAlt | default $.Page.Title }}"
                   loading="eager"
                 />
               {{ end }}
@@ -32,8 +31,22 @@
   <div class="wrapper">
     <div class="inner">
       <div id="coverSliderImageMobile" class="image" data-visibility="mobile">
-        <span class="frame"><img src="/images/coverSliderImageMobile.png" alt=""
-            title="Order the Cleaner" /></span>
+        <span class="frame">
+          {{ with .Page.Params.coverImageMobile | default .Page.Params.coverImage }}
+            {{ $image := resources.Get . }}
+            {{ with $image }}
+              {{ $filter := images.UnsharpMask .5 .5 0 }}
+              {{ $processed := $image.Filter $filter }}
+              {{ $final := $processed.Resize "600x webp picture Center" }}
+              <img 
+                src="{{ $final.RelPermalink }}" 
+                alt="{{ $.Page.Params.coverImageAlt }}" 
+                title="{{ $.Page.Params.coverImageTitle }}" 
+                loading="eager"
+              />
+            {{ end }}
+          {{ end }}
+        </span>
       </div>
     </div>
   </div>
@@ -42,55 +55,28 @@
   <div class="wrapper">
     <div class="inner">
       <div>
-        <p id="text97" class="style11">Secret Gears Of Silent Heroes:</p>
-        <p id="text41" class="style16">Heavy-duty mechanic gloves made of 8-mil nitrile and built exclusively
-          for mechanics are now available at the best price. A textured grip offers reliable protection and
-          comfort. The gloves are developed for automotive and industrial use and meet FDA, ASTM, and CE
-          standards, making them a dependable choice for service departments.</p>
-        <ul id="buttons21" class="style2 buttons">
-          <li>
-            <a href="https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil" class="button n01"
-              role="button"><svg aria-labelledby="buttons21-icon-1-title">
-                <title id="buttons21-icon-1-title">Cart (Alt)</title>
-                <use xlink:href="/icons.svg#cart-alt"></use>
-              </svg><span class="label">Buy Gloves</span></a>
-          </li>
-          <li>
-            <a href="#wholesale" class="button n02" role="button"><svg aria-labelledby="buttons21-icon-2-title">
-                <title id="buttons21-icon-2-title">Form</title>
-                <use xlink:href="/icons.svg#form"></use>
-              </svg><span class="label">Wholesale Inquiry</span></a>
-          </li>
-        </ul>
+        <p id="text97" class="style11">{{ .Page.Params.subtitle | default "Secret Gears Of Silent Heroes:" | markdownify }}</p>
+        <p id="text41" class="style16">{{ .Page.Params.description | markdownify }}</p>
+        {{ partial "CTAGroup.html" . }}
       </div>
       <div>
         <div id="list02" class="style2 list">
+          {{ with .Page.Params.features }}
           <ul>
+            {{ range . }}
             <li>
-              <p>8 Mil Thick Nitrile</p>
+              <p>{{ . }}</p>
             </li>
-            <li>
-              <p>Latex Free</p>
-            </li>
-            <li>
-              <p>Textured Grit Grip</p>
-            </li>
-            <li>
-              <p>Touchscreen Compatible</p>
-            </li>
-            <li>
-              <p>Oil Resistant</p>
-            </li>
-            <li>
-              <p>Puncture Resistant</p>
-            </li>
-            <li>
-              <p>FDA, 510K, ASTM, CE APPROVED</p>
-            </li>
+            {{ end }}
           </ul>
+          {{ end }}
         </div>
-        <h3 id="text11" class="style15">$4.99</h3>
-        <h3 id="text03" class="style14">Per box (100 Gloves)</h3>
+        {{ with .Page.Params.price }}
+        <p id="text11" class="style15">{{ . }}</p>
+        {{ end }}
+        {{ with .Page.Params.perBoxText }}
+        <p id="text03" class="style14">{{ . }}</p>
+        {{ end }}
       </div>
     </div>
   </div>

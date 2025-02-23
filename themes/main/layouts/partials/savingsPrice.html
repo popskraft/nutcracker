@@ -1,0 +1,19 @@
+{{ with .Page.Params.priceSection }}
+<div id="savingsPrice" class="style15 container default">
+  <div class="wrapper">
+    <div class="inner">
+      <h3 id="text16" class="style5" style="opacity: 1; transform: none;">{{ .title }}</h3>
+      <h3 id="text52" style="opacity: 1; transform: none;">
+        {{ $price := .price }}
+        {{ $price := strings.TrimPrefix "$" $price }}
+        {{ $wholePart := index (split $price ".") 0 }}
+        <span style="color: #FF5500">${{ $wholePart }}</span>{{ if gt (len (split $price ".")) 1 }}.{{ index (split
+        $price ".") 1 }}{{ end }}
+      </h3>
+      {{ with .perBoxTextExtended }}
+      <h3 id="text53" class="style6">{{ . }}</h3>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

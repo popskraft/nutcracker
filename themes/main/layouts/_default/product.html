@@ -4,7 +4,16 @@
 <hr id="divider10" class="style4">
 {{ partial "benefitsHeader.html" . }}
 {{ partial "benefitsContent.html" . }}
-{{ partial "savingsAndProducts.html" . }}
+{{ partial "benefitsCTA.html" . }}
+{{ partial "savingsHeader.html" . }}
+{{ partial "savingsPrice.html" . }}
+{{ if .Page.Params.products }}
+  {{ $productCount := len .Page.Params.products }}
+  {{ if and (gt $productCount 0) (le $productCount 4) }}
+    {{ partial (printf "savingsFooter%dgoods" $productCount) . }}
+  {{ end }}
+{{ end }}
 {{ partial "testimonials.html" . }}
+{{ partial "faq.html" . }}
 
 {{ end }}
