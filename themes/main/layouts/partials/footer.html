@@ -5,46 +5,33 @@
         <div>
           <div id="logoHeader" class="image">
             <a href="#home" class="frame">
-              <img src="{{ "logo.svg" | relURL }}" alt="Logo">
+              <img src="{{ "logo.svg" | relURL }}" alt="{{ .Site.Params.companyName }} Logo">
             </a>
           </div>
           <ul id="buttons01" class="style1 buttons">
             <li>
-              <a href="tel:800.260.5051" class="button n01" role="button"><svg
+              <a href="tel:{{ .Site.Params.contact.phone }}" class="button n01" role="button"><svg
                   aria-labelledby="buttons01-icon-1-title">
                   <title id="buttons01-icon-1-title">Phone</title>
                   <use xlink:href="{{ "icons.svg" | relURL }}#phone"></use>
-                </svg><span class="label">800.260.5051</span></a>
+                </svg><span class="label">{{ .Site.Params.contact.phone }}</span></a>
             </li>
             <li>
-              <a href="mailto:info@akdealerservices.com" class="button n02" role="button"><svg
+              <a href="mailto:{{ .Site.Params.contact.email }}" class="button n02" role="button"><svg
                   aria-labelledby="buttons01-icon-2-title">
                   <title id="buttons01-icon-2-title">Email (Alt)</title>
                   <use xlink:href="{{ "icons.svg" | relURL }}#email-alt"></use>
-                </svg><span class="label">info @ akdealerservices.com</span></a>
+                </svg><span class="label">{{ .Site.Params.contact.email }}</span></a>
             </li>
           </ul>
         </div>
         <div>
           <ul id="links02" class="style2 links">
-            <li class="n01">
-              <a href="#benefits">Benefits</a>
+            {{ range .Site.Menus.main }}
+            <li class="{{ .Identifier }}">
+              <a href="{{ .URL }}">{{ .Name }}</a>
             </li>
-            <li class="n02">
-              <a href="#savings">Great savings</a>
-            </li>
-            <li class="n03">
-              <a href="#faq">F.A.Q.</a>
-            </li>
-            <li class="n04">
-              <a href="#contact">Contact</a>
-            </li>
-            <li class="n05">
-              <a href="https://nutcrackerpro.com/">All Products</a>
-            </li>
-            <li class="n06">
-              <a href="#about">About</a>
-            </li>
+            {{ end }}
           </ul>
         </div>
         <div>
@@ -68,9 +55,9 @@
   <div id="footerBottom" class="container default">
     <div class="wrapper">
       <div class="inner">
-        <p id="text42"><span class="p">2025 All rights reserved.<br />By using this site, by sending messages,
+        <p id="text42"><span class="p">{{ now.Format "2006" }} {{ .Site.Params.companyName }} All rights reserved.<br />By using this site, by sending messages,
             you agree to the processing of personal data in accordance with the <a
-            href="#terms">Terms &amp; Conditions</a></span></p>
+            href="#terms">Terms &amp; Conditions</a></span></p>
         <hr id="divider03" class="style3">
       </div>
     </div>
