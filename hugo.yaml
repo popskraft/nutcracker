@@ -20,6 +20,12 @@ params:
     phone: "Your Phone Number"  # Placeholder for actual phone number
     email: "your.email@example.com"  # Placeholder for actual email
 
+  footer:
+    copyright: "All rights reserved."
+    terms_text: "By using this site, by sending messages, you agree to the processing of personal data in accordance with the"
+    terms_link_text: "Terms & Conditions"
+    terms_link: "#terms"
+
   call_to_action:
     buy_now: "Buy Now"
     wholesale_inquiry: "Wholesale Inquiry"

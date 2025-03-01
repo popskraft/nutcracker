@@ -55,9 +55,8 @@
   <div id="footerBottom" class="container default">
     <div class="wrapper">
       <div class="inner">
-        <p id="text42"><span class="p">{{ now.Format "2006" }} {{ .Site.Params.companyName }} All rights reserved.<br />By using this site, by sending messages,
-            you agree to the processing of personal data in accordance with the <a
-            href="#terms">Terms &amp; Conditions</a></span></p>
+        <p id="text42"><span class="p">{{ now.Format "2006" }} {{ .Site.Params.companyName }} {{ .Site.Params.footer.copyright }}<br />{{ .Site.Params.footer.terms_text }} <a
+            href="{{ .Site.Params.footer.terms_link }}">{{ .Site.Params.footer.terms_link_text }}</a></span></p>
         <hr id="divider03" class="style3">
       </div>
     </div>
