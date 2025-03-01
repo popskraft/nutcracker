@@ -8,18 +8,18 @@
     </div>
   </div>
 </div>
-{{ range $index, $question := $faq.questions }}
-<div id="container{{ add 1 $index }}" class="style12 collapse container columns">
+<div id="faqBody" class="style12 container default">
   <div class="wrapper">
     <div class="inner" style="opacity: 1; transform: none;">
-      <div>
-        <p id="text{{ add 1 $index }}" class="style2"><span style="color: #FFB800">Q.</span> {{ $question.question }}</p>
-      </div>
-      <div class="collapse-parent">
-        <p id="text{{ add 100 $index }}" class="style6 collapse-target">{{ $question.answer | safeHTML }}</p>
-      </div>
+      {{ range $index, $question := $faq.questions }}
+      <hr class="style9 full screen" style="opacity: 1; transform: none;">
+      <p class="style2 faqTitle">
+        <span style="color: #FFB800">Q.</span> {{ $question.question }}
+      </p>
+      <p class="style6 faqAnswer">{{ $question.answer | safeHTML }}</p>
+      {{ end }}
     </div>
   </div>
 </div>
 {{ end }}
-{{ end }}
+

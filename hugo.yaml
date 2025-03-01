@@ -1,14 +1,34 @@
 baseURL: "/"
-title: "Nutcracker Products"
-languageCode: "en-us"
-
+title: Professional-grade tools and products supply
+languageCode: "en"
 theme: "main"
 
+# Site metadata
 params:
-  description: "Professional Hand Cleaner and Products"
-  author: "Nutcracker Team"
-  mainSections:
-    - "products"
+  seoTitleAfter: "• Nutcracker Pro"
+  description: Professional-grade quality without markup. Streamlined procurement process. American-focused supply chain. Understanding of tradesperson needs. Reliability in stock and delivery.
+  colorScheme: "light only"
+  openGraph:
+    ogImage: "/images/ogimage.jpg"
+    type: "website"
+
+  companyName: "Nutcracker"
+  tagline: "Secret Gears Of Silent Heroes"
+  subtitle: "Pro-grade essentials at accessible prices for those who keep America running"
+
+  contact:
+    phone: "Your Phone Number"  # Placeholder for actual phone number
+    email: "your.email@example.com"  # Placeholder for actual email
+
+  call_to_action:
+    buy_now: "Buy Now"
+    wholesale_inquiry: "Wholesale Inquiry"
+    read_more: "Read more"
+
+  business_propositions:
+    price_point: "$4.99 per box (100 Gloves)"
+    savings_potential: "Save up to $3,500 a year"
+    minimum_order_quantity: "Minimum pack — 20 boxes (1 container)"
 
 menus:
   main:
@@ -33,10 +53,34 @@ menus:
       url: "https://nutcrackerpro.com/"
       weight: 5
 
+
+## Settings
+
 markup:
   goldmark:
     renderer:
       unsafe: true  # Allows HTML in markdown
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false
+
+pagination:
+  pagerSize: 36
+
+summaryLength: 30
+
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+  filename: sitemap.xml
+
+imaging:
+  resampleFilter: "Lanczos"
+  quality: 95
+
+taxonomies:
+  tag: tags
 
 outputs:
   home:
@@ -51,10 +95,6 @@ outputs:
 
 minify:
   minifyOutput: true
-
-imaging:
-  quality: 85
-  resampleFilter: "Lanczos"
 
 server:
   headers:

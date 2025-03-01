@@ -71,10 +71,10 @@
           </ul>
           {{ end }}
         </div>
-        {{ with .Page.Params.price }}
+        {{ with .Page.Params.priceSection.price }}
         <p id="text11" class="style15">{{ . }}</p>
         {{ end }}
-        {{ with .Page.Params.perBoxText }}
+        {{ with .Page.Params.priceSection.perBoxText }}
         <p id="text03" class="style14">{{ . }}</p>
         {{ end }}
       </div>

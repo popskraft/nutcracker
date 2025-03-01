@@ -10,7 +10,7 @@
             {{- else }}
             <div class="frame">
             {{- end }}
-            <img src="/images/image06.svg" alt="Logo" />
+            <img src="{{ "logo.svg" | relURL }}" alt="Logo">
             {{- if not $.IsHome }}
             </a>
             {{- else }}
@@ -32,10 +32,13 @@
         <div>
           <ul id="buttons02" class="style3 buttons">
             <li>
-              <a href="#contacts" class="button n01" role="button"><svg aria-labelledby="buttons02-icon-1-title">
+              <a href="/contacts" class="button n01" role="button">
+                {{/*  <svg aria-labelledby="buttons02-icon-1-title">
                   <title id="buttons02-icon-1-title">Arrow Down (Light)</title>
-                  <use xlink:href="/icons.svg#arrow-down-light"></use>
-                </svg><span class="label">Get in touch</span></a>
+                  <use xlink:href="{{ "icons.svg" | relURL }}#arrow-down-light"></use>
+                </svg>  */}}
+                <span class="label">Get in touch</span>
+              </a>
             </li>
           </ul>
         </div>

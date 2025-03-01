@@ -143,29 +143,10 @@ For questions or issues:
 - Consult this documentation file
 
 ## Communication Rules
-
-### Language Protocol
-1. **User Communication**:
-   - User will communicate in Russian language
-   - All Russian input will be translated to English for development purposes
-   - Translation will be optimized for technical and programming context
-
-2. **Development Standards**:
-   - All code will be written in English
-   - All comments in code will be in English
-   - All documentation will be maintained in English
-   - All commit messages and technical discussions will be in English
-   - Variable names, function names, and other code identifiers will use English
-
-3. **Documentation**:
-   - Project documentation will be maintained in English
-   - Technical terms will use standard English programming terminology
-   - Code examples will include English comments and explanations
-
-This protocol ensures:
-- Consistent codebase language
-- Standard technical terminology
-- Clear communication in development context
-- Maintainable and understandable code for all developers
+- All communication regarding project updates, issues, and feature requests should be documented in the project management tool.
+- Regular check-ins will be scheduled to discuss progress and address any blockers.
+- Code reviews are mandatory for all new features or significant changes to ensure quality and maintainability.
+- Documentation should be kept up to date with any changes made to the project to assist future developers and maintainers.
+- Use clear and descriptive commit messages to document changes in the version control system.
 
 Last Updated: 2025-02-22

@@ -1,15 +1,37 @@
 ---
-# page metadata
-title: "Disposable Nitrile **8mil Gloves**"
-subtitle: "Secret Gears Of Silent Heroes:"
-description: "Heavy-duty mechanic gloves made of 8-mil nitrile and built exclusively for mechanics are now available at the best price. A textured grip offers reliable protection and comfort. The gloves are developed for automotive and industrial use and meet FDA, ASTM, and CE standards, making them a dependable choice for service departments."
 type: "product"
 layout: "product"
 date: 2025-02-22
 
+# page metadata
+title: "Disposable Nitrile **8mil Gloves**"
+subtitle: "Secret Gears Of Silent Heroes:"
+description: "Heavy-duty mechanic gloves made of 8-mil nitrile and built exclusively for mechanics are now available at the best price. A textured grip offers reliable protection and comfort. The gloves are developed for automotive and industrial use and meet FDA, ASTM, and CE standards, making them a dependable choice for service departments."
+
+# CTA buttons
+productLink: "https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil"
+buttonCartText: "Buy Gloves"
+wholesaleLink: "#wholesale"
+buttonWholesaleText: "Wholesale Inquiry"
+
+# cover slider (in static folder)
+slider:
+  - image: "/images/covers/cover-1.webp"
+    caption: "Nutcracker Professional Products"
+  - image: "/images/covers/cover-2.webp"
+    caption: "Quality Tools for Professionals"
+  - image: "/images/covers/cover-6.webp"
+    caption: "Professional Grade Solutions"
+
+# cover image
+coverImage: "images/gloves/coverSliderImageDesctop.png"
+coverImageMobile: "images/gloves/coverSliderImageMobile.png"
+coverImageAlt: "Disposable Nitrile 8mil Gloves"
+coverImageTitle: "Order the"
+
 # price section
 priceSection:
-  title: "outstanding price"
+  title: "Outstanding price"
   price: "$4.99" #example $4.99
   perBoxText: "Per box (100 Gloves)"
   perBoxTextExtended: "Per box (100 Gloves). Minimum pack — 20 boxes (1 container)"
@@ -17,29 +39,29 @@ priceSection:
 # products section
 products:
   - size: "M"
-    image: "/images/image05.jpg"
+    image: "/images/gloves/glove-M.jpg"
     imageAlt: "Buy 8mil Nitrile Disposable Gloves M"
     productLink: "https://akdealerservices.com/product/1000527-mechanic-gloves-medium"
     buttonText: "Buy M size"
-    priceText: "Small batch from 4 containers **$24.99 per container**"
+    priceText:
   - size: "L"
-    image: "/images/image08.jpg"
+    image: "/images/gloves/glove-L.jpg"
     imageAlt: "Buy 8mil Nitrile Disposable Gloves L"
     productLink: "https://akdealerservices.com/product/1000528-mechanic-gloves-large"
     buttonText: "Buy L size"
-    priceText: "Large batch of 114 containers **$19.99 per container**"
+    priceText:
   - size: "XL"
-    image: "/images/image21.jpg"
+    image: "/images/gloves/glove-XL.jpg"
     imageAlt: "Buy 8mil Nitrile Disposable Gloves XL"
     productLink: "https://akdealerservices.com/product/1000529-mechanic-gloves-x-large"
     buttonText: "Buy XL size"
-    priceText: "Large batch of 114 containers **$19.99 per container**"
+    priceText:
   - size: "XXL"
-    image: "/images/image22.jpg"
+    image: "/images/gloves/glove-XXL.jpg"
     imageAlt: "Buy 8mil Nitrile Disposable Gloves XXL"
     productLink: "https://akdealerservices.com/product/1000530-mechanic-gloves-xx-large"
     buttonText: "Buy XXL size"
-    priceText: "Large batch of 114 containers **$19.99 per container**"
+    priceText:
 
 # features
 features:
@@ -50,27 +72,6 @@ features:
   - "Oil Resistant"
   - "Puncture Resistant"
   - "FDA, 510K, ASTM, CE APPROVED"
-
-# cover image
-coverImage: "images/gloves/coverSliderImageDesctop.png"
-coverImageMobile: "images/gloves/coverSliderImageMobile.png"
-coverImageAlt: "Disposable Nitrile 8mil Gloves"
-coverImageTitle: "Order the"
-
-# CTA buttons
-productLink: "https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil"
-buttonCartText: "Buy Gloves"
-wholesaleLink: "#wholesale"
-buttonWholesaleText: "Wholesale Inquiry"
-
-# slider (in static folder)
-slider:
-  - image: "/images/covers/cover-1.webp"
-    caption: "Nutcracker Professional Products"
-  - image: "/images/covers/cover-2.webp"
-    caption: "Quality Tools for Professionals"
-  - image: "/images/covers/cover-6.webp"
-    caption: "Professional Grade Solutions"
 
 # benefitsHeader
 benefitsHeaderTitle: ""
