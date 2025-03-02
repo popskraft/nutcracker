@@ -8,6 +8,7 @@ title: Professional **Hand Cleaner**
 subtitle: "Secret Gears Of Silent Heroes:"
 description: >
   We offer a non-solvent best hand soap for mechanics. Designed to be used routinely for the toughest cleaning without drying out your hands. Multiple emollients and conditioners actually moisturize chapped skin with repeated use.
+ogImage: "/images/handcleaner/ogimage.jpg"
 
 # CTA buttons
 productLink: https://akdealerservices.com/product/1001256-professional-hand-cleaner

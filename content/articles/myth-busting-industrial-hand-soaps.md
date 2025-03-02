@@ -1,11 +1,13 @@
 ---
-title: "Myth Busting:"
 date: 2025-03-01
-layout: "article"
+title: "Hand cleaner for mechanics"
+seoTitle:
+subtitle: "The True Cost of Clean Hands"
 coverImage: "/images/articles/chuvak.jpg"
-subtitle: "Industrial Hand Soaps"
-discription: >
-  There are a great many myths surrounding industrial hand soaps. From 'tough cleaners always ruin skin' to 'do eco-friendly products really work?', there are plenty of misconceptions out there that might drive someone away from the right solution. Let's dispel these myths. Nutcracker cleaner stands as a prime example of how an industrial hand soap can be both effective and gentle in addition to supporting sustainability.
+headerTitle: "Hand cleaner for mechanics"
+headerSubtitle: "The True Cost of Clean Hands"
+description: >
+  Clean hands are very important in an automotive environment, and yet the real cost of keeping those hands clean is often not evident initially. While traditional hand soaps may appear to be the go-to option, it usually means hidden costs: frequent restocking, higher water usages, and the eventual toll on hardworking mechanics' skin. Nutcracker Hand Cleaner is a step above the rest, bringing cost-effectiveness without skimping on strong cleaning.
 
 ---
 
@@ -18,9 +20,9 @@ Perhaps the most persistent myth in industrial cleaning is that effectiveness co
 {{< youtube "esTzImp-P5A" >}}
 
 {{< gallery title="The True Price of Conventional Gloves" >}}
-/images/gallery06/128c5b95.jpg, Alternate text, First image caption, #link |||
-/images/gallery06/42bcd11f.jpg, Second image, Another caption, #link |||
-/images/gallery06/91fe47ca.jpg, Third image, Final caption
+images/gloves/glove-L.jpg, Alternate text, First image caption, #link |||
+images/gloves/glove-M.jpg, Second image, Another caption, #link |||
+images/gloves/glove-XL.jpg, Third image, Final caption
 {{< /gallery >}}
 
 ## Myth #2: Eco-Friendly Products Don't Work on Industrial Grime

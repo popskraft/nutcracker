@@ -1,28 +1,33 @@
-{{- $seoTitle := or (.Params.seoTitle) (.Site.Title) (.Title) -}}
-{{- $seoTitle = $seoTitle| markdownify | plainify -}}
+{{- $seoTitle := or (.Params.seoTitle) (printf "%s %s" .Title .Site.Params.seoTitleAfter) (.Site.Title) -}}
+{{- $seoTitle = $seoTitle | markdownify | plainify -}}
 {{- $description := or (.Params.description) (.Content) (.Description) (.Site.Params.description) -}}
 {{- $description = $description | markdownify | plainify | truncate 164 -}}
+{{- $siteName := .Site.Title -}}
 <!DOCTYPE HTML>
 <html lang="{{ .Site.LanguageCode }}">
 
 <head>
-  <title>{{ $seoTitle }} {{ .Site.Params.seoTitleAfter }}</title>
+  <title>{{ $seoTitle }}</title>
   <meta charset="utf-8">
-  <link rel="canonical" href="{{ .Permalink }}">
+  {{- $canonical := or (.Params.canonical) (.Permalink) -}}
+  <link rel="canonical" href="{{ $canonical }}">
   {{- if .Params.nofollow }}
   <meta name="robots" content="noindex">
   {{- end }}
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="{{ $description }}">
-  <meta property="og:site_name" content="{{ .Site.Params.openGraph.siteName }}">
+  <meta property="og:site_name" content="{{ $siteName }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:title" content="{{ $seoTitle }}">
-  <meta property="og:type" content="{{ .Site.Params.openGraph.type }}">
+  <meta property="og:type" content="{{ .Site.Params.openGrapeType }}">
   <meta property="og:description" content="{{ $description }}">
 
-  {{- with or (index (.Resources.ByType "image") 0) (resources.Get .Site.Params.ogImage) }}
+  {{- $baseURL := .Site.BaseURL }}
+
+  {{- $ogImagePath := .Params.ogImage | default .Site.Params.ogImage }}
+  {{- with or (index (.Resources.ByType "image") 0) (resources.Get $ogImagePath) }}
   {{- $OGcover := .Fill "1280x800 webp picture Center" }}
-  <meta property="og:image" content="{{ $OGcover.Permalink }}">
+  <meta property="og:image" content="{{ $baseURL }}{{ $OGcover.RelPermalink }}">
   {{- end }}
 
   <link href="https://fonts.googleapis.com/css2?display=swap&family=Wix+Madefor+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700"

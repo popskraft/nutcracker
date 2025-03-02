@@ -1,4 +1,5 @@
 baseURL: "https://nutcrackerpro.netlify.app/"
+# $siteName
 title: Professional-grade tools and products supply
 languageCode: "en"
 
@@ -6,16 +7,10 @@ languageCode: "en"
 params:
   seoTitleAfter: "• Nutcracker Pro"
   description: Professional-grade quality without markup. Streamlined procurement process. American-focused supply chain. Understanding of tradesperson needs. Reliability in stock and delivery.
-  openGraph:
-    ogImage: "/images/ogimage.jpg"
-    type: "website"
-  
-  call_to_action:
-    buy_now: "Buy Now"
-    wholesale_inquiry: "Wholesale Inquiry"
-    read_more: "Read more"
+  ogImage: "/images/ogimage.jpg"
+  openGrapeType: "website"
 
-  companyName: "Nutcracker"
+  companyName: "NutcrackerPro"
   tagline: "Secret Gears Of Silent Heroes"
   subtitle: "Pro-grade essentials at accessible prices for those who keep America running"
 
