@@ -74,7 +74,7 @@
   
   {{ with resources.Get "main.js" }}
     {{ $script := .  | minify  }}
-    <script src="{{ $script.RelPermalink }}"></script>
+    <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
   {{ end }}
 
   {{/*  SLIDER SCRIPT  */}}
@@ -96,13 +96,13 @@
     {{ end }}
     {{ with resources.Get "js/coverSlider.js" }}
       {{ $script := .  | minify  }}
-      <script src="{{ $script.RelPermalink }}"></script>
+      <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
     {{ end }}
   {{ end }}
   
   {{ with resources.Get "js/inBottom.js" }}
   {{ $inBottomScript := . | minify }}
-  <script src="{{ $inBottomScript.RelPermalink }}" integrity="{{ $inBottomScript.Data.Integrity }}" crossorigin="anonymous"></script>
+  <script defer src="{{ $inBottomScript.RelPermalink }}" integrity="{{ $inBottomScript.Data.Integrity }}" crossorigin="anonymous"></script>
   {{ end }}
   
 </body>
