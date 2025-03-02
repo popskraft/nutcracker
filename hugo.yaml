@@ -1,4 +1,4 @@
-baseURL: "/"
+baseURL: "https://nutcracker.netlify.app/"
 title: Professional-grade tools and products supply
 languageCode: "en"
 theme: "main"
