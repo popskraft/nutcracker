@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nutcracker.netlify.app/sitemap.xml
+Sitemap: https://nutcrackerpro.netlify.app/sitemap.xml
