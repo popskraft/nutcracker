@@ -6,7 +6,7 @@
       </div>
       <div>
         <div id="coverSliderImageDesctop" class="image full" data-visibility="desktop">
-          <a href="https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil" class="frame">
+          <a href="{{ .Page.Params.productLink | default "#" }}" class="frame" {{ if .Page.Params.productLink }}target="_blank" rel="noopener noreferrer"{{ end }}>
             {{ with .Page.Params.coverImage }}
               {{ $image := resources.Get . }}
               {{ with $image }}
@@ -31,7 +31,7 @@
   <div class="wrapper">
     <div class="inner">
       <div id="coverSliderImageMobile" class="image" data-visibility="mobile">
-        <span class="frame">
+        <a href="{{ .Page.Params.productLink | default "#" }}" class="frame" {{ if .Page.Params.productLink }}target="_blank" rel="noopener noreferrer"{{ end }}>
           {{ with .Page.Params.coverImageMobile | default .Page.Params.coverImage }}
             {{ $image := resources.Get . }}
             {{ with $image }}
@@ -46,7 +46,7 @@
               />
             {{ end }}
           {{ end }}
-        </span>
+        </a>
       </div>
     </div>
   </div>

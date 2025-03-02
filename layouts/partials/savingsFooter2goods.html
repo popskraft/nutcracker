@@ -1,9 +1,9 @@
-<div id="savingsFooter2goods" class="style13 container columns">
+<div id="savingsFooter2goods" class="style13 products container columns">
   <div class="wrapper">
     <div class="inner">
       {{ range $index, $product := .Page.Params.products }}
         <div>
-          <div id="image{{ add 24 $index }}" class="style2 image" style="opacity: 1;">
+          <div id="savings2-image-{{ $index }}" class="style2 image" style="opacity: 1;">
             {{ with resources.Get $product.image }}
               {{ $image := . }}
               {{ $filter := images.UnsharpMask .5 .5 0 }}
@@ -20,9 +20,9 @@
             {{ end }}
           </div>
           {{ with $product.priceText }}
-          <p id="text{{ add 81 $index }}" class="style6" style="opacity: 1; transform: none;">{{ . | markdownify }}</p>
+          <p id="savings2-text-{{ $index }}" class="style6" style="opacity: 1; transform: none;">{{ . | markdownify }}</p>
           {{ end }}
-          <ul id="buttons{{ add 28 $index }}" class="style7 buttons">
+          <ul id="savings2-buttons-{{ $index }}" class="style7 buttons">
             <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
               <a href="{{ $product.productLink }}" class="button n01" role="button">{{ $product.buttonText | default "Buy now" }}</a>
             </li>

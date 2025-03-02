@@ -4,9 +4,9 @@
       {{ range $columnIndex, $column := .Page.Params.benefitsColumns }}
       <div>
         {{ range $benefitIndex, $benefit := $column }}
-        <h2 id="text{{ add $columnIndex 1 }}{{ add $benefitIndex 1 }}" class="style5">{{ $benefit.title }}</h2>
-        <p id="text{{ add $columnIndex 1 }}{{ add $benefitIndex 2 }}" class="style3">{{ $benefit.content | markdownify }}</p>
-        <hr id="divider{{ add $columnIndex 1 }}{{ add $benefitIndex 1 }}" class="style1">
+        <h2 id="benefit-title-{{ $columnIndex }}-{{ $benefitIndex }}" class="style5">{{ $benefit.title }}</h2>
+        <p id="benefit-text-{{ $columnIndex }}-{{ $benefitIndex }}" class="style3">{{ $benefit.content | markdownify }}</p>
+        <hr id="benefit-divider-{{ $columnIndex }}-{{ $benefitIndex }}" class="style1">
         {{ end }}
       </div>
       {{ end }}

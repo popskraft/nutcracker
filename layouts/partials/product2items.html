@@ -13,17 +13,17 @@
           {{ range $itemIndex := seq $startIndex (add $startIndex 1) }}
             {{ $item := index $items $itemIndex }}
             <div>
-              <p id="text{{ add 1 $itemIndex }}" class="style18" style="opacity: 1; transform: none;">
+              <p id="product-title-{{ $itemIndex }}" class="style18" style="opacity: 1; transform: none;">
                 <a href="{{ $item.url }}">{{ $item.title | markdownify }}</a>
               </p>
-              <div id="image{{ add 1 $itemIndex }}" class="style4 image full" style="opacity: 1;">
+              <div id="product-image-{{ $itemIndex }}" class="style4 image full" style="opacity: 1;">
                 <a href="{{ $item.url }}" class="frame">
                   {{ $mainImage := resources.Get $item.mainImage.src }}
                   {{ $processedImage := $mainImage.Resize "839x webp picture Center" }}
                   <img src="{{ $processedImage.RelPermalink }}" alt="{{ $item.mainImage.alt }}">
                 </a>
               </div>
-              <div id="gallery{{ add 1 $itemIndex }}" class="style2 gallery full">
+              <div id="product-gallery-{{ $itemIndex }}" class="style2 gallery full">
                 <div class="inner">
                   <ul>
                     {{ range $galleryIndex, $galleryItem := $item.gallery }}
@@ -40,7 +40,7 @@
                   </ul>
                 </div>
               </div>
-              <p id="text{{ add 100 $itemIndex }}" class="style3" style="opacity: 1; transform: none;">
+              <p id="product-desc-{{ $itemIndex }}" class="style3" style="opacity: 1; transform: none;">
                 {{ $item.description }}
               </p>
               <ul class="style5 buttons">
@@ -48,7 +48,7 @@
                 <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
                   <a href="{{ $button.url }}" class="button {{ $button.class }}" role="button">
                     <svg aria-labelledby="buttons{{ add 1 $itemIndex }}-icon-{{ add 1 $buttonIndex }}-title">
-                      <title id="buttons{{ add 1 $itemIndex }}-icon-{{ add 1 $buttonIndex }}-title">{{ $button.label }}</title>
+                      <title id="product-btn-{{ $itemIndex }}-icon-{{ $buttonIndex }}-title">{{ $button.label }}</title>
                       <use xlink:href="{{ "icons.svg" | relURL }}#{{ $button.icon }}"></use>
                     </svg>
                     <span class="label">{{ $button.label }}</span>
@@ -70,17 +70,17 @@
     <div id="product2Cols-last" class="products container default">
       <div class="wrapper">
         <div class="inner">
-          <p id="text{{ add 1 $lastIndex }}" class="style18" style="opacity: 1; transform: none;">
+          <p id="product-title-{{ $lastIndex }}" class="style18" style="opacity: 1; transform: none;">
             <a href="{{ $lastItem.url }}">{{ $lastItem.title | markdownify }}</a>
           </p>
-          <div id="image{{ add 1 $lastIndex }}" class="style4 image full" style="opacity: 1;">
+          <div id="product-image-{{ $lastIndex }}" class="style4 image full" style="opacity: 1;">
             <a href="{{ $lastItem.url }}" class="frame">
               {{ $mainImage := resources.Get $lastItem.mainImage.src }}
               {{ $processedImage := $mainImage.Resize "900x webp picture Center" }}
               <img src="{{ $processedImage.RelPermalink }}" alt="{{ $lastItem.mainImage.alt }}">
             </a>
           </div>
-          <div id="gallery{{ add 1 $lastIndex }}" class="style2 gallery full">
+          <div id="product-gallery-{{ $lastIndex }}" class="style2 gallery full">
             <div class="inner">
               <ul>
                 {{ range $galleryIndex, $galleryItem := $lastItem.gallery }}
@@ -97,7 +97,7 @@
               </ul>
             </div>
           </div>
-          <p id="text{{ add 100 $lastIndex }}" class="style3" style="opacity: 1; transform: none;">
+          <p id="product-desc-{{ $lastIndex }}" class="style3" style="opacity: 1; transform: none;">
             {{ $lastItem.description }}
           </p>
           <ul class="style5 buttons">
@@ -105,7 +105,7 @@
             <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
               <a href="{{ $button.url }}" class="button {{ $button.class }}" role="button">
                 <svg aria-labelledby="buttons{{ add 1 $lastIndex }}-icon-{{ add 1 $buttonIndex }}-title">
-                  <title id="buttons{{ add 1 $lastIndex }}-icon-{{ add 1 $buttonIndex }}-title">{{ $button.label }}</title>
+                  <title id="product-btn-{{ $lastIndex }}-icon-{{ $buttonIndex }}-title">{{ $button.label }}</title>
                   <use xlink:href="{{ "icons.svg" | relURL }}#{{ $button.icon }}"></use>
                 </svg>
                 <span class="label">{{ $button.label }}</span>

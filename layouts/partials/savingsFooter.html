@@ -4,7 +4,7 @@
     <div class="inner">
       {{ range $index, $product := first $productCount .Page.Params.products }}
         <div>
-          <div id="image{{ add 5 $index }}" class="style2 image" style="opacity: 1;">
+          <div id="savings-image-{{ $index }}" class="style2 image" style="opacity: 1;">
             {{ with resources.Get $product.image }}
               {{ $image := . }}
               {{ $filter := images.UnsharpMask .5 .5 0 }}
@@ -20,7 +20,7 @@
               </a>
             {{ end }}
           </div>
-          <ul id="buttons{{ add 23 $index }}" class="style7 buttons">
+          <ul id="savings-buttons-{{ $index }}" class="style7 buttons">
             <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
               <a href="{{ $product.productLink }}" class="button n01" role="button">{{ $product.buttonText | default "Buy now" }}</a>
             </li>
