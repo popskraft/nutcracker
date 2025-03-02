@@ -125,8 +125,7 @@ testimonials:
 
 # FAQ section
 faq:
-  title: "Nutcracker Nitrile 8mil Gloves"
-  titleColored: "F.A.Q."
+  title: "Nutcracker Pro Questions"
   questions:
     - question: "How do you ensure the professional-grade quality of your products?"
       answer: "Every tool undergoes extensive durability testing in real-world conditions, reflecting our commitment to the 'silent heroes' who rely on equipment day in and day out. This thorough process ensures each product can handle the intense demands of professional maintenance and service."

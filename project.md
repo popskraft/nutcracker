@@ -58,10 +58,6 @@ To create new content:
 - Run `hugo server -D` for development server
 - Access site at `http://localhost:1313`
 - `-D` flag shows draft content
-- **Server Restart Policy**:
-  - Only restart the server when system requirements change or when fixing errors that prevent proper operation
-  - For simple content or style changes, server restart is not necessary (Hugo's live reload will handle these changes)
-  - Avoid unnecessary server restarts to maintain efficient development workflow
 
 ### Design Implementation
 - Maintain exact styling from Carrd template
@@ -119,10 +115,6 @@ The slider functionality has been refactored to dynamically pull images from the
 4. Follow semantic HTML structure
 5. Implement proper meta tags for SEO
 6. Use appropriate caching strategies
-7. Follow server restart policy:
-   - Only restart the Hugo server when necessary (system changes or error fixes)
-   - Rely on Hugo's live reload for content and style changes
-   - Minimize unnecessary server restarts for efficient development
 7. Minimize third-party dependencies
 
 ## Version Control
