@@ -120,7 +120,8 @@ testimonials:
 
 # FAQ section
 faq:
-  title: "Nutcracker Hand Cleaner FAQ"
+  title: "Nutcracker Hand Cleaner"
+  titleColored: "F.A.Q."
   questions:
     - question: "What types of grime can Nutcracker cleaner remove?"
       answer: "Nutcracker effectively removes grease, oil, ink, paint, and other tough industrial contaminants. It also removes tar, glue and so much more."
