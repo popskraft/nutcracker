@@ -26,15 +26,18 @@
   <meta property="og:image" content="{{ $OGcover.Permalink }}">
   {{- end }}
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?display=swap&family=Wix+Madefor+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700"
-    rel="stylesheet" type="text/css">
+    rel="stylesheet" media="print" onload="this.media='all'">
   
   <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 
   {{ with resources.Get "main.css" }}
   {{ $styles := . | minify }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
+  <link rel="preload" href="{{ $styles.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
+  <noscript><link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous"></noscript>
   {{ end }}
 
   <noscript>
@@ -46,7 +49,8 @@
   
   {{ with resources.Get "custom.css" }}
   {{ $customStyles := . | minify }}
-  <link rel="stylesheet" href="{{ $customStyles.RelPermalink }}" integrity="{{ $customStyles.Data.Integrity }}" crossorigin="anonymous">
+  <link rel="preload" href="{{ $customStyles.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="{{ $customStyles.Data.Integrity }}" crossorigin="anonymous">
+  <noscript><link rel="stylesheet" href="{{ $customStyles.RelPermalink }}" integrity="{{ $customStyles.Data.Integrity }}" crossorigin="anonymous"></noscript>
   {{ end }}
 
   {{ with resources.Get "js/head.js" }}
@@ -56,6 +60,11 @@
 
   {{ partial "schema-org" . }}
 
+  <!-- Preload polyfill for browsers that don't support it -->
+  <script>
+    /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+    (function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",true);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+  </script>
 </head>
 
 <body class="is-loading">
