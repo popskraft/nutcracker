@@ -1,4 +1,5 @@
 # Nutcracker Project Documentation
+deployment
 
 ## Project Overview
 This is a Hugo-based website for Nutcracker products, converted from a Carrd template. The site is built with modern web standards and includes responsive design for optimal viewing across different devices. The primary focus is on product presentation and information delivery, with occasional embedded videos from YouTube or MP4 sources when needed.

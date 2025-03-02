@@ -1,13 +1,11 @@
 baseURL: "https://nutcrackerpro.netlify.app/"
 title: Professional-grade tools and products supply
 languageCode: "en"
-theme: "main"
 
 # Site metadata
 params:
   seoTitleAfter: "• Nutcracker Pro"
   description: Professional-grade quality without markup. Streamlined procurement process. American-focused supply chain. Understanding of tradesperson needs. Reliability in stock and delivery.
-  colorScheme: "light only"
   openGraph:
     ogImage: "/images/ogimage.jpg"
     type: "website"
