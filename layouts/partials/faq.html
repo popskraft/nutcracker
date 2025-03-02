@@ -1,0 +1,28 @@
+{{ $faq := .Page.Params.faq }}
+{{ if not $faq }}
+  {{ $faq = .Site.Params.faq }}
+{{ end }}
+{{ if $faq }}
+<div id="faqHeader" class="style16 container default">
+  <div class="wrapper">
+    <div class="inner">
+      <hr id="divider08" class="style3">
+      <h2 id="text57" class="style18" style="opacity: 1; transform: none;">{{ $faq.title | markdownify }} <span style="color: #FFB800">{{ $faq.titleColored }}</span></h2>
+    </div>
+  </div>
+</div>
+<div id="faqBody" class="style12 container default">
+  <div class="wrapper">
+    <div class="inner" style="opacity: 1; transform: none;">
+      {{ range $index, $question := $faq.questions }}
+      <hr class="style9 full screen" style="opacity: 1; transform: none;">
+      <p class="style2 faqTitle">
+        <span style="color: #FFB800">Q.</span> {{ $question.question }}
+      </p>
+      <p class="style6 faqAnswer">{{ $question.answer | markdownify }}</p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
+

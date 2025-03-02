@@ -1,4 +1,4 @@
-baseURL: "https://nutcrackerpro.netlify.app/"
+baseURL: "/"
 title: Professional-grade tools and products supply
 languageCode: "en"
 theme: "main"
@@ -11,30 +11,43 @@ params:
   openGraph:
     ogImage: "/images/ogimage.jpg"
     type: "website"
+  
+  call_to_action:
+    buy_now: "Buy Now"
+    wholesale_inquiry: "Wholesale Inquiry"
+    read_more: "Read more"
 
   companyName: "Nutcracker"
   tagline: "Secret Gears Of Silent Heroes"
   subtitle: "Pro-grade essentials at accessible prices for those who keep America running"
 
   contact:
-    phone: "Your Phone Number"  # Placeholder for actual phone number
-    email: "your.email@example.com"  # Placeholder for actual email
+    phone: "800.260.5051"  # Placeholder for actual phone number
+    email: "info@akdealerservices.com"  # Placeholder for actual email
 
   footer:
     copyright: "All rights reserved."
     terms_text: "By using this site, by sending messages, you agree to the processing of personal data in accordance with the"
     terms_link_text: "Terms & Conditions"
     terms_link: "#terms"
+    
+  # FAQ section
+  faq:
+    title: "Nutcracker Pro"
+    titleColored: "F.A.Q."
+    questions:
+      - question: "How do you ensure the professional-grade quality of your products?"
+        answer: "Every tool undergoes extensive durability testing in real-world conditions, reflecting our commitment to the 'silent heroes' who rely on equipment day in and day out. This thorough process ensures each product can handle the intense demands of professional maintenance and service."
+      - question: "Are your prices truly lower compared to other suppliers?"
+        answer: "Absolutely. Our streamlined operations allow us to offer professional-grade tools at prices consistently 20%-70% below the market average, delivering unmatched savings without sacrificing quality."
+      - question: "Will high-demand items be in stock when I need them?"
+        answer: "Yes. We maintain robust, optimized inventory levels on essential products. By monitoring real-time demand trends, we ensure that your staple items are almost always available."
+      - question: "What makes your procurement process more efficient?"
+        answer: "Our user-friendly online platform streamlines bulk ordering and offers quick reordering options. We also provide transparent bulk-pricing tiers, making it easier to plan your purchasing budget and avoid any downtime."
+      - question: "What do you mean by a 'value-driven partnership'?"
+        answer: "We want to be more than a vendor — we aim to be your long-term partner in maintenance success. With dedicated account management we help you optimize your operations and maximize your budget over the long run."      
 
-  call_to_action:
-    buy_now: "Buy Now"
-    wholesale_inquiry: "Wholesale Inquiry"
-    read_more: "Read more"
 
-  business_propositions:
-    price_point: "$4.99 per box (100 Gloves)"
-    savings_potential: "Save up to $3,500 a year"
-    minimum_order_quantity: "Minimum pack — 20 boxes (1 container)"
 
 menus:
   main:

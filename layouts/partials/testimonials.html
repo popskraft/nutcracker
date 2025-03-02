@@ -1,0 +1,45 @@
+{{ $testimonials := .Page.Params.testimonials }}
+{{ if $testimonials }}
+<div id="testimonialsHeader" class="container default">
+  <div class="wrapper">
+    <div class="inner">
+      <hr id="divider23" class="style5">
+      <h2 id="text05" class="style5" style="opacity: 1; transform: none;">{{ $testimonials.title | default "Customer reviews" }}</h2>
+      <hr id="divider04" class="style3">
+    </div>
+  </div>
+</div>
+
+<div id="testimonials" class="style14 container columns">
+  <div class="wrapper">
+    <div class="inner">
+      {{ $total := len $testimonials.items }}
+      {{ $perColumn := div (add $total 2) 3 }}
+      
+      {{ range $colIndex := (seq 3) }}
+        {{ $start := mul (sub $colIndex 1) $perColumn }}
+        {{ $nextEnd := mul $colIndex $perColumn }}
+        {{ $end := $nextEnd }}
+        {{ if gt $nextEnd $total }}
+          {{ $end = $total }}
+        {{ end }}
+        
+        <div>
+          {{ range $index, $review := (first (sub $end $start) (after $start $testimonials.items)) }}
+            {{ if gt $index 0 }}
+            <hr class="style6 full screen" style="opacity: 1; transform: none;">
+            {{ end }}
+            <div id="image{{ add 10 $index }}" class="style1 image" style="opacity: 1;">
+              <span class="frame"><img src="{{ $review.stars | default "/stars.svg" | relURL }}" alt="Stars"></span>
+            </div>
+            <h2 id="text{{ add 90 $index }}" class="style2">{{ $review.name }}</h2>
+            <p id="text{{ add 85 $index }}" class="style3" style="opacity: 1; transform: none;">{{ $review.text }}</p>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<hr id="divider09" class="style5">
+{{ end }}
