@@ -1,27 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const htmlElement = document.querySelector('html');
-  let lastKnownScrollPosition = 0;
-  let ticking = false;
-
-  function updateScrollClass() {
-    if (lastKnownScrollPosition > 0) {
-      htmlElement.classList.add('scrolled');
-    } else {
-      htmlElement.classList.remove('scrolled');
-    }
-    ticking = false;
+// Use IntersectionObserver for scroll detection
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    document.documentElement.classList.toggle('scrolled', !entry.isIntersecting);
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: '0px'
   }
+);
 
-  document.addEventListener('scroll', () => {
-    lastKnownScrollPosition = window.scrollY;
-
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        updateScrollClass();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }, { passive: true });
-});
+// Create and observe a sentinel element
+const sentinel = document.createElement('div');
+sentinel.style.cssText = 'position: absolute; top: 0; width: 1px; height: 1px;';
+document.body.prepend(sentinel);
+observer.observe(sentinel);
 

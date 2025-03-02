@@ -54,10 +54,6 @@
 </head>
 
 <body>
-  {{ with resources.Get "js/head.js" }}
-  {{ $headScript := . | minify }}
-  <script defer src="{{ $headScript.RelPermalink }}" integrity="{{ $headScript.Data.Integrity }}" crossorigin="anonymous"></script>
-  {{ end }}
   <div id="wrapper">
     <div id="main">
       <div class="inner">
@@ -71,12 +67,23 @@
     </div>
   </div>
   
-  {{ with resources.Get "main.js" }}
-    {{ $script := . | minify }}
-    <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+  {{/* Load all scripts at the end */}}
+  <script>
+    window.addEventListener('load', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+  {{ with resources.Get "js/head.js" }}
+    {{ $headScript := . | minify }}
+    <script async src="{{ $headScript.RelPermalink }}" integrity="{{ $headScript.Data.Integrity }}" crossorigin="anonymous"></script>
   {{ end }}
 
-  {{/*  SLIDER SCRIPT  */}}
+  {{ with resources.Get "main.js" }}
+    {{ $script := . | minify }}
+    <script async src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+  {{ end }}
+
   {{ if eq .Type "product" }}
     {{ if .Params.slider }}
       <script>
@@ -92,14 +99,11 @@
           ]
         };
       </script>
-    {{ end }}
-    {{ with resources.Get "js/coverSlider.js" }}
-      {{ $script := . | minify }}
-      <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+      {{ with resources.Get "js/coverSlider.js" }}
+        {{ $script := . | minify }}
+        <script async src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+      {{ end }}
     {{ end }}
   {{ end }}
-  
-
-  
 </body>
 </html>
