@@ -1,20 +1,27 @@
-const htmlElement = document.querySelector('html');
+document.addEventListener('DOMContentLoaded', () => {
+  const htmlElement = document.querySelector('html');
+  let lastKnownScrollPosition = 0;
+  let ticking = false;
 
-function throttle(func, limit) {
-  let inThrottle;
-  return function () {
-    if (!inThrottle) {
-      func.apply(this, arguments);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+  function updateScrollClass() {
+    if (lastKnownScrollPosition > 0) {
+      htmlElement.classList.add('scrolled');
+    } else {
+      htmlElement.classList.remove('scrolled');
     }
-  };
-}
-
-window.addEventListener('scroll', throttle(() => {
-  if (window.pageYOffset > 0) {
-    htmlElement.classList.add('scrolled');
-  } else {
-    htmlElement.classList.remove('scrolled');
+    ticking = false;
   }
-}, 200)); // Throttle scroll event to once every 200ms
+
+  document.addEventListener('scroll', () => {
+    lastKnownScrollPosition = window.scrollY;
+
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateScrollClass();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+});
+
