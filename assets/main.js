@@ -3804,7 +3804,6 @@
 			};
 	
 	// Container: coverSlider.
-
 	
 	// Initialize "On Visible" animations.
 		onvisible.add('h1.style1, h2.style1, h3.style1, p.style1', { style: 'zoom-in', speed: 750, intensity: 9, threshold: 1, delay: 0, replay: false });

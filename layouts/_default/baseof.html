@@ -49,11 +49,6 @@
   <link rel="stylesheet" href="{{ $customStyles.RelPermalink }}" integrity="{{ $customStyles.Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 
-  {{ with resources.Get "js/head.js" }}
-  {{ $headScript := . | minify }}
-  <script defer src="{{ $headScript.RelPermalink }}" integrity="{{ $headScript.Data.Integrity }}" crossorigin="anonymous"></script>
-  {{ end }}
-
   {{ partial "schema-org" . }}
 
 </head>
@@ -98,11 +93,6 @@
       {{ $script := .  | minify  }}
       <script src="{{ $script.RelPermalink }}"></script>
     {{ end }}
-  {{ end }}
-  
-  {{ with resources.Get "js/inBottom.js" }}
-  {{ $inBottomScript := . | minify }}
-  <script src="{{ $inBottomScript.RelPermalink }}" integrity="{{ $inBottomScript.Data.Integrity }}" crossorigin="anonymous"></script>
   {{ end }}
   
   {{ with resources.Get "js/theme.js" }}
