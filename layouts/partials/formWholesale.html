@@ -1,4 +1,4 @@
-<form action="https://formsubmit.co/popskraft@gmail.com" id="form03" method="POST" class="style1">
+<form netlify name="wholesale" id="form03" method="POST" action="#" class="style1">
   <div class="inner">
     <div class="field">
       <input type="text" name="name" id="form03-name" placeholder="Your Name" maxlength="128" required />
@@ -10,17 +10,14 @@
       <input type="email" name="email" id="form03-email" placeholder="Email" maxlength="128" required />
     </div>
     <div class="field">
-      <input type="tel" pattern="[0-9\-\(\)+ #*]+" name="phone" id="form03-phone" placeholder="Phone Number"
-        maxlength="64" required />
+      <input type="tel" pattern="[0-9\-\(\)+ #*]+" name="phone" id="form03-phone" placeholder="Phone Number" maxlength="64" required />
     </div>
     <div class="field">
-      <textarea data-gramm_editor="false" name="message" id="form03-message" placeholder="How can we help you?"
-        maxlength="16384" required></textarea>
+      <textarea data-gramm_editor="false" name="message" id="form03-message" placeholder="How can we help you?" maxlength="16384" required></textarea>
     </div>
     <div class="actions">
       <button type="submit">Submit</button>
     </div>
   </div>
-  <input type="hidden" name="WholesaleForm"
-    value="The Submission form was submitted from the {{ .Site.Params.companyName }} website at {{ .Permalink }}">
+  <input type="hidden" name="wholesaleform" value="The Submission form was submitted from the {{ .Site.Params.companyName }} website at {{ .Permalink }}">
 </form>
