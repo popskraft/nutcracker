@@ -1,25 +1,26 @@
-<form netlify name="wholesale" id="formWholesale" method="post" action="#" class="style1">
+<form netlify name="wholesale" id="form03" method="post" action="#" class="style1">
   <div class="inner">
     <div class="field">
-      <input type="text" name="name" id="formWholesale-name" placeholder="Your Name" maxlength="128" required />
+      <input type="text" name="name" id="form03-name" placeholder="Your Name" maxlength="128" required />
     </div>
     <div class="field">
-      <input type="text" name="company" id="formWholesale-company" placeholder="Company Name" maxlength="128" required />
+      <input type="text" name="company" id="form03-company" placeholder="Company Name" maxlength="128" required />
     </div>
     <div class="field">
-      <input type="email" name="email" id="formWholesale-email" placeholder="Email" maxlength="128" required />
+      <input type="email" name="email" id="form03-email" placeholder="Email" maxlength="128" required />
     </div>
     <div class="field">
-      <input type="tel" pattern="[0-9\-\(\)+ #*]+" name="phone" id="formWholesale-phone" placeholder="Phone Number"
+      <input type="tel" pattern="[0-9\-\(\)+ #*]+" name="phone" id="form03-phone" placeholder="Phone Number"
         maxlength="64" required />
     </div>
     <div class="field">
-      <textarea data-gramm_editor="false" name="message" id="formWholesale-message" placeholder="Order details"
+      <textarea data-gramm_editor="false" name="message" id="form03-message" placeholder="How can we help you?"
         maxlength="16384" required></textarea>
     </div>
     <div class="actions">
       <button type="submit">Submit</button>
     </div>
   </div>
-  <input type="hidden" name="id" value="formWholesale">
+  <input type="hidden" name="WholesaleForm"
+    value="The Submission form was submitted from the {{ .Site.Params.companyName }} website at {{ .Permalink }}">
 </form>
