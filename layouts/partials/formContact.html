@@ -1,29 +1,23 @@
-<form data-netlify="true" data-netlify-honeypot="bot-field" name="contact" id="formContact" method="post" action="/thank-you/" class="style1">
+<form netlify name="contact" id="form01" method="post" action="#" class="style1">
   <div class="inner">
-    <p class="hidden">
-      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-    </p>
-    <input type="hidden" name="form-name" value="contact">
     <div class="field">
-      <input type="text" name="name" id="formContact-name" placeholder="Your Name" maxlength="128" required />
+      <input type="text" name="name" id="form01-name" placeholder="Your Name" maxlength="128" required />
     </div>
     <div class="field">
-      <input type="text" name="company" id="formContact-company" placeholder="Company Name" maxlength="128" required />
+      <input type="text" name="company" id="form01-company" placeholder="Company Name" maxlength="128" required />
     </div>
     <div class="field">
-      <input type="email" name="email" id="formContact-email" placeholder="Email" maxlength="128" required />
+      <input type="email" name="email" id="form01-email" placeholder="Email" maxlength="128" required />
     </div>
     <div class="field">
-      <input type="tel" pattern="[0-9\-\(\)+ #*]+" name="phone" id="formContact-phone" placeholder="Phone Number"
-        maxlength="64" required />
+      <input type="tel" pattern="[0-9\-\(\)+ #*]+" name="phone" id="form01-phone" placeholder="Phone Number" maxlength="64" required />
     </div>
     <div class="field">
-      <textarea data-gramm_editor="false" name="message" id="formContact-message" placeholder="How can we help you?"
-        maxlength="16384" required></textarea>
+      <textarea data-gramm_editor="false" name="message" id="form01-message" placeholder="How can we help you?" maxlength="16384" required></textarea>
     </div>
     <div class="actions">
       <button type="submit">Submit</button>
     </div>
   </div>
-  <input type="hidden" name="id" value="formContact">
+  <input type="hidden" name="ContactForm" value="The Submission form was submitted from the {{ .Site.Params.companyName }} website at {{ .Permalink }}">
 </form>
