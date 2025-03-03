@@ -42,6 +42,18 @@
             {{ if ne (add $index 1) (sub $total $firstCol) }}<hr class="style1">{{ end }}
           {{ end }}
         </div>
+      {{ else }}
+        {{ with .Site.Params.benefits.defaultColumns }}
+          {{ range $colIndex, $column := . }}
+            <div>
+              {{ range $blockIndex, $block := $column }}
+                <h2 class="style5">{{ $block.title }}</h2>
+                <p class="style3">{{ $block.content | markdownify }}</p>
+                {{ if ne (add $blockIndex 1) (len $column) }}<hr class="style1">{{ end }}
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
       {{ end }}
     </div>
   </div>

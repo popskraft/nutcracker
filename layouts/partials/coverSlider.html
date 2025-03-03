@@ -7,12 +7,18 @@
       <div>
         <div id="coverSliderImageDesctop" class="image full" data-visibility="desktop">
           <a href="{{ .Page.Params.productLink | default "#" }}" class="frame" {{ if .Page.Params.productLink }}target="_blank" rel="noopener noreferrer"{{ end }}>
-            {{ with .Page.Params.coverImage }}
+            {{ $sigma := $.Site.Params.coverImage.filter.unsharpMask.sigma }}
+              {{ $amount := $.Site.Params.coverImage.filter.unsharpMask.amount }}
+              {{ $threshold := $.Site.Params.coverImage.filter.unsharpMask.threshold }}
+              {{ $desktopWidth := $.Site.Params.coverImage.desktopWidth }}
+              {{ $desktopHeight := $.Site.Params.coverImage.desktopHeight }}
+              {{ $format := $.Site.Params.coverImage.format }}
+              {{ with .Page.Params.coverImage }}
               {{ $image := resources.Get . }}
               {{ with $image }}
-                {{ $filter := images.UnsharpMask .5 .5 0 }}
+                {{ $filter := images.UnsharpMask $sigma $amount $threshold }}
                 {{ $processed := $image.Filter $filter }}
-                {{ $final := $processed.Fill "756x756 webp picture Center" }}
+                {{ $final := $processed.Fill (printf "%dx%d %s picture Center" $desktopWidth $desktopHeight $format) }}
                 <img 
                   src="{{ $final.RelPermalink }}" 
                   alt="{{ $.Page.Params.coverImageAlt }}" 
@@ -32,12 +38,17 @@
     <div class="inner">
       <div id="coverSliderImageMobile" class="image" data-visibility="mobile">
         <a href="{{ .Page.Params.productLink | default "#" }}" class="frame" {{ if .Page.Params.productLink }}target="_blank" rel="noopener noreferrer"{{ end }}>
-          {{ with .Page.Params.coverImageMobile | default .Page.Params.coverImage }}
+          {{ $sigma := $.Site.Params.coverImage.filter.unsharpMask.sigma }}
+            {{ $amount := $.Site.Params.coverImage.filter.unsharpMask.amount }}
+            {{ $threshold := $.Site.Params.coverImage.filter.unsharpMask.threshold }}
+            {{ $mobileWidth := $.Site.Params.coverImage.mobileWidth }}
+            {{ $format := $.Site.Params.coverImage.format }}
+            {{ with .Page.Params.coverImageMobile | default .Page.Params.coverImage }}
             {{ $image := resources.Get . }}
             {{ with $image }}
-              {{ $filter := images.UnsharpMask .5 .5 0 }}
+              {{ $filter := images.UnsharpMask $sigma $amount $threshold }}
               {{ $processed := $image.Filter $filter }}
-              {{ $final := $processed.Resize "600x webp picture Center" }}
+              {{ $final := $processed.Resize (printf "%dx %s picture Center" $mobileWidth $format) }}
               <img 
                 src="{{ $final.RelPermalink }}" 
                 alt="{{ $.Page.Params.coverImageAlt }}" 
@@ -55,7 +66,7 @@
   <div class="wrapper">
     <div class="inner">
       <div>
-        <p id="text97" class="style11">{{ .Page.Params.subtitle | default "Secret Gears Of Silent Heroes:" | markdownify }}</p>
+        <p id="text97" class="style11">{{ .Page.Params.subtitle | default .Site.Params.tagline | markdownify }}</p>
         <p id="text41" class="style16">{{ .Page.Params.description | markdownify }}</p>
         {{ partial "CTAGroup.html" . }}
       </div>

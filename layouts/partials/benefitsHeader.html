@@ -5,7 +5,7 @@
         {{ with .Page.Params.benefitsHeaderTitle }}
           {{ . | markdownify }}
         {{ else }}
-          Why choose {{ .Page.Title | markdownify }}
+          {{ .Site.Params.benefits.headerTitle | default (printf "Why choose %s" .Page.Title) | markdownify }}
         {{ end }}
       </h2>
     </div>

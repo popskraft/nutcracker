@@ -60,7 +60,6 @@ productItems:
 
 
 benefitsHeaderTitle: "Why Choose **Nutcracker Pro**?"
-
 benefitsColumns:
   - # Column 1
     - title: "Streamlined Procurement and Cost Control"
@@ -77,6 +76,7 @@ benefitsColumns:
       content: "Each product meets rigorous industry standards, reducing compliance risks and safeguarding your workforce. By choosing Nutcracker Pro, you protect both your employees and your reputation."
     - title: "Bulk Bundles for Long-Term Savings"
       content: "Strategic bulk purchasing packages allow you to stretch your budget further while ensuring consistent stock levels, effectively lowering overall expenses and boosting return on investment."
+
 
 # savings section
 savings:

@@ -5,16 +5,16 @@
       <svg aria-labelledby="buttons21-icon-1-title">
         <title id="buttons21-icon-1-title">Cart (Alt)</title>
         <use xlink:href="/icons.svg#cart-alt"></use>
-      </svg><span class="label">{{ .Page.Params.buttonCartText | default "Buy Gloves" | markdownify }}</span></a>
+      </svg><span class="label">{{ .Page.Params.buttonCartText | default .Site.Params.products.defaultButtonCartText | markdownify }}</span></a>
   </li>
   {{ end }}
   {{ if .Page.Params.wholesaleLink }}
   <li>
-    <a href="{{ .Page.Params.wholesaleLink }}" class="button n02" role="button">
+    <a href="{{ .Page.Params.wholesaleLink | default .Site.Params.products.defaultWholesaleLink }}" class="button n02" role="button">
       <svg aria-labelledby="buttons21-icon-2-title">
         <title id="buttons21-icon-2-title">Form</title>
         <use xlink:href="/icons.svg#form"></use>
-      </svg><span class="label">{{ .Page.Params.buttonWholesaleText | default "Wholesale Inquiry" | markdownify }}</span></a>
+      </svg><span class="label">{{ .Page.Params.buttonWholesaleText | default .Site.Params.wholesaleSection.title | markdownify }}</span></a>
   </li>
   {{ end }}
 </ul>

@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="inner">
       <div>
-        {{ with .Page.Params.savings }}
+        {{ with .Page.Params.savings | default .Site.Params.savings }}
           <h2 id="text119" class="style4" style="opacity: 1; transform: none;">{{ .title }}</h2>
           <h3 id="text120" class="style5" style="opacity: 1; transform: none;">
             <span style="color: #FF5500">{{ .subtitle }}</span>
@@ -11,7 +11,7 @@
         {{ end }}
       </div>
       <div>
-        {{ with .Page.Params.savings }}
+        {{ with .Page.Params.savings | default .Site.Params.savings }}
           <div id="image03" class="style3 image full">
             {{ with resources.Get .image }}
               {{ $image := . }}

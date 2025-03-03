@@ -21,6 +21,11 @@
   fill: #FFE000;
 }
 
+/* Hide Netlify honeypot field */
+.hidden {
+  display: none !important;
+}
+
 .products.container .button.n02:hover {
   background-color: #000000 !important;
 }

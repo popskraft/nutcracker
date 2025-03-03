@@ -5,15 +5,24 @@ languageCode: "en"
 
 # Site metadata
 params:
+  # SEO and metadata settings
   seoTitleAfter: "• Nutcracker Pro"
   description: Professional-grade quality without markup. Streamlined procurement process. American-focused supply chain. Understanding of tradesperson needs. Reliability in stock and delivery.
   ogImage: "/images/ogimage.jpg"
   openGrapeType: "website"
   siteLogo: "logo.svg"
 
+  # Company information
   companyName: "NutcrackerPro"
   tagline: "Secret Gears Of Silent Heroes"
   subtitle: "Pro-grade essentials at accessible prices for those who keep America running"
+  distributorName: "AK Dealer Services"
+  distributorDescription: "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries."
+  
+  # Common page header settings
+  header:
+    defaultTitle: "**Secret Gears** Of Silent Heroes"
+    defaultSubtitle: "Pro-grade essentials at accessible prices for those who keep America running"
 
   contact:
     phone: "800.260.5051"  # Placeholder for actual phone number
@@ -39,7 +48,65 @@ params:
   wholesaleSection:
     title: "Wholesale Inquiry"
     description: "Provide details of your order in any format. Our staff will review it and contact you to finalize your order. We make your work more comfortable."
+    
+  # Common product settings
+  products:
+    defaultButtonCartText: "Buy Now"
+    defaultButtonWholesaleText: "Wholesale Inquiry"
+    defaultWholesaleLink: "#wholesale"
+    
+  # Common savings section
+  savings:
+    title: "Save up to $6,500 a year"
+    subtitle: "Special offer for car dealerships!"
+    description: >-
+      Every dollar matters in a competitive market, and we're thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. As an example, on gloves alone, our team analyzed the numbers and found that by reducing the standard $12 per box price to just $4.99, businesses can save up to $1,850 annually. Depending on usage, total savings range **from $875 to $3,500 per year**.
+    image: "/images/carflag.jpg"
+    imageAlt: "Big Savings"
+    
+  # Common slider images
+  slider:
+    defaultSlides:
+      - image: "/images/covers/cover-1.webp"
+        caption: "Nutcracker Professional Products"
+      - image: "/images/covers/cover-2.webp"
+        caption: "Quality Tools for Professionals"
+      - image: "/images/covers/cover-3.webp"
+        caption: "Professional Grade Solutions"
+        
+  # Cover image processing settings
+  coverImage:
+    desktopWidth: 756
+    desktopHeight: 756
+    mobileWidth: 600
+    format: "webp"
+    filter:
+      unsharpMask:
+        sigma: 0.5
+        amount: 0.5
+        threshold: 0
+        
+  # Common benefits section
+  benefits:
+    headerTitle: "Why Choose **Nutcracker Pro**?"
+    defaultColumns:
+      - # Column 1
+        - title: "Streamlined Procurement and Cost Control"
+          content: "A transparent pricing model, bulk ordering options, and a user-friendly platform help you secure high-quality tools while staying on budget. Fewer administrative hoops mean quicker approvals and smoother purchasing cycles."
+        - title: "Long-Term Value and Partnership"
+          content: "Durable products, bulk-buy advantages, and ongoing consultations form a true partnership, ensuring that your operations run smoothly and your investment pays off over the long haul."
+      - # Column 2
+        - title: "Consistent Availability and Fast Delivery"
+          content: "With a robust logistics network and emergency fulfillment options, Nutcracker Pro ensures that essential items are readily available and rapidly delivered. The result? Minimal disruptions and maximum uptime"
+        - title: "Scalable Solutions for Multi-Site Operations"
+          content: "From small repair shops to multi-facility corporations, Nutcracker Pro's scalable procurement systems adapt as you expand. Centralized oversight ensures consistent quality, pricing, and delivery, regardless of location."
+      - # Column 3
+        - title: "Compliance and Safety Assurance"
+          content: "Each product meets rigorous industry standards, reducing compliance risks and safeguarding your workforce. By choosing Nutcracker Pro, you protect both your employees and your reputation."
+        - title: "Bulk Bundles for Long-Term Savings"
+          content: "Strategic bulk purchasing packages allow you to stretch your budget further while ensuring consistent stock levels, effectively lowering overall expenses and boosting return on investment."
 
+  # Footer settings
   footer:
     copyright: "All rights reserved."
     terms_text: "By using this site, by sending messages, you agree to the processing of personal data in accordance with the"
@@ -63,7 +130,6 @@ params:
         answer: "We want to be more than a vendor — we aim to be your long-term partner in maintenance success. With dedicated account management we help you optimize your operations and maximize your budget over the long run."      
 
 
-
 menus:
   main:
     - identifier: "n01"
@@ -83,9 +149,10 @@ menus:
       url: "#contact"
       weight: 4
     - identifier: "n05"
-      name: "All Products"
-      url: "https://nutcrackerpro.com/"
+      name: "About Us"
+      url: "/about/"
       weight: 5
+
 
 
 ## Settings

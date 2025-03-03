@@ -4,7 +4,7 @@
     <div class="wrapper">
       <div class="inner">
         <h1 id="text76" class="style1">{{ .Params.headerTitle | default "Who We Are" | markdownify }}</h1>
-        <p id="text69" class="description style9">{{ .Params.headerSubtitle | default "Bringing Best-in-Class Solutions to the Automotive and Industrial Workforce." | markdownify }}</p>
+        <p id="text69" class="description style9">{{ .Params.headerSubtitle | default .Site.Params.header.defaultSubtitle | markdownify }}</p>
         <div class="txt">
           {{ .Content }}
         </div>
@@ -50,13 +50,13 @@
                 aria-labelledby="buttons07-icon-1-title">
                 <title id="buttons07-icon-1-title">Email (Alt)</title>
                 <use xlink:href="/icons.svg#email-alt"></use>
-              </svg><span class="label">{{ .Params.buttonCartText | default "Contact us" | markdownify }}</span></a>
+              </svg><span class="label">{{ .Params.buttonCartText | default .Site.Params.contactSection.title | markdownify }}</span></a>
           </li>
           <li>
-            <a href="{{ .Params.wholesaleLink | default "#wholesale" }}" class="button n02" role="button"><svg aria-labelledby="buttons07-icon-2-title">
+            <a href="{{ .Params.wholesaleLink | default .Site.Params.products.defaultWholesaleLink }}" class="button n02" role="button"><svg aria-labelledby="buttons07-icon-2-title">
                 <title id="buttons07-icon-2-title">Form</title>
                 <use xlink:href="/icons.svg#form"></use>
-              </svg><span class="label">{{ .Params.buttonWholesaleText | default "Wholesale Inquiry" | markdownify }}</span></a>
+              </svg><span class="label">{{ .Params.buttonWholesaleText | default .Site.Params.wholesaleSection.title | markdownify }}</span></a>
           </li>
         </ul>
       </div>
