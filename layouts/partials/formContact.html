@@ -1,0 +1,25 @@
+<form netlify name="contact" id="formContact" method="post" action="#" class="style1">
+  <div class="inner">
+    <div class="field">
+      <input type="text" name="name" id="formContact-name" placeholder="Your Name" maxlength="128" required />
+    </div>
+    <div class="field">
+      <input type="text" name="company" id="formContact-company" placeholder="Company Name" maxlength="128" required />
+    </div>
+    <div class="field">
+      <input type="email" name="email" id="formContact-email" placeholder="Email" maxlength="128" required />
+    </div>
+    <div class="field">
+      <input type="tel" pattern="[0-9\-\(\)+ #*]+" name="phone" id="formContact-phone" placeholder="Phone Number"
+        maxlength="64" required />
+    </div>
+    <div class="field">
+      <textarea data-gramm_editor="false" name="message" id="formContact-message" placeholder="How can we help you?"
+        maxlength="16384" required></textarea>
+    </div>
+    <div class="actions">
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+  <input type="hidden" name="id" value="formContact">
+</form>

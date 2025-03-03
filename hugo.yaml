@@ -9,6 +9,7 @@ params:
   description: Professional-grade quality without markup. Streamlined procurement process. American-focused supply chain. Understanding of tradesperson needs. Reliability in stock and delivery.
   ogImage: "/images/ogimage.jpg"
   openGrapeType: "website"
+  siteLogo: "logo.svg"
 
   companyName: "NutcrackerPro"
   tagline: "Secret Gears Of Silent Heroes"
@@ -17,6 +18,27 @@ params:
   contact:
     phone: "800.260.5051"  # Placeholder for actual phone number
     email: "info@akdealerservices.com"  # Placeholder for actual email
+    
+  contactSection:
+    title: "Contact Section"
+    description: "Provide details of your order in any format. Our staff will review it and contact you to finalize your order. We make your work more comfortable."
+    
+  contactBody:
+    title: "How to order?"
+    description: "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries."
+    buttons:
+      - label: "Contact us"
+        url: "#contact"
+        icon: "email-alt"
+        class: "n01"
+      - label: "Wholesale Inquiry"
+        url: "#wholesale"
+        icon: "form"
+        class: "n02"
+        
+  wholesaleSection:
+    title: "Wholesale Inquiry"
+    description: "Provide details of your order in any format. Our staff will review it and contact you to finalize your order. We make your work more comfortable."
 
   footer:
     copyright: "All rights reserved."

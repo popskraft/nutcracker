@@ -1,10 +1,12 @@
-<section id="wholesale-section">
+<section id="contact-section">
   <div id="formContainer" class="style18 container default">
     <div class="wrapper">
       <div class="inner">
-        <p id="text62" class="style13">{{ .Site.Params.wholesaleSection.title | default "Wholesale Inquiry" | markdownify }}</p>
-        <p id="text74" class="style3">{{ .Site.Params.wholesaleSection.description | markdownify }}</p>
-        {{ partial "formWholesale" . }}
+        <p id="text62" class="style13">{{ .Site.Params.contactSection.title | default "Contact Section" }}</p>
+        <p id="text74" class="style3">
+          {{ .Site.Params.contactSection.description | markdownify }}
+        </p>
+        {{ partial "formContact" . }}
         <ul id="buttons16" class="style6 buttons">
           <li>
             <a href="#home" class="button n01" role="button"><svg aria-labelledby="buttons16-icon-1-title">
