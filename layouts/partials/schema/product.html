@@ -1,0 +1,70 @@
+{
+  "@type": "Product",
+  "@id": "{{ .Permalink }}#product",
+  "name": "{{ .Title | plainify }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}",
+  {{ if .Params.slider }}
+  "image": [
+    {{ if .Params.coverImage }}
+    "{{ .Params.coverImage | absURL }}"{{ if .Params.slider }},{{ end }}
+    {{ else if .Params.ogImage }}
+    "{{ .Params.ogImage | absURL }}"{{ if .Params.slider }},{{ end }}
+    {{ end }}
+    {{ range $index, $slide := .Params.slider }}
+    "{{ $slide.image | absURL }}"{{ if ne $index (sub (len $.Params.slider) 1) }},{{ end }}
+    {{ end }}
+  ],
+  {{ else if .Params.coverImage }}
+  "image": "{{ .Params.coverImage | absURL }}",
+  {{ else if .Params.ogImage }}
+  "image": "{{ .Params.ogImage | absURL }}",
+  {{ else }}
+  "image": "{{ .Site.Params.ogImage | absURL }}",
+  {{ end }}
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ .Site.Params.companyName }}"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ with .Params.productLink }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}",
+    "priceCurrency": "USD",
+    {{ if .Params.price }}
+    "price": "{{ .Params.price }}",
+    {{ end }}
+    "priceValidUntil": "{{ now.AddDate 1 0 0 | time.Format "2006-01-02" }}",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@id": "{{ .Site.BaseURL }}#organization"
+    }
+  }
+  {{ if .Params.reviews }}
+  ,
+  "review": [
+    {{ range $index, $review := .Params.reviews }}
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{ $review.rating }}"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "{{ $review.author }}"
+      },
+      "datePublished": "{{ $review.date }}",
+      "description": "{{ $review.text }}"
+    }{{ if ne $index (sub (len $.Params.reviews) 1) }},{{ end }}
+    {{ end }}
+  ]
+  {{ end }}
+  {{ if .Params.aggregateRating }}
+  ,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ .Params.aggregateRating.value }}",
+    "reviewCount": "{{ .Params.aggregateRating.count }}"
+  }
+  {{ end }}
+}

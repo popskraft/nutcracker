@@ -113,22 +113,6 @@ params:
     terms_link_text: "Terms & Conditions"
     terms_link: "#terms"
     
-  # FAQ section
-  faq:
-    title: "Nutcracker Pro"
-    titleColored: "F.A.Q."
-    questions:
-      - question: "How do you ensure the professional-grade quality of your products?"
-        answer: "Every tool undergoes extensive durability testing in real-world conditions, reflecting our commitment to the 'silent heroes' who rely on equipment day in and day out. This thorough process ensures each product can handle the intense demands of professional maintenance and service."
-      - question: "Are your prices truly lower compared to other suppliers?"
-        answer: "Absolutely. Our streamlined operations allow us to offer professional-grade tools at prices consistently 20%-70% below the market average, delivering unmatched savings without sacrificing quality."
-      - question: "Will high-demand items be in stock when I need them?"
-        answer: "Yes. We maintain robust, optimized inventory levels on essential products. By monitoring real-time demand trends, we ensure that your staple items are almost always available."
-      - question: "What makes your procurement process more efficient?"
-        answer: "Our user-friendly online platform streamlines bulk ordering and offers quick reordering options. We also provide transparent bulk-pricing tiers, making it easier to plan your purchasing budget and avoid any downtime."
-      - question: "What do you mean by a 'value-driven partnership'?"
-        answer: "We want to be more than a vendor — we aim to be your long-term partner in maintenance success. With dedicated account management we help you optimize your operations and maximize your budget over the long run."      
-
 
 menus:
   main:

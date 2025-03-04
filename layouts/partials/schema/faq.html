@@ -1,0 +1,18 @@
+{{- if .Page.Params.faq -}}
+{
+  "@type": "FAQPage",
+  "@id": "{{ .Site.BaseURL }}#faqpage",
+  "mainEntity": [
+    {{- range $index, $question := .Page.Params.faq.questions -}}
+    {
+      "@type": "Question",
+      "name": {{ $question.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $question.answer | jsonify }}
+      }
+    }{{- if ne $index (sub (len $.Page.Params.faq.questions) 1) -}},{{- end -}}
+    {{- end -}}
+  ]
+}
+{{- end -}}
