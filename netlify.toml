@@ -27,9 +27,15 @@
 
 [[redirects]]
   from = "https://nutcrackerpro.netlify.app/*"
-  to = "/"
-  status = 200
+  to = "https://nutcrackerpro.com/:splat"
+  status = 301
+  force = true
 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  
 [[headers]]
   for = "/*"
     [headers.values]
