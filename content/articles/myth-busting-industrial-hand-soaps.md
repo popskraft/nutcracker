@@ -3,7 +3,7 @@ date: 2025-03-01
 title: "Hand cleaner for mechanics"
 seoTitle:
 subtitle: "The True Cost of Clean Hands"
-coverImage: "/images/articles/chuvak.jpg"
+coverImage: "/images/articles/maninglass.jpg"
 headerTitle: "Hand cleaner for mechanics"
 headerSubtitle: "The True Cost of Clean Hands"
 description: >

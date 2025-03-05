@@ -26,9 +26,9 @@ slider:
     caption: "Professional Grade Solutions"
 
 # cover image
-coverImage: "images/handcleaner/bottle-120-900w.png"
-coverImageMobile: "images/handcleaner/bottle-120-900w-product.png"
-coverImageAlt: "Disposable Nitrile 8mil Gloves"
+coverImage: "images/handcleaner/product-cover.png"
+coverImageMobile: "images/handcleaner/product-cover-mobile.png"
+coverImageAlt: "Professional Hand Cleaner Nutcracker Pro"
 coverImageTitle: "Order the"
 
 # price section
@@ -41,13 +41,13 @@ priceSection:
 # products section
 products:
   - size: Small
-    image: /images/handcleaner/4-boxes-720w.jpg
+    image: /images/handcleaner/product-1.jpg
     imageAlt: Buy a Small batch of Hand Cleaner
     productLink: https://akdealerservices.com/product/1001255-professional-hand-cleaner
     buttonText:
     priceText: Small batch from 4 containers **$24.99 per container**
   - size: Large batch of 114 containers **$19.99 per container**
-    image: /images/handcleaner/36-boxes-Pallet-720w.jpg
+    image: /images/handcleaner/product-2.jpg
     imageAlt: Buy a Large batch of Hand Cleaner
     productLink: https://akdealerservices.com/product/1001257-professional-hand-cleaner-1-pallet
     buttonText:
@@ -64,8 +64,10 @@ benefitsHeaderTitle: ""
 
 # benefitsContent
 benefitsImages:
-  - image: "/images/handcleaner/despencer-narrow-1000w.png"
-    alt: ""
+  - image: "/images/handcleaner/product-despencer.jpg"
+    alt: "Nutcracker Pro Hand Cleaner Dispenser"
+  - image: "/images/handcleaner/product-details.jpg"
+    alt: "Nutcracker Pro Hand Cleaner variants"
 
 benefitsBlocks:
   - title: "Effective for Car Professionals"
@@ -88,7 +90,7 @@ savings:
   description: >
     This best hand soap for mechanics is distributed exclusively through AK Dealer Services, a trusted distributor known for offering the lowest prices on the market. When you buy through AK Dealer Services, you can be assured of getting the best value as they are committed to helping you achieve huge savings. Choose our product and experience REAL savings that make a REAL difference.
   image: "/images/carflag.jpg"
-  imageAlt: "Big Savings"
+  imageAlt: "Big Savings with Nutcracker Pro Hand Cleaner Dispenser"
 
 # testimonials section
 testimonials:

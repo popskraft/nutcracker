@@ -95,7 +95,7 @@
 
 .txt p strong {
   color: #222222;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .txt h2 {
@@ -105,7 +105,7 @@
   font-family: 'Wix Madefor Display', sans-serif;
   font-size: 1.5em;
   line-height: 1.125;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .txt h3 {
@@ -115,7 +115,7 @@
   font-family: 'Wix Madefor Display', sans-serif;
   font-size: 1.125em;
   line-height: 1.25;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* OL */

@@ -15,7 +15,7 @@
                 {{ $final := $processed.Fill "700x500 webp picture Center" }}
                 <img 
                   src="{{ $final.RelPermalink }}" 
-                  alt="{{ $.Params.coverImageAlt | default "Article Image" }}" 
+                  alt="{{ $.Params.coverImageAlt | default $.Title }}" 
                   loading="eager"
                 >
               {{ end }}

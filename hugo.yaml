@@ -13,7 +13,7 @@ params:
   siteLogo: "logo.svg"
 
   # Company information
-  companyName: "NutcrackerPro"
+  companyName: "Nutcracker Pro"
   tagline: "Secret Gears Of Silent Heroes"
   subtitle: "Pro-grade essentials at accessible prices for those who keep America running"
   distributorName: "AK Dealer Services"
@@ -29,7 +29,7 @@ params:
     email: "info@akdealerservices.com"  # Placeholder for actual email
     
   contactSection:
-    title: "Contact Section"
+    title: "Contact us"
     description: "Provide details of your order in any format. Our staff will review it and contact you to finalize your order. We make your work more comfortable."
     
   contactBody:
@@ -116,23 +116,20 @@ params:
 
 menus:
   main:
-    - identifier: "n01"
-      name: "Hand Cleaner"
+    - name: "Hand Cleaner"
       url: "/hand-cleaner/"
       weight: 1
-    - identifier: "n02"
-      name: "8mil Nitrile Gloves"
+    - name: "8mil Nitrile Gloves"
       url: "/nitrile-gloves/"
       weight: 2
-    - identifier: "n03"
-      name: "About"
+    - name: "About"
       url: "/about/"
       weight: 3
-    - identifier: "n04"
-      name: "Contact"
-      url: "#contact"
-      weight: 4
 
+  footer:
+    - name: "Articles"
+      url: "/articles/"
+      weight: 1
 
 ## Settings
 

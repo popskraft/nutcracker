@@ -26,8 +26,8 @@ slider:
     caption: "Professional Grade Solutions"
 
 # cover image
-coverImage: "images/gloves/coverSliderImageDesctop.png"
-coverImageMobile: "images/gloves/coverSliderImageMobile.png"
+coverImage: "images/gloves/product-cover.png"
+coverImageMobile: "images/gloves/product-cover-mobile.png"
 coverImageAlt: "Disposable Nitrile 8mil Gloves"
 coverImageTitle: "Order the"
 
@@ -41,25 +41,25 @@ priceSection:
 # products section
 products:
   - size: "M"
-    image: "/images/gloves/glove-M.jpg"
+    image: "/images/gloves/product-4.jpg"
     imageAlt: "Buy 8mil Nitrile Disposable Gloves M"
     productLink: "https://akdealerservices.com/product/1000527-mechanic-gloves-medium"
     buttonText: "Buy M size"
     priceText:
   - size: "L"
-    image: "/images/gloves/glove-L.jpg"
+    image: "/images/gloves/product-3.jpg"
     imageAlt: "Buy 8mil Nitrile Disposable Gloves L"
     productLink: "https://akdealerservices.com/product/1000528-mechanic-gloves-large"
     buttonText: "Buy L size"
     priceText:
   - size: "XL"
-    image: "/images/gloves/glove-XL.jpg"
+    image: "/images/gloves/product-2.jpg"
     imageAlt: "Buy 8mil Nitrile Disposable Gloves XL"
     productLink: "https://akdealerservices.com/product/1000529-mechanic-gloves-x-large"
     buttonText: "Buy XL size"
     priceText:
   - size: "XXL"
-    image: "/images/gloves/glove-XXL.jpg"
+    image: "/images/gloves/product-1.jpg"
     imageAlt: "Buy 8mil Nitrile Disposable Gloves XXL"
     productLink: "https://akdealerservices.com/product/1000530-mechanic-gloves-xx-large"
     buttonText: "Buy XXL size"
@@ -80,9 +80,9 @@ benefitsHeaderTitle: ""
 
 # benefitsContent
 benefitsImages:
-  - image: "/images/gloves/glove-2.jpg"
+  - image: "/images/gloves/gallery-2.png"
     alt: ""
-  - image: "/images/gloves/glove-1.jpg"
+  - image: "/images/gloves/product-details.jpg"
     alt: ""
 
 benefitsBlocks:

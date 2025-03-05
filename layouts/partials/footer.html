@@ -28,9 +28,16 @@
         <div>
           <ul id="links02" class="style2 links">
             {{ range .Site.Menus.main }}
-            <li class="{{ .Identifier }}">
+            <li class="{{ .Identifier | default "n01" }}">
               <a href="{{ .URL }}">{{ .Name }}</a>
             </li>
+            {{ end }}
+            {{ with .Site.Menus.footer }}
+            {{ range . }}
+            <li class="{{ .Identifier | default "fn01" }}">
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
             {{ end }}
           </ul>
         </div>

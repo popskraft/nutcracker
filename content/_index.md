@@ -11,8 +11,8 @@ productItems:
     - title: "Professional **Hand Cleaner**"
       url: "/hand-cleaner/"
       mainImage:
-        src: "/images/handcleaner/product-cover-cleaner-3.png"
-        alt: "Professional Hand Cleaner"
+        src: "/images/handcleaner/product-cover-1.png"
+        alt: "Professional Hand Cleaner Nutcracker Pro"
       gallery:
         - src: "/images/handcleaner/gallery-3.png"
         - src: "/images/handcleaner/gallery-4.png"
@@ -36,13 +36,13 @@ productItems:
     - title: "Disposable Nitrile **8mil Gloves**"
       url: "/nitrile-gloves/"
       mainImage:
-        src: "/images/gloves/product-cover-gloves.png"
-        alt: "Nitrile Gloves"
+        src: "/images/gloves/product-cover-1.png"
+        alt: "Nitrile 8mil Gloves Nutcracker Pro"
       gallery:
-        - src: "/images/gloves/gallery-1.png"
-        - src: "/images/gloves/gallery-4.png"
-        - src: "/images/gloves/gallery-5.png"
-        - src: "/images/gloves/gallery-6.png"
+        - src: "/images/gloves/gallery-1.jpg"
+        - src: "/images/gloves/gallery-2.jpg"
+        - src: "/images/gloves/gallery-3.jpg"
+        - src: "/images/gloves/gallery-4.jpg"
       description: "We offer a non-solvent best hand soap for mechanics. Designed to be used routinely for the toughest cleaning without drying out your hands."
       buttons:
         - label: "Buy Nitrile Gloves"

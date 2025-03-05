@@ -39,4 +39,6 @@ buttonWholesaleText: "Wholesale Inquiry"
 
 **Nutcracker Pro** is a B2B supplier of professional-grade maintenance tools, equipment, and supplies, serving the United States market. Our core mission is to provide high-quality tools and supplies at consistently low prices, ensuring that maintenance professionals have access to reliable equipment without straining their budgets.
 
-**AK Dealer Services** proudly serves as an authorized distributor for Nutcracker Pro products. Our mission is to simplify procurement by offering transparent pricing, streamlined delivery, and dedicated customer support. Whether you’re a business owner, facility manager, or technician, we aim to minimize downtime and maximize value.
+## Official Distributor
+
+**[AK Dealer Services](https://akdealerservices.com/)** proudly serves as an authorized distributor for Nutcracker Pro products. Our mission is to simplify procurement by offering transparent pricing, streamlined delivery, and dedicated customer support. Whether you’re a business owner, facility manager, or technician, we aim to minimize downtime and maximize value.
