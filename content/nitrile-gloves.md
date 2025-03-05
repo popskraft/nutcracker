@@ -76,7 +76,7 @@ features:
   - "FDA, 510K, ASTM, CE APPROVED"
 
 # benefitsHeader
-benefitsHeaderTitle: ""
+benefitsHeaderTitle: "Why Choose **8mil Nitrile Disposable Gloves**?"
 
 # benefitsContent
 benefitsImages:

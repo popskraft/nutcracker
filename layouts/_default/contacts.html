@@ -2,7 +2,10 @@
 <div id="articleContentTop" class="style6 container default">
   <div class="wrapper">
     <div class="inner">
-      {{ .Content }}
+      <h1 class="style1">{{ .Title }}</h1>
+      <div class="txt">
+        {{ .Content | safeHTML }}
+      </div>
     </div>
   </div>
 </div>

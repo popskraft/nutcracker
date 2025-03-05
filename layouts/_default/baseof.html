@@ -106,6 +106,8 @@
   {{ $themeScript := . | minify }}
   <script defer src="{{ $themeScript.RelPermalink }}" integrity="{{ $themeScript.Data.Integrity }}" crossorigin="anonymous"></script>
   {{ end }}
+
+  {{ template "_internal/google_analytics.html" . }}
   
 </body>
 </html>

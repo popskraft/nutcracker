@@ -1,4 +1,8 @@
-<form netlify name="contact" id="form01" method="POST" action="#" class="style1">
+<form data-netlify="true" data-netlify-honeypot="bot-field" name="contact" id="form01" method="POST" action="/thank-you/" class="style1">
+  <input type="hidden" name="form-name" value="contact" />
+  <p class="hidden">
+    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+  </p>
   <div class="inner">
     <div class="field">
       <input type="text" name="name" id="form01-name" placeholder="Your Name" maxlength="128" required />
@@ -19,5 +23,5 @@
       <button type="submit">Submit</button>
     </div>
   </div>
-  <input type="hidden" name="ContactForm" value="The Submission form was submitted from the {{ .Site.Params.companyName }} website at {{ .Permalink }}">
+  <input type="hidden" name="ContactForm" value="Contact form submission from {{ .Site.Params.companyName }} website">
 </form>

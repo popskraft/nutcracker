@@ -8,7 +8,7 @@ headerSubtitle: "Pro-grade essentials at accessible prices for those who keep Am
 productItems:
   title: "Our Products"
   items:
-    - title: "Professional **Hand Cleaner**"
+    - title: "Professional **Hand Cleaner**"
       url: "/hand-cleaner/"
       mainImage:
         src: "/images/handcleaner/product-cover-1.png"
@@ -33,7 +33,7 @@ productItems:
           icon: "arrow-right-light"
           class: "n03"
           
-    - title: "Disposable Nitrile **8mil Gloves**"
+    - title: "Disposable Nitrile **8mil Gloves**"
       url: "/nitrile-gloves/"
       mainImage:
         src: "/images/gloves/product-cover-1.png"
@@ -43,7 +43,7 @@ productItems:
         - src: "/images/gloves/gallery-2.jpg"
         - src: "/images/gloves/gallery-3.jpg"
         - src: "/images/gloves/gallery-4.jpg"
-      description: "We offer a non-solvent best hand soap for mechanics. Designed to be used routinely for the toughest cleaning without drying out your hands."
+      description: "Heavy-duty mechanic gloves made of 8-mil nitrile and built exclusively for automotive and industrial use. Meet FDA, ASTM, CE standards."
       buttons:
         - label: "Buy Nitrile Gloves"
           url: "https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil"

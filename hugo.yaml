@@ -173,6 +173,9 @@ outputs:
 minify:
   minifyOutput: true
 
+# Google Analytics
+googleAnalytics: "G-FY8F76ZGS8"  # Replace with your actual Google Analytics ID
+
 server:
   headers:
     - for: "/**"

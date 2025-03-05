@@ -12,6 +12,10 @@
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* Product Button Styles */
 .products.container .button.n02 {
   background-color: #222222;
