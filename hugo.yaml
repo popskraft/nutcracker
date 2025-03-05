@@ -117,26 +117,21 @@ params:
 menus:
   main:
     - identifier: "n01"
-      name: "Benefits"
-      url: "#benefits"
+      name: "Hand Cleaner"
+      url: "/hand-cleaner/"
       weight: 1
     - identifier: "n02"
-      name: "Great savings"
-      url: "#savings"
+      name: "8mil Nitrile Gloves"
+      url: "/nitrile-gloves/"
       weight: 2
     - identifier: "n03"
-      name: "F.A.Q."
-      url: "#faq"
+      name: "About"
+      url: "/about/"
       weight: 3
     - identifier: "n04"
       name: "Contact"
       url: "#contact"
       weight: 4
-    - identifier: "n05"
-      name: "About Us"
-      url: "/about/"
-      weight: 5
-
 
 
 ## Settings

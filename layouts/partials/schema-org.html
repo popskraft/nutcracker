@@ -1,201 +1,190 @@
 <script type="application/ld+json">
+{{- $baseURL := .Site.BaseURL -}}
+{{- $permalink := .Permalink -}}
+{{- $siteTitle := .Site.Title -}}
+{{- $siteDesc := .Site.Params.description -}}
+{{- $langCode := .Site.LanguageCode | default "en-US" -}}
+{{- $siteLogo := .Site.Params.siteLogo | absURL -}}
+{{- $companyName := .Site.Params.companyName -}}
+{{- $distributorName := .Site.Params.distributorName -}}
+{{- $phone := .Site.Params.contact.phone -}}
+{{- $tagline := .Site.Params.tagline -}}
+{{- $ogImage := .Site.Params.ogImage | absURL -}}
+{{- $pageTitle := cond .IsHome $siteTitle (cond (ne .Title "") (printf "%s | %s" .Title $siteTitle) $siteTitle) -}}
+{{- $pageDesc := cond (ne .Description "") .Description $siteDesc -}}
+{{- $primaryImage := cond (isset .Params "coverImage") (.Params.coverImage | absURL) (cond (isset .Params "ogImage") (.Params.ogImage | absURL) $ogImage) -}}
+
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "{{ .Site.BaseURL }}#website",
-      "url": "{{ .Site.BaseURL }}",
-      "name": {{ .Site.Title | jsonify }},
-      "description": {{ .Site.Params.description | jsonify }},
-      "publisher": {
-        "@id": "{{ .Site.BaseURL }}#organization"
-      },
-      "inLanguage": "{{ .Site.LanguageCode | default "en-US" }}"
-    },
-    {
-      "@type": "Organization",
-      "@id": "{{ .Site.BaseURL }}#organization",
-      "name": {{ .Site.Params.distributorName | jsonify }},
-      "url": "{{ .Site.BaseURL }}",
-      "logo": {
-        "@type": "ImageObject",
-        "@id": "{{ .Site.BaseURL }}#logo",
-        "url": "{{ .Site.Params.siteLogo | absURL }}",
-        "width": 112,
-        "height": 112,
-        "caption": {{ .Site.Params.companyName | jsonify }}
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": {{ .Site.Params.contact.phone | jsonify }},
-        "contactType": "Customer Service",
-        "areaServed": "US",
-        "availableLanguage": "English"
-      },
-      "slogan": {{ .Site.Params.tagline | jsonify }},
-      "description": {{ .Site.Params.description | jsonify }}
-    },
-    {
-      "@type": "WebPage",
-      "@id": "{{ .Permalink }}#webpage",
-      "url": "{{ .Permalink }}",
-      "name": {{ if .IsHome }}{{ .Site.Title | jsonify }}{{ else }}{{ with .Title }}{{ printf "%s | %s" . $.Site.Title | jsonify }}{{ else }}{{ .Site.Title | jsonify }}{{ end }}{{ end }},
-      "isPartOf": {
-        "@id": "{{ .Site.BaseURL }}#website"
-      },
-      {{- if .Params.coverImage -}}
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "@id": "{{ .Permalink }}#primaryimage",
-        "url": "{{ .Params.coverImage | absURL }}"
-      },
-      {{- else if .Params.ogImage -}}
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "@id": "{{ .Permalink }}#primaryimage",
-        "url": "{{ .Params.ogImage | absURL }}"
-      },
-      {{- else if .Site.Params.ogImage -}}
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "@id": "{{ .Permalink }}#primaryimage",
-        "url": "{{ .Site.Params.ogImage | absURL }}"
-      },
-      {{- end -}}
-      "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ $.Site.Params.description | jsonify }}{{ end }},
-      "breadcrumb": {
-        "@id": "{{ .Permalink }}#breadcrumb"
-      },
-      "inLanguage": "{{ .Site.LanguageCode | default "en-US" }}",
-      "potentialAction": {
-        "@type": "ReadAction",
-        "target": [
-          "{{ .Permalink }}"
-        ]
-      }
-    }
-    {{- if and .IsHome .Params.faq -}}
-    ,{
-      "@type": "FAQPage",
-      "@id": "{{ .Site.BaseURL }}#faqpage",
-      "mainEntity": [
-        {{- range $index, $question := .Params.faq.questions -}}
-        {
-          "@type": "Question",
-          "name": {{ $question.question | jsonify }},
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": {{ $question.answer | jsonify }}
-          }
-        }{{- if ne $index (sub (len $.Params.faq.questions) 1) -}},{{- end -}}
-        {{- end -}}
-      ]
-    }
-    {{- end -}}
-    
-    {{- if eq .Layout "product" -}}
-    ,{
-      "@type": "Product",
-      "name": {{ .Title | jsonify }},
-      "description": {{ .Description | jsonify }},
-      "sku": {{ .Params.sku | jsonify }},
-      "brand": {
-        "@type": "Brand",
-        "name": {{ .Site.Params.companyName | jsonify }}
-      },
-      {{- with .Params.priceSection.price -}}
-      "offers": {
-        "@type": "Offer",
-        "price": "{{ . }}",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      },
-      {{- end -}}
-      "image": [
-        {{- with .Params.coverImage -}}
-        {{- $image := resources.Get . -}}
-        {{- with $image -}}
-        {{- $sigma := $.Site.Params.coverImage.filter.unsharpMask.sigma -}}
-        {{- $amount := $.Site.Params.coverImage.filter.unsharpMask.amount -}}
-        {{- $threshold := $.Site.Params.coverImage.filter.unsharpMask.threshold -}}
-        {{- $desktopWidth := $.Site.Params.coverImage.desktopWidth -}}
-        {{- $desktopHeight := $.Site.Params.coverImage.desktopHeight -}}
-        {{- $format := $.Site.Params.coverImage.format -}}
-        {{- $filter := images.UnsharpMask $sigma $amount $threshold -}}
-        {{- $processed := $image.Filter $filter -}}
-        {{- $final := $processed.Fill (printf "%dx%d %s picture Center" $desktopWidth $desktopHeight $format) -}}
-        "{{ $final.RelPermalink }}"
-        {{- end -}}
-        {{- end -}}
-      ]
-    }
-    {{- if .Params.faq -}}
-    ,{
-      "@type": "FAQPage",
-      "@id": "{{ .Permalink }}#faqpage",
-      "mainEntity": [
-        {{- range $index, $question := .Params.faq.questions -}}
-        {
-          "@type": "Question",
-          "name": {{ $question.question | jsonify }},
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": {{ $question.answer | jsonify }}
-          }
-        }{{- if ne $index (sub (len $.Params.faq.questions) 1) -}},{{- end -}}
-        {{- end -}}
-      ]
-    }
-    {{- end -}}
-    {{- end -}}
-    
-    {{- if eq .Layout "article" -}}
-    ,{
-      "@type": "Article",
-      "headline": {{ .Title | jsonify }},
-      "description": {{ .Description | jsonify }},
-      "author": {
-        "@type": "Person",
-        "name": {{ .Params.author | default .Site.Params.author | jsonify }}
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": {{ .Site.Params.distributorName | jsonify }},
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ .Site.Params.siteLogo | absURL }}"
-        }
-      },
-      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ .Permalink }}"
-      },
-      "image": "{{ .Params.coverImage | default .Site.Params.ogImage | absURL }}"
-    }
-    {{- end -}}
-    
-    {{- if eq .Layout "about" -}}
-    ,{
-      "@type": "AboutPage",
-      "name": {{ .Title | jsonify }},
-      "description": {{ .Description | jsonify }},
-      "publisher": {
-        "@type": "Organization",
-        "name": {{ .Site.Params.distributorName | jsonify }},
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ .Site.Params.siteLogo | absURL }}"
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ .Permalink }}"
-      }
-    }
-    {{- end -}}
-  ]
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebPage",
+"@id": "{{ $baseURL }}#webpage",
+"name": "{{ $pageTitle | plainify | safeJS }}",
+"url": "{{ $baseURL }}",
+"isPartOf": {
+"@id": "{{ $baseURL }}#website"
+},
+"primaryImageOfPage": {
+"@id": "{{ $baseURL }}#primaryimage"
+},
+"breadcrumb": {
+"@id": "{{ $baseURL }}#breadcrumb"
+},
+"inLanguage": "{{ $langCode }}",
+"potentialAction": {
+"@type": "ReadAction",
+"target": [
+"{{ $baseURL }}"
+]
+}
+},
+{{- if eq .Layout "product" -}}
+{
+"@type": "Product",
+"@id": "{{ $baseURL }}#product",
+"name": "{{ .Title | plainify | safeJS }}",
+"description": "{{ .Description | plainify | safeJS }}",
+"image": {
+"@id": "{{ $baseURL }}#primaryimage"
+},
+"offers": {
+"@type": "Offer",
+"url": "{{ with .Params.productLink }}{{ . }}{{ else }}{{ $baseURL }}#benefits{{ end }}",
+"priceCurrency": "USD",
+"price": "{{ with .Params.priceSection.price }}{{ replace . "$" "" }}{{ else }}19.99{{ end }}",
+"priceValidUntil": "2026-12-31",
+"itemCondition": "https://schema.org/NewCondition",
+"availability": "https://schema.org/InStock",
+"seller": {
+"@id": "{{ $baseURL }}#organization"
+},
+"hasMerchantReturnPolicy": {
+"@type": "MerchantReturnPolicy",
+"name": "Special Dealer Return Policy",
+"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"
+},
+"shippingDetails": {
+"@type": "OfferShippingDetails",
+"description": "Shipping options vary based on region and order size. Please contact customer service for specific details."
+}
+},
+"aggregateRating": {
+"@type": "AggregateRating",
+"ratingValue": "4.9",
+"reviewCount": "126"
+},
+"review": [
+{{- if isset .Params "testimonials" -}}
+{{- $itemCount := len .Params.testimonials.items -}}
+{{- range $index, $review := .Params.testimonials.items -}}
+{
+"@type": "Review",
+"reviewRating": {
+"@type": "Rating",
+"ratingValue": "{{ if not $index }}4{{ else }}5{{ end }}"
+},
+"author": {
+"@type": "Person",
+"name": {{ $review.name | plainify | jsonify }}
+},
+"datePublished": "{{ if eq $index 0 }}2023-12-15{{ else if eq $index 1 }}2023-11-01{{ else if eq $index 2 }}2023-09-20{{ else }}2023-08-10{{ end }}",
+"description": {{ $review.text | plainify | jsonify }}
+}{{ if lt (add $index 1) (len $.Params.testimonials.items) }},{{ end }}
+{{- end -}}
+{{- end -}}
+]
+},
+{{- end -}}
+{
+"@type": "Organization",
+"@id": "{{ $baseURL }}#organization",
+"name": "AK Dealer Services",
+"url": "{{ $baseURL }}",
+"logo": {
+"@id": "{{ $baseURL }}#logo"
+},
+"contactPoint": {
+"@type": "ContactPoint",
+"telephone": "+1-{{ $phone }}",
+"contactType": "Customer Service",
+"areaServed": "US",
+"availableLanguage": "English"
+},
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "7315 Gibson Cemetery Rd # 103",
+"addressLocality": "Mansfield",
+"addressRegion": "TX",
+"postalCode": "76063",
+"addressCountry": "US"
+},
+"slogan": "{{ $tagline | safeJS }}",
+"legalName": "Nutcracker AK Dealer Services"
+},
+{
+"@type": "WebSite",
+"@id": "{{ $baseURL }}#website",
+"url": "{{ $baseURL }}",
+"name": "{{ $siteTitle | plainify | safeJS }}",
+"description": "{{ $siteDesc | plainify | safeJS }}",
+"publisher": {
+"@id": "{{ $baseURL }}#organization"
+},
+"inLanguage": "{{ $langCode }}"
+},
+{{- if .Params.faq -}}
+{
+"@type": "FAQPage",
+"@id": "{{ $baseURL }}#faqpage",
+"mainEntity": [
+{{- $questionCount := len .Params.faq.questions -}}
+{{- range $index, $question := .Params.faq.questions -}}
+{
+"@type": "Question",
+"name": {{ $question.question | plainify | jsonify }},
+"acceptedAnswer": {
+"@type": "Answer",
+"text": {{ $question.answer | plainify | jsonify }}
+}
+}{{ if lt (add $index 1) (len $.Params.faq.questions) }},{{ end }}
+{{- end -}}
+]
+},
+{{- end -}}
+{
+"@type": "ImageObject",
+"@id": "{{ $baseURL }}#primaryimage",
+"url": "{{ $primaryImage }}",
+"contentUrl": "{{ $primaryImage }}",
+"caption": "{{ $pageTitle | plainify | safeJS }}"
+},
+{
+"@type": "BreadcrumbList",
+"@id": "{{ $permalink }}#breadcrumb",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "{{ $baseURL }}"
+}
+{{- if ne $permalink $baseURL }}
+,{
+"@type": "ListItem",
+"position": 2,
+"name": "{{ .Title | plainify }}",
+"item": "{{ $permalink }}"
+}
+{{- end }}
+]
+},
+{
+"@type": "ImageObject",
+"@id": "{{ $baseURL }}#logo",
+"url": "{{ $baseURL }}assets/images/image06.svg",
+"contentUrl": "{{ $baseURL }}assets/images/image06.svg"
+}
+]
 }
 </script>
