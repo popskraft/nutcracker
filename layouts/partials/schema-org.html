@@ -29,7 +29,7 @@
 "@id": "{{ $baseURL }}#primaryimage"
 },
 "breadcrumb": {
-"@id": "{{ $baseURL }}#breadcrumb"
+"@id": "{{ $permalink }}#breadcrumb"
 },
 "inLanguage": "{{ $langCode }}",
 "potentialAction": {
@@ -182,8 +182,8 @@
 {
 "@type": "ImageObject",
 "@id": "{{ $baseURL }}#logo",
-"url": "{{ $baseURL }}assets/images/image06.svg",
-"contentUrl": "{{ $baseURL }}assets/images/image06.svg"
+"url": "{{ $siteLogo }}",
+"contentUrl": "{{ $siteLogo }}"
 }
 ]
 }
