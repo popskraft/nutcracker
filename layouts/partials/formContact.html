@@ -17,11 +17,19 @@
       <input type="tel" pattern="[0-9\-\(\)+ #*]+" name="phone" id="form01-phone" placeholder="Phone Number" maxlength="64" required />
     </div>
     <div class="field">
-      <textarea data-gramm_editor="false" name="message" id="form01-message" placeholder="How can we help you?" maxlength="16384" required></textarea>
+      <input type="hidden" name="predefined_message" value="Contact form submission - " />
+      <textarea data-gramm_editor="false" id="form01-message" placeholder="How can we help you?" maxlength="16384" required></textarea>
     </div>
     <div class="actions">
       <button type="submit">Submit</button>
     </div>
   </div>
-  <input type="hidden" name="ContactForm" value="Contact form submission from {{ .Site.Params.companyName }} website">
+  <input type="hidden" name="form_metadata" value="Contact form submission from {{ .Site.Params.companyName }} website">
+  <input type="hidden" name="message" id="form01-message-hidden">
+  <script>
+    document.getElementById('form01').addEventListener('submit', function(e) {
+      var userMessage = document.getElementById('form01-message').value;
+      document.getElementById('form01-message-hidden').value = 'Contact form submission - ' + userMessage;
+    });
+  </script>
 </form>
