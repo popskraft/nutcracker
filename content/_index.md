@@ -3,15 +3,7 @@ title: Professional-grade tools and products supply
 date: 2025-02-10T22:05:14+04:00
 description:
 headerTitle: "**Secret Gears** Of Silent Heroes"
-headerSubtitle: "
-  Nutcracker Pro is a B2B supplier of professional-grade products, serving the United States market. Our core mission is to provide high-quality  supplies at consistently low prices.
-  
-  ### There is two way you can purchase it:
-
-  - Retail customer can purchase it through authorized distributor AK Dealer Services
-  
-  - Wholesaler or  Bulk Purchaser can be purchase it by contacting us directly"
-
+headerSubtitle: "Pro-grade essentials at accessible prices for those who keep America running"
 
 productItems:
   title: "Our Products"
