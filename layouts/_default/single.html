@@ -1,44 +1,45 @@
 {{ define "main" }}
 
+{{ if .Params.coverImage }}
 <div id="articleHeader" class="style11 container columns">
   <div class="wrapper">
     <div class="inner">
-
       <div>
         <div id="image09" class="style2 image">
           <a href="#home" class="frame">
-            {{ with .Params.coverImage }}
-              {{ $image := resources.Get . }}
-              {{ with $image }}
-                {{ $filter := images.UnsharpMask .5 .5 0 }}
-                {{ $processed := $image.Filter $filter }}
-                {{ $final := $processed.Fill "700x500 webp picture Center" }}
-                <img 
-                  src="{{ $final.RelPermalink }}" 
-                  alt="{{ $.Params.coverImageAlt | default $.Title }}" 
-                  loading="eager"
-                >
-              {{ end }}
+            {{ $image := resources.Get .Params.coverImage }}
+            {{ with $image }}
+              {{ $filter := images.UnsharpMask .5 .5 0 }}
+              {{ $processed := $image.Filter $filter }}
+              {{ $final := $processed.Fill "700x500 webp picture Center" }}
+              <img 
+                src="{{ $final.RelPermalink }}" 
+                alt="{{ $.Params.coverImageAlt | default $.Title }}" 
+                loading="eager"
+              >
             {{ end }}
           </a>
         </div>
       </div>
       
       <div>
-        <h1 id="text84" class="style1">{{ .Title }}</h1>
+        <h1 class="style1">{{ .Title | safeHTML }}</h1>
         <hr id="divider06" class="style1">
         {{ with .Params.subtitle }}
-        <h2 id="text85" class="style5">{{ . }}</h2>
+        <h2 class="style5">{{ . }}</h2>
         {{ end }}
       </div>
-
     </div>
   </div>
 </div>
+{{ end }}
 
 <div id="articleContentTop" class="style6 container default">
   <div class="wrapper">
     <div class="inner">
+      {{ if not .Params.coverImage }}
+      <h1 id="pageHeadline" class="style1">{{ .Title | safeHTML }}</h1>
+      {{ end }}
       
       {{ with .Params.description }}
       <p id="text01" class="style8">{{ . | markdownify }}</p>
@@ -48,7 +49,6 @@
       <div class="txt">
       {{ .Content }}
       </div>
-      
     </div>
   </div>
 </div>
