@@ -29,11 +29,11 @@
             {{ if gt $index 0 }}
             <hr class="style6 full screen" style="opacity: 1; transform: none;">
             {{ end }}
-            <div id="testimonial-stars-{{ $index }}" class="style1 image" style="opacity: 1;">
+            <div class="style1 image" style="opacity: 1;">
               <span class="frame"><img src="{{ "/stars.svg" | relURL }}" alt="Stars"></span>
             </div>
-            <h2 id="testimonial-name-{{ $index }}" class="style2">{{ $review.name }}</h2>
-            <p id="testimonial-text-{{ $index }}" class="style3" style="opacity: 1; transform: none;">{{ $review.text }}</p>
+            <h2 class="style2">{{ $review.name }}</h2>
+            <p class="style3" style="opacity: 1; transform: none;">{{ $review.text }}</p>
           {{ end }}
         </div>
       {{ end }}
