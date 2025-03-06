@@ -32,14 +32,14 @@
           {{ range $index, $block := first $firstCol $blocks }}
             <h2 class="style5">{{ $block.title }}</h2>
             <p class="style3">{{ $block.text | markdownify }}</p>
-            {{ if ne (add $index 1) $firstCol }}<hr class="style1">{{ end }}
+            <hr class="style1">
           {{ end }}
         </div>
         <div>
           {{ range $index, $block := after $firstCol $blocks }}
             <h2 class="style5">{{ $block.title }}</h2>
             <p class="style3">{{ $block.text | markdownify }}</p>
-            {{ if ne (add $index 1) (sub $total $firstCol) }}<hr class="style1">{{ end }}
+            <hr class="style1">
           {{ end }}
         </div>
       {{ else }}
@@ -49,7 +49,7 @@
               {{ range $blockIndex, $block := $column }}
                 <h2 class="style5">{{ $block.title }}</h2>
                 <p class="style3">{{ $block.content | markdownify }}</p>
-                {{ if ne (add $blockIndex 1) (len $column) }}<hr class="style1">{{ end }}
+                <hr class="style1">
               {{ end }}
             </div>
           {{ end }}
