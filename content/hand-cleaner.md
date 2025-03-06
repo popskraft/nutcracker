@@ -41,13 +41,13 @@ priceSection:
 # products section
 products:
   - size: Small
-    image: /images/handcleaner/product-1.jpg
+    image: /images/handcleaner/product-2.jpg
     imageAlt: Buy a Small batch of Hand Cleaner
     productLink: https://akdealerservices.com/product/1001255-professional-hand-cleaner
     buttonText:
     priceText: Small batch from 4 containers **$24.99 per container**
   - size: Large batch of 114 containers **$19.99 per container**
-    image: /images/handcleaner/product-2.jpg
+    image: /images/handcleaner/product-1.jpg
     imageAlt: Buy a Large batch of Hand Cleaner
     productLink: https://akdealerservices.com/product/1001257-professional-hand-cleaner-1-pallet
     buttonText:
