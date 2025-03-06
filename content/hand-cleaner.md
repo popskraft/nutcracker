@@ -7,7 +7,7 @@ date: 2025-02-22
 title: Professional <br> **Hand Cleaner**
 subtitle: "Secret Gears Of Silent Heroes:"
 description: >
-  We offer a non-solvent best hand soap for mechanics. Designed to be used routinely for the toughest cleaning without drying out your hands. Multiple emollients and conditioners actually moisturize chapped skin with repeated use.
+  We offer a non-solvent best hand soap for service professionals. Designed to be used routinely for the toughest cleaning without drying out your hands. Multiple emollients and conditioners actually moisturize chapped skin with repeated use.
 ogImage: "/images/handcleaner/ogimage.jpg"
 
 # CTA buttons
@@ -70,7 +70,7 @@ benefitsImages:
     alt: "Nutcracker Pro Hand Cleaner variants"
 
 benefitsBlocks:
-  - title: "Effective for Car Professionals"
+  - title: "Effective for Service Professionals"
     text: "Nutcracker hand cleaner for mechanics are specially formulated for car environments. Its formula takes on the toughest automotive grime, making it perfect for mechanics and dealership workshops."
   - title: "Skin-Conditioning Formula"
     text: "Nutcracker's cleaner emollient-rich formula conditions hands so they remain healthy and moisturized even with frequent use. It's perfect for those mechanics who have to wash their hands all day."
