@@ -3,8 +3,8 @@
     <div class="inner">
       <div>
         {{ with .Page.Params.savings | default .Site.Params.savings }}
-          <h2 id="text119" class="style4" style="opacity: 1; transform: none;">{{ .title }}</h2>
-          <h3 id="text120" class="style5" style="opacity: 1; transform: none;">
+          <h2 id="text119" class="style4">{{ .title }}</h2>
+          <h3 id="text120" class="style5">
             <span style="color: #FF5500">{{ .subtitle }}</span>
           </h3>
           <p id="text121" class="style6">{{ .description | markdownify }}</p>

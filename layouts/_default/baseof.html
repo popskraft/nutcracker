@@ -34,6 +34,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Wix+Madefor+Display:wght@400..800&display=swap"
     rel="stylesheet">
+    
+  {{- if .Site.Params.prefetch.enabled -}}
+  <!-- Prefetch important pages for faster navigation -->
+  {{- range .Site.Params.prefetch.pages -}}
+  <link rel="prefetch" href="{{ . }}">
+  <link rel="prerender" href="{{ . }}">
+  {{- end -}}
+  {{- end -}}
   
   <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
@@ -67,8 +75,8 @@
         <section id="home-section">
           {{ block "main" . }}{{ end }}
         </section>
-        {{ partial "wholesale-section" . }}
-        {{ partial "contact-section" . }}
+        {{/*  {{ partial "wholesale-section" . }}  */}}
+        {{/*  {{ partial "contact-section" . }}  */}}
         {{ partial "footer" . }}
       </div>
     </div>

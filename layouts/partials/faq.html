@@ -7,15 +7,15 @@
   <div class="wrapper">
     <div class="inner">
       <hr id="divider08" class="style3">
-      <h2 id="text57" class="style18" style="opacity: 1; transform: none;">{{ $faq.title | markdownify }} <span style="color: #FFB800">{{ $faq.titleColored }}</span></h2>
+      <h2 id="text57" class="style18">{{ $faq.title | markdownify }} <span style="color: #FFB800">{{ $faq.titleColored }}</span></h2>
     </div>
   </div>
 </div>
 <div id="faqBody" class="style12 container default">
   <div class="wrapper">
-    <div class="inner" style="opacity: 1; transform: none;">
+    <div class="inner">
       {{ range $index, $question := $faq.questions }}
-      <hr class="style9 full screen" style="opacity: 1; transform: none;">
+      <hr class="style9 full screen">
       <p class="style2 faqTitle">
         <span style="color: #FFB800">Q.</span> {{ $question.question }}
       </p>

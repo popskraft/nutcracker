@@ -2,9 +2,13 @@
 <div id="articleContentTop" class="style6 container default">
   <div class="wrapper">
     <div class="inner">
-      <h1 class="style1">{{ .Title }}</h1>
+      <h1 class="style1">{{ .Title | markdownify }}</h1>
+      {{ with .Params.description }}
+      <p class="style6">{{ . | markdownify }}</p>
+      {{ end }}
+     
       <div class="txt">
-        {{ .Content | safeHTML }}
+        {{ .Content | markdownify }}
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@
     <div class="inner">
       {{ range $index, $product := .Page.Params.products }}
         <div>
-          <div id="savings4-image-{{ $index }}" class="style2 image" style="opacity: 1;">
+          <div id="savings4-image-{{ $index }}" class="style2 image">
             {{ with resources.Get $product.image }}
               {{ $image := . }}
               {{ $filter := images.UnsharpMask .5 .5 0 }}
@@ -20,14 +20,14 @@
             {{ end }}
           </div>
           {{ with $product.priceText }}
-          <p id="savings4-text-{{ $index }}" class="style3" style="opacity: 1; transform: none;">{{ . | markdownify }}</p>
+          <p id="savings4-text-{{ $index }}" class="style3 product-description">{{ . | markdownify }}</p>
           {{ end }}
           <ul id="savings4-buttons-{{ $index }}" class="style7 buttons">
-            <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
+            <li>
               <a href="{{ $product.productLink }}" class="button n01" role="button">{{ $product.buttonText | default "Buy now" }}</a>
             </li>
-            <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
-              <a href="#wholesale" class="button n02" role="button">Wholesale</a>
+            <li>
+              <a href="/wholesale" class="button n02" role="button">Wholesale</a>
             </li>
           </ul>
         </div>

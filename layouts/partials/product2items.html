@@ -13,10 +13,10 @@
           {{ range $itemIndex := seq $startIndex (add $startIndex 1) }}
             {{ $item := index $items $itemIndex }}
             <div>
-              <p id="product-title-{{ $itemIndex }}" class="style18" style="opacity: 1; transform: none;">
+              <p id="product-title-{{ $itemIndex }}" class="style18">
                 <a href="{{ $item.url }}">{{ $item.title | markdownify }}</a>
               </p>
-              <div id="product-image-{{ $itemIndex }}" class="style4 image full" style="opacity: 1;">
+              <div id="product-image-{{ $itemIndex }}" class="style4 image full">
                 <a href="{{ $item.url }}" class="frame">
                   {{ $mainImage := resources.Get $item.mainImage.src }}
                   {{ $processedImage := $mainImage.Resize "839x webp picture Center" }}
@@ -27,7 +27,7 @@
                 <div class="inner">
                   <ul>
                     {{ range $galleryIndex, $galleryItem := $item.gallery }}
-                    <li style="opacity: 1;">
+                    <li>
                       <a href="{{ $item.url }}" class="thumbnail n{{ printf "%02d" (add 1 $galleryIndex) }}">
                         <span class="frame">
                           {{ $galleryImage := resources.Get (strings.TrimPrefix "/" $galleryItem.src) }}
@@ -40,12 +40,12 @@
                   </ul>
                 </div>
               </div>
-              <p id="product-desc-{{ $itemIndex }}" class="style3" style="opacity: 1; transform: none;">
-                {{ $item.description }}
+              <p id="product-desc-{{ $itemIndex }}" class="product-description style3">
+                {{ $item.description | markdownify }}
               </p>
               <ul class="style5 buttons">
                 {{ range $buttonIndex, $button := $item.buttons }}
-                <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
+                <li>
                   <a href="{{ $button.url }}" class="button {{ $button.class }}" role="button">
                     <svg aria-labelledby="buttons{{ add 1 $itemIndex }}-icon-{{ add 1 $buttonIndex }}-title">
                       <title id="product-btn-{{ $itemIndex }}-icon-{{ $buttonIndex }}-title">{{ $button.label }}</title>
@@ -70,10 +70,10 @@
     <div id="product2Cols-last" class="products container default">
       <div class="wrapper">
         <div class="inner">
-          <p id="product-title-{{ $lastIndex }}" class="style18" style="opacity: 1; transform: none;">
+          <p id="product-title-{{ $lastIndex }}" class="style18">
             <a href="{{ $lastItem.url }}">{{ $lastItem.title | markdownify }}</a>
           </p>
-          <div id="product-image-{{ $lastIndex }}" class="style4 image full" style="opacity: 1;">
+          <div id="product-image-{{ $lastIndex }}" class="style4 image full">
             <a href="{{ $lastItem.url }}" class="frame">
               {{ $mainImage := resources.Get $lastItem.mainImage.src }}
               {{ $processedImage := $mainImage.Resize "900x webp picture Center" }}
@@ -84,7 +84,7 @@
             <div class="inner">
               <ul>
                 {{ range $galleryIndex, $galleryItem := $lastItem.gallery }}
-                <li style="opacity: 1;">
+                <li>
                   <a href="{{ $lastItem.url }}" class="thumbnail n{{ printf "%02d" (add 1 $galleryIndex) }}">
                     <span class="frame">
                       {{ $galleryImage := resources.Get (strings.TrimPrefix "/" $galleryItem.src) }}
@@ -97,12 +97,12 @@
               </ul>
             </div>
           </div>
-          <p id="product-desc-{{ $lastIndex }}" class="style3" style="opacity: 1; transform: none;">
+          <p id="product-desc-{{ $lastIndex }}" class="product-description style3">
             {{ $lastItem.description }}
           </p>
           <ul class="style5 buttons">
             {{ range $buttonIndex, $button := $lastItem.buttons }}
-            <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
+            <li>
               <a href="{{ $button.url }}" class="button {{ $button.class }}" role="button">
                 <svg aria-labelledby="buttons{{ add 1 $lastIndex }}-icon-{{ add 1 $buttonIndex }}-title">
                   <title id="product-btn-{{ $lastIndex }}-icon-{{ $buttonIndex }}-title">{{ $button.label }}</title>

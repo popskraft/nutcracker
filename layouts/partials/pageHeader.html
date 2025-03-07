@@ -1,11 +1,23 @@
 <div id="pageHeader" class="container columns">
   <div class="wrapper">
     <div class="inner">
+      
       <div>
         <h1 class="style4">{{ .Params.headerTitle | default .Site.Params.header.defaultTitle | markdownify }}</h1>
       </div>
-      <div class="txt">
-        <p class="style6">{{ .Params.headerSubtitle | default .Site.Params.header.defaultSubtitle | markdownify }}</p>
+
+      <div>
+        <p class="style20">{{ .Site.Params.header.description | markdownify }}</p>
+        {{/*  {{ with .Site.Params.header.customersTitle }}
+        <p class="style2">{{ . | markdownify }}</p>
+        {{ end }}  */}}
+        {{ with .Site.Params.header.customers }}
+        <p class="style19">
+          {{ range . }}
+            <span class="p">{{ . | markdownify }}</span>
+          {{ end }}
+        </p>
+        {{ end }}
       </div>
     </div>
   </div>

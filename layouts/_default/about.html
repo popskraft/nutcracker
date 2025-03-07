@@ -3,19 +3,47 @@
   <div id="aboutContentTop" class="style6 container default">
     <div class="wrapper">
       <div class="inner">
-        <h1 id="text76" class="style1">{{ .Params.headerTitle | default "Who We Are" | markdownify }}</h1>
-        <p id="text69" class="description style9">{{ .Params.headerSubtitle | default .Site.Params.header.defaultSubtitle | markdownify }}</p>
+        <h1 class="style1">{{ .Params.headerTitle | markdownify }}</h1>
+        <p class="description style9">{{ .Params.headerSubtitle | markdownify }}</p>
         <div class="txt">
           {{ .Content }}
         </div>
       </div>
     </div>
   </div>
-  <div id="aboutContent2Col" class="style10 container columns">
+
+  <div id="aboutFooter" class="style10 container default">
     <div class="wrapper">
       <div class="inner">
+        <ul id="buttons07" class="style2 buttons">
+          <li>
+            <a href="{{ .Params.contactEmail }}" class="button n01" role="button"><svg
+                aria-labelledby="buttons07-icon-1-title">
+                <title id="buttons07-icon-1-title">Email (Alt)</title>
+                <use xlink:href="/icons.svg#email-alt"></use>
+              </svg><span class="label">{{ .Params.buttonCartText | default .Site.Params.contactSection.title |
+                markdownify }}</span></a>
+          </li>
+          <li>
+            <a href="{{ .Params.wholesaleLink | default .Site.Params.products.defaultWholesaleLink }}" class="button n02"
+              role="button"><svg aria-labelledby="buttons07-icon-2-title">
+                <title id="buttons07-icon-2-title">Form</title>
+                <use xlink:href="/icons.svg#form"></use>
+              </svg><span class="label">{{ .Params.buttonWholesaleText | default .Site.Params.wholesaleSection.title |
+                markdownify }}</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  {{ if or .Params.primaryOperationsList .Params.forBusinessesList }}
+  <div id="aboutContent2Col" class="style6 container columns">
+    <div class="wrapper">
+      <div class="inner">
+        {{ if .Params.primaryOperationsList }}
         <div>
-          <p id="text73" class="style2">{{ .Params.primaryOperationsTitle | default "Primary Operations" | markdownify }}</p>
+          <p class="style2">{{ .Params.primaryOperationsTitle | default "Primary Operations" | markdownify }}</p>
           <div id="list08" class="style3 list">
             <ul>
               {{ range .Params.primaryOperationsList }}
@@ -26,8 +54,10 @@
             </ul>
           </div>
         </div>
+        {{ end }}
+        {{ if .Params.forBusinessesList }}
         <div>
-          <p id="text71" class="style2">{{ .Params.forBusinessesTitle | default "For Businesses" | markdownify }}</p>
+          <p class="style2">{{ .Params.forBusinessesTitle | default "For Businesses" | markdownify }}</p>
           <div id="list07" class="style3 list">
             <ul>
               {{ range .Params.forBusinessesList }}
@@ -38,31 +68,13 @@
             </ul>
           </div>
         </div>
+        {{ end }}
       </div>
     </div>
   </div>
-  <div id="aboutFooter" class="style6 container default">
-    <div class="wrapper">
-      <div class="inner">
-        <ul id="buttons07" class="style2 buttons">
-          <li>
-            <a href="{{ .Params.contactEmail | default "#contact" }}" class="button n01" role="button"><svg
-                aria-labelledby="buttons07-icon-1-title">
-                <title id="buttons07-icon-1-title">Email (Alt)</title>
-                <use xlink:href="/icons.svg#email-alt"></use>
-              </svg><span class="label">{{ .Params.buttonCartText | default .Site.Params.contactSection.title | markdownify }}</span></a>
-          </li>
-          <li>
-            <a href="{{ .Params.wholesaleLink | default .Site.Params.products.defaultWholesaleLink }}" class="button n02" role="button"><svg aria-labelledby="buttons07-icon-2-title">
-                <title id="buttons07-icon-2-title">Form</title>
-                <use xlink:href="/icons.svg#form"></use>
-              </svg><span class="label">{{ .Params.buttonWholesaleText | default .Site.Params.wholesaleSection.title | markdownify }}</span></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  {{ end }}
+
+
+  
 </section>
-
-
 {{ end }}

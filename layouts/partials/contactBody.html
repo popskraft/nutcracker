@@ -1,7 +1,7 @@
 <div id="contactBody" class="style17 container default">
   <div class="wrapper">
     <div class="inner">
-      <p id="text22" class="style1" style="opacity: 1; transform: none;">{{ .Site.Params.contactBody.title | default "How to order?" | markdownify }}</p>
+      <p id="text22" class="style1">{{ .Site.Params.contactBody.title | default "How to order?" | markdownify }}</p>
       <p id="text25" class="style6 collapse-target">{{ .Site.Params.contactBody.description | default "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries." | markdownify }}</p>
       <ul id="buttons03" class="style1 buttons">
         <li>
@@ -20,7 +20,7 @@
       </ul>
       <ul id="buttons22" class="style2 buttons">
         {{ range .Site.Params.contactBody.buttons }}
-        <li style="opacity: 1; transform-origin: 50% 50%; transform: none;">
+        <li>
           <a href="{{ .url }}" class="button {{ .class }}" role="button"><svg
               aria-labelledby="buttons22-icon-{{ .class }}-title">
               <title id="buttons22-icon-{{ .class }}-title">{{ .icon | title }}</title>

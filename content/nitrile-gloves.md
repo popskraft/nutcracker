@@ -13,7 +13,7 @@ ogImage: "/images/gloves/ogimage.jpg"
 # CTA buttons
 productLink: "https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil"
 buttonCartText: "Buy Gloves"
-wholesaleLink: "#wholesale"
+wholesaleLink: "/wholesale"
 buttonWholesaleText: "Wholesale Inquiry"
 
 # cover slider (in static folder)
@@ -87,7 +87,7 @@ benefitsImages:
 
 benefitsBlocks:
   - title: "Exceptional Cost Savings"
-    text: "**Bulk Price of $4.99** — roughly half the average market price allows workers to replace gloves more often without straining budgets. This means improved hygiene and better overall protection."
+    text: "Bulk Price is roughly half the average market price allows workers to replace gloves more often without straining budgets. This means improved hygiene and better overall protection."
   - title: "Enhanced Durability and Protection"
     text: "The 8-mil thickness and puncture-resistant nitrile material stand up to sharp parts and tools. Technicians can work confidently around oil and chemicals without gloves tearing prematurely."
   - title: "Trusted Safety and Regulatory Compliance"
@@ -103,9 +103,10 @@ benefitsBlocks:
 savings:
   title: "Save up to $3,500 a year"
   subtitle: "Special offer for car dealerships!"
-  description: "Every dollar matters in a competitive market, and we're thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. As an example, on gloves alone, our team analyzed the numbers and found that by reducing the standard $12 per box price to just $4.99, businesses can save up to $1,850 annually. Depending on usage, **total savings range from $875 to $3,500 per year**."
   image: "/images/carflag.jpg"
   imageAlt: "Big Savings"
+  description: >
+    Every dollar matters in a competitive market, and we’re thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. As an example, on gloves alone, our team analyzed the numbers and found that by reducing the standard $18 per box price to just $4.99, businesses can save up to $1,850 annually. Depending on usage, **total savings range from $875 to $3,500 per year.**
 
 # testimonials section
 testimonials:

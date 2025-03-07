@@ -5,6 +5,17 @@ languageCode: "en"
 
 # Site metadata
 params:
+  # Performance settings
+  prefetch:
+    enabled: true
+    pages:
+      - "/"
+      - "/contacts"
+      - "/wholesale"
+      - "/hand-cleaner"
+      - "/nitrile-gloves"
+      - "/about"
+  
   # SEO and metadata settings
   seoTitleAfter: "• Nutcracker Pro"
   description: Professional-grade quality without markup. Streamlined procurement process. American-focused supply chain. Understanding of tradesperson needs. Reliability in stock and delivery.
@@ -15,15 +26,19 @@ params:
   # Company information
   companyName: "Nutcracker Pro"
   tagline: "Secret Gears Of Silent Heroes"
-  subtitle: "Pro-grade essentials at accessible prices for those who keep America running"
   distributorName: "AK Dealer Services"
   distributorDescription: "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries."
   
-  # Common page header settings
+  # Main and common pages header settings
   header:
     defaultTitle: "**Secret Gears** Of Silent Heroes"
-    defaultSubtitle: "Pro-grade essentials at accessible prices for those who keep America running"
+    description: "**Nutcracker Pro is a B2B supplier** of professional-grade products, serving the United States market. Our core mission is to provide high-quality supplies at consistently low prices."
+    customersTitle: "There is two way you can purchase it:"
+    customers:
+      - "**Retail customers** can purchase it through authorized distributor AK Dealer Services."
+      - "**Wholesalers or Bulk Purchasers** can be purchase it by contacting us directly."
 
+  # Contact settings
   contact:
     phone: "800.260.5051"  # Placeholder for actual phone number
     email: "info@akdealerservices.com"  # Placeholder for actual email
@@ -37,14 +52,15 @@ params:
     description: "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries."
     buttons:
       - label: "Contact us"
-        url: "#contact"
+        url: "/contacts"
         icon: "email-alt"
         class: "n01"
       - label: "Wholesale Inquiry"
-        url: "#wholesale"
+        url: "/wholesale"
         icon: "form"
         class: "n02"
-        
+  
+  # Wholesale section
   wholesaleSection:
     title: "Wholesale Inquiry"
     description: "Provide details of your order in any format. Our staff will review it and contact you to finalize your order. We make your work more comfortable."
@@ -53,7 +69,7 @@ params:
   products:
     defaultButtonCartText: "Buy Now"
     defaultButtonWholesaleText: "Wholesale Inquiry"
-    defaultWholesaleLink: "#wholesale"
+    defaultWholesaleLink: "/wholesale"
     
   # Common savings section
   savings:
