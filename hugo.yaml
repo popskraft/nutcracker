@@ -32,7 +32,7 @@ params:
   # Main and common pages header settings
   header:
     defaultTitle: "**Secret Gears** Of Silent Heroes"
-    description: "**Nutcracker Pro is a B2B supplier** of professional-grade products, serving the United States market. Our core mission is to provide high-quality supplies at consistently low prices."
+    description: "Nutcracker Pro is a B2B supplier of professional-grade products, serving the United States market. Our core mission is to provide high-quality supplies at consistently low prices."
     customersTitle: "There is two way you can purchase it:"
     customers:
       - "**Retail customers** can purchase it through authorized distributor AK Dealer Services."
