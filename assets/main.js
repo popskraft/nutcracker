@@ -3804,9 +3804,9 @@
 			};
 	
 	// Container: coverSlider.
+
 	
 	// Initialize "On Visible" animations.
-		onvisible.add('h1.style1, h2.style1, h3.style1, p.style1', { style: 'zoom-in', speed: 750, intensity: 9, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style5, h2.style5, h3.style5, p.style5', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style3, h2.style3, h3.style3, p.style3', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 125, replay: false });
 		onvisible.add('hr.style1', { style: 'fade-right', speed: 625, intensity: 10, threshold: 1, delay: 0, replay: false });
@@ -3820,9 +3820,11 @@
 		onvisible.add('.buttons.style7', { style: 'flip-right', speed: 1000, intensity: 5, threshold: 1, delay: 0, stagger: 125, staggerSelector: ':scope > li', replay: false });
 		onvisible.add('h1.style7, h2.style7, h3.style7, p.style7', { style: 'fade-up', speed: 1000, intensity: 5, threshold: 1, delay: 500, replay: false });
 		onvisible.add('#coverSliderImageDesctop', { style: 'pop-in', speed: 750, intensity: 10, threshold: 2, delay: 500, replay: false });
-		onvisible.add('#coverSliderImageMobile', { style: 'pop-in', speed: 750, intensity: 10, threshold: 2, delay: 500, replay: false });
+		onvisible.add('#pageAboutIntro', { style: 'pop-in', speed: 375, intensity: 5, threshold: 1, delay: 0, replay: false });
+		onvisible.add('h1.style1, h2.style1, h3.style1, p.style1', { style: 'zoom-in', speed: 750, intensity: 9, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.container.style4', { style: 'pop-in', speed: 375, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.image.style2', { style: 'pop-in', speed: 500, intensity: 3, threshold: 1, delay: 0, replay: false });
+		onvisible.add('#coverSliderImageMobile', { style: 'pop-in', speed: 750, intensity: 10, threshold: 2, delay: 500, replay: false });
 		onvisible.add('h1.style11, h2.style11, h3.style11, p.style11', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style16, h2.style16, h3.style16, p.style16', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.buttons.style2', { style: 'flip-right', speed: 1000, intensity: 5, threshold: 1, delay: 0, stagger: 125, staggerSelector: ':scope > li', replay: false });
@@ -3833,6 +3835,7 @@
 		onvisible.add('#text52', { style: 'fade-up', speed: 1000, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('hr.style9', { style: 'fade-right', speed: 625, intensity: 10, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.gallery.style4', { style: 'pop-in', speed: 1000, intensity: 5, threshold: 3, delay: 0, stagger: 125, staggerSelector: ':scope ul > li', replay: false });
+		onvisible.add('.gallery.style5', { style: 'pop-in', speed: 1000, intensity: 5, threshold: 3, delay: 0, stagger: 125, staggerSelector: ':scope ul > li', replay: false });
 		onvisible.add('#image04', { style: 'zoom-in', speed: 750, intensity: 9, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style13, h2.style13, h3.style13, p.style13', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style9, h2.style9, h3.style9, p.style9', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });

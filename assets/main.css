@@ -4615,14 +4615,15 @@ hr.style9:before {
 .container.style6 {
 	display: flex;
 	width: 100%;
-	align-items: flex-end;
+	min-height: 32rem;
+	align-items: center;
 	justify-content: center;
 	background-color: transparent;
 }
 
 .container.style6 > .wrapper > .inner {
 	--gutters: 3rem;
-	--padding-vertical: 3.5rem;
+	--padding-vertical: 3rem;
 	--spacing: 1.25rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
 }
@@ -4727,6 +4728,7 @@ hr.style9:before {
 
 .container.style6.columns > .wrapper > .inner > .full {
 	align-self: stretch;
+	min-height: calc(32rem - (var(--padding-vertical) * 2));
 }
 
 .container.style6.columns > .wrapper > .inner > .full:first-child {
@@ -10987,7 +10989,9 @@ th {
 		width: 100% !important;
 	}
 	
-	
+	.container.style6 {
+		min-height: 24rem;
+	}
 	
 	.container.style6 > .wrapper > .inner {
 		--gutters: 3rem;
@@ -11068,6 +11072,10 @@ th {
 	
 	.container.style6.columns > .wrapper > .inner > div:last-of-type, .container.style6.columns > .wrapper > .inner > div:last-of-type > .full:first-child {
 		border-top-right-radius: 0 !important;
+	}
+	
+	.container.style6.columns > .wrapper > .inner > .full {
+		min-height: calc(24rem - (var(--padding-vertical) * 2));
 	}
 	
 	.container.style6.columns > .wrapper > .inner > .full > .full:first-child:last-child {
@@ -12505,6 +12513,14 @@ th {
 		--padding-horizontal: 0rem;
 		--padding-vertical: 1.5rem;
 		--spacing: 0.9375rem;
+	}
+	
+	.container.style6 {
+		min-height: 16rem;
+	}
+	
+	.container.style6.columns > .wrapper > .inner > .full {
+		min-height: calc(16rem - (var(--padding-vertical) * 2));
 	}
 	
 	.container.style16 > .wrapper > .inner {
