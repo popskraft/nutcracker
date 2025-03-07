@@ -11,7 +11,6 @@ params:
   formContactUrl: "https://nutcrackerpro.ju.mp/"
   formWholesaleUrl: "https://nutcrackerpro.ju.mp/#wholesale"
 
-
   # Performance settings
   prefetch:
     enabled: true
