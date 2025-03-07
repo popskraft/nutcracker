@@ -17,8 +17,6 @@ params:
     enabled: true
     pages:
       - "/"
-      - "/contacts"
-      - "/wholesale"
       - "/hand-cleaner"
       - "/nitrile-gloves"
       - "/about"
@@ -62,11 +60,9 @@ params:
     description: "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries."
     buttons:
       - label: "Contact us"
-        url: "/contacts"
         icon: "email-alt"
         class: "n01"
       - label: "Wholesale Inquiry"
-        url: "/wholesale"
         icon: "form"
         class: "n02"
   
