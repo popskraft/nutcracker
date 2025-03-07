@@ -13,8 +13,6 @@ ogImage: "/images/gloves/ogimage.jpg"
 # CTA buttons
 productLink: "https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil"
 buttonCartText: "Buy Gloves"
-wholesaleLink: "/wholesale"
-buttonWholesaleText: "Wholesale Inquiry"
 
 # cover slider (in static folder)
 slider:

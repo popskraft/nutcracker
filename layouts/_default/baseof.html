@@ -41,6 +41,14 @@
   <link rel="prefetch" href="{{ . }}">
   <link rel="prerender" href="{{ . }}">
   {{- end -}}
+  
+  <!-- Prefetch external URLs -->
+  {{- if .Site.Params.prefetch.externalUrls -}}
+  {{- range .Site.Params.prefetch.externalUrls -}}
+  <link rel="dns-prefetch" href="{{ . }}">
+  <link rel="preconnect" href="{{ . }}">
+  {{- end -}}
+  {{- end -}}
   {{- end -}}
   
   <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}">

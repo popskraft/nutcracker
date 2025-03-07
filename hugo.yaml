@@ -1,10 +1,17 @@
 baseURL: "https://nutcrackerpro.com/"
+
 # $siteName
 title: Professional-grade tools and products supply
 languageCode: "en"
 
 # Site metadata
 params:
+
+  # Form links
+  formContactUrl: "https://nutcrackerpro.ju.mp/"
+  formWholesaleUrl: "https://nutcrackerpro.ju.mp/#wholesale"
+
+
   # Performance settings
   prefetch:
     enabled: true
@@ -15,6 +22,9 @@ params:
       - "/hand-cleaner"
       - "/nitrile-gloves"
       - "/about"
+    externalUrls:
+      - "https://nutcrackerpro.ju.mp/"
+      - "https://nutcrackerpro.ju.mp/#wholesale"
   
   # SEO and metadata settings
   seoTitleAfter: "• Nutcracker Pro"
@@ -69,7 +79,6 @@ params:
   products:
     defaultButtonCartText: "Buy Now"
     defaultButtonWholesaleText: "Wholesale Inquiry"
-    defaultWholesaleLink: "/wholesale"
     
   # Common savings section
   savings:

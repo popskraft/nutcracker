@@ -12,8 +12,6 @@ ogImage: ""
 # CTA buttons
 productLink: ""
 buttonCartText: "Buy Now"
-wholesaleLink: "/wholesale"
-buttonWholesaleText: "Wholesale Inquiry"
 
 # cover slider (in static folder)
 slider:

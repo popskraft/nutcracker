@@ -32,7 +32,7 @@
         <div>
           <ul id="buttons02" class="style3 buttons">
             <li>
-              <a href="/contacts" class="button n01" role="button">
+              <a href="{{ .Site.Params.formContactUrl | default "/contacts" }}" class="button n01" role="button">
                 {{/*  <svg aria-labelledby="buttons02-icon-1-title">
                   <title id="buttons02-icon-1-title">Arrow Down (Light)</title>
                   <use xlink:href="{{ "icons.svg" | relURL }}#arrow-down-light"></use>

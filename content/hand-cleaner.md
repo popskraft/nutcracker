@@ -13,8 +13,6 @@ ogImage: "/images/handcleaner/ogimage.jpg"
 # CTA buttons
 productLink: https://akdealerservices.com/product/1001256-professional-hand-cleaner
 buttonCartText: "Buy Hand Cleaner"
-wholesaleLink: "/wholesale"
-buttonWholesaleText: "Wholesale Inquiry"
 
 # cover slider (in static folder)
 slider:

@@ -28,10 +28,8 @@ forBusinessesList:
   - Bulk pricing advantages
 
 # Contact buttons
-contactEmail: "/contacts"
-wholesaleLink: "/wholesale"
+contactEmail: "https://nutcrackerpro.ju.mp/"
 buttonCartText: "Contact us"
-buttonWholesaleText: "Wholesale Inquiry"
 
 ---
 

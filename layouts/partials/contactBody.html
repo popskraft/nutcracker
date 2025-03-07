@@ -21,11 +21,19 @@
       <ul id="buttons22" class="style2 buttons">
         {{ range .Site.Params.contactBody.buttons }}
         <li>
-          <a href="{{ .url }}" class="button {{ .class }}" role="button"><svg
+          {{ if eq .url "/contacts" }}
+          <a href="{{ $.Site.Params.formContactUrl }}" class="button {{ .class }}" role="button"><svg
               aria-labelledby="buttons22-icon-{{ .class }}-title">
               <title id="buttons22-icon-{{ .class }}-title">{{ .icon | title }}</title>
               <use xlink:href="{{ "icons.svg" | relURL }}#{{ .icon }}"></use>
             </svg><span class="label">{{ .label | markdownify }}</span></a>
+          {{ else if eq .url "/wholesale" }}
+          <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button {{ .class }}" role="button"><svg
+              aria-labelledby="buttons22-icon-{{ .class }}-title">
+              <title id="buttons22-icon-{{ .class }}-title">{{ .icon | title }}</title>
+              <use xlink:href="{{ "icons.svg" | relURL }}#{{ .icon }}"></use>
+            </svg><span class="label">{{ .label | markdownify }}</span></a>
+          {{ end }}
         </li>
         {{ end }}
       </ul>

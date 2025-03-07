@@ -25,11 +25,11 @@
                 markdownify }}</span></a>
           </li>
           <li>
-            <a href="{{ .Params.wholesaleLink | default .Site.Params.products.defaultWholesaleLink }}" class="button n02"
+            <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button n02"
               role="button"><svg aria-labelledby="buttons07-icon-2-title">
                 <title id="buttons07-icon-2-title">Form</title>
                 <use xlink:href="/icons.svg#form"></use>
-              </svg><span class="label">{{ .Params.buttonWholesaleText | default .Site.Params.wholesaleSection.title |
+              </svg><span class="label">{{ $.Site.Params.products.defaultButtonWholesaleText |
                 markdownify }}</span></a>
           </li>
         </ul>

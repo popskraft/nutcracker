@@ -27,7 +27,7 @@
               <a href="{{ $product.productLink }}" class="button n01" role="button">{{ $product.buttonText | default "Buy now" }}</a>
             </li>
             <li>
-              <a href="/wholesale" class="button n02" role="button">Wholesale</a>
+              <a href="{{ .Site.Params.formWholesaleUrl | default "/wholesale" }}" class="button n02" role="button">Wholesale</a>
             </li>
           </ul>
         </div>
