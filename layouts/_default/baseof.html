@@ -48,7 +48,8 @@
 
   {{ with resources.Get "main.css" }}
   {{ $styles := . | minify }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
+  {{ $styles := $styles | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}?v={{ now.Unix }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 
   <noscript>
