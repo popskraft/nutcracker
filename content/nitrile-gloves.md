@@ -4,7 +4,7 @@ layout: "product"
 date: 2025-02-22
 
 # page metadata
-title: "8mil Disposable **Nitrile Gloves**"
+title: "8mil • Disposable **Nitrile Gloves**"
 subtitle: "Secret Gears Of Silent Heroes:"
 description: >
   Heavy-duty mechanic gloves made of 8-mil nitrile and built exclusively for mechanics are now available at the best price. A textured grip offers reliable protection and comfort. The gloves are developed for automotive and industrial use and meet FDA, ASTM, and CE standards, making them a dependable choice for service departments.
@@ -40,7 +40,7 @@ priceSection:
 products:
   - size: "M"
     image: "/images/gloves/product-4.jpg"
-    imageAlt: "Buy 8mil Nitrile Disposable Gloves M"
+    imageAlt: "Buy 8mil • Nitrile Disposable Gloves M"
     productLink: "https://akdealerservices.com/product/1000527-mechanic-gloves-medium"
     buttonText: "Buy M size"
     priceText:
@@ -74,7 +74,7 @@ features:
   - "FDA, 510K, ASTM, CE APPROVED"
 
 # benefitsHeader
-benefitsHeaderTitle: "Why Choose **8mil Nitrile Disposable Gloves**?"
+benefitsHeaderTitle: "Why Choose **8mil Disposable Nitrile Gloves**?"
 
 # benefitsContent
 benefitsImages:
@@ -99,7 +99,7 @@ benefitsBlocks:
 
 # savings section
 savings:
-  title: "Save up to $3,500 a year"
+  title: "Save up to $3,500 a year"
   subtitle: "Special offer for car dealerships!"
   image: "/images/carflag.jpg"
   imageAlt: "Big Savings"
