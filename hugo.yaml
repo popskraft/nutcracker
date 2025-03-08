@@ -32,9 +32,28 @@ params:
 
   # Company information
   companyName: "Nutcracker Pro"
-  tagline: "Secret Gears Of Silent Heroes"
+  tagline: "Secret Gears Of Silent Heroes"
   distributorName: "AK Dealer Services"
   distributorDescription: "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries."
+
+  # Company address information
+  companyAddress:
+    streetAddress: "7315 Gibson Cemetery Rd # 103"
+    addressLocality: "Mansfield"
+    addressRegion: "TX"
+    postalCode: "76063"
+    addressCountry: "US"
+
+  # Schema.org structured data settings
+  schema:
+    priceValidUntil: "2026-12-31"
+    aggregateRating:
+      ratingValue: "4.9"
+      reviewCount: "126"
+    returnPolicy:
+      description: "Return policy terms are specified in individual wholesale contracts. Please contact us for detailed information."
+    shipping:
+      description: "Shipping terms, rates, and delivery times are determined based on order volume, destination, and specific wholesale contract terms. Contact us for detailed shipping information for your order."
   
   # Main and common pages header settings
   header:
@@ -73,15 +92,20 @@ params:
   products:
     defaultButtonCartText: "Buy Now"
     defaultButtonWholesaleText: "Wholesale Inquiry"
+    defaultWholesaleLink: "#wholesale"
+    defaultCurrency: "USD"
+    defaultPrice: "19.99"
+    defaultItemCondition: "https://schema.org/NewCondition"
+    defaultAvailability: "https://schema.org/InStock"
     
   # Common savings section
   savings:
     title: "Save up to $6,500 a year"
     subtitle: "Special offer for car dealerships!"
-    description: >-
-      Every dollar matters in a competitive market, and we're thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. As an example, on gloves alone, our team analyzed the numbers and found that by reducing the standard $12 per box price to just $4.99, businesses can save up to $1,850 annually. Depending on usage, total savings range **from $875 to $3,500 per year**.
     image: "/images/carflag.jpg"
     imageAlt: "Big Savings"
+    description: >-
+      Every dollar matters in a competitive market, and we're thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. As an example, on gloves alone, our team analyzed the numbers and found that by reducing the standard $12 per box price to just $4.99, businesses can save up to $1,850 annually. Depending on usage, total savings range **from $875 to $3,500 per year**.
     
   # Common slider images
   slider:
@@ -203,3 +227,9 @@ server:
         X-XSS-Protection: "1; mode=block"
         X-Content-Type-Options: "nosniff"
         Referrer-Policy: "strict-origin-when-cross-origin"
+
+  schema:
+    priceValidUntil: "2026-12-31"
+    aggregateRating:
+      ratingValue: "4.9"
+      reviewCount: "126"

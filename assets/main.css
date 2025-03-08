@@ -573,7 +573,7 @@ h1.style5:not(:last-child), h2.style5:not(:last-child), h3.style5:not(:last-chil
 h1.style5, h2.style5, h3.style5, p.style5 {
 	color: #222222;
 	font-family: 'Wix Madefor Display', sans-serif;
-	font-size: 1.625em;
+	font-size: 1.5em;
 	line-height: 1.25;
 	font-weight: 500;
 }
@@ -778,7 +778,7 @@ h1.style1, h2.style1, h3.style1, p.style1 {
 	font-family: 'Wix Madefor Display', sans-serif;
 	letter-spacing: -0.025rem;
 	width: 100%;
-	font-size: 2.75em;
+	font-size: 2.5em;
 	line-height: 1;
 	font-weight: 500;
 }
@@ -1574,7 +1574,7 @@ hr.style9:before {
 
 #pageHeader > .wrapper > .inner {
 	--gutters: 1.5rem;
-	--padding-vertical: 0.625rem;
+	--padding-vertical: 1rem;
 	--spacing: 0.5rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
 }
@@ -4615,7 +4615,6 @@ hr.style9:before {
 .container.style6 {
 	display: flex;
 	width: 100%;
-	min-height: 32rem;
 	align-items: center;
 	justify-content: center;
 	background-color: transparent;
@@ -4728,7 +4727,6 @@ hr.style9:before {
 
 .container.style6.columns > .wrapper > .inner > .full {
 	align-self: stretch;
-	min-height: calc(32rem - (var(--padding-vertical) * 2));
 }
 
 .container.style6.columns > .wrapper > .inner > .full:first-child {
@@ -10989,9 +10987,7 @@ th {
 		width: 100% !important;
 	}
 	
-	.container.style6 {
-		min-height: 24rem;
-	}
+	
 	
 	.container.style6 > .wrapper > .inner {
 		--gutters: 3rem;
@@ -11072,10 +11068,6 @@ th {
 	
 	.container.style6.columns > .wrapper > .inner > div:last-of-type, .container.style6.columns > .wrapper > .inner > div:last-of-type > .full:first-child {
 		border-top-right-radius: 0 !important;
-	}
-	
-	.container.style6.columns > .wrapper > .inner > .full {
-		min-height: calc(24rem - (var(--padding-vertical) * 2));
 	}
 	
 	.container.style6.columns > .wrapper > .inner > .full > .full:first-child:last-child {
@@ -12513,14 +12505,6 @@ th {
 		--padding-horizontal: 0rem;
 		--padding-vertical: 1.5rem;
 		--spacing: 0.9375rem;
-	}
-	
-	.container.style6 {
-		min-height: 16rem;
-	}
-	
-	.container.style6.columns > .wrapper > .inner > .full {
-		min-height: calc(16rem - (var(--padding-vertical) * 2));
 	}
 	
 	.container.style16 > .wrapper > .inner {

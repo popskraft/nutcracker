@@ -51,28 +51,29 @@
 "offers": {
 "@type": "Offer",
 "url": "{{ with .Params.productLink }}{{ . }}{{ else }}{{ $baseURL }}#benefits{{ end }}",
-"priceCurrency": "USD",
-"price": "{{ with .Params.priceSection.price }}{{ replace . "$" "" }}{{ else }}19.99{{ end }}",
-"priceValidUntil": "2026-12-31",
-"itemCondition": "https://schema.org/NewCondition",
-"availability": "https://schema.org/InStock",
+"priceCurrency": "{{ .Site.Params.products.defaultCurrency }}",
+"price": "{{ with .Params.priceSection.price }}{{ replace . "$" "" }}{{ else }}{{ .Site.Params.products.defaultPrice }}{{ end }}",
+"priceValidUntil": "{{ .Site.Params.schema.priceValidUntil }}",
+"itemCondition": "{{ .Site.Params.products.defaultItemCondition }}",
+"availability": "{{ .Site.Params.products.defaultAvailability }}",
 "seller": {
 "@id": "{{ $baseURL }}#organization"
 },
 "hasMerchantReturnPolicy": {
 "@type": "MerchantReturnPolicy",
-"name": "Special Dealer Return Policy",
-"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"
+"name": "Wholesale Return Policy",
+"returnPolicyCategory": "https://schema.org/MerchantReturnUnspecified",
+"description": "{{ .Site.Params.schema.returnPolicy.description }}"
 },
 "shippingDetails": {
 "@type": "OfferShippingDetails",
-"description": "Shipping options vary based on region and order size. Please contact customer service for specific details."
+"description": "{{ .Site.Params.schema.shipping.description }}"
 }
 },
 "aggregateRating": {
 "@type": "AggregateRating",
-"ratingValue": "4.9",
-"reviewCount": "126"
+"ratingValue": "{{ .Site.Params.schema.aggregateRating.ratingValue }}",
+"reviewCount": "{{ .Site.Params.schema.aggregateRating.reviewCount }}"
 },
 "review": [
 {{- if isset .Params "testimonials" -}}
@@ -99,7 +100,7 @@
 {
 "@type": "Organization",
 "@id": "{{ $baseURL }}#organization",
-"name": "AK Dealer Services",
+"name": "Nutcracker Pro",
 "url": "{{ $baseURL }}",
 "logo": {
 "@id": "{{ $baseURL }}#logo"
@@ -113,14 +114,14 @@
 },
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "7315 Gibson Cemetery Rd # 103",
-"addressLocality": "Mansfield",
-"addressRegion": "TX",
-"postalCode": "76063",
-"addressCountry": "US"
+"streetAddress": "{{ .Site.Params.companyAddress.streetAddress }}",
+"addressLocality": "{{ .Site.Params.companyAddress.addressLocality }}",
+"addressRegion": "{{ .Site.Params.companyAddress.addressRegion }}",
+"postalCode": "{{ .Site.Params.companyAddress.postalCode }}",
+"addressCountry": "{{ .Site.Params.companyAddress.addressCountry }}"
 },
 "slogan": "{{ $tagline | safeJS }}",
-"legalName": "Nutcracker AK Dealer Services"
+"legalName": "{{ .Site.Params.companyName }}"
 },
 {
 "@type": "WebSite",
