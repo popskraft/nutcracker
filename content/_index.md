@@ -86,10 +86,10 @@ benefitsColumns:
 savings:
   title: "Save up to $6,500 a year"
   subtitle: "Special offer for car dealerships!"
-  description: >
-    At Nutcracker Pro, we understand the value of steady, consistent savings. Our carefully designed pricing and bulk order options can help you save up to $6,500 each year. Whether you choose our trusted hand cleaner,our dependable nitrile gloves or otherNutcracker Pro , every purchase supports a smoother, more efficient procurement process. Enjoy a calm, measured approach to managing expenses while nurturing the growth of your business.
   image: "/images/carflag.jpg"
   imageAlt: "Big Savings"
+  description: >
+    At Nutcracker Pro, we understand the value of steady, consistent savings. Our carefully designed pricing and bulk order options can help you save up to $6,500 each year. Whether you choose our trusted hand cleaner,our dependable nitrile gloves or other Nutcracker Pro products, every purchase supports a smoother, more efficient procurement process. Enjoy a calm, measured approach to managing expenses while nurturing the growth of your business.
 
 
 # FAQ section
