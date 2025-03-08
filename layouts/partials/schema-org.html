@@ -43,8 +43,8 @@
 {
 "@type": "Product",
 "@id": "{{ $baseURL }}#product",
-"name": "{{ .Title | plainify | safeJS }}",
-"description": "{{ .Description | plainify | safeJS }}",
+"name": "{{ .Title | markdownify | plainify | safeJS }}",
+"description": "{{ .Description | markdownify | plainify | safeJS }}",
 "image": {
 "@id": "{{ $baseURL }}#primaryimage"
 },
@@ -158,7 +158,7 @@
 "@id": "{{ $baseURL }}#primaryimage",
 "url": "{{ $primaryImage }}",
 "contentUrl": "{{ $primaryImage }}",
-"caption": "{{ $pageTitle | plainify | safeJS }}"
+"caption": "{{ $pageTitle | markdownify | plainify | safeJS }}"
 },
 {
 "@type": "BreadcrumbList",
@@ -174,7 +174,7 @@
 ,{
 "@type": "ListItem",
 "position": 2,
-"name": "{{ .Title | plainify }}",
+"name": "{{ .Title | markdownify | plainify }}",
 "item": "{{ $permalink }}"
 }
 {{- end }}
