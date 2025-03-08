@@ -36,7 +36,7 @@ productItems:
           class: "n03"
 
     # Gloves
-    - title: "Disposable Nitrile **8mil Gloves**"
+    - title: "8mil Disposable **Nitrile Gloves**"
       url: "/nitrile-gloves/"
       mainImage:
         src: "/images/gloves/product-cover-1.png"
@@ -46,7 +46,7 @@ productItems:
         - src: "/images/gloves/gallery-2.jpg"
         - src: "/images/gloves/gallery-3.jpg"
         - src: "/images/gloves/gallery-4.jpg"
-      description: "Heavy-duty disposable  disposable nitrile gloves made of 8-mil nitrile and built exclusively for service professional and industrial use. Meet FDA, ASTM, CE standards."
+      description: "**Heavy-duty disposable disposable nitrile gloves** made of 8-mil nitrile and built exclusively for service professional and industrial use. Meet FDA, ASTM, CE standards."
       buttons:
         - label: "Buy Nitrile Gloves"
           url: "https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil"
