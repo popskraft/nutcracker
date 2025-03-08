@@ -36,7 +36,7 @@ productItems:
           class: "n03"
 
     # Gloves
-    - title: "8mil Disposable **Nitrile Gloves**"
+    - title: "8mil • Disposable **Nitrile Gloves**"
       url: "/nitrile-gloves/"
       mainImage:
         src: "/images/gloves/product-cover-1.png"
