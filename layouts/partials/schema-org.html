@@ -20,7 +20,7 @@
 {
 "@type": "WebPage",
 "@id": "{{ $baseURL }}#webpage",
-"name": "{{ $pageTitle | plainify | safeJS }}",
+"name": "{{ $pageTitle | markdownify | plainify | safeJS }}",
 "url": "{{ $baseURL }}",
 "isPartOf": {
 "@id": "{{ $baseURL }}#website"
