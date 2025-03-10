@@ -24,7 +24,7 @@ params:
       - "https://nutcrackerpro.ju.mp/#wholesale"
   
   # SEO and metadata settings
-  seoTitleAfter: "• Nutcracker Pro"
+  seoTitleAfter: "– Nutcracker Pro"
   description: Professional-grade quality without markup. Streamlined procurement process. American-focused supply chain. Understanding of tradesperson needs. Reliability in stock and delivery.
   ogImage: "/images/ogimage.jpg"
   openGrapeType: "website"

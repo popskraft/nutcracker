@@ -32,7 +32,7 @@
                         <span class="frame">
                           {{ $galleryImage := resources.Get (strings.TrimPrefix "/" $galleryItem.src) }}
                           {{ $processedImage := $galleryImage.Fill "300x300 webp picture Center" }}
-                          <img src="{{ $processedImage.RelPermalink }}" alt="{{ $galleryItem.alt | default "Product" }}">
+                          <img src="{{ $processedImage.RelPermalink }}" alt="{{ $galleryItem.alt | default $item.title | markdownify | plainify }}">
                         </span>
                       </a>
                     </li>
@@ -89,7 +89,7 @@
                     <span class="frame">
                       {{ $galleryImage := resources.Get (strings.TrimPrefix "/" $galleryItem.src) }}
                       {{ $processedImage := $galleryImage.Fill "300x300 webp picture Center" }}
-                      <img src="{{ $processedImage.RelPermalink }}" alt="{{ $galleryItem.alt | default "Product" }}">
+                      <img src="{{ $processedImage.RelPermalink }}" alt="{{ $galleryItem.alt | default $lastItem.title | markdownify | plainify }}">
                     </span>
                   </a>
                 </li>
