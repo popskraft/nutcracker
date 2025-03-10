@@ -199,8 +199,8 @@ imaging:
   resampleFilter: "Lanczos"
   quality: 95
 
-taxonomies:
-  tag: tags
+# taxonomies:
+#   tag: tags
 
 outputs:
   home:
