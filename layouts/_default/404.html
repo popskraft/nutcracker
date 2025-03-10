@@ -3,16 +3,11 @@
 <div id="articleContentTop" class="style6 container default">
   <div class="wrapper">
     <div class="inner">
-      <h1 id="pageHeadline" class="style1">{{ .Title | safeHTML }}</h1>
+      <h1 id="pageHeadline" class="style1">404 Page Not Found</h1>
       
-      {{ with .Params.description }}
-      <p id="text01" class="style8">{{ . | markdownify }}</p>
+      <p id="text01" class="style8">We apologize, but the page you're looking for cannot be found. It might have been moved, renamed, or deleted.</p>
       <hr id="divider11" class="style1">
-      {{ end }}
 
-      <div class="txt">
-      {{ .Content }}
-      </div>
     </div>
   </div>
 </div>
