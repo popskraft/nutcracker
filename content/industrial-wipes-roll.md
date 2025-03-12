@@ -5,10 +5,11 @@ date: 2025-03-10T13:09:43+04:00
 
 
 # page metadata
-title: "8mil Disposable **Nitrile Gloves**"
+title: "**Industrial Wipes**"
+seoTitle: "Industrial Wipes Roll"
 subtitle: "Secret Gears Of Silent Heroes:"
 description: >
-  Heavy-duty mechanic gloves made of 8-mil nitrile and built exclusively for mechanics are now available at the best price. A textured grip offers reliable protection and comfort. The gloves are developed for automotive and industrial use and meet FDA, ASTM, and CE standards, making them a dependable choice for service departments.
+  **Heavy-duty mechanic gloves** made of 8-mil nitrile and built exclusively for mechanics are now available at the best price. A textured grip offers reliable protection and comfort. The gloves are developed for automotive and industrial use and meet FDA, ASTM, and CE standards, making them a dependable choice for service departments.
 ogImage: "/images/gloves/ogimage.jpg"
 
 # CTA buttons
@@ -17,11 +18,11 @@ buttonCartText: "Buy Gloves"
 
 # cover slider (in static folder)
 slider:
-  - image: "/images/covers/cover-1.webp"
+  - image: "/images/covers/cover-7.webp"
     caption: "Nutcracker Professional Products"
-  - image: "/images/covers/cover-2.webp"
+  - image: "/images/covers/cover-8.webp"
     caption: "Quality Tools for Professionals"
-  - image: "/images/covers/cover-6.webp"
+  - image: "/images/covers/cover-9.webp"
     caption: "Professional Grade Solutions"
 
 # cover image
