@@ -61,7 +61,7 @@ params:
       Nutcracker Pro is a B2B supplier of professional-grade products, serving the United States. Our core mission is to provide high-quality supplies at consistently low prices.
     customersTitle: "There is two way you can purchase it:"
     customers:
-      - "**Retail customers** can purchase through authorized distributor AK Dealer Services."
+      - "**Retail customers** can purchase through authorized distributor AK Dealer Services."
       - "**Wholesalers or Bulk Purchasers** can purchase it by contacting us directly."
 
   # Contact settings
@@ -71,11 +71,13 @@ params:
     
   contactSection:
     title: "Contact us"
-    description: "Provide details of your order in any format. Our staff will review it and contact you to finalize your order. We make your work more comfortable."
+    description: >
+      Provide details of your order in any format. Our staff will review it and contact you to finalize your order. We make your work more comfortable.
     
   contactBody:
     title: "How to order?"
-    description: "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries."
+    description: >
+      **AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company’s website or contact us by phone or email with inquiries.
     buttons:
       - label: "Contact us"
         icon: "email-alt"
@@ -84,11 +86,6 @@ params:
         icon: "form"
         class: "n02"
   
-  # Wholesale section
-  wholesaleSection:
-    title: "Wholesale Inquiry"
-    description: "Provide details of your order in any format. Our staff will review it and contact you to finalize your order. We make your work more comfortable."
-    
   # Common product settings
   products:
     defaultButtonCartText: "Buy Now"
