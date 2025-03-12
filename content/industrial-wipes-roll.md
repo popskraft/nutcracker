@@ -7,7 +7,7 @@ date: 2025-03-10T13:09:43+04:00
 # page metadata
 title: "**Industrial Wipes**"
 seoTitle: "Industrial Wipes Roll"
-subtitle: "Secret Gears Of Silent Heroes:"
+subtitle: "Secret Gear Of Silent Heroes:"
 description: >
   **Heavy-duty mechanic gloves** made of 8-mil nitrile and built exclusively for mechanics are now available at the best price. A textured grip offers reliable protection and comfort. The gloves are developed for automotive and industrial use and meet FDA, ASTM, and CE standards, making them a dependable choice for service departments.
 ogImage: "/images/gloves/ogimage.jpg"

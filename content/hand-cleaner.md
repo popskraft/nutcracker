@@ -5,7 +5,7 @@ date: 2025-02-22
 
 # page metadata
 title: Professional <br> **Hand Cleaner**
-subtitle: "Secret Gears Of Silent Heroes:"
+subtitle: "Secret Gear Of Silent Heroes:"
 description: >
   We offer a non-solvent hand soap for service professionals. Designed to be used routinely for the toughest cleaning without drying out your hands. Multiple emollients and conditioners actually moisturize chapped skin with repeated use.
 ogImage: "/images/handcleaner/ogimage.jpg"
