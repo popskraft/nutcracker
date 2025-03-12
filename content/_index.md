@@ -19,7 +19,7 @@ productItems:
         - src: "/images/handcleaner/gallery-4.png"
         - src: "/images/handcleaner/gallery-7.png"
         - src: "/images/handcleaner/gallery-8.png"
-      description: "**The original heavy duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world with Cosmetic Grade Walnut Shells.
+      description: "**The original heavy-duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world with Cosmetic Grade Walnut Shells.
 "
       buttons:
         - label: "Buy Hand Cleaner"
@@ -46,7 +46,7 @@ productItems:
         - src: "/images/gloves/gallery-2.jpg"
         - src: "/images/gloves/gallery-3.jpg"
         - src: "/images/gloves/gallery-4.jpg"
-      description: "**Heavy-duty disposable disposable nitrile gloves** made of 8-mil nitrile and built exclusively for service professional and industrial use. Meet FDA, ASTM, CE standards."
+      description: "**Heavy-duty disposable nitrile gloves** made of 8-mil nitrile and built exclusively for service professional and industrial use. Meet FDA, ASTM, CE standards."
       buttons:
         - label: "Buy Nitrile Gloves"
           url: "https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil"
@@ -89,7 +89,7 @@ savings:
   image: "/images/carflag.jpg"
   imageAlt: "Big Savings"
   description: >
-    At Nutcracker Pro, we understand the value of steady, consistent savings. Our carefully designed pricing and bulk order options can help you save up to $6,500 each year. Whether you choose our trusted hand cleaner,our dependable nitrile gloves or other Nutcracker Pro products, every purchase supports a smoother, more efficient procurement process. Enjoy a calm, measured approach to managing expenses while nurturing the growth of your business.
+    At Nutcracker Pro, we understand the value of steady, consistent savings. Our carefully designed pricing and bulk order options can help you save up to $6,500 each year. Whether you choose our trusted hand cleaner, our dependable nitrile gloves or other Nutcracker Pro products, every purchase supports a smoother, more efficient procurement process. Enjoy a calm, measured approach to managing expenses while nurturing the growth of your business.
 
 
 # FAQ section

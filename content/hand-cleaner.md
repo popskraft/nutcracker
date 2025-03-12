@@ -57,10 +57,10 @@ features:
   - "Helps Hands With Repeated Use"
   - "Easily removes paint, oil, and grease"
   - "Volume: 120 FL OZ (3.55 L)."
-  - "Dispenser available for easy use."
+  - "Dispenser is available for easy use."
 
 # benefitsHeader
-benefitsHeaderTitle: "Why choose **Professional Hand Cleaner**?"
+benefitsHeaderTitle: "Why choose a **Professional Hand Cleaner**?"
 
 # benefitsContent
 benefitsImages:
@@ -99,7 +99,7 @@ testimonials:
     - name: Michael
       stars: /images/stars.svg
       text: >
-        Same as all thr other brands I've used before, with much better pricing. Same cleaning results too.
+        Same as all the other brands I've used before, with much better pricing. Same cleaning results too.
     - name: JMP
       stars: /images/stars.svg
       text: >

@@ -149,7 +149,7 @@ params:
 
   # Footer settings
   footer:
-    copyright: "All rights reserved."
+    copyright: ". All rights reserved."
     terms_text: "By using this site, by sending messages, you agree to the processing of personal data in accordance with the"
     terms_link_text: "Terms & Conditions"
     terms_link: "/terms/"
