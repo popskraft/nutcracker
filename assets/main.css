@@ -2256,7 +2256,7 @@ hr.style9:before {
 	--gutters: 2rem;
 	--padding-vertical: 1.75rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
-	border-radius: calc(0.5rem - 2px);
+	border-radius: calc(0.5rem - 0px);
 }
 
 #pageAboutIntro > .wrapper {
@@ -2404,8 +2404,8 @@ hr.style9:before {
 	--gutters: 0rem;
 	--padding-vertical: 2rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
-	border-top-left-radius: calc(0.5rem - 1px);
-	border-top-right-radius: calc(0.5rem - 1px);
+	border-top-left-radius: calc(0.5rem - 0px);
+	border-top-right-radius: calc(0.5rem - 0px);
 }
 
 #coverSlider > .wrapper {
@@ -2753,8 +2753,8 @@ hr.style9:before {
 	--padding-vertical: 3.5rem;
 	--spacing: 1.25rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
-	border-bottom-left-radius: calc(0.5rem - 2px);
-	border-bottom-right-radius: calc(0.5rem - 2px);
+	border-bottom-left-radius: calc(0.5rem - 0px);
+	border-bottom-right-radius: calc(0.5rem - 0px);
 }
 
 .container.style20 > .wrapper {
@@ -4780,8 +4780,8 @@ hr.style9:before {
 	--padding-vertical: 3rem;
 	--spacing: 0.5rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
-	border-top-left-radius: calc(0.5rem - 2px);
-	border-top-right-radius: calc(0.5rem - 2px);
+	border-top-left-radius: calc(0.5rem - 0px);
+	border-top-right-radius: calc(0.5rem - 0px);
 }
 
 .container.style16 > .wrapper {
@@ -5081,8 +5081,8 @@ hr.style9:before {
 	--padding-vertical: 4rem;
 	--spacing: 0.5rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
-	border-bottom-left-radius: calc(0.5rem - 2px);
-	border-bottom-right-radius: calc(0.5rem - 2px);
+	border-bottom-left-radius: calc(0.5rem - 0px);
+	border-bottom-right-radius: calc(0.5rem - 0px);
 }
 
 .container.style17 > .wrapper {
@@ -5377,8 +5377,8 @@ hr.style9:before {
 	--padding-vertical: 2.5rem;
 	--spacing: 1rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
-	border-top-left-radius: calc(0.5rem - 8px);
-	border-top-right-radius: calc(0.5rem - 8px);
+	border-top-left-radius: calc(0.5rem - 0px);
+	border-top-right-radius: calc(0.5rem - 0px);
 }
 
 #footerTop > .wrapper {
@@ -7233,7 +7233,6 @@ form.style1 label:first-child {
 form.style1 .field button {
 	background-size: 1rem;
 	height: 2rem;
-	line-height: 2rem;
 	width: 2rem;
 	border-radius: 0.16rem;
 	background-color: #222222;
@@ -7338,11 +7337,13 @@ form.style1 input[type="checkbox"] + label, form.style1 p {
 
 form.style1 .actions button {
 	display: inline-block;
+	width: auto;
 	height: 2.5rem;
 	line-height: 2.5rem;
 	padding: 0 1.25rem;
-	font-size: 1em;
+	vertical-align: middle;
 	font-family: 'Wix Madefor Display', sans-serif;
+	font-size: 1em;
 	font-weight: 500;
 	border-radius: 0.25rem;
 	direction: var(--site-language-direction);
@@ -7452,7 +7453,6 @@ form.style2 label:first-child {
 form.style2 .field button {
 	background-size: 1rem;
 	height: 2rem;
-	line-height: 2rem;
 	width: 2rem;
 	border-radius: 0.16rem;
 	background-color: #222222;
@@ -7557,11 +7557,13 @@ form.style2 input[type="checkbox"] + label, form.style2 p {
 
 form.style2 .actions button {
 	display: inline-block;
+	width: auto;
 	height: 2.5rem;
 	line-height: 2.5rem;
 	padding: 0 1.25rem;
-	font-size: 0.875em;
+	vertical-align: middle;
 	font-family: 'Wix Madefor Display', sans-serif;
+	font-size: 0.875em;
 	font-weight: 500;
 	border-radius: 0.25rem;
 	direction: var(--site-language-direction);
@@ -9627,7 +9629,7 @@ th {
 		--indent-right: 1;
 		--margin-left: auto;
 		--margin-right: auto;
-		min-height: 23rem;
+		min-height: 19rem;
 	}
 	
 	#coverSlider > .wrapper > .inner {
@@ -9723,7 +9725,7 @@ th {
 	}
 	
 	#coverSlider.columns > .wrapper > .inner > .full {
-		min-height: calc(23rem - (var(--padding-vertical) * 2));
+		min-height: calc(19rem - (var(--padding-vertical) * 2));
 	}
 	
 	#coverSlider.columns > .wrapper > .inner > .full > .full:first-child:last-child {
@@ -11968,8 +11970,8 @@ th {
 	}
 	
 	form.style1 .actions button {
-		font-size: 1em;
 		letter-spacing: 0rem;
+		font-size: 1em;
 	}
 	
 	form.style2 label:first-child {
@@ -11995,8 +11997,8 @@ th {
 	}
 	
 	form.style2 .actions button {
-		font-size: 0.875em;
 		letter-spacing: 0rem;
+		font-size: 0.875em;
 	}
 	
 	form.style2 .inner {
@@ -12409,11 +12411,11 @@ th {
 	}
 	
 	#coverSlider {
-		min-height: 17.25rem;
+		min-height: 14.25rem;
 	}
 	
 	#coverSlider.columns > .wrapper > .inner > .full {
-		min-height: calc(17.25rem - (var(--padding-vertical) * 2));
+		min-height: calc(14.25rem - (var(--padding-vertical) * 2));
 	}
 	
 	#container09 > .wrapper > .inner {
