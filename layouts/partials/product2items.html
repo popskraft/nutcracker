@@ -98,7 +98,7 @@
             </div>
           </div>
           <p id="product-desc-{{ $lastIndex }}" class="product-description style3">
-            {{ $lastItem.description }}
+            {{ $lastItem.description | markdownify }}
           </p>
           <ul class="style5 buttons">
             {{ range $buttonIndex, $button := $lastItem.buttons }}
