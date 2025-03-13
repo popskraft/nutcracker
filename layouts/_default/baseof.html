@@ -1,6 +1,6 @@
 {{- $seoTitle := or (.Params.seoTitle) (printf "%s %s" .Title .Site.Params.seoTitleAfter) (.Site.Title) -}}
 {{- $seoTitle = $seoTitle | markdownify | plainify -}}
-{{- $description := or (.Params.description) (.Content) (.Description) (.Site.Params.description) -}}
+{{- $description := or (.Params.seoDescription) (.Params.description) (.Content) (.Description) (.Site.Params.description) -}}
 {{- $description = $description | markdownify | plainify | truncate 164 -}}
 {{- $siteName := .Site.Title -}}
 <!DOCTYPE HTML>

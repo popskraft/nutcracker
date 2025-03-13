@@ -85,25 +85,25 @@ gallery:
   items:
     - image: "images/wipes/gallery-4.jpg"
       alt: "Industrial wipes effectively cleaning greasy automotive parts"
-      # caption: "Perfect for cleaning greasy parts and components"
+      caption: "Perfect for cleaning greasy parts and components"
       # link: "#"
     - image: "images/wipes/gallery-5.jpg"
       alt: "Heavy-duty shop wipes in Tork floor dispenser for easy access"
-      # caption: "Compatible with standard Tork floor dispensers"
+      caption: "Compatible with standard Tork floor dispensers"
       # link: "#"
     - image: "images/wipes/gallery-6.jpg"
       alt: "Industrial wipes demonstrating superior absorption of automotive fluids"
-      # caption: "Superior absorption capacity for oils and fluids"
+      caption: "Superior absorption capacity for oils and fluids"
       # link: "#"
 
 # savings section
 savings:
-  title: "Save up to $3,500 a year"
+  title: "Save up to $3,500 a year"
   subtitle: "Special offer for car dealerships!"
   image: "/images/carflag.jpg"
   imageAlt: "Big Savings"
   description: >
-    We’ve analyzed real-world usage and pricing for industrial wipes on the U.S. market, and the numbers show that switching to our $69 rolls can lead to significant yearly savings. For example, a typical shop relying on rental towels might spend around $0.10 per towel. If that same shop uses 60,000 towels a year, the cost can reach $6,000 annually. By contrast, you’d need only about 57 rolls of our industrial wipes — each with 1,050 sheets — costing roughly $3,933 in total. That simple switch could save you over $2,000 a year, and depending on usage, many businesses see annual savings ranging from $875 up to $3,500.
+    Every dollar matters in a competitive market, and we're thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. Our analysis shows that by switching from rental shop towels to our industrial wipes rolls, a typical service center can save up to $3,500 annually. These savings come from both reduced cost per wipe and the need for fewer wipes per job. Depending on your usage volume, **total savings range from $875 to $3,500 per year.**
 
 # testimonials section
 testimonials:

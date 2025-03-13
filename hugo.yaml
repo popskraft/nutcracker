@@ -163,9 +163,9 @@ menus:
     - name: "8mil Nitrile Gloves"
       url: "/nitrile-gloves/"
       weight: 2
-    # - name: "Industrial Wipes"
-    #   url: "/industrial-wipes-roll/"
-    #   weight: 3
+    - name: "Industrial Wipes"
+      url: "/industrial-wipes-roll/"
+      weight: 3
     # - name: "Absorbent Pads"
     #   url: "/absorbent-pads/"
     #   weight: 4

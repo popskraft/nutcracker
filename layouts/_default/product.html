@@ -6,6 +6,12 @@
 {{ partial "benefitsHeader.html" . }}
 {{ partial "benefitsContent.html" . }}
 {{ partial "benefitsCTA.html" . }}
+
+{{ if .Page.Params.gallery }}
+  {{ partial "product-gallery.html" . }}
+  <hr id="divider-gallery" class="style2">
+{{ end }}
+
 {{ partial "savingsHeader.html" . }}
 {{ partial "savingsPrice.html" . }}
 {{ if .Page.Params.products }}

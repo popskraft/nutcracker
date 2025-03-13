@@ -61,6 +61,33 @@ productItems:
           icon: "arrow-right-light"
           class: "n03"
 
+    # Wipes
+    - title: "Industrial **Wipes Roll**"
+      url: "/industrial-wipes-roll/"
+      mainImage:
+        src: "/images/wipes/product-cover-1.png"
+        alt: "Industrial Wipes Roll Nutcracker Pro"
+      gallery:
+        - src: "/images/wipes/gallery-2.jpg"
+        - src: "/images/wipes/gallery-4.jpg"
+        - src: "/images/wipes/gallery-5.jpg"
+        - src: "/images/wipes/gallery-6.jpg"
+      description: >
+        **Industrial cleaning cloths** tackle oil, grease, and water with excellent strength and absorption. Designed for dealerships and service centers, they deliver a professional clean with minimal effort.
+      buttons:
+        - label: "Buy Wipes Roll"
+          url: "https://akdealerservices.com/product/1000534-mechanic-cloths"
+          icon: "cart-alt"
+          class: "n01"
+        - label: "Wholesale Inquiry"
+          url: "https://nutcrackerpro.ju.mp/#wholesale"
+          icon: "form"
+          class: "n02"
+        - label: "More about Wipes Roll"
+          url: "/industrial-wipes-roll/"
+          icon: "arrow-right-light"
+          class: "n03"
+
 
 # Benefits section
 benefitsHeaderTitle: "Why Choose **Nutcracker Pro**?"
