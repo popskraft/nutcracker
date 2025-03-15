@@ -19,7 +19,7 @@ productItems:
         - src: "/images/handcleaner/gallery-4.png"
         - src: "/images/handcleaner/gallery-7.png"
         - src: "/images/handcleaner/gallery-8.png"
-      description: "**The original heavy-duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world with Cosmetic Grade Walnut Shells.
+      description: "**The original heavy-duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world Cosmetic Grade Walnut Shells.
 "
       buttons:
         - label: "Buy Hand Cleaner"
