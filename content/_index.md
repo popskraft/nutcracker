@@ -73,7 +73,7 @@ productItems:
         - src: "/images/wipes/gallery-5.jpg"
         - src: "/images/wipes/gallery-6.jpg"
       description: >
-        **Industrial cleaning cloths** tackle oil, grease, and water with excellent strength and absorption. Designed for dealerships and service centers, they deliver a professional clean with minimal effort.
+        **Industrial cleaning wipes** tackle oil, grease, and water with excellent strength and absorption. Designed for dealerships and service centers, they deliver a professional clean with minimal effort.
       buttons:
         - label: "Buy Wipes Roll"
           url: "https://akdealerservices.com/product/1000534-mechanic-cloths"
