@@ -50,7 +50,6 @@ products:
 
 # features
 features:
-  - 200 pads per case for efficient inventory
   - Perforated design for custom sizing
   - No residue or fraying during use
   - Single-layer meltblown polypropylene construction
