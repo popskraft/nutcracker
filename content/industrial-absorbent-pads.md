@@ -10,7 +10,7 @@ seoDescription: >
   Professional-grade absorbent pads from Nutcracker Pro. High-performance floor protection with Exxon technology. Durable, non-slip poly backing, ideal for automotive dealerships. Save up to $1,200 yearly with cost-effective bulk ordering.
 subtitle: "Secret Gear Of Silent Heroes:"
 description: >
-  **Industrial Absorbent Pads (PIG Mats)** are high-performance, single-layer meltblown pads engineered with advanced Exxon technology. These pads, sometimes known as PIG Mats, offer unrivaled liquid absorbency — up to 17–20 gallons per pad — making them perfect for tackling spills in industrial settings. With an incredible offer of 200 pads for the price of a standard pack, this is a value-driven solution you don’t want to miss.
+  **Industrial Absorbent Pads (PIG Mats)** are high-performance, single-layer meltblown pads engineered with advanced Exxon technology. These pads, sometimes known as PIG Mats, offer unrivaled liquid absorbency — up to 17–20 gallons per pad — making them perfect for tackling spills in industrial settings. With 200 pads at just $39 per case, this beats the cost of smaller standard packs.
 ogImage: "/images/abspads/ogimage.jpg"
 
 # CTA buttons
@@ -19,11 +19,11 @@ buttonCartText: "Order Absorbent Pads"
 
 # cover slider (in static folder)
 slider:
-  - image: "/images/covers/cover-4.webp"
+  - image: "/images/covers/cover-4-2.webp"
     caption: "Nutcracker Professional Products"
-  - image: "/images/covers/cover-8.webp"
+  - image: "/images/covers/cover-11.webp"
     caption: "Quality Tools for Professionals"
-  - image: "/images/covers/cover-9.webp"
+  - image: "/images/covers/cover-8.webp"
     caption: "Professional Grade Solutions"
 
 # cover image
@@ -69,7 +69,7 @@ benefitsBlocks:
   - title: "Superior Spill Control"
     text: >
       Our pads efficiently absorb a wide range of fluids-oils, solvents, coolants, and more-preventing leaks from spreading and ensuring your service area remains safe and operational.
-  - title: "A Workplace Safety & Compliance"
+  - title: "Workplace Safety & Compliance"
     text: >
       By quickly containing spills, these pads reduce slip hazards and help you meet OSHA and industry safety standards, protecting both your team and your customers.
   - title: "Versatility Across Multiple Liquid Types"
