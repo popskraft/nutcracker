@@ -10,7 +10,8 @@
             {{ $filter := images.UnsharpMask .5 .5 0 }}
             {{ $processed := $image.Filter $filter }}
             {{ $final := $processed.Resize "715x webp picture Center" }}
-            <a href="{{ $product.productLink }}" class="frame">
+            {{ $imageLink := cond (ne $product.buttonWholesaleText false) $.Site.Params.formWholesaleUrl $product.productLink }}
+            <a href="{{ $imageLink }}" class="frame">
               <img 
                 src="{{ $final.RelPermalink }}" 
                 alt="{{ $product.imageAlt | default $product.imageTitle }}" 
@@ -23,13 +24,17 @@
         {{ with $product.priceText }}
         <p id="text75" class="style6">{{ . | markdownify }}</p>
         {{ end }}
-        <ul id="buttons17" class="style7 buttons">
+        <ul id="buttons17" class="style2 buttons">
+          {{ if ne $product.buttonText false }}
           <li>
-            <a href="{{ $product.productLink }}" class="button n01" role="button">{{ $product.buttonText | default "Buy now" }}</a>
+            <a href="{{ $product.productLink }}" class="button n01" role="button">{{ or $product.buttonText $.Page.Params.buttonCartText "Buy now" }}</a>
           </li>
+          {{ end }}
+          {{ if ne $product.buttonWholesaleText false }}
           <li>
-            <a href="{{ $.Site.Params.formWholesaleUrl  }}" class="button n02" role="button">Wholesale</a>
+            <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button n02" role="button">{{ or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry" }}</a>
           </li>
+          {{ end }}
         </ul>
       </div>
       {{ end }}

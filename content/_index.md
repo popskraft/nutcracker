@@ -23,7 +23,7 @@ productItems:
 "
       buttons:
         - label: "Buy Hand Cleaner"
-          url: "https://akdealerservices.com/product/1001256-professional-hand-cleaner"
+          url: "https://akdealerservices.com/product/1001255-professional-hand-cleaner"
           icon: "cart-alt"
           class: "n01"
         - label: "Wholesale Inquiry"

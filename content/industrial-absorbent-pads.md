@@ -15,7 +15,7 @@ ogImage: "/images/abspads/ogimage.jpg"
 
 # CTA buttons
 productLink: "https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats"
-buttonCartText: "Order Absorbent Pads"
+buttonCartText: "Buy Absorbent Pads"
 
 # cover slider (in static folder)
 slider:
@@ -37,16 +37,23 @@ priceSection:
   title: "Professional price"
   price: "$39"
   perBoxText: "Per case (200 pads)"
-  perBoxTextExtended: "Per case (200 pads) - 2 case min. Bulk ordering available"
+  perBoxTextExtended: "Per case (200 pads) - 2 case minimum"
 
 # products section
 products:
   - size:
-    image: "/images/abspads/product.jpg"
-    imageAlt: "Industrial Absorbent Pads Box"
-    productLink: "https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats"
-    buttonText: "Order Now"
-    priceText:
+    image: /images/abspads/product-1.jpg
+    imageAlt: Buy a Small batch of Absorbent Pads
+    productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
+    buttonWholesaleText: false
+    priceText: Small batch minimum 2 case (400 pads) **$39.00 per case**
+
+  - size:
+    image: /images/abspads/product-2.jpg
+    imageAlt: Wholesale Absorbent Pads Batch
+    productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
+    buttonText: false
+    priceText: Large batch 1 pallet (7200 pads) **$33.00 per case**
 
 # features
 features:

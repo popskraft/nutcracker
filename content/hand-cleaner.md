@@ -12,7 +12,8 @@ ogImage: "/images/handcleaner/ogimage.jpg"
 
 # CTA buttons
 productLink: https://akdealerservices.com/product/1001256-professional-hand-cleaner
-buttonCartText: "Buy Hand Cleaner"
+buttonCartText: Buy Hand Cleaner
+buttonWholesaleText:
 
 # cover slider (in static folder)
 slider:
@@ -39,16 +40,17 @@ priceSection:
 # products section
 products:
   - size: Small
-    image: /images/handcleaner/product-2.jpg
+    image: /images/handcleaner/product-1.jpg
     imageAlt: Buy a Small batch of Hand Cleaner
     productLink: https://akdealerservices.com/product/1001255-professional-hand-cleaner
-    buttonText:
+    buttonWholesaleText: false
     priceText: Small batch from 4 containers **$24.99 per container**
+
   - size: Large batch of 114 containers **$19.99 per container**
-    image: /images/handcleaner/product-1.jpg
-    imageAlt: Buy a Large batch of Hand Cleaner
-    productLink: https://akdealerservices.com/product/1001257-professional-hand-cleaner-1-pallet
-    buttonText:
+    image: /images/handcleaner/product-2.jpg
+    imageAlt: Wholesale Hand Cleaner Batch
+    productLink: https://akdealerservices.com/product/1001255-professional-hand-cleaner
+    buttonText: false
     priceText: Large batch of 114 containers **$19.99 per container**
 
 # features
