@@ -72,7 +72,7 @@ benefitsBlocks:
   - title: "Workplace Safety & Compliance"
     text: >
       By quickly containing spills, these pads reduce slip hazards and help you meet OSHA and industry safety standards, protecting both your team and your customers.
-  - title: "Versatility Across Multiple Liquid Types"
+  - title: "Designed for Multiple Liquid Types"
     text: >
       Designed to handle everything from motor oils and coolants to chemical solvents, these pads serve as a universal solution for various leak scenarios in automotive settings.
   - title: "Cost-Effective Bulk Supply"
@@ -81,9 +81,9 @@ benefitsBlocks:
   - title: "High Durability & Tear-Resistance"
     text: >
       Engineered with a sonic-bonded, dimpled polypropylene design, our pads withstand rigorous industrial use without fraying or leaving residue, ensuring consistent performance.
-  - title: "Rapid Cleanup & Minimized Downtime"
+  - title: "Streamlined Workflow Efficiency"
     text: >
-      With their exceptional absorbency, these pads quickly lock in spills, allowing your team to resume work faster and reducing costly service interruptions.
+      The strategic placement of these ready-to-use pads in high-risk areas prevents workflow disruptions before they occur, maintaining smooth operations throughout your facility.
 
 # gallery section
 gallery:
