@@ -87,6 +87,33 @@ productItems:
           url: "/industrial-wipes-roll/"
           icon: "arrow-right-light"
           class: "n03"
+    
+    # Absorbent Pads
+    - title: "Industrial **Absorbent Pads**"
+      url: "/industrial-absorbent-pads/"
+      mainImage:
+        src: "/images/abspads/product-cover-1.png"
+        alt: "Industrial Absorbent Pads Nutcracker Pro"
+      gallery:
+        - src: "/images/abspads/gallery-1.jpg"
+        - src: "/images/abspads/gallery-2.jpg"
+        - src: "/images/abspads/gallery-3.jpg"
+        - src: "/images/abspads/gallery-4.jpg"
+      description: >
+        **Industrial Absorbent Pads (PIG Mats)** are high-performance, single-layer meltblown pads built with Exxon technology, capable of absorbing up to 17–20 gallons per pad. They offer an unbeatable value, delivering 200 pads at the price of a standard pack for efficient spill control in industrial settings.
+      buttons:
+        - label: "Buy Absorbent Pads"
+          url: "https://akdealerservices.com/product/1000534-mechanic-cloths"
+          icon: "cart-alt"
+          class: "n01"
+        - label: "Wholesale Inquiry"
+          url: "https://nutcrackerpro.ju.mp/#wholesale"
+          icon: "form"
+          class: "n02"
+        - label: "About Absorbent Pads"
+          url: "/industrial-absorbent-pads/"
+          icon: "arrow-right-light"
+          class: "n03"
 
 
 # Benefits section

@@ -146,9 +146,9 @@ menus:
     - name: "Industrial Wipes"
       url: "/industrial-wipes-roll/"
       weight: 3
-    # - name: "Absorbent Pads"
-    #   url: "/absorbent-pads/"
-    #   weight: 4
+    - name: "Absorbent Pads"
+      url: "/industrial-absorbent-pads/"
+      weight: 4
 
 
   footer:
