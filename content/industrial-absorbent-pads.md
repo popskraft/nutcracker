@@ -55,7 +55,6 @@ features:
   - No residue or fraying during use
   - Single-layer meltblown polypropylene construction
   - Sonic-bonded dimpled surface for enhanced absorption
-  - Absorbs up to 17-20 gallons of liquid per pad
   - Compatible with oils, solvents, and chemicals
   - OSHA compliant for workplace safety
 
@@ -156,9 +155,6 @@ faq:
     - question: "What makes these pads a cost-effective option?"
       answer: >
         The offer includes 200 pads per case at the price of a standard pack, delivering exceptional value and reducing the frequency of reorders.
-    - question: "Are these pads suitable for automotive service centers?"
-      answer: >
-        Absolutely. They are perfect for auto disk centers as they efficiently manage spills and leaks from automotive fluids, ensuring a safe and clean working environment.
     - question: "How do the dimpled and perforated design features benefit my operation?"
       answer: >
         The unique dimpled surface enhances absorption and wicking, while the perforations allow for easy customization of pad size to suit different spill scenarios.
