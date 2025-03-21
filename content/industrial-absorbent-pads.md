@@ -53,7 +53,7 @@ products:
     imageAlt: Wholesale Absorbent Pads Batch
     productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
     buttonText: false
-    priceText: Large batch 1 pallet 48 cases **$34 per case**
+    priceText: Large batch 1 pallet (36 cases, 7200 pads) **$34 per case**
 
 # features
 features:
