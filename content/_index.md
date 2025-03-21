@@ -103,7 +103,7 @@ productItems:
         **Industrial Absorbent Pads (PIG Mats)** are high-performance, single-layer meltblown pads built with Exxon technology, capable of absorbing up to 17–20 gallons per pad.
       buttons:
         - label: "Buy Absorbent Pads"
-          url: "https://akdealerservices.com/product/1000534-mechanic-cloths"
+          url: "https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats"
           icon: "cart-alt"
           class: "n01"
         - label: "Wholesale Inquiry"
