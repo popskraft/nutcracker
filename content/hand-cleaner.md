@@ -48,7 +48,7 @@ features:
 # price section
 priceSection:
   title: Outstanding price
-  price: $19.99 #example $4.99
+  price: $3.99 #example $4.99
   priceCaptionInHeader: Per container (wholesale price)
   priceCaptionInProduct: Per container (114 containers per pallet)
 
