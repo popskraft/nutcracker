@@ -19,8 +19,7 @@ ogImage: /images/{{ .Name }}/ogimage.jpg
 
 # CTA buttons
 productLink: "" # e.g. https://akdealerservices.com/product/1000000-product-name
-buttonCartText: "Buy Now"
-buttonWholesaleText: "Wholesale Inquiry" # Set to false to hide wholesale button
+buttonCartText: "Buy {{ replace .Name "-" " " | title }}"
 
 # cover slider (in static folder)
 slider:
@@ -46,35 +45,25 @@ features:
   - "Feature 5"
 
 # price section
+# the price data is in the related data file: data/products/same-filename.yaml
 priceSection:
-  title: "Outstanding price"
-  price: "$0.00" # e.g. $19.99
-  pricePerCaptionLong: "Per unit (wholesale price)"
-  priceCaptionInProduct: "Per unit (bulk pricing)"
+  title: Outstanding price
 
 # products section
 products:
-  - size: "Option 1" # e.g. size, variant, or package
+  - size: "Option 1"
     image: /images/{{ .Name }}/product-1.jpg
     imageAlt: "Buy {{ replace .Name "-" " " | title }} - Option 1"
-    productLink: "" # Individual product link, falls back to page productLink if empty
-    buttonText: "Buy Option 1" # Set to false to hide button
-    buttonWholesaleText: false # Set to false to hide wholesale button
-    priceText: >
-      Retail: **$0.00 per unit**
-      <br>
-      Wholesale: **$0.00 per unit**
+    productLink: https://akdealerservices.com/product/
+    buttonWholesaleText: false
+    priceText: Small batch description
 
   - size: "Option 2"
     image: /images/{{ .Name }}/product-2.jpg
     imageAlt: "Buy {{ replace .Name "-" " " | title }} - Option 2"
-    productLink: ""
-    buttonText: "Buy Option 2"
-    buttonWholesaleText: false
-    priceText: >
-      Retail: **$0.00 per unit**
-      <br>
-      Wholesale: **$0.00 per unit**
+    productLink: https://akdealerservices.com/product/
+    buttonText: false
+    priceText: Large batch description
 
 # benefitsHeader
 benefitsHeaderTitle: "Why Choose **{{ replace .Name "-" " " | title }}**?"
