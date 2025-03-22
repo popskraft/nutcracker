@@ -32,36 +32,49 @@ coverImageTitle: Order the
 # price section
 priceSection:
   title: Outstanding price
-  price: $4.99 #example $4.99
-  perBoxText: Per box (100 Gloves)
-  perBoxTextExtended: Per box (100 Gloves). Minimum pack — 20 boxes (1 container)
+  price: $3.99 #example $4.99
+  priceCaptionInHeader: Per 100 gloves box (wholesale price)
+  priceCaptionInProduct: Per 100 gloves box (1 pallet - 960 boxes, totaling 9600 gloves)
 
 # products section
 products:
   - size: "M"
     image: /images/gloves/product-4.jpg
-    imageAlt: "Buy 8mil • Nitrile Disposable Gloves M"
+    imageAlt: "Buy 8mil –  Nitrile Disposable Gloves M"
     productLink: https://akdealerservices.com/product/1000527-mechanic-gloves-medium
     buttonText: Buy M size
-    priceText:
+    priceText: >
+      Retail (20 boxes): **$4.99 per box**
+      <br>
+      Wholesale (960 boxes): **$3.99 per box**
+
   - size: "L"
     image: /images/gloves/product-3.jpg
-    imageAlt: "Buy 8mil Nitrile Disposable Gloves L"
+    imageAlt: "Buy 8mil – Nitrile Disposable Gloves L"
     productLink: https://akdealerservices.com/product/1000528-mechanic-gloves-large
-    buttonText: Buy L size
-    priceText:
+    buttonText: Buy L size  
+    priceText: >
+      Retail (20 boxes): **$4.99 per box**
+      <br>
+      Wholesale (960 boxes): **$3.99 per box**
   - size: "XL"
     image: /images/gloves/product-2.jpg
-    imageAlt: "Buy 8mil Nitrile Disposable Gloves XL"
+    imageAlt: "Buy 8mil – Nitrile Disposable Gloves XL"
     productLink: https://akdealerservices.com/product/1000529-mechanic-gloves-x-large
     buttonText: Buy XL size
-    priceText:
+    priceText: >
+      Retail (20 boxes): **$4.99 per box**
+      <br>
+      Wholesale (960 boxes): **$3.99 per box**
   - size: "XXL"
     image: /images/gloves/product-1.jpg
-    imageAlt: "Buy 8mil Nitrile Disposable Gloves XXL"
+    imageAlt: "Buy 8mil – Nitrile Disposable Gloves XXL"
     productLink: https://akdealerservices.com/product/1000530-mechanic-gloves-xx-large
     buttonText: Buy XXL size
-    priceText:
+    priceText: >
+      Retail (20 boxes): **$4.99 per box**
+      <br>
+      Wholesale (960 boxes): **$3.99 per box**
 
 # features
 features:

@@ -36,8 +36,8 @@ coverImageTitle: Order the
 priceSection:
   title: Professional price
   price: $34
-  perBoxText: Per case (pallet 7200 cases)
-  perBoxTextExtended: Per case (pallet 7200 cases)
+  priceCaptionInHeader: Per 200-pad package (wholesale price)
+  priceCaptionInProduct: Per 200-pad package (36 packages per pallet, totaling 7200 pads)
 
 # products section
 products:
@@ -46,14 +46,14 @@ products:
     imageAlt: Buy a Small batch of Absorbent Pads
     productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
     buttonWholesaleText: false
-    priceText: Small batch minimum 2 cases (400 pads) **$39 per case**
+    priceText: Small batch minimum 2 packages (400 pads) **$39 per package**
 
   - size:
     image: /images/abspads/product-2.jpg
     imageAlt: Wholesale Absorbent Pads Batch
     productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
     buttonText: false
-    priceText: Large batch 1 pallet (36 cases, 7200 pads) **$34 per case**
+    priceText: Large batch 1 pallet (36 packages, 7200 pads) **$34 per package**
 
 # features
 features:
@@ -104,12 +104,12 @@ gallery:
 
 # savings section
 savings:
-  title: Save up to $2,750 a year
+  title: Save up to $3,996 a year
   subtitle: Special offer for car dealerships!
   image: /images/carflag.jpg
   imageAlt: Big Savings
   description: >
-    We’ve analyzed real-world spill management in automotive service centers. For an average mid-sized U.S. auto dealer using 912 pads annually, traditional methods could run about $684/year. Switching to our Industrial Absorbent Pads priced at just $39 per case (200 pads) drops your cost to only $195/year for the same volume, delivering a savings of $489. For larger operations using up to 5,000 pads/year, traditional costs could reach $3,750, while our pads bring that down to $1,000, unlocking savings up to $2,750 depending on your scale.
+    We’ve analyzed real-world spill management in automotive service centers. For example, purchasing a pallet of **7,200** pads costs only **$1,404** with our Industrial Absorbent Pads, priced at just **$39** per case (200 pads). In contrast, traditional methods can cost around **$5,400** for the same volume—unlocking potential annual savings of **$3,996**. Whether you’re a mid-sized U.S. auto dealer or managing a larger operation, these savings can have a significant impact on your bottom line.
 
 # video section
 video:

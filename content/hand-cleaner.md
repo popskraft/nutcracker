@@ -34,8 +34,8 @@ coverImageTitle: Order the
 priceSection:
   title: Outstanding price
   price: $19.99 #example $4.99
-  perBoxText: per container (pallet 114 containers)
-  perBoxTextExtended: Large batch of 114 containers (per container)
+  priceCaptionInHeader: Per container (wholesale price)
+  priceCaptionInProduct: Per container (114 containers per pallet)
 
 # products section
 products:

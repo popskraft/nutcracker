@@ -32,8 +32,8 @@ coverImageTitle: "Order the"
 priceSection:
   title: "Outstanding price"
   price: "" #example $4.99
-  perBoxText: ""
-  perBoxTextExtended: ""
+  priceCaptionInHeader ""
+  priceCaptionInProduct: ""
 
 # products section
 products:

@@ -10,9 +10,7 @@
         <span style="color: #FF5500">${{ $wholePart }}</span>{{ if gt (len (split $price ".")) 1 }}.{{ index (split
         $price ".") 1 }}{{ end }}
       </h3>
-      {{ with .perBoxTextExtended }}
-      <h3 id="text53" class="style6">{{ . }}</h3>
-      {{ end }}
+      <h3 id="text53" class="style6">{{ or .priceCaptionInProduct .priceCaptionInHeader }}</h3>
     </div>
   </div>
 </div>
