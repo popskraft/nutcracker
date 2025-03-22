@@ -1,0 +1,7 @@
+baseURL: "https://nutcrackerpro.com"
+title: "Nutcracker Pro"
+languageCode: "en-us"
+
+params:
+  wholesaleUrl: "https://nutcrackerpro.ju.mp/#wholesale"
+  formWholesaleUrl: "https://nutcrackerpro.ju.mp/#wholesale"

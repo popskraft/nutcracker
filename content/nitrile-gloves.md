@@ -3,11 +3,18 @@ type: product
 layout: product
 date: 2025-02-22
 
-# page metadata
+# SEO metadata
+seoTitle: "8mil Nitrile Gloves - Professional Mechanic Gloves | Nutcracker Pro"
+seoDescription: >-
+  Professional-grade 8mil nitrile gloves from Nutcracker Pro. Heavy-duty protection for mechanics and service professionals. FDA, ASTM, and CE certified. Available in M, L, XL, XXL sizes.
+
+# Page content
 title: "8mil Disposable **Nitrile Gloves**"
-subtitle: "Secret Gear Of Silent Heroes:"
-description: >
+subtitle:
+description: >-
   **Heavy-duty mechanic gloves** made of 8-mil nitrile and built exclusively for mechanics are now available at the best price. A textured grip offers reliable protection and comfort. The gloves are developed for automotive and industrial use and meet FDA, ASTM, and CE standards, making them a dependable choice for service departments.
+
+# Media
 ogImage: /images/gloves/ogimage.jpg
 
 # CTA buttons
@@ -28,6 +35,16 @@ coverImage: images/gloves/product-cover.png
 coverImageMobile: images/gloves/product-cover-mobile.png
 coverImageAlt: 8mil Disposable Nitrile Gloves
 coverImageTitle: Order the
+
+# features
+features:
+  - "8 Mil Thick Nitrile"
+  - "Latex Free"
+  - "Textured Grit Grip"
+  - "Touchscreen Compatible"
+  - "Oil Resistant"
+  - "Puncture Resistant"
+  - "FDA, 510K, ASTM, CE APPROVED"
 
 # price section
 priceSection:
@@ -75,16 +92,6 @@ products:
       Retail (20 boxes): **$4.99 per box**
       <br>
       Wholesale (960 boxes): **$3.99 per box**
-
-# features
-features:
-  - "8 Mil Thick Nitrile"
-  - "Latex Free"
-  - "Textured Grit Grip"
-  - "Touchscreen Compatible"
-  - "Oil Resistant"
-  - "Puncture Resistant"
-  - "FDA, 510K, ASTM, CE APPROVED"
 
 # benefitsHeader
 benefitsHeaderTitle: "Why Choose **8mil Disposable Nitrile Gloves**?"

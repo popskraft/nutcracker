@@ -3,14 +3,18 @@ type: product
 layout: product
 date: 2025-03-21T13:48:15+04:00
 
-# page metadata
-title: Industrial **Absorbent Pads**
-seoTitle: Industrial Absorbent Pads (PIG Mats) - Nutcracker Pro
-seoDescription: >
+# SEO metadata
+seoTitle: "Industrial Absorbent Pads (PIG Mats) - Nutcracker Pro"
+seoDescription: >-
   Professional-grade absorbent pads from Nutcracker Pro. High-performance floor protection with Exxon technology. Durable, non-slip poly backing, ideal for automotive dealerships. Save up to $1,200 yearly with cost-effective bulk ordering.
-  subtitle: Secret Gear Of Silent Heroes:
-description: >
+
+# Page content
+title: Industrial **Absorbent Pads**
+subtitle:
+description: >-
   **Industrial Absorbent Pads (PIG Mats)** are high-performance, single-layer meltblown pads engineered with advanced Exxon technology. These pads, sometimes known as PIG Mats, offer unrivaled liquid absorbency — up to 17–20 gallons per pad — making them perfect for tackling spills in industrial settings. With 200 pads at just $39 per case, this beats the cost of smaller standard packs.
+
+# Media
 ogImage: /images/abspads/ogimage.jpg
 
 # CTA buttons
@@ -31,6 +35,15 @@ coverImage: images/abspads/product-cover.png
 coverImageMobile: images/abspads/product-cover-mobile.png
 coverImageAlt: Industrial Absorbent Pads
 coverImageTitle: Order the
+
+# features
+features:
+  - Perforated design for custom sizing
+  - No residue or fraying during use
+  - Single-layer meltblown polypropylene construction
+  - Sonic-bonded dimpled surface for enhanced absorption
+  - Compatible with oils, solvents, and chemicals
+  - OSHA compliant for workplace safety
 
 # price section
 priceSection:
@@ -54,15 +67,6 @@ products:
     productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
     buttonText: false
     priceText: Large batch 1 pallet (36 packages, 7200 pads) **$34 per package**
-
-# features
-features:
-  - Perforated design for custom sizing
-  - No residue or fraying during use
-  - Single-layer meltblown polypropylene construction
-  - Sonic-bonded dimpled surface for enhanced absorption
-  - Compatible with oils, solvents, and chemicals
-  - OSHA compliant for workplace safety
 
 # benefitsHeader
 benefitsHeaderTitle: Why Choose **Industrial Absorbent Pads**?

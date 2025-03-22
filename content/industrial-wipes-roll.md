@@ -3,15 +3,18 @@ type: product
 layout: product
 date: 2025-03-10T13:09:43+04:00
 
-
-# page metadata
-title: "**Industrial Wipes**"
-seoTitle: Industrial Wipes Roll (1050 Wipes) - Heavy-Duty Shop Towels | Nutcracker Pro
-seoDescription: >
+# SEO metadata
+seoTitle: "Industrial Wipes Roll (1050 Wipes) - Heavy-Duty Shop Towels | Nutcracker Pro"
+seoDescription: >-
   Professional-grade industrial wipes from Nutcracker Pro. 1050 heavy-duty wipes per roll, perfect for automotive shops and service centers. Durable, lint-free, solvent-resistant, and budget-friendly. Save up to 40% compared to rental shop towels.
-subtitle: "Secret Gear Of Silent Heroes:"
-description: >
+
+# Page content
+title: "**Industrial Wipes**"
+subtitle:
+description: >-
   Our industrial wipe rolls deliver exceptional performance for automotive professionals. Each roll contains 1050 heavy-duty wipes that effectively tackle oil, grease, and fluids while leaving minimal lint. Specifically engineered for dealerships and service centers, these durable wipes withstand heavy use without tearing. Their cost-effective pricing helps reduce your maintenance budget while ensuring you maintain a reliable supply.
+
+# Media
 ogImage: /images/wipes/ogimage.jpg
 
 # CTA buttons
