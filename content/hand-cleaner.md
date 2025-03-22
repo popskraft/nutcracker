@@ -10,7 +10,7 @@ seoDescription: >-
 
 # Page content
 title: Professional <br> **Hand Cleaner**
-subtitle:
+subtitle: # Secret Gear of Silent Heroes
 description: >-
   We offer a non-solvent **Industrial Hand Soap** for service professionals. Designed to be used routinely for the toughest cleaning without drying out your hands. Multiple emollients and conditioners actually moisturize chapped skin with repeated use.
 
@@ -46,27 +46,25 @@ features:
   - Dispenser is available for easy use.
 
 # price section
+# the price data is in the related data file: data/products/same-filename.yaml
 priceSection:
   title: Outstanding price
-  price: $3.99 #example $4.99
-  priceCaptionInHeader: Per container (wholesale price)
-  priceCaptionInProduct: Per container (114 containers per pallet)
 
 # products section
 products:
-  - size: Small
+  - size:
     image: /images/handcleaner/product-1.jpg
     imageAlt: Buy a Small batch of Hand Cleaner
     productLink:
     buttonWholesaleText: false
-    priceText: Small batch from 4 containers **$24.99 per container**
+    priceText: Small batch from 4 containers
 
-  - size: Large batch of 114 containers **$19.99 per container**
+  - size:
     image: /images/handcleaner/product-2.jpg
     imageAlt: Wholesale Hand Cleaner Batch
     productLink:
     buttonText: false
-    priceText: Large batch of 114 containers **$19.99 per container**
+    priceText: Large batch of 114 containers
 
 # benefitsHeader
 benefitsHeaderTitle: Why choose a **Professional Hand Cleaner**?

@@ -49,7 +49,7 @@ features:
 priceSection:
   title: "Outstanding price"
   price: "$0.00" # e.g. $19.99
-  priceCaptionInHeader: "Per unit (wholesale price)"
+  pricePerCaptionLong: "Per unit (wholesale price)"
   priceCaptionInProduct: "Per unit (bulk pricing)"
 
 # products section

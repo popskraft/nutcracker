@@ -33,6 +33,7 @@
     </div>
   </div>
 </div>
+
 <div id="container09" class="container default" data-visibility="mobile">
   <div class="wrapper">
     <div class="inner">
@@ -62,15 +63,17 @@
     </div>
   </div>
 </div>
+
 <div id="CoverBottom" class="style20 container columns">
   <div class="wrapper">
     <div class="inner">
       <div>
-        <p id="text97" class="style11">{{ .Page.Params.subtitle | default .Site.Params.tagline | markdownify }}</p>
-        <p id="text41" class="style16">{{ .Page.Params.description | markdownify }}</p>
+        <p class="style11">{{ .Page.Params.subtitle | default .Site.Params.tagline | markdownify }}</p>
+        <p class="style16">{{ .Page.Params.description | markdownify }}</p>
         {{ partial "CTAGroup.html" . }}
       </div>
       <div>
+
         <div id="list02" class="style2 list">
           {{ with .Page.Params.features }}
           <ul>
@@ -82,12 +85,29 @@
           </ul>
           {{ end }}
         </div>
-        {{ with .Page.Params.priceSection.price }}
-        <p id="text11" class="style15">{{ . }}</p>
+
+        {{/*  Product price from data/products.yaml  */}}
+        {{ $filename := .File.BaseFileName }}
+        {{ $dataPrice := or (index .Site.Data.products $filename "priceWholesale") (index .Site.Data.products $filename "price") }}
+        {{ $price := or .Page.Params.priceSection.priceWholesale .Page.Params.priceSection.price $dataPrice }}
+        {{ with $price }}
+        <p class="style15">
+          {{ . }}
+        </p>
         {{ end }}
-        {{ with .Page.Params.priceSection.priceCaptionInHeader }}
-        <p id="text03" class="style14">{{ . }}</p>
+        
+        {{ with .Page.Params.priceSection }}
+        <p class="style14">
+          {{ $dataCaptions := index $.Site.Data.products $.Page.File.BaseFileName }}
+          {{ $longCaption := or .pricePerCaptionLong (index $dataCaptions "pricePerCaptionLong") }}
+          {{ if $longCaption }}
+            {{ $longCaption }}
+          {{ else }}
+            {{ .pricePerCaptionShort }}
+          {{ end }}
+        </p>
         {{ end }}
+        
       </div>
     </div>
   </div>

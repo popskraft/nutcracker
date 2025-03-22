@@ -39,9 +39,10 @@ coverImageTitle: Order the
 # price section
 priceSection:
   title: Unbeatable price
-  price: $59 #example $4.99
-  priceCaptionInHeader: Per 1050 wipes roll (wholesale price)
-  priceCaptionInProduct: Per 1050 wipes roll (54 rolls per pallet, totaling 56700 wipes)
+  # price: $69
+  # priceWholesale: $59
+  # pricePerCaptionLong: Per 1050 wipes roll (wholesale, pallet)
+  # pricePerCaptionShort: Per roll
 
 # products section
 products:
@@ -50,14 +51,14 @@ products:
     imageAlt: Buy Industrial Wipes Roll
     productLink: https://akdealerservices.com/product/1000534-mechanic-cloths
     buttonWholesaleText: false
-    priceText: Small batch minimum 2 rolls (2100 Wipes) **$69 per roll**
+    priceText: Small batch minimum 2 rolls (2100 Wipes)
 
   - size: 1050 Wipes
     image: /images/wipes/product-2.jpg
     imageAlt: Wholesale Industrial Wipes Roll
     productLink: https://akdealerservices.com/product/1000534-mechanic-cloths
     buttonText: false
-    priceText: Large batch 1 pallet (54 rolls, 56700 Wipes) **$59 per roll**
+    priceText: Large batch 1 pallet (54 rolls, 56700 Wipes)
 
 # features
 features:

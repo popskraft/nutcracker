@@ -19,9 +19,26 @@
               </a>
             {{ end }}
           </div>
+          
           {{ with $product.priceText }}
-          <p id="savings2-text-{{ $index }}" class="style6">{{ . | markdownify }}</p>
+          <p class="style6">
+            {{ . | markdownify }}
+            {{/* Get price from frontmatter or data file */}}
+            {{ $filename := $.Page.File.BaseFileName }}
+            {{ $dataPrice := or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") }}
+            {{ $price := or $.Page.Params.priceSection.priceWholesale $.Page.Params.priceSection.price $dataPrice }}
+            {{ $priceType := cond (ne $product.buttonText false) "price" "priceWholesale" }}
+            {{ with $dataPrice := index $.Site.Data.products $filename $priceType }}
+              <strong>&ensp;
+                <span style="color: #FF5500">{{ $dataPrice }}</span>
+                {{ with $caption := index $.Site.Data.products $filename "pricePerCaptionShort" }}
+                {{ $caption }}
+                {{ end }}
+              </strong>
+            {{ end }}
+          </p>
           {{ end }}
+          
           <ul id="savings2-buttons-{{ $index }}" class="style2 buttons">
             {{ if ne $product.buttonText false }}
             <li>
@@ -30,7 +47,7 @@
             {{ end }}
             {{ if ne $product.buttonWholesaleText false }}
             <li>
-              <a href="{{ $.Site.Params.wholesaleUrl }}" class="button n02" role="button">{{ or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry" }}</a>
+              <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button n02" role="button">{{ or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry" }}</a>
             </li>
             {{ end }}
           </ul>

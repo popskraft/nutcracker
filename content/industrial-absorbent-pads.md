@@ -48,9 +48,10 @@ features:
 # price section
 priceSection:
   title: Professional price
-  price: $34
-  priceCaptionInHeader: Per 200-pad package (wholesale price)
-  priceCaptionInProduct: Per 200-pad package (36 packages per pallet, totaling 7200 pads)
+  # price: $29
+  # priceWholesale: $34
+  # pricePerCaptionLong: Per 200-pad package (wholesale, pallet)
+  # pricePerCaptionShort: Per package
 
 # products section
 products:
@@ -59,14 +60,13 @@ products:
     imageAlt: Buy a Small batch of Absorbent Pads
     productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
     buttonWholesaleText: false
-    priceText: Small batch minimum 2 packages (400 pads) **$39 per package**
-
+    priceText: Small batch minimum 2 packages (400 pads)
   - size:
     image: /images/abspads/product-2.jpg
     imageAlt: Wholesale Absorbent Pads Batch
     productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
     buttonText: false
-    priceText: Large batch 1 pallet (36 packages, 7200 pads) **$34 per package**
+    priceText: Large batch 1 pallet (36 packages, 7200 pads)
 
 # benefitsHeader
 benefitsHeaderTitle: Why Choose **Industrial Absorbent Pads**?

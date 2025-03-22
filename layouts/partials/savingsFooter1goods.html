@@ -31,7 +31,7 @@
           {{ end }}
           {{ if ne $product.buttonWholesaleText false }}
           <li>
-            <a href="{{ $.Site.Params.wholesaleUrl }}" class="button n02" role="button">{{ or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry" }}</a>
+            <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button n02" role="button">{{ or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry" }}</a>
           </li>
           {{ end }}
         </ul>

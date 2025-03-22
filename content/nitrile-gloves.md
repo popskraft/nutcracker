@@ -49,9 +49,10 @@ features:
 # price section
 priceSection:
   title: Outstanding price
-  price: $3.99 #example $4.99
-  priceCaptionInHeader: Per 100 gloves box (wholesale price)
-  priceCaptionInProduct: Per 100 gloves box (1 pallet - 960 boxes, totaling 9600 gloves)
+  # price: $4.99
+  # priceWholesale: $3.99
+  # pricePerCaptionLong: Per 100 gloves box (wholesale, pallet)
+  # pricePerCaptionShort: Per box
 
 # products section
 products:
@@ -60,38 +61,29 @@ products:
     imageAlt: "Buy 8mil –  Nitrile Disposable Gloves M"
     productLink: https://akdealerservices.com/product/1000527-mechanic-gloves-medium
     buttonText: Buy M size
-    priceText: >
-      Retail (20 boxes): **$4.99 per box**
-      <br>
-      Wholesale (960 boxes): **$3.99 per box**
-
+    priceText: Retail (20 boxes)
+    priceTextWholesale: Wholesale (960 boxes)
   - size: "L"
     image: /images/gloves/product-3.jpg
     imageAlt: "Buy 8mil – Nitrile Disposable Gloves L"
     productLink: https://akdealerservices.com/product/1000528-mechanic-gloves-large
     buttonText: Buy L size  
-    priceText: >
-      Retail (20 boxes): **$4.99 per box**
-      <br>
-      Wholesale (960 boxes): **$3.99 per box**
+    priceText: Retail (20 boxes)
+    priceTextWholesale: Wholesale (960 boxes)
   - size: "XL"
     image: /images/gloves/product-2.jpg
     imageAlt: "Buy 8mil – Nitrile Disposable Gloves XL"
     productLink: https://akdealerservices.com/product/1000529-mechanic-gloves-x-large
     buttonText: Buy XL size
-    priceText: >
-      Retail (20 boxes): **$4.99 per box**
-      <br>
-      Wholesale (960 boxes): **$3.99 per box**
+    priceText: Retail (20 boxes)
+    priceTextWholesale: Wholesale (960 boxes)
   - size: "XXL"
     image: /images/gloves/product-1.jpg
     imageAlt: "Buy 8mil – Nitrile Disposable Gloves XXL"
     productLink: https://akdealerservices.com/product/1000530-mechanic-gloves-xx-large
     buttonText: Buy XXL size
-    priceText: >
-      Retail (20 boxes): **$4.99 per box**
-      <br>
-      Wholesale (960 boxes): **$3.99 per box**
+    priceText: Retail (20 boxes)
+    priceTextWholesale: Wholesale (960 boxes)
 
 # benefitsHeader
 benefitsHeaderTitle: "Why Choose **8mil Disposable Nitrile Gloves**?"
