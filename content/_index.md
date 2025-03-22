@@ -20,7 +20,7 @@ productItems:
         - src: /images/handcleaner/gallery-7.png
         - src: /images/handcleaner/gallery-8.png
       description: >
-        {{ **The original heavy-duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world Cosmetic Grade Walnut Shells. }}
+        **The original heavy-duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world Cosmetic Grade Walnut Shells.
       buttons:
         - label: Buy Hand Cleaner
           url: https://akdealerservices.com/product/1001255-professional-hand-cleaner
@@ -47,7 +47,7 @@ productItems:
         - src: /images/gloves/gallery-3.jpg
         - src: /images/gloves/gallery-4.jpg
       description: >
-        {{ **Heavy-duty disposable nitrile gloves** made of 8-mil nitrile and built exclusively for service professional and industrial use. Meet FDA, ASTM, CE standards. }}
+        **Heavy-duty disposable nitrile gloves** made of 8-mil nitrile and built exclusively for service professional and industrial use. Meet FDA, ASTM, CE standards.
       buttons:
         - label: Buy Nitrile Gloves
           url: https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil
@@ -101,7 +101,7 @@ productItems:
         - src: /images/abspads/gallery-3.jpg
         - src: /images/abspads/gallery-4.jpg
       description: >
-        {{ **Industrial Absorbent Pads (PIG Mats)** are high-performance, single-layer meltblown pads built with Exxon technology, capable of absorbing up to 17–20 gallons per pad. }}
+        **Industrial Absorbent Pads (PIG Mats)** are high-performance, single-layer meltblown pads built with Exxon technology, capable of absorbing up to 17–20 gallons per pad.
       buttons:
         - label: Buy Absorbent Pads
           url: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
