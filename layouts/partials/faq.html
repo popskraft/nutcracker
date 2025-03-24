@@ -7,7 +7,11 @@
   <div class="wrapper">
     <div class="inner">
       <hr id="divider08" class="style3">
-      <h2 id="text57" class="style18">{{ $faq.title | markdownify }} <span style="color: #FFB800">{{ $faq.titleColored }}</span></h2>
+      <h2 class="style18">
+        {{ $productName := partial "productName" . | markdownify }}
+        {{ or $faq.title (printf "**%s**" $productName) | markdownify }}
+        <span style="color: #FFB800">{{ $faq.titleColored }}</span>
+      </h2>
     </div>
   </div>
 </div>

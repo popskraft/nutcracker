@@ -8,7 +8,7 @@ description: >
 
 # Header content
 headerTitle: Who We Are
-headerSubtitle: Bringing Best-in-Class Solutions to the Automotive and Industrial Workforce.
+headerSubtitle: We Provide Best-in-Class Solutions to the Automotive and Industrial Workforce.
 
 # Primary Operations list
 primaryOperationsTitle: Primary Operations
@@ -41,4 +41,4 @@ buttonCartText: Contact us
 
 ## Become a Distributor or Wholesale Inquiries
 
-Please contact us directly and provide the best pricing
+Contact us directly for more information.

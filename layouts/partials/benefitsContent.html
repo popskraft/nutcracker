@@ -1,3 +1,5 @@
+{{ $productName := partial "productName" . | markdownify | plainify }}
+{{ $imageAlt := or $productName $.Page.Title | markdownify | plainify }}
 <div id="container38" class="style8 container columns">
   <div class="wrapper">
     <div class="inner">
@@ -14,8 +16,8 @@
               <span class="frame">
                 <img 
                   src="{{ $final.RelPermalink }}" 
-                  alt="{{ $item.alt | default ($.Page.Title | markdownify | plainify) }}"
-                  title="{{ $item.title | default ($.Page.Title | markdownify | plainify) }}"  
+                  alt="{{ $item.alt }} {{ $imageAlt }} Benefits"
+                  title="{{ $item.alt }} {{ $imageAlt }} Benefits"  
                   loading="lazy"
                 />
               </span>

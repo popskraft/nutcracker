@@ -4,7 +4,7 @@ layout: product
 date: 2025-02-22
 
 # SEO metadata
-seoTitle: "Professional Hand Cleaner - Industrial Strength Hand Soap | Nutcracker Pro"
+seoTitleSuffix: Industrial Strength Hand Soap
 seoDescription: >-
   Professional-grade non-solvent hand soap from Nutcracker Pro. Tough on grease and grime, gentle on hands. Enriched with emollients and conditioners. Perfect for automotive and industrial use.
 
@@ -18,24 +18,20 @@ description: >-
 ogImage: /images/handcleaner/ogimage.jpg
 
 # CTA buttons
-productLink: https://akdealerservices.com/product/1001255-professional-hand-cleaner
 buttonCartText: Buy Hand Cleaner
 buttonWholesaleText:
 
 # cover slider (in static folder)
 slider:
   - image: /images/covers/cover-3.webp
-    caption: Nutcracker Professional Products
   - image: /images/covers/cover-2.webp
-    caption: Quality Tools for Professionals
   - image: /images/covers/cover-4.webp
-    caption: Professional Grade Solutions
 
 # cover image
 coverImage: images/handcleaner/product-cover.png
 coverImageMobile: images/handcleaner/product-cover-mobile.png
-coverImageAlt: Professional Hand Cleaner Nutcracker Pro
 coverImageTitle: Order the
+coverImageAlt: # Professional Hand Cleaner Nutcracker Pro
 
 # features
 features:
@@ -54,20 +50,20 @@ priceSection:
 products:
   - size:
     image: /images/handcleaner/product-1.jpg
-    imageAlt: Buy a Small batch of Hand Cleaner
+    imageAlt: Buy a Small batch of
     productLink:
     buttonWholesaleText: false
     priceText: Small batch from 4 containers
 
   - size:
     image: /images/handcleaner/product-2.jpg
-    imageAlt: Wholesale Hand Cleaner Batch
+    imageAlt: Order wholesale Batch of
     productLink:
     buttonText: false
     priceText: Large batch of 114 containers
 
 # benefitsHeader
-benefitsHeaderTitle: Why choose a **Professional Hand Cleaner**?
+benefitsHeaderTitle:
 
 # benefitsContent
 benefitsImages:
@@ -77,9 +73,9 @@ benefitsImages:
     alt: Nutcracker Pro Hand Cleaner variants
 
 benefitsBlocks:
-  - title: Effective for Service Professionals
+  - title: Service Professionals Love It
     text: >
-      Nutcracker hand cleaner for service professionals is specially formulated for car environments. Its formula takes on the toughest automotive grime, making it perfect for mechanics and dealership workshops.
+      Nutcracker hand cleaner for service professionals is specially formulated for auto environments. Its formula takes on the toughest automotive grime, making it perfect for mechanics and dealership workshops.
   - title: Skin-Conditioning Formula
     text: >
       Nutcracker's emollient-rich formula conditions hands so they remain healthy and moisturized even with frequent use. It's perfect for those mechanics who have to wash their hands all day.
@@ -100,14 +96,13 @@ benefitsBlocks:
 savings:
   title: Save up to $3,500 a year
   subtitle: Special offer for car dealerships!
-  description: >
-    This best hand soap for mechanics is distributed exclusively through AK Dealer Services, a trusted distributor known for offering the lowest prices on the market. When you buy through AK Dealer Services, you can be assured of getting the best value as they are committed to helping you achieve huge savings. Choose our product and experience REAL savings that make a REAL difference.
   image: /images/carflag.jpg
-  imageAlt: Big Savings with Nutcracker Pro Hand Cleaner Dispenser
+  description: >
+    Nutcracker Pro is exclusively distributed by AK Dealer Services, a trusted distributor known for offering the lowest prices and best quality. When you buy through AK Dealer Services, they have your back, with their commitment to the best value around. Choose our product and experience REAL savings that make a REAL difference.
 
 # testimonials section
 testimonials:
-  title: Customer reviews of our Industrial Hand Cleaner
+  title: # Customer reviews of
   items:
     - name: Michael
       text: >
@@ -130,7 +125,7 @@ testimonials:
 
 # FAQ section
 faq:
-  title: Nutcracker Hand Cleaner
+  title: # Nutcracker Hand Cleaner
   titleColored: F.A.Q.
   questions:
     - question: What types of grime can Nutcracker cleaner remove?

@@ -59,10 +59,10 @@ params:
   header:
     description: >
       Nutcracker Pro is a B2B supplier of professional-grade products, serving the United States. Our core mission is to provide high-quality supplies at consistently low prices.
-    customersTitle: "There is two way you can purchase it:"
+    customersTitle: "Two ways to purchase:"
     customers:
-      - "**Retail customers** can purchase through authorized distributor AK Dealer Services."
-      - "**Wholesalers or Bulk Purchasers** can purchase it by contacting us directly."
+      - "**Retail customers** can purchase through our authorized distributor AK Dealer Services."
+      - "**Wholesalers or Bulk Purchasers** can purchase by contacting us directly."
 
   # Contact settings
   contact:
@@ -101,7 +101,7 @@ params:
     title: "Save up to $6,500 a year"
     subtitle: "Special offer for car dealerships!"
     image: "/images/carflag.jpg"
-    imageAlt: "Big Savings"
+    imageAlt: "Big Savings for Car Dealerships"
     description: >-
       Every dollar matters in a competitive market, and we're thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. As an example, on gloves alone, our team analyzed the numbers and found that by reducing the standard $12 per box price to just $4.99, businesses can save up to $1,850 annually. Depending on usage, total savings range **from $875 to $3,500 per year**.
     

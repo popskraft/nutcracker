@@ -1,11 +1,12 @@
-{{ if or .Page.Params.productLink .Page.Params.formWholesaleUrl }}
+{{ $productLink := partial "rawProductLink" . }}
+{{ if or $productLink .Page.Params.formWholesaleUrl }}
 <div id="benefitsCTA" class="container default">
   <div class="wrapper">
     <div class="inner">
       <ul id="buttons05" class="style2 buttons">
-        {{ if .Page.Params.productLink }}
+        {{ if $productLink }}
         <li>
-          <a href="{{ .Page.Params.productLink }}" class="button n01" role="button">
+          <a href="{{ $productLink }}" class="button n01" role="button">
             <svg aria-labelledby="buttons05-icon-1-title">
               <title id="buttons05-icon-1-title">Cart (Alt)</title>
               <use xlink:href="/icons.svg#cart-alt"></use>
@@ -14,7 +15,7 @@
         {{ end }}
         {{ if .Site.Params.formWholesaleUrl }}
         <li>
-          <a href="{{ .Site.Params.formWholesaleUrl }}" class="button n02" role="button">
+          <a href="{{ .Site.Params.formWholesaleUrl | relURL }}" class="button n02" role="button">
             <svg aria-labelledby="buttons05-icon-2-title">
               <title id="buttons05-icon-2-title">Form</title>
               <use xlink:href="/icons.svg#form"></use>

@@ -4,7 +4,7 @@ layout: product
 date: 2025-03-10T13:09:43+04:00
 
 # SEO metadata
-seoTitle: "Industrial Wipes Roll (1050 Wipes) - Heavy-Duty Shop Towels | Nutcracker Pro"
+seoTitleSuffix: Heavy-Duty Shop Towels
 seoDescription: >-
   Professional-grade industrial wipes from Nutcracker Pro. 1050 heavy-duty wipes per roll, perfect for automotive shops and service centers. Durable, lint-free, solvent-resistant, and budget-friendly. Save up to 40% compared to rental shop towels.
 
@@ -12,50 +12,41 @@ seoDescription: >-
 title: "**Industrial Wipes**"
 subtitle:
 description: >-
-  Our industrial wipe rolls deliver exceptional performance for automotive professionals. Each roll contains 1050 heavy-duty wipes that effectively tackle oil, grease, and fluids while leaving minimal lint. Specifically engineered for dealerships and service centers, these durable wipes withstand heavy use without tearing. Their cost-effective pricing helps reduce your maintenance budget while ensuring you maintain a reliable supply.
+  Our industrial wipe rolls deliver exceptional performance for automotive professionals. Each roll contains 1050 heavy-duty wipes that effectively tackle oil, grease, and fluids while leaving minimal lint. Specifically engineered for dealerships and service centers, these durable wipes withstand heavy use without tearing. Our cost-effective pricing helps reduce your maintenance budget while ensuring you maintain a reliable supply.
 
 # Media
 ogImage: /images/wipes/ogimage.jpg
 
 # CTA buttons
-productLink: https://akdealerservices.com/product/1000534-mechanic-cloths
-buttonCartText: Buy Wipes Roll
+buttonCartText: Buy Wipe Rolls
 
 # cover slider (in static folder)
 slider:
   - image: /images/covers/cover-7.webp
-    caption: Nutcracker Professional Products
   - image: /images/covers/cover-8.webp
-    caption: Quality Tools for Professionals
   - image: /images/covers/cover-9.webp
-    caption: Professional Grade Solutions
 
 # cover image
 coverImage: images/wipes/product-cover.png
 coverImageMobile: images/wipes/product-cover-mobile.png
-coverImageAlt: Industrial Wipes Roll
 coverImageTitle: Order the
 
 # price section
 priceSection:
   title: Unbeatable price
-  # price: $69
-  # priceWholesale: $59
-  # pricePerCaptionLong: Per 1050 wipes roll (wholesale, pallet)
-  # pricePerCaptionShort: Per roll
 
 # products section
 products:
   - size: 1050 Wipes
     image: /images/wipes/product-1.jpg
-    imageAlt: Buy Industrial Wipes Roll
+    imageAlt: Buy
     productLink: https://akdealerservices.com/product/1000534-mechanic-cloths
     buttonWholesaleText: false
     priceText: Small batch minimum 2 rolls (2100 Wipes)
 
   - size: 1050 Wipes
     image: /images/wipes/product-2.jpg
-    imageAlt: Wholesale Industrial Wipes Roll
+    imageAlt: Wholesale
     productLink: https://akdealerservices.com/product/1000534-mechanic-cloths
     buttonText: false
     priceText: Large batch 1 pallet (54 rolls, 56700 Wipes)
@@ -69,7 +60,7 @@ features:
   - Compatible with all standard Tork dispensers
 
 # benefitsHeader
-benefitsHeaderTitle: Why Choose an **Industrial Wipes Roll**?
+benefitsHeaderTitle:
 
 # benefitsContent
 benefitsImages:
@@ -102,29 +93,22 @@ gallery:
   items:
     - image: images/wipes/gallery-4.jpg
       alt: Industrial wipes effectively cleaning greasy automotive parts
-      # caption: Perfect for cleaning greasy parts and components
-      # link: #
     - image: images/wipes/gallery-5.jpg
       alt: Heavy-duty shop wipes in Tork floor dispenser for easy access
-      # caption: Compatible with standard Tork floor dispensers
-      # link: #
     - image: images/wipes/gallery-6.jpg
       alt: Industrial wipes demonstrating superior absorption of automotive fluids
-      # caption: Superior absorption capacity for oils and fluids
-      # link: #
 
 # savings section
 savings:
   title: Save up to $3,500 a year
   subtitle: Special offer for car dealerships!
   image: /images/carflag.jpg
-  imageAlt: Big Savings
   description: >
-    We’ve analyzed real-world usage and pricing for industrial wipes on the U.S. market, and the numbers show that switching to our $69 rolls can lead to significant yearly savings. For example, a typical shop relying on rental towels might spend around $0.10 per towel. If that same shop uses 60,000 towels a year, the cost can reach $6,000 annually. By contrast, you’d need only about 57 rolls of our industrial wipes — each with 1,050 sheets — costing roughly $3,933 in total. That simple switch could save you over $2,000 a year, and depending on usage, many businesses see annual savings ranging from $875 up to $3,500.
+    We’ve analyzed real-world usage and pricing for industrial wipes in the U.S. market, and the numbers show that switching to our $69 rolls can lead to significant yearly savings. For example, a typical shop relying on rental towels might spend around $0.10 per towel. If that same shop uses 60,000 towels a year, the cost can reach $6,000 annually. By contrast, you’d need only about 57 rolls of our industrial wipes — each with 1,050 sheets — costing roughly $3,933 in total. That simple switch could save you over $2,000 a year, and depending on usage, many businesses see annual savings ranging from $875 up to $3,500.
 
 # testimonials section
 testimonials:
-  title: Customer reviews
+  title: # Customer reviews
   items:
     - name: Marty
       text: >
@@ -147,7 +131,7 @@ testimonials:
 
 # FAQ section
 faq:
-  title: Nutcracker Industrial Wipes Roll
+  title:
   titleColored: F.A.Q.
   questions:
     - question: How durable are these wipes for heavy-duty cleaning tasks?

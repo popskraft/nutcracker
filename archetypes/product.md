@@ -13,7 +13,6 @@ title: "**{{ replace .Name "-" " " | title }}**"
 subtitle: ""
 description: >-
   
-
 # Media
 ogImage: /images/{{ .Name }}/ogimage.jpg
 
@@ -24,11 +23,8 @@ buttonCartText: "Buy {{ replace .Name "-" " " | title }}"
 # cover slider (in static folder)
 slider:
   - image: "/images/covers/cover-1.webp"
-    caption: "Nutcracker Professional Products"
   - image: "/images/covers/cover-2.webp"
-    caption: "Quality Tools for Professionals"
   - image: "/images/covers/cover-4.webp"
-    caption: "Professional Grade Solutions"
 
 # cover image
 coverImage: images/{{ .Name }}/product-cover.png

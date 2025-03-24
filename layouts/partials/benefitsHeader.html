@@ -2,11 +2,8 @@
   <div class="wrapper">
     <div class="inner">
       <h2 id="text10" class="style1">
-        {{ with .Page.Params.benefitsHeaderTitle }}
-          {{ . | markdownify }}
-        {{ else }}
-          {{ .Site.Params.benefits.headerTitle | default (printf "Why choose %s" .Page.Title) | markdownify }}
-        {{ end }}
+        {{ $productName := partial "productName" . | markdownify }}
+        {{ or .Page.Params.benefitsHeaderTitle (printf "Why choose **%s**" $productName) | markdownify }}
       </h2>
     </div>
   </div>

@@ -1,0 +1,57 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<div id="articleListing" class="style10 container default">
+  <div class="wrapper">
+    <div class="inner">
+      <h1 class="style1">{{ .Title }}</h1>
+
+      <div id="gallery06" class="style5 gallery full">
+        <div class="inner">
+          <ul>
+            {{- range $index, $page := .Pages -}}
+            <li>
+              <a href="{{ $page.RelPermalink }}">
+                <span class="thumbnail n{{ add $index 1 }}">
+                  <span class="frame">
+                    {{- $imagePath := "" -}}
+                    {{- $imageSrc := "" -}}
+                    
+                    {{- /* Try page cover image first */ -}}
+                    {{- if $page.Params.coverImage -}}
+                      {{- $imagePath = $page.Params.coverImage -}}
+                    {{- /* Then try site OG image as fallback */ -}}
+                    {{- else if $.Site.Params.ogImage -}}
+                      {{- $imagePath = $.Site.Params.ogImage -}}
+                    {{- end -}}
+                    
+                    {{- with $imagePath -}}
+                      {{- $image := resources.Get . -}}
+                      {{- with $image -}}
+                        {{- $filter := images.UnsharpMask .5 .5 0 -}}
+                        {{- $processed := $image.Filter $filter -}}
+                        {{- $final := $processed.Fill "452x283 webp picture Center" -}}
+                        {{- $imageSrc = $final.RelPermalink -}}
+                      {{- end -}}
+                    {{- end -}}
+                    
+                    <img src="{{ $imageSrc }}" alt="{{ $page.Title }}" loading="lazy">
+                  </span>
+                </span>
+                <div class="caption">
+                  <p>{{ $page.Title }}</p>
+                </div>
+              </a>
+            </li>
+            {{- end -}}
+          </ul>
+        </div>
+      </div>
+
+      <hr class="style2">
+
+    </div>
+  </div>
+</div>
+
+
+{{ end }}

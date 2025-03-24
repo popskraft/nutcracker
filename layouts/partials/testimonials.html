@@ -4,7 +4,10 @@
   <div class="wrapper">
     <div class="inner">
       <hr id="divider23" class="style5">
-      <h2 id="text05" class="style5">{{ $testimonials.title | default "Customer reviews" }}</h2>
+      <h2 class="style5">
+        {{ $productName := partial "productName" . | markdownify }}
+        {{ or $testimonials.title (printf "Customer reviews of the **%s**" $productName) | markdownify }}
+      </h2>
       <hr id="divider04" class="style3">
     </div>
   </div>
@@ -32,7 +35,7 @@
             <div class="style1 image">
               <span class="frame"><img src="{{ "/stars.svg" | relURL }}" alt="Stars"></span>
             </div>
-            <h2 class="style2">{{ $review.name }}</h2>
+            <p class="style2">{{ $review.name }}</p>
             <p class="style3">{{ $review.text }}</p>
           {{ end }}
         </div>

@@ -1,7 +1,11 @@
+{{ $productName := partial "productName" . | markdownify | plainify }}
+{{ $productLink := partial "rawProductLink" . }}
+{{ $imageAlt := or $productName $.Page.Title | markdownify | plainify }}
 <div id="savingsFooter4goods" class="style13 products container columns">
   <div class="wrapper">
     <div class="inner">
       {{ range $index, $product := .Page.Params.products }}
+      {{ $productLink := or $product.productLink $productLink }}
         <div>
           <div id="savings4-image-{{ $index }}" class="style2 image">
             {{ with resources.Get $product.image }}
@@ -9,11 +13,11 @@
               {{ $filter := images.UnsharpMask .5 .5 0 }}
               {{ $processed := $image.Filter $filter }}
               {{ $final := $processed.Resize "688x webp picture Center" }}
-              <a href="{{ if $product.productLink }}{{ $product.productLink }}{{ else }}{{ $.Page.Params.productLink }}{{ end }}" class="frame">
+              <a href="{{ $productLink }}" class="frame">
                 <img 
                   src="{{ $final.RelPermalink }}" 
-                  alt="{{ $product.imageAlt | default $.Page.Title }}" 
-                  title="{{ $product.imageAlt | default $.Page.Title }}"
+                  alt="{{ or $product.imageAlt $product.buttonText }} {{ $imageAlt }}" 
+                  title="{{ or $product.imageAlt $product.buttonText }} {{ $imageAlt }}"
                   loading="lazy"
                 >
               </a>
@@ -54,12 +58,12 @@
           <ul id="savings4-buttons-{{ $index }}" class="style7 buttons">
             {{ if ne $product.buttonText false }}
             <li>
-              <a href="{{ if $product.productLink }}{{ $product.productLink }}{{ else }}{{ $.Page.Params.productLink }}{{ end }}" class="button n01" role="button">{{ or $product.buttonText $.Page.Params.buttonCartText "Buy now" }}</a>
+              <a href="{{ $productLink }}" class="button n01" role="button">{{ or $product.buttonText $.Page.Params.buttonCartText "Buy now" }}</a>
             </li>
             {{ end }}
             {{ if ne $product.buttonWholesaleText false }}
             <li>
-              <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button n02" role="button">{{ or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry" }}</a>
+              <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button n02" role="button">{{ or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale" }}</a>
             </li>
             {{ end }}
           </ul>

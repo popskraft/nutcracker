@@ -1,4 +1,14 @@
-{{- $seoTitle := or (.Params.seoTitle) (printf "%s %s" .Title .Site.Params.seoTitleAfter) (.Site.Title) -}}
+{{- $seoTitle := "" -}}
+{{- if .File -}}
+  {{- $filename := .File.BaseFileName | replaceRE "^[^/]+/" "" -}}
+  {{- with (index $.Site.Data.products $filename "productName") -}}
+    {{- $seoTitle = printf "%s - %s %s" . (or $.Params.seoTitleSuffix $.Title) $.Site.Params.seoTitleAfter -}}
+  {{- else -}}
+    {{- $seoTitle = printf "%s %s" (or $.Params.seoTitleSuffix $.Title) $.Site.Params.seoTitleAfter -}}
+  {{- end -}}
+{{- else -}}
+  {{- $seoTitle = printf "%s %s" (or .Params.seoTitleSuffix .Title) .Site.Params.seoTitleAfter -}}
+{{- end -}}
 {{- $seoTitle = $seoTitle | markdownify | plainify -}}
 {{- $description := or (.Params.seoDescription) (.Params.description) (.Content) (.Description) (.Site.Params.description) -}}
 {{- $description = $description | markdownify | plainify | truncate 164 -}}
@@ -60,23 +70,24 @@
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}?v={{ now.Unix }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 
+  {{ with resources.Get "tailwindstyle.css" }}
+  {{ $tailwind := . | minify }}
+  {{ $tailwind := $tailwind | fingerprint }}
+  <link rel="stylesheet" href="{{ $tailwind.RelPermalink }}?v={{ now.Unix }}" integrity="{{ $tailwind.Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
+
   <noscript>
     {{ with resources.Get "noscript.css" }}
     {{ $noscript := . | minify }}
     <link rel="stylesheet" href="{{ $noscript.Permalink }}" integrity="{{ $noscript.Data.Integrity }}">
     {{ end }}
   </noscript>
-  
-  {{ with resources.Get "custom.css" }}
-  {{ $customStyles := . | minify }}
-  <link rel="stylesheet" href="{{ $customStyles.RelPermalink }}" integrity="{{ $customStyles.Data.Integrity }}" crossorigin="anonymous">
-  {{ end }}
 
   {{ partial "schema-org" . }}
 
 </head>
 
-<body class="is-loading">
+<body class="is-loading type-{{ .Type }} {{ with .Layout }}layout-{{.}}{{end}} {{ with .Section }}section-{{.}}{{end}}">
   <div id="wrapper">
     <div id="main">
       <div class="inner">

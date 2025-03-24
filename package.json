@@ -1,0 +1,29 @@
+{
+  "name": "nutcracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server --disableFastRender",
+    "build": "hugo --gc --minify",
+    "tailwind:watch": "npx tailwindcss -i ./assets/tailwind/tailwind.css -o ./assets/tailwindstyle.css --watch --config ./assets/tailwind/tailwind.config.js",
+    "tailwind:build": "npx tailwindcss -i ./assets/tailwind/tailwind.css -o ./assets/tailwindstyle.css --minify --config ./assets/tailwind/tailwind.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popskraft/nutcracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/popskraft/nutcracker/issues"
+  },
+  "homepage": "https://github.com/popskraft/nutcracker#readme",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.3.0"
+  }
+}

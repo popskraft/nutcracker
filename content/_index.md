@@ -20,7 +20,7 @@ productItems:
         - src: /images/handcleaner/gallery-7.png
         - src: /images/handcleaner/gallery-8.png
       description: >
-        **The original heavy-duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world Cosmetic Grade Walnut Shells.
+        **The original heavy-duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world utilizing Cosmetic Grade Walnut Shells.
       buttons:
         - label: Buy Hand Cleaner
           url: https://akdealerservices.com/product/1001255-professional-hand-cleaner
@@ -47,7 +47,7 @@ productItems:
         - src: /images/gloves/gallery-3.jpg
         - src: /images/gloves/gallery-4.jpg
       description: >
-        **Heavy-duty disposable nitrile gloves** made of 8-mil nitrile and built exclusively for service professional and industrial use. Meet FDA, ASTM, CE standards.
+        **Heavy-duty disposable nitrile gloves** are 8-mil thick, built exclusively for service professionals and industrial use. They meet the rugged FDA, ASTM, CE standards.
       buttons:
         - label: Buy Nitrile Gloves
           url: https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil
@@ -101,7 +101,7 @@ productItems:
         - src: /images/abspads/gallery-3.jpg
         - src: /images/abspads/gallery-4.jpg
       description: >
-        **Industrial Absorbent Pads** are high-performance, single-layer meltblown pads built with Exxon technology, capable of absorbing up to 17–20 gallons per pad.
+        **Industrial Absorbent Pads** are high-performance, single-layer meltblown pads built with Exxon technology, capable of absorbing up to 17–20 ounces per pad.
       buttons:
         - label: Buy Absorbent Pads
           url: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
@@ -123,14 +123,14 @@ benefitsColumns:
   - # column 1
     - title: Streamlined Procurement and Cost Control
       content: >
-        A transparent pricing model, bulk ordering options, and a user-friendly platform help you secure high-quality tools while staying on budget. Fewer administrative hoops mean quicker approvals and smoother purchasing cycles.
+        A transparent pricing model, bulk ordering options, and a user-friendly platform help you secure high-quality products while staying on budget. Fewer administrative hoops mean quicker approvals and smoother purchasing cycles.
     - title: Long-Term Value and Partnership
       content: >
         Durable products, bulk-buy advantages, and ongoing consultations form a true partnership, ensuring that your operations run smoothly and your investment pays off over the long haul.
   - # column 2
     - title: Consistent Availability and Fast Delivery
       content: >
-        With a robust logistics network and emergency fulfillment options, Nutcracker Pro ensures that essential items are readily available and rapidly delivered. The result? Minimal disruptions and maximum uptime.
+        With a robust logistics network and emergency fulfillment options, Nutcracker Pro ensures that essential items are readily available and seamlessly delivered. The result? Minimal disruptions and maximum uptime.
     - title: Scalable Solutions for Multi-Site Operations
       content: >
         From small repair shops to multi-facility corporations, Nutcracker Pro’s scalable procurement systems adapt as you expand. Centralized oversight ensures consistent quality, pricing, and delivery, regardless of location.
@@ -140,7 +140,7 @@ benefitsColumns:
         Each product meets rigorous industry standards, reducing compliance risks and safeguarding your workforce. By choosing Nutcracker Pro, you protect both your employees and your reputation.
     - title: Bulk Bundles for Long-Term Savings
       content: >
-        Strategic bulk purchasing packages allow you to stretch your budget further while ensuring consistent stock levels, effectively lowering overall expenses and boosting return on investment.
+        Strategic bulk purchasing packages allow you to stretch your budget further while ensuring consistent stock levels, lowering overall expenses and boosting return on investment.
 
 
 # savings section

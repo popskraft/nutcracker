@@ -1,3 +1,5 @@
+{{ $productName := partial "productName" . | markdownify | plainify }}
+{{ $imageAlt := or $.Page.Params.savings.imageAlt $productName $.Page.Title | markdownify | plainify }}
 <div id="container39" class="style3 container columns">
   <div class="wrapper">
     <div class="inner">
@@ -21,7 +23,7 @@
               <span class="frame">
                 <img 
                   src="{{ $final.RelPermalink }}" 
-                  alt="{{ $.Page.Params.savings.imageAlt }}" 
+                  alt="{{ or $.Page.Params.savings.imageAlt $.Site.Params.savings.imageAlt }} {{ $imageAlt }}" 
                   loading="lazy"
                 />
               </span>
