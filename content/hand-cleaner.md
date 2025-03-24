@@ -73,7 +73,7 @@ benefitsImages:
     alt: Nutcracker Pro Hand Cleaner variants
 
 benefitsBlocks:
-  - title: Service Professionals Love It
+  - title: Service Professionals Love It
     text: >
       Nutcracker hand cleaner for service professionals is specially formulated for auto environments. Its formula takes on the toughest automotive grime, making it perfect for mechanics and dealership workshops.
   - title: Skin-Conditioning Formula
