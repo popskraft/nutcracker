@@ -38,7 +38,7 @@ features:
   - Does Not Contain Petroleum Solvents
   - Helps Hands With Repeated Use
   - Easily removes paint, oil, and grease
-  - Volume: 120 FL OZ (3.55 L).
+  - "Volume: 120 FL OZ (3.55 L)."
   - Dispenser is available for easy use.
 
 # price section

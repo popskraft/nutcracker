@@ -67,19 +67,20 @@
   {{ with resources.Get "main.css" }}
   {{ $styles := . | minify }}
   {{ $styles := $styles | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}?v={{ now.Unix }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 
   {{ with resources.Get "tailwindstyle.css" }}
   {{ $tailwind := . | minify }}
   {{ $tailwind := $tailwind | fingerprint }}
-  <link rel="stylesheet" href="{{ $tailwind.RelPermalink }}?v={{ now.Unix }}" integrity="{{ $tailwind.Data.Integrity }}" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ $tailwind.RelPermalink }}" integrity="{{ $tailwind.Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 
   <noscript>
     {{ with resources.Get "noscript.css" }}
     {{ $noscript := . | minify }}
-    <link rel="stylesheet" href="{{ $noscript.Permalink }}" integrity="{{ $noscript.Data.Integrity }}">
+    {{ $noscript := $noscript | fingerprint }}
+    <link rel="stylesheet" href="{{ $noscript.RelPermalink }}" integrity="{{ $noscript.Data.Integrity }}">
     {{ end }}
   </noscript>
 

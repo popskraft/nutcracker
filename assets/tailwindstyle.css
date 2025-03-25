@@ -10,6 +10,10 @@
   margin-bottom: 1rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -28,6 +32,11 @@
   white-space: nowrap;
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -35,6 +44,10 @@
 
 .tracking-normal {
   letter-spacing: 0em;
+}
+
+.no-underline {
+  text-decoration-line: none;
 }
 
 .filter {
@@ -247,4 +260,8 @@
   font-size: 200%;
   line-height: 0.75;
   color: #222222;
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }

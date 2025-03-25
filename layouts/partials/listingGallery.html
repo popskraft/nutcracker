@@ -1,0 +1,35 @@
+<div id="gallery06" class="style5 gallery full">
+  <div class="inner">
+    <ul>
+      {{- range $index, $page := .Pages -}}
+      {{ $pageTitle := $page.Title | markdownify | plainify }}
+      <li>
+        <span class="thumbnail n{{ add $index 1 }}">
+          <span class="frame">
+            {{- $imagePath := or $page.Params.ogImage $page.Params.coverImage $.Site.Params.ogImage -}}
+            {{- $imageSrc := "" -}}
+
+            {{- with $imagePath -}}
+              {{- $image := resources.Get . -}}
+              {{- with $image -}}
+                {{- $filter := images.UnsharpMask .5 .5 0 -}}
+                {{- $processed := $image.Filter $filter -}}
+                {{- $final := $processed.Fill "452x283 webp picture Center" -}}
+                {{- $imageSrc = $final.RelPermalink -}}
+              {{- end -}}
+            {{- end -}}
+            <a href="{{ $page.RelPermalink }}">
+              <img src="{{ $imageSrc }}" alt="{{ $pageTitle }}" loading="lazy">
+            </a>
+          </span>
+        </span>
+        <div class="caption">
+          <p class="mt-1">
+            <a class="no-underline hover:underline" href="{{ $page.RelPermalink }}">{{ $pageTitle }}</a>
+          </p>
+        </div>
+      </li>
+      {{- end -}}
+    </ul>
+  </div>
+</div>
