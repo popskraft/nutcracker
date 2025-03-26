@@ -6,7 +6,11 @@
       <li>
         <span class="thumbnail n{{ add $index 1 }}">
           <span class="frame">
-            {{- $imagePath := or $page.Params.ogImage $page.Params.coverImage $.Site.Params.ogImage -}}
+            {{- $filename := "" -}}
+            {{- with $page.File -}}
+              {{- $filename = .BaseFileName | replaceRE "^[^/]+/" "" -}}
+            {{- end -}}
+            {{- $imagePath := or (index $.Site.Data.products $filename "ogImage") $page.Params.ogImage $page.Params.coverImage $.Site.Params.ogImage -}}
             {{- $imageSrc := "" -}}
 
             {{- with $imagePath -}}

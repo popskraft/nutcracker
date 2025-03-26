@@ -7,15 +7,19 @@
 {{ partial "benefitsContent.html" . }}
 {{ partial "benefitsCTA.html" . }}
 
-{{ if .Page.Params.gallery }}
-  {{ partial "product-gallery.html" . }}
+{{ $filename := .File.BaseFileName }}
+{{ $gallery := or (index $.Site.Data.products $filename).gallery .Page.Params.gallery }}
+{{ if $gallery }}
+  {{ partial "gallery.html" (dict "context" . "items" $gallery.items) }}
   <hr id="divider-gallery" class="style2">
 {{ end }}
 
 {{ partial "savingsHeader.html" . }}
 {{ partial "savingsPrice.html" . }}
-{{ if .Page.Params.products }}
-  {{ $productCount := len .Page.Params.products }}
+{{ $filename := .File.BaseFileName }}
+{{ $products := or (index $.Site.Data.products $filename).products .Page.Params.products }}
+{{ if $products }}
+  {{ $productCount := len $products }}
   {{ if and (gt $productCount 0) (le $productCount 4) }}
     {{ partial (printf "savingsFooter%dgoods" $productCount) . }}
   {{ end }}

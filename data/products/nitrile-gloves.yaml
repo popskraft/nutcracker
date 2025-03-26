@@ -4,3 +4,68 @@ priceWholesale: $3.99
 pricePerCaptionLong: Per 100-glove box (wholesale price, pallet)
 pricePerCaptionShort: Per box
 productLink: https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil
+
+# cover slider (in static folder)
+slider:
+  - image: "/images/covers/cover-1.webp"
+  - image: "/images/covers/cover-2.webp"
+  - image: "/images/covers/cover-6.webp"
+
+# cover image
+coverImage: "images/gloves/product-cover.png"
+coverImageMobile: "images/gloves/product-cover-mobile.png"
+coverImageTitle: "Order the"
+
+# Media
+ogImage: "/images/gloves/ogimage.jpg"
+
+# CTA buttons
+buttonCartText: "Buy Gloves"
+
+# price section
+priceSection:
+  title: "Outstanding price"
+
+# features
+features:
+  - "8 Mil Thick Nitrile"
+  - "Latex Free"
+  - "Textured Grit Grip"
+  - "Touchscreen Compatible"
+  - "Oil Resistant"
+  - "Puncture Resistant"
+  - "FDA, 510K, ASTM, CE APPROVED"
+
+# products section
+products:
+  - size: "M"
+    image: "/images/gloves/product-4.jpg"
+    productLink: "https://akdealerservices.com/product/1000527-mechanic-gloves-medium"
+    buttonText: "Buy M size"
+    priceText: "Retail (20 boxes)"
+    priceTextWholesale: "Wholesale (960 boxes)"
+  - size: "L"
+    image: "/images/gloves/product-3.jpg"
+    productLink: "https://akdealerservices.com/product/1000528-mechanic-gloves-large"
+    buttonText: "Buy L size"  
+    priceText: "Retail (20 boxes)"
+    priceTextWholesale: "Wholesale (960 boxes)"
+  - size: "XL"
+    image: "/images/gloves/product-2.jpg"
+    productLink: "https://akdealerservices.com/product/1000529-mechanic-gloves-x-large"
+    buttonText: "Buy XL size"
+    priceText: "Retail (20 boxes)"
+    priceTextWholesale: "Wholesale (960 boxes)"
+  - size: "XXL"
+    image: "/images/gloves/product-1.jpg"
+    productLink: "https://akdealerservices.com/product/1000530-mechanic-gloves-xx-large"
+    buttonText: "Buy XXL size"
+    priceText: "Retail (20 boxes)"
+    priceTextWholesale: "Wholesale (960 boxes)"
+
+# savings section
+savings:
+  title: "Save up to $3,500 a year"
+  # subtitle: "Special offer for car dealerships!"
+  # image: "/images/carflag.jpg"
+  description: "Every dollar matters in a competitive market, and we’re thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. As an example, on gloves alone, our team analyzed the numbers and found that by reducing the standard $18 per box price to just $4.99, businesses can save up to $1,850 annually. Depending on usagechartreuse usage, **total savings range from $875 to $3,500 per year.**"

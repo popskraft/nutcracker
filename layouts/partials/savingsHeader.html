@@ -1,21 +1,24 @@
+{{ $filename := .File.BaseFileName }}
+{{ $dataSavings := or .Page.Params.savings (index .Site.Data.products $filename "savings") }}
 {{ $productName := partial "productName" . | markdownify | plainify }}
 {{ $imageAlt := or $.Page.Params.savings.imageAlt $productName $.Page.Title | markdownify | plainify }}
 <div id="container39" class="style3 container columns">
   <div class="wrapper">
     <div class="inner">
       <div>
-        {{ with .Page.Params.savings | default .Site.Params.savings }}
+        {{ with $dataSavings }}
           <h2 id="text119" class="style4">{{ .title }}</h2>
           <h3 id="text120" class="style5">
-            <span style="color: #FF5500">{{ .subtitle }}</span>
+            <span style="color: #FF5500">{{ or .subtitle "Special offer for car dealerships!" }}</span>
           </h3>
           <p id="text121" class="style6">{{ .description | markdownify }}</p>
         {{ end }}
       </div>
       <div>
-        {{ with .Page.Params.savings | default .Site.Params.savings }}
+        {{ $image := or $.Page.Params.savings.image $dataSavings.image "/images/carflag.jpg" }}
+        {{ with $image }}
           <div id="image03" class="style3 image full">
-            {{ with resources.Get .image }}
+            {{ with resources.Get . }}
               {{ $image := . }}
               {{ $filter := images.UnsharpMask .5 .5 0 }}
               {{ $processed := $image.Filter $filter }}
@@ -23,7 +26,7 @@
               <span class="frame">
                 <img 
                   src="{{ $final.RelPermalink }}" 
-                  alt="{{ or $.Page.Params.savings.imageAlt $.Site.Params.savings.imageAlt }} {{ $imageAlt }}" 
+                  alt="{{ $imageAlt }}" 
                   loading="lazy"
                 />
               </span>

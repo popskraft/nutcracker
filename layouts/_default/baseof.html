@@ -1,15 +1,24 @@
-{{- $seoTitle := "" -}}
-{{- if .File -}}
-  {{- $filename := .File.BaseFileName | replaceRE "^[^/]+/" "" -}}
-  {{- with (index $.Site.Data.products $filename "productName") -}}
-    {{- $seoTitle = printf "%s - %s %s" . (or $.Params.seoTitleSuffix $.Title) $.Site.Params.seoTitleAfter -}}
+{{- $seoTitle := .Params.seoTitle -}}
+{{ $filename := "" }}
+{{ with .File }}
+  {{ $filename = .BaseFileName | replaceRE "^[^/]+/" "" }}
+{{ end }}
+
+{{- if not $seoTitle -}}
+  {{- if .File -}}
+    {{/* For product pages, include product name if available */}}
+    {{- $productName := index .Site.Data.products $filename "productName" -}}
+    {{- $titleSuffix := or .Params.seoTitleSuffix .Title -}}
+    {{- $seoTitle = cond $productName 
+        (printf "%s - %s" $productName $titleSuffix)
+        (printf "%s" $titleSuffix) -}}
   {{- else -}}
-    {{- $seoTitle = printf "%s %s" (or $.Params.seoTitleSuffix $.Title) $.Site.Params.seoTitleAfter -}}
+    {{- $seoTitle = printf "%s" (or .Params.seoTitleSuffix .Title) -}}
   {{- end -}}
-{{- else -}}
-  {{- $seoTitle = printf "%s %s" (or .Params.seoTitleSuffix .Title) .Site.Params.seoTitleAfter -}}
 {{- end -}}
-{{- $seoTitle = $seoTitle | markdownify | plainify -}}
+
+{{- $seoTitle = printf "%s %s" $seoTitle .Site.Params.seoTitleAfter | markdownify | plainify -}}
+
 {{- $description := or (.Params.seoDescription) (.Params.description) (.Content) (.Description) (.Site.Params.description) -}}
 {{- $description = $description | markdownify | plainify | truncate 164 -}}
 {{- $siteName := .Site.Title -}}
@@ -33,8 +42,7 @@
   <meta property="og:description" content="{{ $description }}">
 
   {{- $baseURL := .Site.BaseURL }}
-
-  {{- $ogImagePath := .Params.ogImage | default .Site.Params.ogImage }}
+  {{- $ogImagePath := or (index .Site.Data.products $filename "ogImage") .Params.ogImage .Site.Params.ogImage }}
   {{- with or (index (.Resources.ByType "image") 0) (resources.Get $ogImagePath) }}
   {{- $OGcover := .Fill "1280x800 webp picture Center" }}
   <meta property="og:image" content="{{ $baseURL }}{{ $OGcover.RelPermalink }}">
@@ -109,12 +117,13 @@
   {{ end }}
 
   {{/*  SLIDER SCRIPT  */}}
+  {{ $sliderImages := or (index $.Site.Data.products $filename "slider") .Page.Params.slider }}
   {{ if eq .Type "product" }}
-    {{ if .Params.slider }}
+    {{ if $sliderImages }}
       <script>
         window.sliderConfig = {
           images: [
-            {{ range .Params.slider }}
+            {{ range $sliderImages }}
             {
               src: '{{ .image }}',
               position: 'center',

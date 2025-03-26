@@ -10,7 +10,7 @@
       <h2 class="style18">
         {{ $productName := partial "productName" . | markdownify }}
         {{ or $faq.title (printf "**%s**" $productName) | markdownify }}
-        <span style="color: #FFB800">{{ $faq.titleColored }}</span>
+        <span style="color: #FFB800">{{ or $faq.titleColored "F.A.Q." | markdownify }}</span>
       </h2>
     </div>
   </div>
@@ -20,9 +20,9 @@
     <div class="inner">
       {{ range $index, $question := $faq.questions }}
       <hr class="style9 full screen">
-      <p class="style2 faqTitle">
+      <h3 class="style2 faqTitle">
         <span style="color: #FFB800">Q.</span> {{ $question.question }}
-      </p>
+      </h3>
       <p class="style6 faqAnswer">{{ $question.answer | markdownify }}</p>
       {{ end }}
     </div>

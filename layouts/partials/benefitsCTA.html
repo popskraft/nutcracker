@@ -1,3 +1,5 @@
+{{ $filename := .File.BaseFileName }}
+
 {{ $productLink := partial "rawProductLink" . }}
 {{ if or $productLink .Page.Params.formWholesaleUrl }}
 <div id="benefitsCTA" class="container default">
@@ -10,7 +12,7 @@
             <svg aria-labelledby="buttons05-icon-1-title">
               <title id="buttons05-icon-1-title">Cart (Alt)</title>
               <use xlink:href="/icons.svg#cart-alt"></use>
-            </svg><span class="label">{{ .Page.Params.buttonCartText | default "Buy Gloves" | markdownify }}</span></a>
+            </svg><span class="label">{{ or (index $.Site.Data.products $filename "buttonCartText") .Page.Params.buttonCartText .Site.Params.products.defaultButtonCartText | markdownify }}</span></a>
         </li>
         {{ end }}
         {{ if .Site.Params.formWholesaleUrl }}
@@ -19,7 +21,7 @@
             <svg aria-labelledby="buttons05-icon-2-title">
               <title id="buttons05-icon-2-title">Form</title>
               <use xlink:href="/icons.svg#form"></use>
-            </svg><span class="label">{{ .Page.Params.buttonWholesaleText | default "Wholesale Inquiry" | markdownify }}</span></a>
+            </svg><span class="label">{{ or .Page.Params.buttonWholesaleText .Site.Params.products.defaultButtonWholesaleText | markdownify }}</span></a>
         </li>
         {{ end }}
       </ul>

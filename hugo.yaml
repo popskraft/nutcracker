@@ -96,15 +96,6 @@ params:
     defaultItemCondition: "https://schema.org/NewCondition"
     defaultAvailability: "https://schema.org/InStock"
     
-  # Common savings section
-  savings:
-    title: "Save up to $6,500 a year"
-    subtitle: "Special offer for car dealerships!"
-    image: "/images/carflag.jpg"
-    imageAlt: "Big Savings"
-    description: >-
-      Every dollar matters in a competitive market, and we're thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. As an example, on gloves alone, our team analyzed the numbers and found that by reducing the standard $12 per box price to just $4.99, businesses can save up to $1,850 annually. Depending on usage, total savings range **from $875 to $3,500 per year**.
-    
   # Common slider images
   slider:
     defaultSlides:

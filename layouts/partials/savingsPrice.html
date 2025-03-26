@@ -1,7 +1,7 @@
 {{ $filename := .Page.File.BaseFileName }}
-{{ $dataPrice := or (index .Site.Data.products $filename "priceWholesale") (index .Site.Data.products $filename "price") }}
-
-{{ with .Page.Params.priceSection }}
+{{ $dataPrice := or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") }}
+{{ $priceSection := or (index $.Site.Data.products $filename "priceSection") .Page.Params.priceSection }}
+{{ with $priceSection }}
 <div id="savingsPrice" class="style15 container default">
   <div class="wrapper">
     <div class="inner">

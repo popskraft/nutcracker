@@ -1,3 +1,4 @@
+{{ $filename := .File.BaseFileName }}
 {{ $productName := partial "productName" . | markdownify | plainify }}
 {{ $productLink := partial "rawProductLink" . }}
 {{ $imageAlt := or $.Page.Params.coverImageAlt $productName $.Page.Title | markdownify | plainify }}
@@ -16,12 +17,12 @@
         <div id="coverSliderImageDesctop" class="image full" data-visibility="desktop">
           <a href="{{ $productLink }}" class="frame">
             {{ $sigma := $.Site.Params.coverImage.filter.unsharpMask.sigma }}
-              {{ $amount := $.Site.Params.coverImage.filter.unsharpMask.amount }}
-              {{ $threshold := $.Site.Params.coverImage.filter.unsharpMask.threshold }}
-              {{ $desktopWidth := $.Site.Params.coverImage.desktopWidth }}
-              {{ $desktopHeight := $.Site.Params.coverImage.desktopHeight }}
-              {{ $format := $.Site.Params.coverImage.format }}
-              {{ with .Page.Params.coverImage }}
+            {{ $amount := $.Site.Params.coverImage.filter.unsharpMask.amount }}
+            {{ $threshold := $.Site.Params.coverImage.filter.unsharpMask.threshold }}
+            {{ $desktopWidth := $.Site.Params.coverImage.desktopWidth }}
+            {{ $desktopHeight := $.Site.Params.coverImage.desktopHeight }}
+            {{ $format := $.Site.Params.coverImage.format }}
+            {{ with or (index $.Site.Data.products $filename "coverImage") .Page.Params.coverImage }}
               {{ $image := resources.Get . }}
               {{ with $image }}
                 {{ $filter := images.UnsharpMask $sigma $amount $threshold }}
@@ -52,7 +53,7 @@
             {{ $threshold := $.Site.Params.coverImage.filter.unsharpMask.threshold }}
             {{ $mobileWidth := $.Site.Params.coverImage.mobileWidth }}
             {{ $format := $.Site.Params.coverImage.format }}
-            {{ with .Page.Params.coverImageMobile | default .Page.Params.coverImage }}
+            {{ with or (index $.Site.Data.products $filename "coverImageMobile") .Page.Params.coverImageMobile | default .Page.Params.coverImage }}
             {{ $image := resources.Get . }}
             {{ with $image }}
               {{ $filter := images.UnsharpMask $sigma $amount $threshold }}
@@ -83,7 +84,8 @@
       <div>
 
         <div id="list02" class="style2 list">
-          {{ with .Page.Params.features }}
+          {{ $features := or (index $.Site.Data.products $filename "features") .Page.Params.features }}
+          {{ with $features }}
           <ul>
             {{ range . }}
             <li>
@@ -95,8 +97,7 @@
         </div>
 
         {{/*  Product price from data/products.yaml  */}}
-        {{ $filename := .File.BaseFileName }}
-        {{ $dataPrice := or (index .Site.Data.products $filename "priceWholesale") (index .Site.Data.products $filename "price") }}
+        {{ $dataPrice := or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") }}
         {{ $price := or .Page.Params.priceSection.priceWholesale .Page.Params.priceSection.price $dataPrice }}
         {{ with $price }}
         <p class="style15">
@@ -104,17 +105,15 @@
         </p>
         {{ end }}
         
-        {{ with .Page.Params.priceSection }}
+        {{ $dataCaptions := index $.Site.Data.products $filename }}
         <p class="style14">
-          {{ $dataCaptions := index $.Site.Data.products $.Page.File.BaseFileName }}
-          {{ $longCaption := or .pricePerCaptionLong (index $dataCaptions "pricePerCaptionLong") }}
-          {{ if $longCaption }}
-            {{ $longCaption }}
-          {{ else }}
-            {{ .pricePerCaptionShort }}
-          {{ end }}
+          {{ or 
+              $dataCaptions.pricePerCaptionLong 
+              $dataCaptions.pricePerCaptionShort 
+              .Page.Params.priceSection.pricePerCaptionLong 
+              .Page.Params.priceSection.pricePerCaptionShort 
+            }}
         </p>
-        {{ end }}
         
       </div>
     </div>
