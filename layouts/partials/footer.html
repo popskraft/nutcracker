@@ -66,8 +66,13 @@
   <div id="footerBottom" class="container default">
     <div class="wrapper">
       <div class="inner">
-        <p id="text42"><span class="p">{{ now.Format "2006" }} {{ .Site.Params.companyName }} {{ .Site.Params.footer.copyright }}<br />{{ .Site.Params.footer.terms_text }} <a
-            href="{{ .Site.Params.footer.terms_link }}">{{ .Site.Params.footer.terms_link_text }}</a></span></p>
+        <p id="text42">
+          <span class="p">{{ now.Format "2006" }} {{ .Site.Params.companyName }} {{ .Site.Params.footer.copyright }}<br />{{ .Site.Params.footer.terms_text }} 
+          <a href="{{ .Site.Params.footer.terms_link }}">{{ .Site.Params.footer.terms_link_text }}</a></span>
+          {{ with .Site.GetPage "sitemap" }}
+          <span class="p"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></span>
+          {{ end }}
+        </p>
         <hr id="divider03" class="style3">
       </div>
     </div>
