@@ -2,6 +2,9 @@
 date: 2025-02-10T22:05:14+04:00
 title: Professional-grade tools and products supply
 headerTitle: "**Secret Gear** Of Silent Heroes"
+sitemap:
+  priority: 1
+  changefreq: "weekly"
 
 # Product items
 productItems:

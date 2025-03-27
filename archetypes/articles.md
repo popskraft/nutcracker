@@ -7,6 +7,9 @@ coverImage: ""
 headerTitle: ""
 headerSubtitle: ""
 description: ""
+sitemap:
+  priority: 0.7
+  changefreq: "weekly"
 ---
 
 ## Introduction

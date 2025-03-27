@@ -2,6 +2,9 @@
 type: product
 layout: product
 date: 2025-02-22
+sitemap:
+  priority: 1
+  changefreq: "weekly"
 
 # SEO metadata
 seoTitleSuffix: "Industrial Strength Hand Soap"

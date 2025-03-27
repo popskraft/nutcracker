@@ -2,6 +2,9 @@
 type: product
 layout: product
 date: 2025-03-10T13:09:43+04:00
+sitemap:
+  priority: 1
+  changefreq: "weekly"
 
 # SEO metadata
 seoTitleSuffix: "Heavy-Duty Shop Towels"

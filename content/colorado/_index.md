@@ -9,4 +9,7 @@ headerTitle: "Colorado Mechanic Supplies"
 subtitle: "Professional Auto Shop Products"
 seoTitle: "Professional Mechanic Supplies in Colorado"
 seoDescription: "Find high-quality mechanic supplies and automotive products in Colorado. Fast shipping to Denver, Colorado Springs, Aurora, and all CO locations."
+sitemap:
+  priority: 0.5
+  changefreq: "weekly"
 ---

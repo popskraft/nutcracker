@@ -9,4 +9,7 @@ headerTitle: "{{ replace .Name "-" " " | title }}"
 subtitle: ""
 seoTitle: ""
 seoDescription: ""
+sitemap:
+  priority: 0.5
+  changefreq: "weekly"
 ---

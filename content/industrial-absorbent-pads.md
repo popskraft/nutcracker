@@ -2,6 +2,9 @@
 type: product
 layout: product
 date: 2025-03-21T13:48:15+04:00
+sitemap:
+  priority: 1
+  changefreq: "weekly"
 
 # SEO metadata
 seoTitleSuffix: "(PIG Mats)"

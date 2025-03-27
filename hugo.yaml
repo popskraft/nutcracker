@@ -6,7 +6,6 @@ languageCode: "en"
 
 # Site metadata
 params:
-
   # Form links
   formContactUrl: "https://nutcrackerpro.ju.mp/"
   formWholesaleUrl: "https://nutcrackerpro.ju.mp/#wholesale"
@@ -168,7 +167,7 @@ summaryLength: 30
 
 sitemap:
   changefreq: monthly
-  priority: 0.5
+  priority: 0.8
   filename: sitemap.xml
 
 imaging:

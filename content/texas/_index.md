@@ -9,4 +9,7 @@ headerTitle: "Texas Mechanic Supplies"
 subtitle: "Professional Auto Shop Products"
 seoTitle: "Professional Mechanic Supplies in Texas"
 seoDescription: "Find high-quality mechanic supplies and automotive products in Texas. Fast shipping to Houston, Dallas, San Antonio, Austin, and all TX locations."
+sitemap:
+  priority: 0.5
+  changefreq: "weekly"
 ---
