@@ -1,11 +1,23 @@
 {{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
 {{ define "main" }}
-<div id="articleListing" class="style10 container default">
+<div id="articleListing" class="style10 style6 container default">
   <div class="wrapper">
     <div class="inner">
       <h1 class="style1">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+      <p class="style8">{{ . | markdownify }}</p>
+      {{ end }}
 
       {{ partial "listingGallery" . }}
+
+      {{ with .Content }}
+        <hr class="style2">
+        <p class="style8">{{ $.Params.description | markdownify }} </p>
+        <hr class="style1">
+        <div class="txt">
+          {{ . | markdownify }}
+        </div>
+      {{ end }}
 
       <hr class="style2">
 

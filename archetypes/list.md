@@ -1,14 +1,11 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-description: ""
-date: {{ .Date }}
-draft: false
 type: "list"
 layout: "list"
-headerTitle: "{{ replace .Name "-" " " | title }}"
+draft: false
+date: {{ .Date }}
+title: "{{ replace .Name "-" " " | title }}"
 subtitle: ""
-seoTitle: ""
-seoDescription: ""
+description: ""
 sitemap:
   priority: 0.5
   changefreq: "weekly"
