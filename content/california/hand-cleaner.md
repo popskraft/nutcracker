@@ -11,58 +11,12 @@ seoDescription: "Discover the professional-grade hand cleaner that California me
 # Page content
 title: Professional <br> **Hand Cleaner**
 titlePrefix: "Nutcracker Pro Professional Hand Cleaner for California Auto Shops & Dealerships"
-subtitle: "# Secret Gear of Silent Heroes"
 description: >
-  Nutcracker Pro presents its top-tier Industrial Hand Soap, a non-solvent, professional-grade hand cleaner engineered specifically for the rigorous demands of California's automotive service industry. This hand cleaner is a favorite among California mechanics, auto shop managers, and dealership decision-makers who require a product that can tackle the toughest grease, oil, and grime while ensuring the health and moisture of their hands. Formulated with multiple emollients and conditioners, it offers both a non-greasy finish and a skin-conditioning formula ideal for prolonged use. Designed with the busy pace of California auto shops in mind, this product promises fast shipping, bulk ordering capabilities, and exceptional compliance with local industry standards. Whether you are a dealership service center or an independent mechanic in California, Nutcracker Pro’s Industrial Hand Soap is your reliable partner for maintaining clean, protected, and healthy hands on the job. Experience the perfect blend of industrial strength and skin safety that has set a new standard in automotive maintenance supplies across California.
-
-# Media
-ogImage: /images/handcleaner/ogimage.jpg
-
-# CTA buttons
-buttonCartText: Buy Hand Cleaner
-buttonWholesaleText:
-
-# cover slider (in static folder)
-slider:
-  - image: /images/covers/cover-3.webp
-  - image: /images/covers/cover-2.webp
-  - image: /images/covers/cover-4.webp
-
-# cover image
-coverImage: images/handcleaner/product-cover.png
-coverImageMobile: images/handcleaner/product-cover-mobile.png
-coverImageTitle: "Order the Nutcracker Pro Hand Cleaner Today"
-coverImageAlt: "Nutcracker Pro Professional Hand Cleaner for California Auto Shops"
-
-# features
-features:
-  - "Does Not Contain Petroleum Solvents"
-  - "Helps Hands With Repeated Use"
-  - "Easily removes paint, oil, and grease"
-  - "Volume: 120 FL OZ (3.55 L)."
-  - "Dispenser is available for easy use."
+  Nutcracker Pro presents its top-tier Industrial Hand Soap, a non-solvent, professional-grade hand cleaner engineered specifically for the rigorous demands of California's automotive service industry. This hand cleaner is a favorite among California mechanics, auto shop managers, and dealership decision-makers who require a product that can tackle the toughest grease, oil, and grime while ensuring the health and moisture of their hands. Formulated with multiple emollients and conditioners, it offers both a non-greasy finish and a skin-conditioning formula ideal for prolonged use.
 
 # price section
 priceSection:
   title: "Outstanding Price"
-
-# products section
-products:
-  - size:
-    image: /images/handcleaner/product-1.jpg
-    imageAlt: "Buy a Small batch of Nutcracker Pro Hand Cleaner"
-    productLink:
-    buttonWholesaleText: false
-    priceText: "Small batch from 4 containers"
-  - size:
-    image: /images/handcleaner/product-2.jpg
-    imageAlt: "Order Wholesale Batch of Nutcracker Pro Hand Cleaner"
-    productLink:
-    buttonText: false
-    priceText: "Large batch of 114 containers"
-
-# benefitsHeader
-benefitsHeaderTitle:
 
 # benefitsContent
 benefitsImages:
