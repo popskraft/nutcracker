@@ -12,7 +12,7 @@
 
       <div class="style3 list">
         <ul class="sitemap-list">
-          {{ range .Site.RegularPages.ByTitle.Reverse }}
+          {{ range .Site.RegularPages }}
           <li>
             <p>
               <a href="{{ .RelPermalink }}" title="Go to {{ .Title | markdownify | plainify }}">{{ .Params.titlePrefix }} {{ .Title | markdownify | plainify }}</a>
