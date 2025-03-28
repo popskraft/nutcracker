@@ -32,10 +32,10 @@ Speed matters in every shop environment. Whether you're stocking up on mechanic 
 
 Bulk shop supplies in Oklahoma include:
 
-- High-capacity industrial wipes with fast shipping  
-- Absorbent pads for dealerships in Oklahoma  
-- Industrial-strength hand cleaners  
-- Auto shop PPE and maintenance gear  
+- [High-capacity industrial wipes with fast shipping](/industrial-wipes-roll/)
+- [Absorbent pads for dealerships in Oklahoma](/industrial-absorbent-pads/)
+- [Industrial-strength hand cleaners](/hand-cleaner/)
+- [Auto shop PPE and maintenance gear](/nitrile-gloves/)
 
 Our warehouse-level shop gear supports high-volume auto service supplies. We serve businesses ranging from independent auto garages to regional dealership networks that require consistent inventory of day-to-day garage supplies.
 
