@@ -70,6 +70,5 @@ You’ll find:
 
 Explore your options with confidence—every item we sell is shop-tested and ready to perform.
 
----
 
 Looking for a local supplier you can count on? Start browsing our full product range or check other regions to compare delivery options and volume deals.

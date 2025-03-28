@@ -104,4 +104,4 @@ faq:
     - question: "Where can I buy these Industrial Absorbent Pads in Oklahoma?"
       answer: >-
         You can purchase these high-performance pads from our trusted distribution network in Oklahoma. They offer fast delivery, reliable bulk ordering, and are widely used in auto repair supplies Oklahoma, local mechanic supply distributor stores, and service center products near me.
-        ---
+---
