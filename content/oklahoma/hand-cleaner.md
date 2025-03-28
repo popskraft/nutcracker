@@ -71,13 +71,13 @@ testimonials:
     - name: "Carlos"
       text: >-
         Works awesome in my Lawton garage. Grime’s gone fast and hands stay soft. Best part? One bottle lasts forever. Good deal for us.
-    - name: "Lori"
+    - name: "Lori Gomez"
       text: >-
         My husband’s a mechanic in Edmond. He says this soap beats others. Cleans deep and quick, no harsh stuff. We’ll keep buying it.
     - name: "Pete"
       text: >-
         I fix cars in Stillwater. This soap’s tough on dirt but easy on skin. Bulk order saves cash, and delivery to Oklahoma’s real fast.
-    - name: "Kim"
+    - name: "KimB"
       text: >-
         Our Muskogee shop swears by it. Grease and paint wipe right off, and it’s not rough on hands. Great for our busy service bays.
     - name: "Dave"
