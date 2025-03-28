@@ -23,7 +23,7 @@
               {{- end -}}
             {{- end -}}
             <a href="{{ $page.RelPermalink }}">
-              <img src="{{ $imageSrc }}" alt="{{ $pageTitle }}" loading="lazy">
+              <img src="{{ $imageSrc }}" alt="{{ $pageTitle }}" title="{{ $pageTitle }} - {{ $.Page.Title }}" loading="lazy">
             </a>
           </span>
         </span>
