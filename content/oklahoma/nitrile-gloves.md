@@ -64,7 +64,7 @@ testimonials:
     - name: "Mindy in OKC"
       text: >-
         I run a dealership in Oklahoma City, and these gloves save us money. They last through tough jobs, and my techs love the fit. Best bulk deal around.
-    - name: "Rusty"
+    - name: "Rusty12"
       text: >-
         Been using these in my garage. They’re thick but easy to move in. No tears even with sharp stuff. Perfect for mechanics like me in Oklahoma.
     - name: "SaraLynn"
