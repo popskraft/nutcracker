@@ -11,18 +11,18 @@
       {{ end }}
 
       <div class="style3 list">
+        {{ range where .Site.Sections "Section" "ne" "articles" }}
+        <h2 class="style2">{{ .Title }}</h2>
         <ul class="sitemap-list">
-          {{ range .Site.RegularPages }}
+          {{ range .RegularPages.ByTitle }}
           <li>
             <p>
               <a href="{{ .RelPermalink }}" title="Go to {{ .Title | markdownify | plainify }}">{{ .Params.titlePrefix }} {{ .Title | markdownify | plainify }}</a>
             </p>
-            {{/*  {{ with .Description }}
-            <p class="sitemap-description">{{ . }}</p>
-            {{ end }}  */}}
           </li>
           {{ end }}
         </ul>
+        {{ end }}
       </div>
 
       <hr class="style2">
