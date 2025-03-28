@@ -4,7 +4,7 @@ layout: product
 date: 2025-02-22
 
 # SEO metadata
-seoTitleSuffix: "Industrial Strength Hand Soap near me"
+seoTitleSuffix: "Industrial Hand Cleaner near me"
 seoTitle: "Professional Hand Cleaner - New Mexico Mechanic Supplies"
 seoDescription: >-
   Get Professional Hand Cleaner in New Mexico. Tough on grease, gentle on hands with fast shipping for auto shops and dealerships. Bulk mechanic supplies near me.

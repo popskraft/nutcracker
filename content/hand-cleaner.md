@@ -7,7 +7,7 @@ sitemap:
   changefreq: "weekly"
 
 # SEO metadata
-seoTitleSuffix: "Industrial Strength Hand Soap"
+seoTitleSuffix: "Industrial Hand Cleaner (Soap)"
 seoDescription: >-
   Professional-grade non-solvent hand soap from Nutcracker Pro. Tough on grease and grime, gentle on hands. Enriched with emollients and conditioners. Perfect for automotive and industrial use.
 
