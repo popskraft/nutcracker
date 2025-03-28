@@ -13,7 +13,7 @@ seoDescription: >-
 title: "Professional <br> **Hand Cleaner**"
 titlePrefix: "New Mexico Auto Shop Essentials"
 description: >-
-  Professional Hand Cleaner: a non-solvent soap for New Mexico mechanics and auto shops. Cleans tough grime fast, moisturizes hands. Ideal for dealerships and service centers. (133 characters)
+  Professional Hand Cleaner: a non-solvent soap for New Mexico mechanics and auto shops. Cleans tough grime fast, moisturizes hands. Ideal for dealerships and service centers.
 
 # benefitsContent
 benefitsImages:
@@ -25,31 +25,31 @@ benefitsImages:
 benefitsBlocks:
   - title: "Top Choice for New Mexico Mechanics"
     text: >-
-      Professional Hand Cleaner tackles grease and oil fast. Perfect for New Mexico auto shops and dealerships needing reliable mechanic supplies. (134 characters)
+      Professional Hand Cleaner tackles grease and oil fast. Perfect for New Mexico auto shops and dealerships needing reliable mechanic supplies.
   - title: "Gentle on Hands"
     text: >-
-      This soap’s conditioning formula keeps hands soft even after repeated use. Great for mechanics and technicians working long hours in service bays. (137 characters)
+      This soap’s conditioning formula keeps hands soft even after repeated use. Great for mechanics and technicians working long hours in service bays.
   - title: "Eco-Friendly Cleaning"
     text: >-
-      Made with walnut shell scrubbers, this cleaner is green and effective. A smart pick for auto repair supplies in New Mexico with no harsh chemicals. (139 characters)
+      Made with walnut shell scrubbers, this cleaner is green and effective. A smart pick for auto repair supplies in New Mexico with no harsh chemicals.
   - title: "Versatile for All Shops"
     text: >-
-      Cleans oil, ink, and paint easily. Ideal for automotive workshops, body shops, and industrial garages needing heavy-duty Professional Hand Cleaner. (138 characters)
+      Cleans oil, ink, and paint easily. Ideal for automotive workshops, body shops, and industrial garages needing heavy-duty Professional Hand Cleaner.
   - title: "No Greasy Residue"
     text: >-
-      Unlike other soaps, this leaves hands clean, not slippery. Perfect for pros who need to get back to work fast without hassle in New Mexico garages. (140 characters)
+      Unlike other soaps, this leaves hands clean, not slippery. Perfect for pros who need to get back to work fast without hassle in New Mexico garages.
   - title: "Cost-Saving Bulk Option"
     text: >-
-      Super-concentrated formula cuts usage by 75%. A budget-friendly choice for high-volume auto service supplies and dealership maintenance stock. (136 characters)
+      Super-concentrated formula cuts usage by 75%. A budget-friendly choice for high-volume auto service supplies and dealership maintenance stock.
   - title: "Fast Shipping to New Mexico"
     text: >-
-      Get Professional Hand Cleaner delivered quick to your shop. Reliable supply for service centers and local mechanic supply distributors in the state. (141 characters)
+      Get Professional Hand Cleaner delivered quick to your shop. Reliable supply for service centers and local mechanic supply distributors in the state.
   - title: "Heavy-Duty Performance"
     text: >-
-      Built for diesel mechanics and tough jobs, this soap delivers industrial-strength cleaning power for professional workshops and fleet services. (137 characters)
+      Built for diesel mechanics and tough jobs, this soap delivers industrial-strength cleaning power for professional workshops and fleet services.
   - title: "Safe for Daily Use"
     text: >-
-      Moisturizing agents make it perfect for regular use. A must-have for technicians needing mechanic safety products and shop PPE in busy garages. (137 characters)
+      Moisturizing agents make it perfect for regular use. A must-have for technicians needing mechanic safety products and shop PPE in busy garages.
 
 # testimonials section
 testimonials:

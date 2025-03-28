@@ -26,31 +26,31 @@ benefitsImages:
 benefitsBlocks:
   - title: "Cost-Saving Bulk Deals"
     text: >-
-      Save big with bulk orders of 8-mil Nitrile Gloves in Colorado. Priced way below market rates, these gloves let mechanics swap them out often, keeping costs low and hands clean (400 chars).
+      Save big with bulk orders of 8-mil Nitrile Gloves in Colorado. Priced way below market rates, these gloves let mechanics swap them out often, keeping costs low and hands clean.
   - title: "Heavy-Duty Shop Protection"
     text: >-
-      Built with 8-mil nitrile, these gloves resist punctures from sharp tools. Perfect for Colorado auto repair shops handling oil, grease, and rugged parts with confidence (400 chars).
+      Built with 8-mil nitrile, these gloves resist punctures from sharp tools. Perfect for Colorado auto repair shops handling oil, grease, and rugged parts with confidence.
   - title: "Compliance for Service Centers"
     text: >-
-      FDA, ASTM, and CE certified, these gloves meet safety rules for Colorado dealerships. Trust them for technician safety and regulatory peace of mind in busy service bays (400 chars).
+      FDA, ASTM, and CE certified, these gloves meet safety rules for Colorado dealerships. Trust them for technician safety and regulatory peace of mind in busy service bays.
   - title: "Perfect Fit for Every Tech"
     text: >-
-      Available in M, L, XL, and XXL, these gloves fit snugly. Mechanics in Colorado garages get comfort and safety without loose or tight gloves slowing them down (400 chars).
+      Available in M, L, XL, and XXL, these gloves fit snugly. Mechanics in Colorado garages get comfort and safety without loose or tight gloves slowing them down.
   - title: "Latex-Free Comfort All Day"
     text: >-
-      No latex allergies here. These ergonomic gloves reduce hand strain, ideal for long shifts at Colorado service centers needing reliable mechanic gear (400 chars).
+      No latex allergies here. These ergonomic gloves reduce hand strain, ideal for long shifts at Colorado service centers needing reliable mechanic gear.
   - title: "Fast Shipping for Workshops"
     text: >-
-      Get quick delivery on these shop-grade gloves across Colorado. Keep your auto shop stocked with high-performance nitrile gloves for daily use (400 chars).
+      Get quick delivery on these shop-grade gloves across Colorado. Keep your auto shop stocked with high-performance nitrile gloves for daily use.
   - title: "Precision for Small Tasks"
     text: >-
-      Despite their strength, these gloves allow easy handling of tiny parts. Great for mechanics needing automotive workshop equipment that won’t limit dexterity (400 chars).
+      Despite their strength, these gloves allow easy handling of tiny parts. Great for mechanics needing automotive workshop equipment that won’t limit dexterity.
   - title: "Eco-Friendly Shop Choice"
     text: >-
-      Go green with durable, professional nitrile gloves. Reduce waste in Colorado auto shops with gloves that last longer than standard options (400 chars).
+      Go green with durable, professional nitrile gloves. Reduce waste in Colorado auto shops with gloves that last longer than standard options.
   - title: "Best Gloves for Diesel Work"
     text: >-
-      Tackle diesel jobs with premium 8-mil gloves. Built for heavy-use, they’re a top pick for Colorado technicians in tough automotive environments (400 chars).
+      Tackle diesel jobs with premium 8-mil gloves. Built for heavy-use, they’re a top pick for Colorado technicians in tough automotive environments.
 
 # testimonials section
 testimonials:
