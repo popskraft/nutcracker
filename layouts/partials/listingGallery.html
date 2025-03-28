@@ -1,7 +1,14 @@
 <div id="gallery06" class="style5 gallery full">
   <div class="inner">
     <ul>
-      {{- range $index, $page := .Pages -}}
+      {{- $pages := slice -}}
+      {{- range .Pages -}}
+        {{- $filename := .File.BaseFileName | replaceRE "^[^/]+/" "" -}}
+        {{- $weight := index $.Site.Data.products $filename "weight" | default 999 -}}
+        {{- $pages = $pages | append (dict "page" . "weight" $weight) -}}
+      {{- end -}}
+      {{- range $index, $item := sort $pages "weight" "asc" -}}
+      {{- $page := $item.page -}}
       {{ $pageTitle := $page.Title | markdownify | plainify }}
       <li>
         <span class="thumbnail n{{ add $index 1 }}">
@@ -28,7 +35,7 @@
           </span>
         </span>
         <div class="caption">
-          <p class="mt-1">
+          <p>
             <a class="no-underline hover:underline" href="{{ $page.RelPermalink }}">{{ $pageTitle }}</a>
           </p>
         </div>
