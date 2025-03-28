@@ -7,7 +7,7 @@ sitemap:
   changefreq: "weekly"
 
 # SEO metadata
-seoTitleSuffix: "(PIG Mats)"
+seoTitleSuffix: "- auto mechanics PIG Mats"
 seoDescription: >-
   Professional-grade absorbent pads from Nutcracker Pro. High-performance floor protection with Exxon technology. Durable, non-slip poly backing, ideal for automotive dealerships. Save up to $1,200 yearly with cost-effective bulk ordering.
 
