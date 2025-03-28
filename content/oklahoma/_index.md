@@ -63,4 +63,4 @@ You’ll find us supporting:
 
 If your location is on the map, we’re already shipping to shops nearby—or ready to. We’re more than a distributor—we’re your long-term service supply expert in Oklahoma.
 
-Order mechanic tools and shop essentials from a team that understands your daily challenges. Explore fast delivery options, bulk discounts, and trusted shop consumables built for Oklahoma professionals.
+Order mechanic tools and shop essentials from a team that understands your daily challenges. Explore fast delivery options, bulk discounts, and trusted shop consumables built for Oklahoma professionals. Hello Kisik!
