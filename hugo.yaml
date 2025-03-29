@@ -167,7 +167,7 @@ summaryLength: 30
 
 sitemap:
   changefreq: monthly
-  priority: 0.8
+  priority: 0.9
   filename: sitemap.xml
 
 imaging:
