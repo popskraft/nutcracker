@@ -1,34 +1,34 @@
-weight: 1
-productName: Professional Hand Cleaner
-price: $24.99
-priceWholesale: $19.99
-pricePerCaptionLong: Per container (wholesale price, pallet)
-pricePerCaptionShort: Per container
+weight: "1"
+productName: "Professional Hand Cleaner"
+price: "$24.99"
+priceWholesale: "$19.99"
+pricePerCaptionLong: "Per container (wholesale price, pallet)"
+pricePerCaptionShort: "Per container"
 productLink: https://akdealerservices.com/product/1001255-professional-hand-cleaner
 
 # Media
 ogImage: /images/handcleaner/ogimage.jpg
 
-# cover slider (in static folder)
+# Cover Slider
 slider:
   - image: /images/covers/cover-3.webp
   - image: /images/covers/cover-2.webp
   - image: /images/covers/cover-4.webp
 
-# cover image
+# Cover Image
 coverImage: /images/handcleaner/product-cover.png
 coverImageMobile: /images/handcleaner/product-cover-mobile.png
 coverImageTitle: "Order the"
 coverImageAlt: "Professional Hand Cleaner Nutcracker Pro"
 
-# CTA buttons
+# CTA Buttons
 buttonCartText: "Buy Hand Cleaner"
 
-# price section
+# Price Section
 priceSection:
   title: "Outstanding price"
 
-# features
+# Features
 features:
   - "Does Not Contain Petroleum Solvents"
   - "Helps Hands With Repeated Use"
@@ -36,19 +36,27 @@ features:
   - "Volume: 120 FL OZ (3.55 L)"
   - "Dispenser is available for easy use"
 
-# products section
+# Products Section
 products:
-  - size:
+  - size: ""
     image: /images/handcleaner/product-1.jpg
     imageAlt: "Buy a Small batch of"
-    buttonWholesaleText: false
+    buttonText: "false"
+    buttonWholesaleText: "Buy Wholesale"
     priceText: "Small batch from 4 containers"
-
-  - size:
+    priceTextWholesale: "Wholesale price for pallet"
+  - size: ""
     image: /images/handcleaner/product-2.jpg
     imageAlt: "Order wholesale Batch of"
-    buttonText: false
-    priceText: "Large batch of 114 containers"  
+    buttonText: "false"
+    buttonWholesaleText: "Buy Wholesale"
+    priceText: "Large batch of 114 containers"
+    priceTextWholesale: "Wholesale price for pallet"
+
+# Benefits Content
+benefitsImages:
+  - image: /images/handcleaner/product-despencer.jpg
+  - image: /images/handcleaner/product-details.jpg  
 
 # savings section
 savings:

@@ -1,43 +1,34 @@
-weight: 3
-productName: Industrial Wipe Rolls
-price: $69
-priceWholesale: $59
-pricePerCaptionLong: Per roll (wholesale price, pallet)
-pricePerCaptionShort: Per roll
+weight: "3"
+productName: "Industrial Wipe Rolls"
+price: "$69"
+priceWholesale: "$59"
+pricePerCaptionLong: "Per roll (wholesale price, pallet)"
+pricePerCaptionShort: "Per roll"
 productLink: https://akdealerservices.com/product/1000534-mechanic-cloths
 
 # Media
-ogImage: "/images/wipes/ogimage.jpg"
+ogImage: /images/wipes/ogimage.jpg
 
-# CTA buttons
+# Cover Slider
+slider:
+  - image: /images/covers/cover-7.webp
+  - image: /images/covers/cover-8.webp
+  - image: /images/covers/cover-9.webp
+
+# Cover Image
+coverImage: /images/wipes/product-cover.png
+coverImageMobile: /images/wipes/product-cover-mobile.png
+coverImageTitle: "Order the"
+coverImageAlt: "Industrial Wipe Rolls for Professional Use"
+
+# CTA Buttons
 buttonCartText: "Buy Wipe Rolls"
 
-# cover slider (in static folder)
-slider:
-  - image: "/images/covers/cover-7.webp"
-  - image: "/images/covers/cover-8.webp"
-  - image: "/images/covers/cover-9.webp"
+# Price Section
+priceSection:
+  title: "Outstanding price"
 
-# cover image
-coverImage: "images/wipes/product-cover.png"
-coverImageMobile: "images/wipes/product-cover-mobile.png"
-coverImageTitle: "Order the"
-
-# products section
-products:
-  - size:
-    image: "/images/wipes/product-1.jpg"
-    imageAlt: "Buy"
-    buttonWholesaleText: false
-    priceText: "Small batch minimum 2 rolls (2100 Wipes)"
-
-  - size:
-    image: "/images/wipes/product-2.jpg"
-    imageAlt: "Wholesale"
-    buttonText: false
-    priceText: "Large batch 1 pallet (54 rolls, 56700 Wipes)"
-
-# features
+# Features
 features:
   - "Heavy-duty, tear-resistant material"
   - "Low-lint formula for streak-free results"
@@ -45,10 +36,27 @@ features:
   - "40% fewer wipes needed compared to traditional rental shop towels"
   - "Compatible with all standard Tork dispensers"
 
-# benefitsContent
+# Products Section
+products:
+  - size: ""
+    image: /images/wipes/product-1.jpg
+    imageAlt: "Buy Small Batch of Industrial Wipes"
+    buttonText: "Buy Now"
+    buttonWholesaleText: "false"
+    priceText: "Small batch minimum 2 rolls (2100 Wipes)"
+    priceTextWholesale: "Wholesale price for small batch"
+  - size: ""
+    image: /images/wipes/product-2.jpg
+    imageAlt: "Buy Wholesale Industrial Wipes"
+    buttonText: "false"
+    buttonWholesaleText: "Buy Wholesale"
+    priceText: "Large batch 1 pallet (54 rolls, 56700 Wipes)"
+    priceTextWholesale: "Wholesale price for pallet"
+
+# Benefits Content
 benefitsImages:
-  - image: "/images/wipes/product-main.jpg"
-  # - image: "/images/wipes/product-details.jpg"
+  - image: /images/wipes/product-main.jpg
+  - image: /images/wipes/product-details.jpg
 
 # savings section
 savings:
