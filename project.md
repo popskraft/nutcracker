@@ -11,10 +11,34 @@ This is a Hugo-based website for Nutcracker products, converted from a Carrd tem
 - **Performance**: Optimized for maximum speed on all devices
 - **Deployment**: Netlify static hosting (nutcrackerpro.netlify.app)
 
-## Design Implementation
-- Original design will be implemented from the Carrd template
-- All styling and layout will match the existing design in `/carrd` directory
-- Assets will be properly optimized for performance
+## Getting Started: Complete Setup Guide
+
+This section provides comprehensive instructions for setting up and running the Nutcracker website project for both AI assistants and human developers.
+
+### Prerequisites
+- **Node.js**: v16.x or later
+- **npm**: v8.x or later
+- **Hugo**: v0.140.2 (extended version)
+- **Git**: Latest version
+
+### Initial Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/popskraft/nutcracker.git
+   cd nutcracker
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Verify Hugo installation**:
+   ```bash
+   hugo version
+   ```
+   Ensure you have Hugo v0.140.2 (extended version) installed.
 
 ## Project Structure
 ```
@@ -25,7 +49,7 @@ nutcracker/
 │   ├── js/              # JavaScript files
 │   ├── tailwind/        # Tailwind CSS configuration
 │   │   ├── tailwind.config.js  # Tailwind configuration
-│   │   └── tailwind.css        # Tailwind source CSS
+│   │   └── src/base.css        # Tailwind source CSS
 │   └── tailwindstyle.css # Compiled Tailwind CSS
 ├── content/             # Main content directory
 │   ├── _index.md        # Homepage content
@@ -53,74 +77,138 @@ nutcracker/
 │   └── shortcodes/      # Hugo shortcodes
 ├── static/              # Static assets
 │   └── images/          # Image files
-└── hugo.yaml            # Hugo configuration
+├── hugo.yaml            # Hugo configuration
+├── package.json         # NPM package configuration
+└── netlify.toml         # Netlify deployment configuration
 ```
 
+## Development Workflow
+
+### Starting the Development Environment
+
+The project includes several npm scripts to streamline development:
+
+1. **Full Development Environment** (Recommended):
+   ```bash
+   npm run dev:all
+   ```
+   This command runs both the Hugo server and Tailwind CSS watch process concurrently using the following:
+   - Hugo server with live reload at http://localhost:1313
+   - Tailwind CSS in watch mode to automatically compile CSS changes
+
+2. **Hugo Server Only**:
+   ```bash
+   npm run dev
+   ```
+   Runs only the Hugo development server with live reload.
+
+3. **Tailwind CSS Watch Only**:
+   ```bash
+   npm run tailwind:watch
+   ```
+   Only watches and compiles Tailwind CSS changes without starting the Hugo server.
+
+### Building for Production
+
+To build the site for production:
+
+```bash
+npm run build
+```
+
+This command:
+1. Builds the Hugo site with garbage collection and minification
+2. Outputs to the `public` directory
+
+### Tailwind CSS Configuration
+
+- **Source File**: `./assets/tailwind/src/base.css`
+- **Output File**: `./assets/tailwindstyle.css`
+- **Configuration**: `./assets/tailwind/tailwind.config.js`
+
+#### Tailwind CSS Commands
+
+- **Watch Mode**:
+  ```bash
+  npm run tailwind:watch
+  ```
+  This watches for changes in the Tailwind source files and recompiles automatically.
+  Command: `npx tailwindcss -i ./assets/tailwind/src/base.css -o ./assets/tailwindstyle.css --watch --config ./assets/tailwind/tailwind.config.js`
+
+- **Build for Production**:
+  ```bash
+  npm run tailwind:build
+  ```
+  This builds and minifies the Tailwind CSS for production.
+  Command: `npx tailwindcss -i ./assets/tailwind/src/base.css -o ./assets/tailwindstyle.css --minify --config ./assets/tailwind/tailwind.config.js`
+
+#### CSS Fingerprinting
+
+Hugo's fingerprinting is used for cache busting:
+```html
+{{ with resources.Get "tailwindstyle.css" }}
+{{ $tailwind := . | minify }}
+{{ $tailwind := $tailwind | fingerprint }}
+<link rel="stylesheet" href="{{ $tailwind.RelPermalink }}" integrity="{{ $tailwind.Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
+```
+
+### Server Restart Policy
+
+- Only restart the server when system requirements change or when fixing errors that prevent proper operation
+- For simple content or style changes, server restart is NOT necessary (Hugo's live reload will handle these changes)
+- Avoid unnecessary server restarts to maintain an efficient development workflow
+
 ## Content Management
+
 ### Content Types
 - Product Pages
 - About Section
 - Terms & Conditions
 - Privacy Policy
 - Contact Forms
-- Embedded Media (YouTube/MP4 when needed)
+- Articles
+- State-specific Pages
+- FAQ sections
 
-### Content Creation
-To create new content:
-1. Create markdown files in appropriate content directories
-2. Use provided archetypes for consistent structure
-3. Follow the existing design patterns from Carrd template
-4. Optimize all images and media for performance
+### Creating and Updating Content
 
-## Development
-### Local Development
-- Run `hugo server -D` for development server
-- Access site at `http://localhost:1313`
-- `-D` flag shows draft content
-- **Server Restart Policy**:
-  - Only restart the server when system requirements change or when fixing errors that prevent proper operation
-  - For simple content or style changes, server restart is not necessary (Hugo's live reload will handle these changes)
-  - Avoid unnecessary server restarts to maintain efficient development workflow
+1. **Creating New Content**:
+   ```bash
+   hugo new products/new-product.md
+   # or
+   hugo new articles/new-article.md
+   ```
 
-### Tailwind CSS Development
-- **Watch Mode**: `npm run tailwind:watch`
-  - This command watches for changes in the Tailwind source files and recompiles automatically
-  - Command: `npx tailwindcss -i ./assets/tailwind/tailwind.css -o ./assets/tailwindstyle.css --watch --config ./assets/tailwind/tailwind.config.js`
+2. **Front Matter Structure**:
+   Each content type requires specific front matter. For example, product pages need:
+   ```yaml
+   ---
+   title: "Product Name"
+   date: 2025-03-30T12:00:00-04:00
+   draft: false
+   layout: "product"
+   coverImage: "images/products/product-image.jpg"
+   coverImageMobile: "images/products/product-image-mobile.jpg"
+   coverImageAlt: "Product description"
+   coverImageTitle: "Product title"
+   productLink: "https://example.com/product"
+   ---
+   ```
 
-- **Build for Production**: `npm run tailwind:build`
-  - This command builds and minifies the Tailwind CSS for production
-  - Command: `npx tailwindcss -i ./assets/tailwind/tailwind.css -o ./assets/tailwindstyle.css --minify --config ./assets/tailwind/tailwind.config.js`
-  - Run this before deploying to ensure the latest CSS changes are included
+3. **Adding FAQ Data**:
+   FAQ data is stored in page frontmatter, not in global configuration:
+   ```yaml
+   faq:
+     questions:
+       - question: "Frequently asked question 1?"
+         answer: "Answer to the first question."
+       - question: "Frequently asked question 2?"
+         answer: "Answer to the second question."
+   ```
 
-- **Tailwind Configuration**:
-  - Configuration file: `./assets/tailwind/tailwind.config.js`
-  - Content paths: Scans all HTML and Markdown files in layouts, content, and themes directories
-  - Core plugins: Container class is disabled, Preflight (reset styles) is disabled to prevent conflicts with existing styles
-
-- **CSS Fingerprinting**:
-  - All CSS files (including Tailwind) use Hugo's fingerprinting for cache busting
-  - Fingerprinting creates a unique filename based on the file's content (e.g., `tailwindstyle.min.1e11f8d58fd7a75b4c49f5cb7cd7d0e1ec3131ac617d15caf0f8f7f5b393c684.css`)
-  - Important: Do not add query parameters (like `?v={{ now.Unix }}`) to fingerprinted files as this defeats the purpose and creates duplicate files
-  - Implementation in baseof.html:
-    ```html
-    {{ with resources.Get "tailwindstyle.css" }}
-    {{ $tailwind := . | minify }}
-    {{ $tailwind := $tailwind | fingerprint }}
-    <link rel="stylesheet" href="{{ $tailwind.RelPermalink }}" integrity="{{ $tailwind.Data.Integrity }}" crossorigin="anonymous">
-    {{ end }}
-    ```
-
-### Design Implementation
-- Maintain exact styling from Carrd template
-- Ensure responsive design works on all devices
-- Optimize for maximum performance
-- Implement proper asset optimization
-
-## Image Processing Pattern
-
-A standard image processing pattern has been established for handling images in Hugo templates:
-
-1. Retrieve image from front matter parameters:
+4. **Image Processing Pattern**:
+   The site uses a standardized image processing pattern:
    ```go-html-template
    {{ with .Page.Params.coverImage }}
      {{ $image := resources.Get . }}
@@ -130,52 +218,37 @@ A standard image processing pattern has been established for handling images in 
        {{ $final := $processed.Fill "756x756 webp picture Center" }}
        <img 
          src="{{ $final.RelPermalink }}" 
-         alt="Image description" 
-         title="Image title"
+         alt="{{ $.Page.Params.coverImageAlt }}" 
+         title="{{ $.Page.Params.coverImageTitle }}"
          loading="eager"
        />
      {{ end }}
    {{ end }}
    ```
 
-2. Key components:
-   - Double with-check pattern for safe processing
-   - UnsharpMask filter for image enhancement
+   Key components:
+   - Desktop images: Fill 756x756 webp picture Center
+   - Mobile images: Resize 600x webp picture Center
+   - UnsharpMask filter for image enhancement (0.5, 0.5, 0)
    - WebP format for better compression
    - Eager loading for above-the-fold images
-   - Fill command with dimensions and positioning
 
-3. Front matter structure:
-   ```yaml
-   coverImage: "images/example.png"
-   ```
-
-## Slider Functionality
-
-The slider functionality has been refactored to dynamically pull images from the front matter of product pages. It only displays when the page type is "product" and images are defined. This enhances flexibility and maintainability of the slider component.
+5. **Adding New Images**:
+   - Place image files in the appropriate directory under `/static/images/` (for cover slider images)
+   - Or for products, place them in `/assets/images/productname/`
+   - Reference them in front matter using relative paths from the static directory
+   - Optimize images before adding them to the project (use WebP format when possible)
 
 ## File Naming Conventions
 - Content files: lowercase with hyphens (e.g., `product-name.md`)
 - Template partials: lowercase with hyphens
 - Asset files: descriptive names matching Carrd structure
+- Use double quotes in YAML only when needed (for values with spaces or special characters)
 
-## Best Practices
-1. Maintain design consistency with Carrd template
-2. Optimize all images and assets for performance
-3. Ensure responsive design works on all devices
-4. Follow semantic HTML structure
-5. Implement proper meta tags for SEO
-6. Use appropriate caching strategies
-7. Follow server restart policy:
-   - Only restart the Hugo server when necessary (system changes or error fixes)
-   - Rely on Hugo's live reload for content and style changes
-   - Minimize unnecessary server restarts for efficient development
-8. Use Tailwind utility classes for consistent styling
-9. Keep FAQ data in content frontmatter, not in global configuration
-10. Use double quotes in YAML only when needed (for values with spaces or special characters)
-11. Run Tailwind build before deploying to ensure latest CSS changes are included
+## Deployment and Maintenance
 
-## Deployment
+### Deployment to Netlify
+
 The site is deployed to Netlify with the following configuration:
 
 1. **Build Command**: `hugo --gc --minify`
@@ -184,10 +257,97 @@ The site is deployed to Netlify with the following configuration:
 4. **Domain**: nutcrackerpro.netlify.app
 5. **Configuration File**: `netlify.toml`
 
-### Deployment Process
-1. Push changes to the GitHub repository
-2. Netlify automatically builds and deploys the site
-3. Form submissions are handled by Netlify Forms
+#### Deployment Process
+
+1. **Prepare for deployment**:
+   ```bash
+   # Build Tailwind CSS for production
+   npm run tailwind:build
+   
+   # Build Hugo site
+   npm run build
+   ```
+
+2. **Push changes to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Descriptive commit message"
+   git push origin main
+   ```
+
+3. **Netlify Automatic Deployment**:
+   - Netlify automatically detects changes to the repository
+   - Builds and deploys the site according to the configuration in netlify.toml
+   - Form submissions are handled by Netlify Forms
+
+### Manual Deployment
+
+If you need to deploy manually without GitHub integration:
+
+1. **Build the site locally**:
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy the `public` directory** to your hosting provider.
+
+### Updating the Website
+
+#### Content Updates
+
+1. **Edit existing content**:
+   - Locate the appropriate Markdown file in the `content/` directory
+   - Make changes to the content or front matter
+   - Test changes locally with `npm run dev:all`
+
+2. **Add new content**:
+   - Create new Markdown files in the appropriate directory
+   - Include all required front matter fields
+   - Test locally before deploying
+
+#### Template Updates
+
+1. **Edit template files**:
+   - Locate the appropriate template in the `layouts/` directory
+   - Make changes to the HTML/template code
+   - Test changes locally with `npm run dev:all`
+
+2. **Update partials**:
+   - Edit files in the `layouts/partials/` directory
+   - Test thoroughly to ensure changes don't break existing pages
+
+#### Style Updates
+
+1. **Edit Tailwind CSS**:
+   - Modify the source file at `./assets/tailwind/src/base.css`
+   - Run `npm run tailwind:watch` to compile changes
+   - Test changes locally
+
+2. **Add custom CSS**:
+   - Add custom styles to files in the `assets/css/` directory
+   - Reference them in the appropriate template files
+
+### Troubleshooting Common Issues
+
+1. **Hugo Server Won't Start**:
+   - Check Hugo version with `hugo version`
+   - Ensure you have the extended version installed
+   - Verify there are no syntax errors in template files
+
+2. **CSS Changes Not Appearing**:
+   - Ensure Tailwind watch process is running
+   - Check browser cache (hard refresh with Ctrl+F5)
+   - Verify the CSS path in the HTML source
+
+3. **Images Not Displaying**:
+   - Check file paths in front matter
+   - Ensure images exist in the correct location
+   - Verify image processing code in templates
+
+4. **Deployment Failures**:
+   - Check Netlify build logs for errors
+   - Verify Hugo version in netlify.toml
+   - Test build locally with `npm run build`
 
 ## Schema.org Implementation
 The site uses a modular Schema.org implementation for structured data:
@@ -208,6 +368,71 @@ The site uses a modular Schema.org implementation for structured data:
    - FAQ schema only included when page has faq frontmatter
    - All schemas use dynamic data from page context
 
+4. **JSON-LD Output Formatting**:
+   - Use `{{- -}}` syntax to trim whitespace around Hugo template actions
+   - Maintain proper JSON structure with correct comma placement
+   - Avoid string escaping in the output
+   - Use consistent indentation for readability
+   - Ensure valid JSON-LD structure that search engines can parse
+
+## For AI Assistants: Working with This Codebase
+
+This section provides specific guidance for AI assistants working with the Nutcracker codebase.
+
+### Understanding the Codebase Structure
+
+1. **Key Template Files**:
+   - `layouts/_default/baseof.html`: Main template that wraps all pages
+   - `layouts/partials/coverSlider.html`: Cover image/slider implementation
+   - `layouts/partials/schema/*.html`: Schema.org structured data templates
+   - `layouts/partials/benefits/*.html`: Product benefits section templates
+
+2. **Content Organization**:
+   - Product data is stored in both front matter and data files
+   - FAQ data is stored in page front matter, not in global configuration
+   - State-specific data is stored in `data/states/` directory
+
+3. **Dynamic Data Pattern for Products from Data Files**:
+   ```go
+   {{ $filename := .File.BaseFileName }}
+   {{ $dataSavings := or .Page.Params.savings (index .Site.Data.products $filename "savings") }}
+   ```
+   This pattern falls back to data files when front matter doesn't provide values.
+
+### Common Tasks for AI Assistants
+
+1. **Adding a New Product Page**:
+   - Create a new markdown file in `content/products/`
+   - Include all required front matter fields
+   - Reference existing product pages for structure
+
+2. **Updating Cover Images**:
+   - Update the `coverImage` and `coverImageMobile` in front matter
+   - Ensure images are properly sized and optimized
+   - Follow the established image processing pattern
+
+3. **Modifying Schema.org Data**:
+   - Edit the appropriate schema partial in `layouts/partials/schema/`
+   - Ensure valid JSON-LD structure
+   - Use proper whitespace trimming with `{{- -}}` syntax
+
+### Troubleshooting for AI Assistants
+
+1. **Context Issues in Templates**:
+   - Store needed values in variables before entering nested contexts
+   - Use `$` prefix to access global context
+   - Use `.Page` to access page context from within partials
+
+2. **Image Processing Errors**:
+   - Check for double with-check pattern
+   - Verify image paths are correct
+   - Ensure proper error handling for missing images
+
+3. **Schema.org Issues**:
+   - Verify JSON syntax is valid
+   - Check for proper comma placement
+   - Ensure all URLs are absolute with `absURL` filter
+
 ## Version Control
 - `.gitignore` configured for Hugo
 - Excludes:
@@ -217,6 +442,40 @@ The site uses a modular Schema.org implementation for structured data:
   - `hugo_stats.json`
   - `.hugo_build.lock`
   - `.DS_Store`
+
+### Version Control Guidelines
+
+1. **Commit Messages**:
+   - Use clear, descriptive commit messages
+   - Start with a verb in present tense (e.g., "Add", "Update", "Fix")
+   - Include the scope of the change (e.g., "Update product schema template")
+
+2. **Branching Strategy**:
+   - Use feature branches for new features
+   - Use fix branches for bug fixes
+   - Merge to main branch only after testing
+
+3. **Pull Requests**:
+   - Include a clear description of changes
+   - Reference any related issues
+   - Ensure all tests pass before merging
+
+## Best Practices
+
+1. Maintain design consistency with Carrd template
+2. Optimize all images and assets for performance
+3. Ensure responsive design works on all devices
+4. Follow semantic HTML structure
+5. Implement proper meta tags for SEO
+6. Use appropriate caching strategies
+7. Follow server restart policy:
+   - Only restart the Hugo server when necessary (system changes or error fixes)
+   - Rely on Hugo's live reload for content and style changes
+   - Minimize unnecessary server restarts for efficient development
+8. Use Tailwind utility classes for consistent styling
+9. Keep FAQ data in content frontmatter, not in global configuration
+10. Use double quotes in YAML only when needed (for values with spaces or special characters)
+11. Run Tailwind build before deploying to ensure latest CSS changes are included
 
 ## Future Considerations
 - SEO optimization
@@ -233,11 +492,12 @@ For questions or issues:
 - Review project structure
 - Consult this documentation file
 
-## Communication Rules
+## Communication and Collaboration
 - All communication regarding project updates, issues, and feature requests should be documented in the project management tool.
 - Regular check-ins will be scheduled to discuss progress and address any blockers.
 - Code reviews are mandatory for all new features or significant changes to ensure quality and maintainability.
 - Documentation should be kept up to date with any changes made to the project to assist future developers and maintainers.
 - Use clear and descriptive commit messages to document changes in the version control system.
+- Do not push changes to GitHub automatically. Only commit and push changes when explicitly requested.
 
-Last Updated: 2025-02-22
+Last Updated: 2025-03-30
