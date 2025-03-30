@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "hugo server --disableFastRender",
     "build": "hugo --gc --minify",
-    "tailwind:watch": "npx tailwindcss -i ./assets/tailwind/src/base.css -o ./assets/tailwind/style.css --watch --config ./assets/tailwind/tailwind.config.js",
-    "tailwind:build": "npx tailwindcss -i ./assets/tailwind/src/base.css -o ./assets/tailwind/style.css --minify --config ./assets/tailwind/tailwind.config.js",
+    "tailwind:watch": "npx tailwindcss -i ./assets/tailwind/src/base.css -o ./assets/tailwindstyle.css --watch --config ./assets/tailwind/tailwind.config.js",
+    "tailwind:build": "npx tailwindcss -i ./assets/tailwind/src/base.css -o ./assets/tailwindstyle.css --minify --config ./assets/tailwind/tailwind.config.js",
     "dev:all": "concurrently \"npm run dev\" \"npm run tailwind:watch\""
   },
   "repository": {
