@@ -12,7 +12,9 @@
 
       <div class="style3 list">
         {{ range where .Site.Sections "Section" "ne" "articles" }}
-        <h2 class="style2">{{ .Title }}</h2>
+        <h2 class="style2 mt-4">
+          <a href="{{ .RelPermalink }}" title="Go to {{ .Title | markdownify | plainify }}">{{ .Title | markdownify | plainify }}</a>
+        </h2>
         <ul class="sitemap-list">
           {{ range .RegularPages.ByTitle }}
           <li>
