@@ -110,7 +110,7 @@ faq:
         Definitely. Latex-free and ergonomic, these gloves reduce fatigue for Kentucky mechanics. Wear them all day in busy garages without discomfort or allergy worries.
     - question: "What sizes are available?"
       answer: >-
-        M, L, XL, and XXL sizes ensure a perfect fit for every Kentucky technician. Proper sizing boosts safety and dexterity for auto repair tasks across the state.
+        M, L, XL, and XXL sizes ensure a perfect fit for every technician. Proper sizing boosts safety and dexterity for auto repair tasks across the state.
     - question: "How do they help Kentucky dealerships?"
       answer: >-
         These gloves offer cost-saving bulk deals and durability for Kentucky dealerships. Keep service teams protected and productive with professional-grade nitrile gloves.
