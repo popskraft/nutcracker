@@ -13,7 +13,7 @@ seoDescription: >-
 
 # Page content
 title: "**Industrial Wipes**"
-titlePrefix: "Empowering Wyoming auto shops and service centers with reliable supply security, fast shipping, and expert support to boost daily performance and safety while meeting local repair standards"
+titlePrefix: "Empowering Wyoming auto shops"
 description: >-
   Our Industrial Wipes deliver unbeatable performance for automotive professionals in Wyoming. With 1050 wipes per roll, these heavy-duty wipes tackle oil, grease, and fluids effortlessly. Designed for dealerships and service centers, they ensure cost-effective maintenance with superior durability and fast shipping auto supplies in Wyoming.
 

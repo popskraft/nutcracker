@@ -139,8 +139,14 @@
 "@type": "FAQPage",
 "@id": "{{ $baseURL }}#faqpage",
 "mainEntity": [
-{{- $questionCount := len .Params.faq.questions -}}
-{{- range $index, $question := .Params.faq.questions -}}
+{{- $questions := .Params.faq -}}
+{{- if reflect.IsMap .Params.faq -}}
+{{- if isset .Params.faq "questions" -}}
+{{- $questions = .Params.faq.questions -}}
+{{- end -}}
+{{- end -}}
+{{- $questionCount := len $questions -}}
+{{- range $index, $question := $questions -}}
 {
 "@type": "Question",
 "name": {{ $question.question | plainify | jsonify }},
@@ -148,7 +154,7 @@
 "@type": "Answer",
 "text": {{ $question.answer | plainify | jsonify }}
 }
-}{{ if lt (add $index 1) (len $.Params.faq.questions) }},{{ end }}
+}{{ if lt (add $index 1) $questionCount }},{{ end }}
 {{- end -}}
 ]
 },
