@@ -1,4 +1,3 @@
-```yaml
 ---
 type: product
 layout: product
@@ -15,7 +14,7 @@ seoDescription: >-
 
 # Page content
 title: "Industrial **Absorbent Pads**"
-titlePrefix: "Leading Auto Solutions for Nevada Shops"
+titlePrefix: "Nevada Shop Supplies"
 description: >-
   Elevate your facility's safety and efficiency with our Industrial Absorbent Pads. Engineered with advanced Exxon technology, these pads provide unbeatable liquid absorbency and spill control for Nevada dealerships, auto repair shops, and service centers. Enjoy cost savings and fast shipping with our bulk orders designed for heavy-duty use.
 
@@ -110,4 +109,3 @@ faq:
       answer: >-
         Fast shipping ensures that Nevada auto shops receive these essential pads promptly, reducing downtime during spill emergencies. Quick delivery helps maintain continuous operations and keeps your repair center running smoothly.
 ---
-```

@@ -108,7 +108,7 @@ faq:
     - question: "Do they work with solvents?"
       answer: >-
         Yup, they handle degreasers and brake cleaners fine. South Carolina shops use them with solvents for all kinds of cleaning jobs.
-    question: "What makes these wipes a cost-effective choice for South Carolina businesses?"
+    - question: "What makes these wipes a cost-effective choice for South Carolina businesses?"
       answer: >-
         Designed for auto shops and service centers in South Carolina, these wipes combine durability with affordability. Their long-lasting performance reduces replacement frequency, and bulk options offer significant savings for dealerships and repair centers statewide.
     - question: "Safe for delicate surfaces?"
