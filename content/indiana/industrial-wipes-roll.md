@@ -124,7 +124,7 @@ faq:
     - question: "Can these wipes handle diesel mechanic work?"
       answer: >-
         Yes, they’re tough enough for Indiana diesel mechanics. Built to clean heavy grease and oil without shredding, they’re a reliable choice for service centers in Indianapolis or heavy-duty shops statewide.
-    - question: "Are these wipes meet Indiana environmental standards?"
+    - question: "Do these wipes meet Indiana environmental standards?"
       answer: >-
         Made with sustainable materials, these wipes help Indiana shops cut waste while meeting cleaning needs. Perfect for service centers in South Bend or Carmel focused on efficiency and environmental responsibility.
 
