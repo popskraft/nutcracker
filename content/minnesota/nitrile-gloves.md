@@ -63,7 +63,7 @@ testimonials:
         These gloves are awesome for my Minneapolis shop. They’re thick, don’t rip, and grip tools great. I wear them all day, and they’re comfy. Good price too.
     - name: "Jenny L."
       text: >-
-        I manage a Duluth dealership, and these gloves are perfect. They’re tough for greasy jobs but fit nice for detailed work. Fast shipping to Minnesota helps a lot.
+        I manage a dealership, and these gloves are perfect. They’re tough for greasy jobs but fit nice for detailed work. Fast shipping to Minnesota helps a lot.
     - name: "Sam R."
       text: >-
         Been using these in my St. Paul garage. They hold up to sharp parts and chemicals. No allergies either, which is great. I’m sticking with these gloves.
