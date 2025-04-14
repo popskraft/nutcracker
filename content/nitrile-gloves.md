@@ -1,7 +1,7 @@
 ---
 type: product
 layout: product
-date: 2025-04-07
+date: 2025-04-14
 sitemap:
   priority: 1
   changefreq: "weekly"
