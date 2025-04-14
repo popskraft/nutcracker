@@ -76,7 +76,7 @@ testimonials:
         These wipes are a game-changer for my Minnesota shop. They soak up oil and grease fast and don’t tear. I use them on everything—tools, parts, even floors. Great price for the quality, and they last a long time.
     - name: "Lisa M."
       text: >-
-        I run a dealership in Minneapolis, and these wipes are perfect. They’re strong, don’t leave lint, and work with all our cleaners. We’ve cut costs since switching, and delivery to Minnesota is super quick.
+        I run a dealership, and these wipes are perfect. They’re strong, don’t leave lint, and work with all our cleaners. We’ve cut costs since switching, and delivery to Minnesota is super quick.
     - name: "Jake P."
       text: >-
         Been using these in my Duluth garage. They’re tough enough for diesel jobs but soft enough for car interiors. The roll fits my dispenser, and I’m saving money compared to other brands.
