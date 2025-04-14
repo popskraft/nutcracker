@@ -59,7 +59,7 @@ testimonials:
         These pads are great for my Minneapolis shop. They soak up oil fast, and the floor stays clean. Good price for the amount you get.
     - name: "Tina"
       text: >-
-        We use Nutcracker pads in our St. Paul dealership. They handle coolant and oil spills easy. Saves us time and keeps things safe.
+        We use Nutcracker pads in our dealership. They handle coolant and oil spills easy. Saves us time and keeps things safe.
     - name: "Mark"
       text: >-
         Been using these in Duluth for months. They’re tough, don’t tear, and suck up spills quick. Best mats we’ve tried so far.
