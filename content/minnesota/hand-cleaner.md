@@ -61,7 +61,7 @@ testimonials:
         This soap gets my hands clean fast. I run a shop in Duluth, and it’s great for grease and oil. Doesn’t dry my skin out either. Good stuff.
     - name: "Lisa"
       text: >-
-        We use Nutcracker in our Minneapolis dealership. It’s tough on grime but feels nice on hands. The guys like it, and we order it often.
+        We use Nutcracker in our dealership. It’s tough on grime but feels nice on hands. The guys like it, and we order it often.
     - name: "Jake"
       text: >-
         Been using this for months in St. Paul. Cuts through diesel stains easy, and my hands don’t crack. Worth the price for sure.
