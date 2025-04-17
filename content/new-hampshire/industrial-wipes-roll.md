@@ -32,13 +32,25 @@ benefitsBlocks:
       These heavy-duty industrial wipes are built for New Hampshire auto shops, tackling oil, grease, and fluids with ease. Perfect for dealerships and service centers needing reliable mechanic supplies.
   - title: "Durable and Absorbent Wipes"
     text: >-
-      Shop-grade industrial wipes stay strong under tough conditions. They quickly absorb spills and grime, making them a top choice for automotive maintenance and service tasks.
+      Shop-grade industrial wipes stay strong under tough conditions. They quickly absorb spills and grime, making them a top choice for auto maintenance and repair.
   - title: "Solvent-Compatible Cleaning"
     text: >-
-      Use these wipes with most solvents for versatile shop cleaning. Ideal for tools, surfaces, and equipment in any professional garage.
+      Use these wipes with most solvents for versatile shop cleaning. Ideal for tools, surfaces, and equipment — a must-have for any serious garage.
   - title: "Cost-Saving Shop Supplies"
     text: >-
-      Bulk industrial wipes help auto shops save on supply costs. Their long-lasting rolls reduce reorder frequency while ensuring reliable daily use.
+      Keep your New Hampshire garage stocked without breaking the bank. Our pricing makes bulk wipes affordable, ensuring a steady supply for daily use.
+  - title: "Low-Lint Professional Finish"
+    text: >-
+      These wipes leave no residue, delivering a clean finish on windshields, interiors, and precision parts.
+  - title: "Fast Dispensing for Efficiency"
+    text: >-
+      Designed for Tork floor dispensers, these wipes offer one-handed access and clean tear-off, reducing waste and boosting workflow.
+  - title: "Eco-Friendly Shop Solution"
+    text: >-
+      Our eco-friendly wipes are tough yet sustainable, supporting environmentally conscious cleaning practices.
+  - title: "Reliable for Heavy Use"
+    text: >-
+      Built for diesel mechanics and body shops, these wipes handle heavy-use tasks without tearing.
 
 # gallery section
 gallery:
@@ -61,12 +73,12 @@ testimonials:
     - name: "Sarah W."
       text: >-
         I run a dealership in New Hampshire, and these wipes keep our bays clean. They’re strong, lint-free, and work with all our solvents. Fast shipping keeps us stocked.
+    - name: "Tom R."
+      text: >-
+        Best wipes I’ve used in my garage. They handle oil and grime no problem and don’t leave lint. The dispenser fit is perfect, and they’re a solid deal for the price.
     - name: "Lisa M."
       text: >-
         These wipes are tough enough for heavy jobs but soft for delicate surfaces. My New Hampshire service center relies on them daily. Great value and quick delivery.
-    - name: "Emily S."
-      text: >-
-        These wipes make cleanup easy. They’re durable, soak up spills fast, and leave no mess. The roll size is great for high-volume use.
     - name: "Jake P."
       text: >-
         I’ve tried other wipes, but these are the real deal. They’re thick, absorbent, and don’t shred. Perfect for my shop’s tools and benches. I’ll keep buying them.
@@ -77,27 +89,21 @@ faq:
   questions:
     - question: "How tough are these industrial wipes for New Hampshire shops?"
       answer: >-
-        Nutcracker Pro’s industrial wipes are designed to meet the needs of auto mechanics. They handle grease, oil, and fluids without tearing, offering long-lasting performance in busy shops.
-    - question: "Do these wipes work with automotive solvents in New Hampshire garages?"
+        Nutcracker Pro’s industrial wipes are built for New Hampshire auto shops, handling oil and grease cleanup. They stay strong when wet and scrub without tearing — ideal for busy service centers.
+    - question: "Do these wipes work with automotive solvents?"
       answer: >-
-        Yes, they’re compatible with degreasers and brake cleaners, making them perfect for New Hampshire repair shops and dealerships looking for reliable shop cleaning supplies.
-    - question: "How many wipes come in a single roll?"
+        Yes, our wipes are compatible with most solvents, including degreasers and brake cleaners. They maintain strength and performance, ideal for daily shop use.
+    - question: "How many wipes are in a roll?"
       answer: >-
-        Each roll contains 1050 wipes, fitting standard dispensers and supporting high-volume service operations.
-    - question: "Are these wipes safe for precision parts?"
+        Each roll has 1050 industrial wipes, optimized for standard dispensers. This ensures your team has enough on hand for high-volume cleaning in any shop.
+    - question: "Are these wipes safe for delicate surfaces?"
       answer: >-
-        Absolutely. Their low-lint composition makes them ideal for cleaning sensitive surfaces without leaving residue.
-    - question: "What dispensers are compatible?"
+        Absolutely. The low-lint design makes them safe for windshields, interiors, and precision parts. They clean thoroughly without leaving residue.
+    - question: "What dispensers work with these wipes?"
       answer: >-
-        These wipes fit common Tork floor dispensers, providing clean, easy access during fast-paced shop activity.
+        These wipes fit standard Tork floor dispensers. The design allows one-handed access and clean tear-off, improving efficiency and reducing waste in busy garages.
     - question: "How fast is shipping to New Hampshire?"
       answer: >-
-        Our team provides fast and reliable shipping to New Hampshire, helping mechanics and dealerships stay stocked without delays.
-    - question: "Are these wipes eco-friendly?"
-      answer: >-
-        Yes, our eco-conscious formula delivers strength without harming the environment. A smart choice for sustainability-minded garages and service centers.
-    - question: "Can these wipes handle diesel mechanic tasks?"
-      answer: >-
-        Definitely. Their thick build tackles even the toughest grime, making them ideal for diesel engine maintenance and other demanding tasks.
+        We offer fast shipping to New Hampshire, ensuring your shop stays stocked with industrial wipes and essential cleaning tools.
 
 ---
