@@ -28,16 +28,31 @@ benefitsImages:
 benefitsBlocks:
   - title: "Top Protection for New Hampshire Shops"
     text: >-
-      These 8-mil nitrile gloves are built for New Hampshire mechanics, offering protection against oil, chemicals, and sharp tools. Ideal for dealerships and service centers.
-  - title: "Puncture-Resistant Durability"
-    text: >-
-      Nitrile material resists tears and punctures, ensuring technicians can handle rough parts safely. A top choice for auto repair professionals.
+      These 8-mil nitrile gloves are built for New Hampshire mechanics, offering heavy-duty protection against oil, chemicals, and sharp tools. Perfect for dealerships and service centers needing reliable PPE.
   - title: "Certified Safety Standards"
     text: >-
-      FDA, ASTM, and CE certified, these gloves meet regulations for shop safety and hygiene. Use them confidently for demanding daily tasks.
+      FDA, ASTM, and CE certified, these gloves meet strict safety regulations. New Hampshire auto shops can trust them for compliant, professional-grade protection.
   - title: "Bulk Savings for Shops"
     text: >-
-      Our wholesale pricing helps cut PPE costs by up to 50%. Service centers can stock up on essential gear while staying on budget.
+      Our bulk pricing cuts costs by up to 50%, making it easy for New Hampshire service centers to stock up on mechanic safety products without overspending.
+  - title: "Perfect Fit for All"
+    text: >-
+      Available in M, L, XL, and XXL, these gloves provide a snug fit for every technician, improving safety and dexterity for New Hampshire mechanics.
+  - title: "Puncture-Resistant Durability"
+    text: >-
+      Shop-grade nitrile material resists tears and punctures, ensuring technicians can handle rough parts safely.
+  - title: "Comfortable All-Day Wear"
+    text: >-
+      Latex-free and ergonomically designed, these gloves reduce hand fatigue and allergies, ensuring comfort for long shifts.
+  - title: "Textured Grip for Precision"
+    text: >-
+      The textured grip ensures precise handling of small parts and tools.
+  - title: "Fast Delivery"
+    text: >-
+      Get quick shipping on these nitrile gloves. Our supply chain keeps garages stocked with essential technician safety equipment.
+  - title: "Versatile for Tough Jobs"
+    text: >-
+      From oil changes to brake repairs, these gloves handle demanding tasks without tearing, supporting mechanics with reliable protection.
 
 # testimonials section
 testimonials:
@@ -48,35 +63,33 @@ testimonials:
         These gloves are awesome for my New Hampshire shop. They’re thick, don’t rip, and the grip is great for greasy parts. Bulk pricing saves us a ton.
     - name: "Megan T."
       text: >-
-        I manage a New Hampshire dealership, and these gloves are a hit. They’re tough, fit well, and don’t tear. Fast delivery is a huge plus.
+        I manage a New Hampshire dealership, and these gloves are a hit. They’re tough, fit well, and don’t tear on sharp edges.
     - name: "Amanda S."
       text: >-
-        These gloves are perfect for our team. They’re durable, easy to move in, and don’t cause allergies. Great value for the price.
-    - name: "Greg P."
+        These gloves are perfect for our New Hampshire service center. They’re durable, easy to move in, and don’t cause allergies.
+    - name: "Tina L."
       text: >-
-        Tough gloves that don’t tear on rough parts. The grip helps with bolts, and they’re comfy for long shifts. Highly recommend.
-    - name: "Steve D."
+        These gloves are great for my New Hampshire garage. They’re thick but flexible, and the fit is perfect.
+    - name: "Kyle R."
       text: >-
-        These gloves are a game-changer. No more rips, even on sharp metal. They’re flexible and protect well during brake work and detailing.
+        Best gloves I’ve used. They’re strong, comfortable, and don’t slip when handling tools.
 
 # FAQ section
 faq:
   titleColored: "F.A.Q."
   questions:
+    - question: "Do these gloves meet safety standards for New Hampshire shops?"
+      answer: >-
+        Yes, these gloves are FDA, ASTM, and CE certified, ensuring compliance with regulations. Mechanics in New Hampshire can count on consistent quality.
     - question: "How durable are these gloves for New Hampshire mechanics?"
       answer: >-
-        These 8-mil nitrile gloves are designed to withstand heavy use. They resist punctures from sharp tools and exposure to chemicals, offering consistent protection in New Hampshire auto shops.
-    - question: "How fast is shipping to New Hampshire?"
+        Nutcracker Pro’s gloves are built for New Hampshire professionals working with sharp tools and chemicals. They resist tears and maintain grip through demanding tasks.
+    - question: "What sizes are available?"
       answer: >-
-        We ship quickly to New Hampshire. Mechanics and service centers can expect fast delivery to keep their safety gear well stocked.
-    - question: "Are these gloves comfortable for long shifts?"
+        They come in M through XXL and are ideal for mechanics across New Hampshire who need comfort and protection.
+    - question: "Are they suitable for chemical handling?"
       answer: >-
-        Yes. They’re latex-free and ergonomically shaped, reducing fatigue. Mechanics can work all day without discomfort or irritation.
-    - question: "Are they suitable for precise tasks?"
+        Yes, they’re resistant to brake fluid, oils, and degreasers. A reliable option for chemical-heavy work in New Hampshire garages.
+    - question: "Are they comfortable for extended wear?"
       answer: >-
-        Definitely. Textured fingertips give extra control, making them perfect for handling small parts and detailed work.
-    - question: "Are they resistant to automotive chemicals?"
-      answer: >-
-        These gloves are built to withstand oils, brake fluid, and degreasers. They're ideal for technicians who need dependable PPE for chemical handling.
-
----
+        Absolutely. Their ergonomic, latex-free build prevents fatigue—great for New Hampshire technicians who work long shifts.
