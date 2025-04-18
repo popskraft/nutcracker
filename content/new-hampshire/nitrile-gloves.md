@@ -93,3 +93,4 @@ faq:
     - question: "Are they comfortable for extended wear?"
       answer: >-
         Absolutely. Their ergonomic, latex-free build prevents fatigue—great for New Hampshire technicians who work long shifts.
+---

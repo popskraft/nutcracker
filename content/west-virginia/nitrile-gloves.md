@@ -76,7 +76,7 @@ testimonials:
     - name: "Kelly"
       text: >-
         My crew loves these gloves. They’re tough, fit well, and keep hands safe. Fast shipping to West Virginia keeps us going without waiting around.
-   /aircraft - name: "Greg"
+    - name: "Greg"
       text: >-
         These gloves rock in my West Virginia garage. No tears even on rough metal, and they’re easy to move in. Good price for bulk—worth it!
     - name: "Beth"
@@ -111,5 +111,4 @@ faq:
     - question: "Are they worth it for small shops in West Virginia?"
       answer: >-
         Yes, bulk pricing and durability make them a steal for Wgarages. Save money and keep hands protected with these pro-grade gloves.
-
 ---
