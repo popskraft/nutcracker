@@ -108,3 +108,4 @@ faq:
     - question: "How do I dispose of gloves responsibly in Wisconsin?"
       answer: >-
         Proper disposal helps protect the environment and comply with Wisconsin waste guidelines. After use, remove gloves carefully to avoid skin contact, then dispose of them as industrial waste or in your facility’s general waste bin if not contaminated with hazardous fluids. For gloves exposed to brake cleaner or other chemicals, follow local hazmat disposal rules and consult your service center manager. Our eco friendly nitrile formulation also reduces landfill impact. Consider bundling used gloves in sealed bags before disposal to prevent leaks and maintain shop cleanliness.
+---

@@ -1,3 +1,4 @@
+---
 type: product
 layout: product
 date: 2025-04-14
@@ -109,3 +110,4 @@ faq:
     - question: "How are these pads packaged?"
       answer: >-
         Nutcracker PIG Mats come in a box of 200 with a dispenser slot for quick access—perfect for Rhode Island auto shops that need reliable, accessible supplies.
+---

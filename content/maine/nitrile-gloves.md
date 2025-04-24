@@ -1,3 +1,4 @@
+---
 type: product
 layout: product
 date: 2025-04-14
@@ -114,4 +115,4 @@ faq:
     - question: "Are they reusable or disposable?"
       answer: >-
         These are disposable gloves built for single-use protection. Each pair provides excellent durability before safe disposal.
-
+---

@@ -1,3 +1,4 @@
+--- 
 type: product
 layout: product
 date: 2025-04-14
@@ -104,3 +105,4 @@ faq:
     - question: "How fast is delivery to Massachusetts?"
       answer: >-
         We offer fast and reliable shipping throughout
+---

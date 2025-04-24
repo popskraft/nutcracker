@@ -1,3 +1,4 @@
+---
 type: product
 layout: product
 date: 2025-04-14T13:48:15+04:00
@@ -109,3 +110,4 @@ faq:
     - question: "How fast is shipping to Maine?"
       answer: >-
         Nutcracker ensures fast delivery to auto shops across Maine, keeping mechanics stocked with dependable absorbent pads.
+---
