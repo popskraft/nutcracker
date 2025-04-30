@@ -78,4 +78,29 @@ testimonials:
       text: >-
         These pads work like a charm. Soak up spills in seconds and hold up great. My shop’s never been cleaner or safer.
 
+# FAQ section
 faq:
+  titleColored: "F.A.Q."
+  questions:
+    - question: "What are Industrial Absorbent Pads (PIG Mats) used for?"
+      answer: >-
+        These pads are engineered to control spills by absorbing oils, solvents, and chemicals swiftly. Ideal for Nevada auto repair shops and dealerships, they ensure safety and maintain a clean work environment while supporting regulatory standards.
+    - question: "How much liquid can each pad absorb?"
+      answer: >-
+        Each pad is designed to absorb between 17 and 20 ounces of liquid, including motor oils and solvents. This high absorbency is crucial for busy Nevada service centers, ensuring efficient spill management and operational continuity.
+    - question: "Why are these pads cost-effective for my shop?"
+      answer: >-
+        Offered in bulk orders of 200 per case, these pads provide significant cost savings and reduce the need for frequent reorders. Nevada service centers benefit from lower costs per unit while maintaining a consistent supply for daily operations.
+    - question: "How do these pads improve workplace safety?"
+      answer: >-
+        By quickly containing spills, these pads minimize slip hazards and chemical exposure. In Nevada auto shops, they enhance workplace safety by ensuring spills are managed promptly, thus supporting OSHA standards and overall operational reliability.
+    - question: "What makes these pads durable under heavy use?"
+      answer: >-
+        Manufactured with advanced polypropylene fibers, these pads are tear-resistant and built for continuous heavy-duty use. Nevada dealerships and repair shops trust them to deliver consistent performance even under rigorous conditions.
+    - question: "Can these pads handle different types of liquids?"
+      answer: >-
+        Yes, these pads are versatile and can absorb a variety of liquids, including motor oils, solvents, and coolants. This multi-liquid capability makes them ideal for diverse spill scenarios in Nevada auto repair facilities.
+    - question: "How does fast shipping benefit Nevada shops?"
+      answer: >-
+        Fast shipping ensures that Nevada auto shops receive these essential pads promptly, reducing downtime during spill emergencies. Quick delivery helps maintain continuous operations and keeps your repair center running smoothly.
+---
