@@ -7,8 +7,8 @@ languageCode: "en"
 # Site metadata
 params:
   # Form links
-  formContactUrl: "https://nutcrackerpro.ju.mp/"
-  formWholesaleUrl: "https://nutcrackerpro.ju.mp/#wholesale"
+  formContactUrl: "https://forms.ju.mp/#nutcracker-contactus"
+  formWholesaleUrl: "https://forms.ju.mp/#nutcracker-wholesale"
 
   # Performance settings
   prefetch:
@@ -19,8 +19,8 @@ params:
       - "/nitrile-gloves"
       - "/about"
     externalUrls:
-      - "https://nutcrackerpro.ju.mp/"
-      - "https://nutcrackerpro.ju.mp/#wholesale"
+      - "https://forms.ju.mp/#nutcracker-contactus"
+      - "https://forms.ju.mp/#nutcracker-wholesale"
   
   # SEO and metadata settings
   seoTitleAfter: "– Nutcracker Pro"
@@ -89,7 +89,7 @@ params:
   products:
     defaultButtonCartText: "Buy Now"
     defaultButtonWholesaleText: "Wholesale Inquiry"
-    defaultWholesaleLink: "#wholesale"
+    defaultWholesaleLink: "#nutcracker-wholesale"
     defaultCurrency: "USD"
     defaultPrice: "19.99"
     defaultItemCondition: "https://schema.org/NewCondition"

@@ -93,4 +93,4 @@ We may update this Privacy Policy from time to time. Changes will be posted on o
 
 ### 8. Contact Us
 
-For any questions regarding this Privacy Policy, please [contact us](https://nutcrackerpro.ju.mp/)
+For any questions regarding this Privacy Policy, please [contact us](https://forms.ju.mp/#nutcracker-contactus)

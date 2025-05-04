@@ -28,7 +28,7 @@ forBusinessesList:
   - Bulk pricing advantages
 
 # Contact buttons
-contactEmail: https://nutcrackerpro.ju.mp/
+contactEmail: https://forms.ju.mp/#nutcracker-contactus
 buttonCartText: Contact us
 
 ---
