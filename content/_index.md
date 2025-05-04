@@ -30,7 +30,7 @@ productItems:
           icon: cart-alt
           class: n01
         - label: Wholesale Inquiry
-          url: https://forms.ju.mp/#wholesale
+          url: https://forms.ju.mp/#nutcracker-wholesale
           icon: form
           class: n02
         - label: More about Hand Cleaner
@@ -57,7 +57,7 @@ productItems:
           icon: cart-alt
           class: n01
         - label: Wholesale Inquiry
-          url: https://forms.ju.mp/#wholesale
+          url: https://forms.ju.mp/#nutcracker-wholesale
           icon: form
           class: n02
         - label: More about Nitrile Gloves
@@ -84,7 +84,7 @@ productItems:
           icon: cart-alt
           class: n01
         - label: Wholesale Inquiry
-          url: https://forms.ju.mp/#wholesale
+          url: https://forms.ju.mp/#nutcracker-wholesale
           icon: form
           class: n02
         - label: More about Wipes Roll
@@ -111,7 +111,7 @@ productItems:
           icon: cart-alt
           class: n01
         - label: Wholesale Inquiry
-          url: https://forms.ju.mp/#wholesale
+          url: https://forms.ju.mp/#nutcracker-wholesale
           icon: form
           class: n02
         - label: About Absorbent Pads
