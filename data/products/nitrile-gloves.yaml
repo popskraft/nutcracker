@@ -46,6 +46,8 @@ products:
     productLink: https://akdealerservices.com/product/1000527-mechanic-gloves-medium
     buttonText: "Buy M size"
     buttonWholesaleText: ""
+    # wholesalePrice: true
+    # wholesaleProductLink: true
     priceText: "Retail (20 boxes)"
     priceTextWholesale: "Wholesale (960 boxes)"
   - size: "L"
@@ -54,6 +56,8 @@ products:
     productLink: https://akdealerservices.com/product/1000528-mechanic-gloves-large
     buttonText: "Buy L size"
     buttonWholesaleText: ""
+    # wholesalePrice: true
+    # wholesaleProductLink: true
     priceText: "Retail (20 boxes)"
     priceTextWholesale: "Wholesale (960 boxes)"
   - size: "XL"
@@ -62,6 +66,8 @@ products:
     productLink: https://akdealerservices.com/product/1000529-mechanic-gloves-x-large
     buttonText: "Buy XL size"
     buttonWholesaleText: ""
+    # wholesalePrice: true
+    # wholesaleProductLink: true
     priceText: "Retail (20 boxes)"
     priceTextWholesale: "Wholesale (960 boxes)"
   - size: "XXL"
@@ -70,6 +76,8 @@ products:
     productLink: https://akdealerservices.com/product/1000530-mechanic-gloves-xx-large
     buttonText: "Buy XXL size"
     buttonWholesaleText: ""
+    # wholesalePrice: true
+    # wholesaleProductLink: true
     priceText: "Retail (20 boxes)"
     priceTextWholesale: "Wholesale (960 boxes)"
 
