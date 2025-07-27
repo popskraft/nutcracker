@@ -8,6 +8,9 @@
       {{ $products := or (index $.Site.Data.products $filename).products .Page.Params.products }}
       {{ range $index, $product := $products }}
       {{ $productLink := or $product.productLink $productLink }}
+      {{ if $product.wholesaleProductLink }}
+        {{ $productLink = index $.Site.Data.products $filename "productLinkWholesale" }}
+      {{ end }}
         <div>
           <div id="savings2-image-{{ $index }}" class="style2 image">
             {{ with resources.Get $product.image }}
@@ -37,15 +40,24 @@
             {{ . | markdownify }}
             {{/* Get price from frontmatter or data file */}}
             {{ $dataPrice := or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") }}
-            {{ $price := or $.Page.Params.priceSection.priceWholesale $.Page.Params.priceSection.price $dataPrice }}
             {{ $priceType := cond (ne $product.buttonText false) "price" "priceWholesale" }}
-            {{ with $dataPrice := index $.Site.Data.products $filename $priceType }}
+            {{ if $product.wholesalePrice }}
+              {{ $price := index $.Site.Data.products $filename "priceWholesale" }}
               <strong>&ensp;
-                <span style="color: #FF5500">{{ $dataPrice }}</span>
+                <span style="color: #FF5500">{{ $price }}</span>
                 {{ with $caption := index $.Site.Data.products $filename "pricePerCaptionShort" }}
                 {{ $caption }}
                 {{ end }}
               </strong>
+            {{ else }}
+              {{ with $dataPrice := index $.Site.Data.products $filename $priceType }}
+                <strong>&ensp;
+                  <span style="color: #FF5500">{{ $dataPrice }}</span>
+                  {{ with $caption := index $.Site.Data.products $filename "pricePerCaptionShort" }}
+                  {{ $caption }}
+                  {{ end }}
+                </strong>
+              {{ end }}
             {{ end }}
           </p>
           {{ end }}
