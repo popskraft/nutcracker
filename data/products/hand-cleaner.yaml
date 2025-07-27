@@ -41,15 +41,15 @@ products:
   - size: ""
     image: /images/handcleaner/product-1.jpg
     imageAlt: "Buy a Small batch of"
-    buttonText: "false"
-    buttonWholesaleText: "Buy Wholesale"
+    buttonText: ""
+    buttonWholesaleText: ""
     priceText: "Small batch from 4 containers"
     priceTextWholesale: "Wholesale price for pallet"
   - size: ""
     image: /images/handcleaner/product-2.jpg
     imageAlt: "Order wholesale Batch of"
-    buttonText: "false"
-    buttonWholesaleText: "Buy Wholesale"
+    buttonText: ""
+    buttonWholesaleText: ""
     priceText: "Large batch of 114 containers"
     priceTextWholesale: "Wholesale price for pallet"
 
