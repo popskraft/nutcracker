@@ -42,13 +42,13 @@ products:
     image: /images/wipes/product-1.jpg
     imageAlt: "Buy Small Batch of Industrial Wipes"
     buttonText: ""
-    buttonWholesaleText: ""
+    buttonWholesaleText: false
     priceText: "Small batch minimum 2 rolls (2100 Wipes)"
     priceTextWholesale: "Wholesale price for small batch"
   - size: ""
     image: /images/wipes/product-2.jpg
     imageAlt: "Buy Wholesale Industrial Wipes"
-    buttonText: ""
+    buttonText: false
     buttonWholesaleText: ""
     wholesalePrice: true
     # wholesaleProductLink: true
@@ -66,4 +66,4 @@ savings:
   # subtitle: "Special offer for car dealerships!"
   # image: "/images/carflag.jpg"
   description: >-
-    We’ve analyzed real-world usage and pricing for industrial wipes in the U.S. market, and the numbers show that switching to our **$69** rolls can lead to significant yearly savings. For example, a typical shop relying on rental towels might spend around **$0.10** per towel. If that same shop uses **60,000** towels a year, the cost can reach **$6,000** annually. By contrast, you’d need only about **57** rolls of our industrial wipes — each with **1,050** sheets — costing roughly **$3,933** in total. That simple switch could save you over **$2,000** a year, and depending on usage, many businesses see annual savings ranging from **$875** up to **$3,500**.
+    We’ve analyzed real-world usage and pricing for industrial wipes in the U.S. market, and the numbers show that switching to our **$59** rolls can lead to significant yearly savings. For example, a typical shop relying on rental towels might spend around **$0.10** per towel. If that same shop uses **60,000** towels a year, the cost can reach **$6,000** annually. By contrast, you’d need only about **57** rolls of our industrial wipes — each with **1,050** sheets — costing roughly **$3,933** in total. That simple switch could save you over **$2,000** a year, and depending on usage, many businesses see annual savings ranging from **$875** up to **$3,500**.

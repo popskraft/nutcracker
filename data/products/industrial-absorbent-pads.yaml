@@ -5,7 +5,7 @@ priceWholesale: "$34"
 pricePerCaptionLong: "Per 200-pad pack (wholesale price, pallet)"
 pricePerCaptionShort: "Per pack"
 productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
-productLinkWholesale: https://akdealerservices.com/product/1001954-absorbent-pads-pallet
+# productLinkWholesale: https://akdealerservices.com/product/1001954-absorbent-pads-pallet
 
 # Media
 ogImage: /images/abspads/ogimage.jpg
@@ -44,16 +44,16 @@ products:
     image: /images/abspads/product-1.jpg
     imageAlt: "Buy Small Batch of Absorbent Pads"
     buttonText: ""
-    buttonWholesaleText: ""
+    buttonWholesaleText: false
     priceText: "Small batch minimum 2 packages (400 pads)"
     priceTextWholesale: "Wholesale price for small batch"
   - size: ""
     image: /images/abspads/product-2.jpg
     imageAlt: "Buy Wholesale Absorbent Pads"
-    buttonText: ""
-    wholesalePrice: true
-    wholesaleProductLink: true
+    buttonText: false
     buttonWholesaleText: ""
+    wholesalePrice: true
+    # wholesaleProductLink: true
     priceText: "Large batch 1 pallet (36 packages, 7200 pads)"
     priceTextWholesale: "Wholesale price for pallet"
 

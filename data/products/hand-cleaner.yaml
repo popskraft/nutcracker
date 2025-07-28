@@ -5,7 +5,7 @@ priceWholesale: "$19.99"
 pricePerCaptionLong: "Per container (wholesale price, pallet)"
 pricePerCaptionShort: "Per container"
 productLink: https://akdealerservices.com/product/1001255-professional-hand-cleaner
-productLinkWholesale: https://akdealerservices.com/product/1001257-professional-hand-cleaner-1-pallet
+# productLinkWholesale: https://akdealerservices.com/product/1001257-professional-hand-cleaner-1-pallet
 
 # Media
 ogImage: /images/handcleaner/ogimage.jpg
@@ -43,17 +43,17 @@ products:
     image: /images/handcleaner/product-1.jpg
     imageAlt: "Buy a Small batch of"
     buttonText: ""
-    buttonWholesaleText: ""
-    priceText: "Small batch from 4 containers"
+    buttonWholesaleText: false
+    priceText: "120 OZ (3.55L) per container • 4 containers min"
     priceTextWholesale: "Wholesale price for pallet"
   - size: ""
     image: /images/handcleaner/product-2.jpg
     imageAlt: "Order wholesale Batch of"
-    buttonText: ""
+    buttonText: false
     buttonWholesaleText: ""
     wholesalePrice: true
-    wholesaleProductLink: true
-    priceText: "Large batch of 114 containers"
+    # wholesaleProductLink: true
+    priceText: "120 OZ (3.55L) per container • 114 containers min"
     priceTextWholesale: "Wholesale price for pallet"
 
 # Benefits Content
