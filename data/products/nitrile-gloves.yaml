@@ -22,7 +22,8 @@ coverImageTitle: "Order the"
 coverImageAlt: "8-mil Nitrile Gloves for Professional Use"
 
 # CTA Buttons
-buttonCartText: "Buy Gloves"
+buttonCartText: ""
+ctaComment: "Buy Gloves"
 
 # Price Section
 priceSection:

@@ -60,6 +60,10 @@
           </p>
           {{ end }}
           
+          {{ with $product.ctaComment }}
+          <p class="style3 product-description">{{ . | markdownify }}</p>
+          {{ end }}
+          
           <ul id="savings2-buttons-{{ $index }}" class="style2 buttons">
             {{ if ne $product.buttonText false }}
             <li>

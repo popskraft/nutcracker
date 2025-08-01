@@ -68,6 +68,9 @@
             </li>
             {{ end }}
           </ul>
+          {{ with $product.ctaComment }}
+            <p class="style3 product-description">{{ . | markdownify }}</p>
+          {{ end }}
         </div>
       {{ end }}
     </div>
