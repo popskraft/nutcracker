@@ -27,7 +27,7 @@ buttonCartText: "Buy Absorbent Pads"
 
 # Price Section
 priceSection:
-  title: "Outstanding price"
+  title: "Best price"
 
 # Features
 features:
@@ -45,7 +45,7 @@ products:
     imageAlt: "Buy Small Batch of Absorbent Pads"
     buttonText: ""
     buttonWholesaleText: false
-    priceText: "Small batch minimum 2 packages (400 pads)"
+    priceText: "200 per bag - 2 bags min"
     priceTextWholesale: "Wholesale price for small batch"
   - size: ""
     image: /images/abspads/product-2.jpg
@@ -54,7 +54,7 @@ products:
     buttonWholesaleText: ""
     wholesalePrice: true
     # wholesaleProductLink: true
-    priceText: "Large batch 1 pallet (36 packages, 7200 pads)"
+    priceText: "Large batch 1 pallet (36 packages)"
     priceTextWholesale: "Wholesale price for pallet"
 
 # Benefits Content
