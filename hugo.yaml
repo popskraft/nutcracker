@@ -87,7 +87,7 @@ params:
   
   # Common product settings
   products:
-    defaultButtonCartText: "Buy Now"
+    defaultButtonCartText: "Buy From Distributor"
     defaultButtonWholesaleText: "Wholesale Inquiry"
     defaultWholesaleLink: "#nutcracker-wholesale"
     defaultCurrency: "USD"

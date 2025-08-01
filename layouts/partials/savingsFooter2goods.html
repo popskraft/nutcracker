@@ -60,7 +60,7 @@
           </p>
           {{ end }}
           
-          {{ with $product.ctaComment }}
+          {{ with $.Page.Params.ctaComment }}
           <p class="style3 product-description">{{ . | markdownify }}</p>
           {{ end }}
           

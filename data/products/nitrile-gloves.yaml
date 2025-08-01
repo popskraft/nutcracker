@@ -23,7 +23,6 @@ coverImageAlt: "8-mil Nitrile Gloves for Professional Use"
 
 # CTA Buttons
 buttonCartText: ""
-ctaComment: "Buy Gloves"
 
 # Price Section
 priceSection:
@@ -45,35 +44,38 @@ products:
     image: /images/gloves/product-4.jpg
     imageAlt: "Buy Medium Size Nitrile Gloves"
     productLink: https://akdealerservices.com/product/1000527-mechanic-gloves-medium
-    buttonText: "Buy M size"
+    buttonText: "Buy M size*"
     buttonWholesaleText: ""
     priceText: "Retail (20 boxes)"
     priceTextWholesale: "Wholesale (960 boxes)"
+    ctaComment: "*Buy From Distributor"
   - size: "L"
     image: /images/gloves/product-3.jpg
     imageAlt: "Buy Large Size Nitrile Gloves"
     productLink: https://akdealerservices.com/product/1000528-mechanic-gloves-large
-    buttonText: "Buy L size"
+    buttonText: "Buy L size*"
     buttonWholesaleText: ""
     priceText: "Retail (20 boxes)"
     priceTextWholesale: "Wholesale (960 boxes)"
+    ctaComment: "*Buy From Distributor"
   - size: "XL"
     image: /images/gloves/product-2.jpg
     imageAlt: "Buy XL Size Nitrile Gloves"
     productLink: https://akdealerservices.com/product/1000529-mechanic-gloves-x-large
-    buttonText: "Buy XL size"
+    buttonText: "Buy XL size*"
     buttonWholesaleText: ""
     priceText: "Retail (20 boxes)"
     priceTextWholesale: "Wholesale (960 boxes)"
+    ctaComment: "*Buy From Distributor"
   - size: "XXL"
     image: /images/gloves/product-1.jpg
     imageAlt: "Buy XXL Size Nitrile Gloves"
     productLink: https://akdealerservices.com/product/1000530-mechanic-gloves-xx-large
-    buttonText: "Buy XXL size"
+    buttonText: "Buy XXL size*"
     buttonWholesaleText: ""
     priceText: "Retail (20 boxes)"
     priceTextWholesale: "Wholesale (960 boxes)"
-
+    ctaComment: "*Buy From Distributor"
 # Benefits Content
 benefitsImages:
   - image: /images/gloves/product-main.jpg

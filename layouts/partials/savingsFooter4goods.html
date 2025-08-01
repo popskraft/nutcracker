@@ -59,7 +59,7 @@
           <ul id="savings4-buttons-{{ $index }}" class="style7 buttons">
             {{ if ne $product.buttonText false }}
             <li>
-              <a href="{{ $productLink }}" class="button n01" role="button">{{ or (index $.Site.Data.products $filename "buttonCartText") $product.buttonText $.Page.Params.buttonCartText "Buy now" }}</a>
+              <a href="{{ $productLink }}" class="button n01" role="button">{{ or (index $.Site.Data.products $filename "buttonCartText") $product.buttonText $.Page.Params.buttonCartText "Buy From Distributor" }}</a>
             </li>
             {{ end }}
             {{ if ne $product.buttonWholesaleText false }}
