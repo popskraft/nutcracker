@@ -26,7 +26,7 @@ buttonCartText: "Buy Wipe Rolls"
 
 # Price Section
 priceSection:
-  title: "Outstanding price"
+  title: "Best price"
 
 # Features
 features:
@@ -43,7 +43,7 @@ products:
     imageAlt: "Buy Small Batch of Industrial Wipes"
     buttonText: ""
     buttonWholesaleText: false
-    priceText: "Small batch minimum 2 rolls (2100 Wipes)"
+    priceText: "1050 per roll - 2 rolls min"
     priceTextWholesale: "Wholesale price for small batch"
   - size: ""
     image: /images/wipes/product-2.jpg
@@ -52,7 +52,7 @@ products:
     buttonWholesaleText: ""
     wholesalePrice: true
     # wholesaleProductLink: true
-    priceText: "Large batch 1 pallet (54 rolls, 56700 Wipes)"
+    priceText: "Large batch 1 pallet (55 rolls)"
     priceTextWholesale: "Wholesale price for pallet"
 
 # Benefits Content
