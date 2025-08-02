@@ -46,8 +46,8 @@ products:
     productLink: https://akdealerservices.com/product/1000527-mechanic-gloves-medium
     buttonText: "Buy M size*"
     buttonWholesaleText: ""
-    priceText: "Retail (20 boxes)"
-    priceTextWholesale: "Wholesale (960 boxes)"
+    priceText: "100 Gloves per box • 20 boxes min"
+    priceTextWholesale: "100 Gloves per box • 960 boxes per pallet"
     ctaComment: "*Buy From Distributor"
   - size: "L"
     image: /images/gloves/product-3.jpg
@@ -55,8 +55,8 @@ products:
     productLink: https://akdealerservices.com/product/1000528-mechanic-gloves-large
     buttonText: "Buy L size*"
     buttonWholesaleText: ""
-    priceText: "Retail (20 boxes)"
-    priceTextWholesale: "Wholesale (960 boxes)"
+    priceText: "100 Gloves per box • 20 boxes min"
+    priceTextWholesale: "100 Gloves per box • 960 boxes per pallet"
     ctaComment: "*Buy From Distributor"
   - size: "XL"
     image: /images/gloves/product-2.jpg
@@ -64,8 +64,8 @@ products:
     productLink: https://akdealerservices.com/product/1000529-mechanic-gloves-x-large
     buttonText: "Buy XL size*"
     buttonWholesaleText: ""
-    priceText: "Retail (20 boxes)"
-    priceTextWholesale: "Wholesale (960 boxes)"
+    priceText: "100 Gloves per box • 20 boxes min"
+    priceTextWholesale: "100 Gloves per box • 960 boxes per pallet"
     ctaComment: "*Buy From Distributor"
   - size: "XXL"
     image: /images/gloves/product-1.jpg
@@ -73,8 +73,8 @@ products:
     productLink: https://akdealerservices.com/product/1000530-mechanic-gloves-xx-large
     buttonText: "Buy XXL size*"
     buttonWholesaleText: ""
-    priceText: "Retail (20 boxes)"
-    priceTextWholesale: "Wholesale (960 boxes)"
+    priceText: "100 Gloves per box • 20 boxes min"
+    priceTextWholesale: "100 Gloves per box • 960 boxes per pallet"
     ctaComment: "*Buy From Distributor"
 # Benefits Content
 benefitsImages:

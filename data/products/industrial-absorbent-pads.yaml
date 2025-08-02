@@ -2,8 +2,8 @@ weight: "4"
 productName: "Industrial Absorbent Pads"
 price: "$39"
 priceWholesale: "$34"
-pricePerCaptionLong: "Per 200-pad back (wholesale price, pallet)"
-pricePerCaptionShort: "Per back"
+pricePerCaptionLong: "Per bag • 1 pallet (36 bags)"
+pricePerCaptionShort: "Per bag"
 productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
 # productLinkWholesale: https://akdealerservices.com/product/1001954-absorbent-pads-pallet
 
@@ -23,7 +23,7 @@ coverImageTitle: "Order the"
 coverImageAlt: "Industrial Absorbent Pads (PIG Mats)"
 
 # CTA Buttons
-buttonCartText: "Buy Absorbent Pads"
+buttonCartText: ""
 
 # Price Section
 priceSection:
@@ -45,7 +45,7 @@ products:
     imageAlt: "Buy Small Batch of Absorbent Pads"
     buttonText: ""
     buttonWholesaleText: false
-    priceText: "200 per bag - 2 bags min"
+    priceText: "200 per bag • 2 bags min"
     priceTextWholesale: "Wholesale price for small batch"
   - size: ""
     image: /images/abspads/product-2.jpg
@@ -54,7 +54,7 @@ products:
     buttonWholesaleText: ""
     wholesalePrice: true
     # wholesaleProductLink: true
-    priceText: "Large batch 1 pallet (36 packages)"
+    priceText: "200 per bag • 36 bags per 1 pallet"
     priceTextWholesale: "Wholesale price for pallet"
 
 # Benefits Content

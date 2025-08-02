@@ -46,7 +46,7 @@
               {{ . | markdownify }}
               {{ with $dataPrice := index $.Site.Data.products $filename "priceWholesale" }}
                 <strong>&ensp;
-                  {{ $dataPrice }}
+                  <span style="color: #FF5500">{{ $dataPrice }}</span>
                   {{ with $caption := index $.Site.Data.products $filename "pricePerCaptionShort" }}
                   {{ $caption }}
                   {{ end }}
@@ -59,7 +59,7 @@
           <ul id="savings4-buttons-{{ $index }}" class="style7 buttons">
             {{ if ne $product.buttonText false }}
             <li>
-              <a href="{{ $productLink }}" class="button n01" role="button">{{ or (index $.Site.Data.products $filename "buttonCartText") $product.buttonText $.Page.Params.buttonCartText "Buy From Distributor" }}</a>
+              <a href="{{ $productLink }}" class="button n01" role="button">{{ or (index $.Site.Data.products $filename "buttonCartText") $product.buttonText $.Page.Params.buttonCartText $.Site.Params.products.defaultButtonCartText }}</a>
             </li>
             {{ end }}
             {{ if ne $product.buttonWholesaleText false }}

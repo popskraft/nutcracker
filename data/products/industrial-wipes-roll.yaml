@@ -2,7 +2,7 @@ weight: "3"
 productName: "Industrial Wipe Rolls"
 price: "$69"
 priceWholesale: "$59"
-pricePerCaptionLong: "Per roll (wholesale price, pallet)"
+pricePerCaptionLong: "Per roll • 1 pallet (55 rolls)"
 pricePerCaptionShort: "Per roll"
 productLink: https://akdealerservices.com/product/1000534-mechanic-cloths
 
@@ -22,7 +22,7 @@ coverImageTitle: "Order the"
 coverImageAlt: "Industrial Wipe Rolls for Professional Use"
 
 # CTA Buttons
-buttonCartText: "Buy Wipe Rolls"
+buttonCartText: ""
 
 # Price Section
 priceSection:
@@ -43,7 +43,7 @@ products:
     imageAlt: "Buy Small Batch of Industrial Wipes"
     buttonText: ""
     buttonWholesaleText: false
-    priceText: "1050 per roll - 2 rolls min"
+    priceText: "1050 per roll • 2 rolls min"
     priceTextWholesale: "Wholesale price for small batch"
   - size: ""
     image: /images/wipes/product-2.jpg

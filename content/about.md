@@ -17,7 +17,6 @@ primaryOperationsList:
   - Automotive service supplies
   - Facility maintenance materials
 
-
 # For Businesses list
 forBusinessesTitle: For Businesses
 forBusinessesList:
