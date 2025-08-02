@@ -1,6 +1,37 @@
 # Nutcracker Pro - Hugo Website
 
-This repository contains a Hugo-based website for Nutcracker Pro, featuring industrial products with state-specific content management.
+## Quick Start Guide
+
+This is a [Hugo](https://gohugo.io)-based website that uses templates and YAML data files to generate product pages for different US states. 
+
+### Core Concepts
+
+1. **Templates & Content Separation**
+   - Site uses Hugo templates (`layouts/`) to define page structure
+   - Content is stored separately in Markdown files (`content/`)
+   - Product data is centralized in YAML files (`data/`)
+
+2. **Important Rules**
+   - YAML formatting must be exact (spaces, not tabs)
+   - Images go in `assets/images/` or `static/images/`
+   - Follow the exact frontmatter structure in content files
+
+### Quick Links
+- [Hugo Content Management Guide](https://gohugo.io/content-management/organization/)
+- [Hugo Template Guide](https://gohugo.io/templates/introduction/)
+- [YAML Syntax Guide](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
+
+### Common Tasks
+```bash
+# Add new product
+1. Create data file:    data/products/new-product.yaml
+2. Add content:         content/new-product.md
+3. Add state pages:     content/*/new-product.md
+
+# Add new state
+1. Create state folder: content/new-state/
+2. Copy product pages:  content/*.md → content/new-state/
+```
 
 ## Table of Contents
 - [Project Structure](#project-structure)
