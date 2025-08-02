@@ -25,7 +25,7 @@ productItems:
       description: >
         **The original heavy-duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world utilizing Cosmetic Grade Walnut Shells.
       buttons:
-        - label: Buy Hand Cleaner
+        - label: Buy From Distributor
           url: https://akdealerservices.com/product/1001255-professional-hand-cleaner
           icon: cart-alt
           class: n01
@@ -52,7 +52,7 @@ productItems:
       description: >
         **Heavy-duty disposable nitrile gloves** are 8-mil thick, built exclusively for service professionals and industrial use. They meet the rugged FDA, ASTM, CE standards.
       buttons:
-        - label: Buy Nitrile Gloves
+        - label: Buy From Distributor
           url: https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil
           icon: cart-alt
           class: n01
@@ -79,7 +79,7 @@ productItems:
       description: >
         **Industrial cleaning wipes** tackle oil, grease, and water with excellent strength and absorption. Designed for dealerships and service centers, they deliver a professional clean with minimal effort.
       buttons:
-        - label: Buy Wipes Roll
+        - label: Buy From Distributor
           url: https://akdealerservices.com/product/1000534-mechanic-cloths
           icon: cart-alt
           class: n01
@@ -106,7 +106,7 @@ productItems:
       description: >
         **Industrial Absorbent Pads** are high-performance, single-layer meltblown pads built with Exxon technology, capable of absorbing up to 17–20 ounces per pad.
       buttons:
-        - label: Buy Absorbent Pads
+        - label: Buy From Distributor
           url: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mats
           icon: cart-alt
           class: n01
