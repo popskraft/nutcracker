@@ -19,8 +19,13 @@
               <div id="product-image-{{ $itemIndex }}" class="style4 image full">
                 <a href="{{ $item.url }}" class="frame">
                   {{ $mainImage := resources.Get $item.mainImage.src }}
-                  {{ $processedImage := $mainImage.Resize "839x webp picture Center" }}
-                  <img src="{{ $processedImage.RelPermalink }}" alt="{{ $item.mainImage.alt }}">
+                  {{ if $mainImage }}
+                    {{ $processedImage := $mainImage.Resize "839x webp picture Center" }}
+                    <img src="{{ $processedImage.RelPermalink }}" alt="{{ $item.mainImage.alt }}">
+                  {{ else }}
+                    <!-- Fallback if image not found -->
+                    <img src="{{ $item.mainImage.src }}" alt="{{ $item.mainImage.alt }}" onerror="this.style.display='none'">
+                  {{ end }}
                 </a>
               </div>
               <div id="product-gallery-{{ $itemIndex }}" class="style2 gallery full">
@@ -31,8 +36,13 @@
                       <a href="{{ $item.url }}" class="thumbnail n{{ printf "%02d" (add 1 $galleryIndex) }}">
                         <span class="frame">
                           {{ $galleryImage := resources.Get (strings.TrimPrefix "/" $galleryItem.src) }}
-                          {{ $processedImage := $galleryImage.Fill "300x300 webp picture Center" }}
-                          <img src="{{ $processedImage.RelPermalink }}" alt="{{ $galleryItem.alt | default $item.title | markdownify | plainify }}">
+                          {{ if $galleryImage }}
+                            {{ $processedImage := $galleryImage.Fill "300x300 webp picture Center" }}
+                            <img src="{{ $processedImage.RelPermalink }}" alt="{{ $galleryItem.alt | default $item.title | markdownify | plainify }}">
+                          {{ else }}
+                            <!-- Fallback if image not found -->
+                            <img src="{{ $galleryItem.src }}" alt="{{ $galleryItem.alt | default $item.title | markdownify | plainify }}" onerror="this.style.display='none'">
+                          {{ end }}
                         </span>
                       </a>
                     </li>
@@ -76,8 +86,13 @@
           <div id="product-image-{{ $lastIndex }}" class="style4 image full">
             <a href="{{ $lastItem.url }}" class="frame">
               {{ $mainImage := resources.Get $lastItem.mainImage.src }}
-              {{ $processedImage := $mainImage.Resize "900x webp picture Center" }}
-              <img src="{{ $processedImage.RelPermalink }}" alt="{{ $lastItem.mainImage.alt }}">
+              {{ if $mainImage }}
+                {{ $processedImage := $mainImage.Resize "900x webp picture Center" }}
+                <img src="{{ $processedImage.RelPermalink }}" alt="{{ $lastItem.mainImage.alt }}">
+              {{ else }}
+                <!-- Fallback if image not found -->
+                <img src="{{ $lastItem.mainImage.src }}" alt="{{ $lastItem.mainImage.alt }}" onerror="this.style.display='none'">
+              {{ end }}
             </a>
           </div>
           <div id="product-gallery-{{ $lastIndex }}" class="style2 gallery full">
@@ -88,8 +103,13 @@
                   <a href="{{ $lastItem.url }}" class="thumbnail n{{ printf "%02d" (add 1 $galleryIndex) }}">
                     <span class="frame">
                       {{ $galleryImage := resources.Get (strings.TrimPrefix "/" $galleryItem.src) }}
-                      {{ $processedImage := $galleryImage.Fill "300x300 webp picture Center" }}
-                      <img src="{{ $processedImage.RelPermalink }}" alt="{{ $galleryItem.alt | default $lastItem.title | markdownify | plainify }}">
+                      {{ if $galleryImage }}
+                        {{ $processedImage := $galleryImage.Fill "300x300 webp picture Center" }}
+                        <img src="{{ $processedImage.RelPermalink }}" alt="{{ $galleryItem.alt | default $lastItem.title | markdownify | plainify }}">
+                      {{ else }}
+                        <!-- Fallback if image not found -->
+                        <img src="{{ $galleryItem.src }}" alt="{{ $galleryItem.alt | default $lastItem.title | markdownify | plainify }}" onerror="this.style.display='none'">
+                      {{ end }}
                     </span>
                   </a>
                 </li>

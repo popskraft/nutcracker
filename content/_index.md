@@ -15,13 +15,13 @@ productItems:
     - title: Professional **Hand Cleaner**
       url: /hand-cleaner/
       mainImage:
-        src: /images/handcleaner/product-cover-1.png
+        src: images/handcleaner/product-cover-1.png
         alt: Professional Hand Cleaner Nutcracker Pro
       gallery:
-        - src: /images/handcleaner/gallery-3.png
-        - src: /images/handcleaner/gallery-4.png
-        - src: /images/handcleaner/gallery-7.png
-        - src: /images/handcleaner/gallery-8.png
+        - src: images/handcleaner/gallery-3.png
+        - src: images/handcleaner/gallery-4.png
+        - src: images/handcleaner/gallery-7.png
+        - src: images/handcleaner/gallery-8.png
       description: >
         **The original heavy-duty hand cleaner**. Nutcracker is simply one of the best hand cleaners and degreasers in the world utilizing Cosmetic Grade Walnut Shells.
       buttons:
@@ -42,13 +42,13 @@ productItems:
     - title: 8mil Disposable **Nitrile Gloves**
       url: /nitrile-gloves/
       mainImage:
-        src: /images/gloves/product-cover-1.png
+        src: images/gloves/product-cover-1.png
         alt: Nitrile 8mil Gloves Nutcracker Pro
       gallery:
-        - src: /images/gloves/gallery-1.jpg
-        - src: /images/gloves/gallery-2.jpg
-        - src: /images/gloves/gallery-3.jpg
-        - src: /images/gloves/gallery-4.jpg
+        - src: images/gloves/gallery-1.jpg
+        - src: images/gloves/gallery-2.jpg
+        - src: images/gloves/gallery-3.jpg
+        - src: images/gloves/gallery-4.jpg
       description: >
         **Heavy-duty disposable nitrile gloves** are 8-mil thick, built exclusively for service professionals and industrial use. They meet the rugged FDA, ASTM, CE standards.
       buttons:
@@ -69,13 +69,13 @@ productItems:
     - title: Industrial **Wipes Roll**
       url: /industrial-wipes-roll/
       mainImage:
-        src: /images/wipes/product-cover-1.png
+        src: images/wipes/product-cover-1.png
         alt: Industrial Wipes Roll Nutcracker Pro
       gallery:
-        - src: /images/wipes/gallery-2.jpg
-        - src: /images/wipes/gallery-4.jpg
-        - src: /images/wipes/gallery-5.jpg
-        - src: /images/wipes/gallery-6.jpg
+        - src: images/wipes/gallery-2.jpg
+        - src: images/wipes/gallery-4.jpg
+        - src: images/wipes/gallery-5.jpg
+        - src: images/wipes/gallery-6.jpg
       description: >
         **Industrial cleaning wipes** tackle oil, grease, and water with excellent strength and absorption. Designed for dealerships and service centers, they deliver a professional clean with minimal effort.
       buttons:
@@ -96,13 +96,13 @@ productItems:
     - title: Industrial **Absorbent Pads**
       url: /industrial-absorbent-pads/
       mainImage:
-        src: /images/abspads/product-cover-1.png
+        src: images/abspads/product-cover-1.png
         alt: Industrial Absorbent Pads Nutcracker Pro
       gallery:
-        - src: /images/abspads/gallery-1.jpg
-        - src: /images/abspads/gallery-2.jpg
-        - src: /images/abspads/gallery-3.jpg
-        - src: /images/abspads/gallery-4.jpg
+        - src: images/abspads/gallery-1.jpg
+        - src: images/abspads/gallery-2.jpg
+        - src: images/abspads/gallery-3.jpg
+        - src: images/abspads/gallery-4.jpg
       description: >
         **Industrial Absorbent Pads** are high-performance, single-layer meltblown pads built with Exxon technology, capable of absorbing up to 17–20 ounces per pad.
       buttons:
