@@ -77,7 +77,6 @@ gallery:
 
 # testimonials section
 testimonials:
-  title: "# Customer reviews"
   items:
     - name: "Eddie, Dealership Manager"
       text: >-

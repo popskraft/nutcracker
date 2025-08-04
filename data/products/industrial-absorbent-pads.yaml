@@ -11,9 +11,9 @@ productLink: https://akdealerservices.com/product/1000532-absorbent-pads-pig-mat
 ogImage: /images/abspads/ogimage.jpg
 
 # Video
-video:
-  src: /videos/video02.mp4
-  poster: /videos/video02_poster.jpg
+# video:
+  # src: /videos/video02.mp4
+  # poster: /videos/video02_poster.jpg
 
 # Cover Slider
 slider:

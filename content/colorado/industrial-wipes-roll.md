@@ -92,7 +92,6 @@ gallery:
 
 # testimonials section
 testimonials:
-  title: "# Customer reviews"
   items:
     - name: "Tasha (Mechanic, Denver)"
       text: >-

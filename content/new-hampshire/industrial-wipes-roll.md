@@ -65,7 +65,6 @@ gallery:
 
 # testimonials section
 testimonials:
-  title: "# Customer reviews"
   items:
     - name: "Mike T."
       text: >-

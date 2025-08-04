@@ -62,7 +62,6 @@ gallery:
       alt: "Industrial wipes demonstrating superior absorption of automotive fluids"
 
 testimonials:
-  title: "# Customer reviews"
   items:
     - name: "Mike D."
       text: >-

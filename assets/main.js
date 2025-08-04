@@ -613,13 +613,6 @@
 				$body.classList.add('with-loader');
 			}, 500);
 		
-		// Create loader element.
-			var $loaderElement = document.createElement('div');
-				$loaderElement.id = 'loader';
-		
-			// Add to body.
-				$body.appendChild($loaderElement);
-		
 		// Create load handler.
 			var loadHandler = function() {
 				setTimeout(function() {
@@ -644,11 +637,6 @@
 		
 							// Mark as ready.
 								$body.classList.add('is-ready');
-		
-							// Remove loader element (after delay).
-								setTimeout(function() {
-									$body.removeChild($loaderElement);
-								}, 1000);
 		
 						}, 3000);
 		
@@ -3816,230 +3804,7 @@
 			};
 	
 	// Container: coverSlider.
-		(function() {
-		
-			var $target, $slideshowBackground;
-		
-			$target = $('#coverSlider');
-		
-			$slideshowBackground = document.createElement('div');
-				$slideshowBackground.className = 'slideshow-background';
-				$target.insertBefore($slideshowBackground, $target.firstChild);
-		
-			new slideshowBackground('coverSlider', {
-				target: '#coverSlider > .slideshow-background',
-				wait: 0,
-				defer: false,
-				order: 'default',
-				transition: {
-					style: 'crossfade',
-					speed: 875,
-					delay: 5000,
-				},
-				images: [
-					{
-						src: 'assets/images/coverSlider-94d36aab.jpg',
-						position: 'center',
-						motion: 'none',
-						speed: 1,
-						caption: 'Nutcracker Professional Hand Cleaner',
-					},
-					{
-						src: 'assets/images/coverSlider-4bfb4893.jpg',
-						position: 'center',
-						motion: 'none',
-						speed: 1,
-						caption: 'Nutcracker Professional Hand Cleaner',
-					},
-					{
-						src: 'assets/images/coverSlider-76da13cd.jpg',
-						position: 'center',
-						motion: 'none',
-						speed: 1,
-						caption: 'Nutcracker Professional Hand Cleaner',
-					},
-				]
-			});
-		
-		})();
-	
-	// Video.
-		class VideoThumbnail {
-		
-			/**
-			 * Map.
-			 * @var {WeakMap}
-			 */
-			static map;
-		
-			/**
-			 * Selector.
-			 * @var {string}
-			 */
-			static selector = 'div.video > .frame > .player.thumbnail';
-		
-			/**
-			 * Initialize.
-			 */
-			static {
-		
-				// Initialize map.
-					this.map = new WeakMap;
-		
-				// Bind click event.
-					$body.addEventListener('click', (event) => {
-		
-						let e = event.target;
-		
-						// Doesn't match selector? Bail.
-							if (!e.matches(this.selector))
-								return;
-		
-						// Prevent default.
-							event.preventDefault();
-							event.stopPropagation();
-		
-						// Look up instance by element.
-							let instance = this.map.get(e.parentNode.parentNode);
-		
-						// Found? Play it.
-							if (instance)
-								instance.play();
-		
-					});
-		
-			}
-		
-			/**
-			 * Attributes.
-			 * @var {array}
-			 */
-			attributes = [];
-		
-			/**
-			 * ID.
-			 * @var {string}
-			 */
-			id = '';
-		
-			/**
-			 * Tag.
-			 * @var {string}
-			 */
-			tag = '';
-		
-			/**
-			 * Element.
-			 * @var {DOMElement}
-			 */
-			$element;
-		
-			/**
-			 * Thumbnail.
-			 * @var {DOMElement}
-			 */
-			$thumbnail;
-		
-			/**
-			 * Video.
-			 * @var {DOMElement}
-			 */
-			$video;
-		
-			/**
-			 * Constructor.
-			 * @param {string} id ID.
-			 * @param {string} tag Tag.
-			 * @param {array} attributes Attributes.
-			 */
-			constructor(id, tag, attributes) {
-		
-				// Set ID, tag, attributes.
-					this.id = id;
-					this.tag = tag;
-					this.attributes = attributes;
-		
-				// Populate element, frame, and thumbnail elements.
-					this.$element = document.getElementById(this.id);
-					this.$frame = this.$element.querySelector('.frame');
-					this.$thumbnail = this.$frame.querySelector('.player.thumbnail');
-		
-				// Link element to instance.
-					this.constructor.map.set(this.$element, this);
-		
-			}
-		
-			/**
-			 * Plays the video associated with this video thumbnail.
-			 */
-			play() {
-		
-				// No thumbnail, or video is active? Bail.
-					if (this.$thumbnail === null
-					||	this.$element.classList.contains('is-active'))
-						return;
-		
-				// Build video element.
-		
-					// Create element.
-						this.$video = document.createElement(this.tag);
-		
-					// Set attributes.
-						for (const [key, value] of Object.entries(this.attributes)) {
-		
-							if (value === '')
-								this.$video.toggleAttribute(key, true);
-							else
-								this.$video.setAttribute(key, value);
-		
-						}
-		
-				// Add "is-active" class to element.
-					this.$element.classList.add('is-active');
-		
-					// Insert video element after delay.
-					// Note: Use shorter delay if dealing with an IFRAME tag to speed things up.
-						setTimeout(() => {
-		
-							// Append video to frame.
-								this.$frame.appendChild(this.$video);
-		
-							// Is a <video> element? Play it.
-								if (this.$video.tagName === 'VIDEO')
-									this.$video.play();
-		
-						}, (this.tag === 'video' ? 250 : 125));
-		
-					// Clean up thumbnail after delay.
-						setTimeout(() => {
-		
-							// Remove overlay from frame.
-								this.$frame.classList.remove('with-overlay');
-		
-							// Remove thumbnail from frame.
-								this.$frame.removeChild(this.$thumbnail);
-		
-							// Clear thumbnail.
-								this.$thumbnail = null;
-		
-						}, 250);
-		
-		
-			}
-		
-		}
-	
-	// Video: video02.
-		new VideoThumbnail('video02', 'video', {
-			"class": "player",
-			"src": "assets\/videos\/video02.mp4",
-			"preload": "auto",
-			"playsinline": "",
-			"webkit-playsinline": "",
-			"autoplay": "",
-			"loop": "",
-			"controls": "",
-		});
+
 	
 	// Initialize "On Visible" animations.
 		onvisible.add('h1.style5, h2.style5, h3.style5, p.style5', { style: 'fade-up', speed: 750, intensity: 5, threshold: 1, delay: 0, replay: false });
@@ -4055,6 +3820,7 @@
 		onvisible.add('.buttons.style7', { style: 'flip-right', speed: 1000, intensity: 5, threshold: 1, delay: 0, stagger: 125, staggerSelector: ':scope > li', replay: false });
 		onvisible.add('h1.style7, h2.style7, h3.style7, p.style7', { style: 'fade-up', speed: 1000, intensity: 5, threshold: 1, delay: 500, replay: false });
 		onvisible.add('#coverSliderImageDesctop', { style: 'pop-in', speed: 750, intensity: 10, threshold: 2, delay: 500, replay: false });
+		onvisible.add('#pageAboutIntro', { style: 'pop-in', speed: 375, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('h1.style1, h2.style1, h3.style1, p.style1', { style: 'zoom-in', speed: 750, intensity: 9, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.container.style4', { style: 'pop-in', speed: 375, intensity: 5, threshold: 1, delay: 0, replay: false });
 		onvisible.add('.image.style2', { style: 'pop-in', speed: 500, intensity: 3, threshold: 1, delay: 0, replay: false });

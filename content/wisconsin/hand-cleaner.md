@@ -55,7 +55,6 @@ benefitsBlocks:
 
 # testimonials section
 testimonials:
-  title: "# Customer reviews"
   items:
     - name: "Jake"
       text: >-

@@ -68,7 +68,6 @@ gallery:
 
 # testimonials section
 testimonials:
-  title: "# Customer reviews"
   items:
     - name: "Marty from Anchorage"
       text: >-

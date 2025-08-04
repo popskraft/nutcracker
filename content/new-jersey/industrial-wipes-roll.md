@@ -62,7 +62,6 @@ gallery:
       alt: "Industrial wipes absorbing automotive fluids"
 
 testimonials:
-  title: "# Customer reviews"
   items:
     - name: "Mike T."
       text: >-

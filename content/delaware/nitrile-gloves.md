@@ -52,7 +52,6 @@ benefitsBlocks:
       Keep your Delaware shop stocked with quick delivery of mechanic gloves. Essential for service centers requiring reliable PPE supply.
 
 testimonials:
-  title: "# Customer reviews"
   items:
     - name: "Jake M."
       text: >-

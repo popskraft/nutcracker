@@ -6,7 +6,7 @@
       <hr id="divider23" class="style5">
       <h2 class="style5">
         {{ $productName := partial "productName" . | markdownify }}
-        {{ or $testimonials.title (printf "Customer reviews of the **%s**" $productName) | markdownify }}
+        {{ or $testimonials.title (printf "Customer reviews of the %s" $productName) | markdownify }}
       </h2>
       <hr id="divider04" class="style3">
     </div>
