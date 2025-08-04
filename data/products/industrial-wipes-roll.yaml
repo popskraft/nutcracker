@@ -9,6 +9,11 @@ productLink: https://akdealerservices.com/product/1000534-mechanic-cloths
 # Media
 ogImage: /images/wipes/ogimage.jpg
 
+# Video
+video:
+  src: /videos/video02.mp4
+  poster: /videos/video02_poster.jpg
+
 # Cover Slider
 slider:
   - image: /images/covers/cover-7.webp

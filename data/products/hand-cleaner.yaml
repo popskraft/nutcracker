@@ -10,6 +10,11 @@ productLink: https://akdealerservices.com/product/1001255-professional-hand-clea
 # Media
 ogImage: /images/handcleaner/ogimage.jpg
 
+# Video
+video:
+  src: /videos/video02.mp4
+  poster: /videos/video02_poster.jpg
+
 # Cover Slider
 slider:
   - image: /images/covers/cover-3.webp
