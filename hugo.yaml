@@ -14,10 +14,10 @@ params:
   prefetch:
     enabled: true
     pages:
-      - "/"
-      - "/hand-cleaner"
-      - "/nitrile-gloves"
-      - "/about"
+      - "/hand-cleaner/"
+      - "/nitrile-gloves/"
+      - "/industrial-wipes-roll/"
+      - "/industrial-absorbent-pads/"
     externalUrls:
       - "https://forms.ju.mp/#nutcracker-contactus"
       - "https://forms.ju.mp/#nutcracker-wholesale"

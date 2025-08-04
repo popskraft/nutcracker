@@ -57,7 +57,6 @@
   <!-- Prefetch important pages for faster navigation -->
   {{- range .Site.Params.prefetch.pages -}}
   <link rel="prefetch" href="{{ . }}">
-  <link rel="prerender" href="{{ . }}">
   {{- end -}}
   
   <!-- Prefetch external URLs -->
