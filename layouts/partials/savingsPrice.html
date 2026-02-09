@@ -1,27 +1,23 @@
 {{ $filename := .Page.File.BaseFileName }}
-{{ $dataPrice := or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") }}
+{{ $dataPrice := strings.TrimSpace (or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") "") }}
 {{ $priceSection := or (index $.Site.Data.products $filename "priceSection") .Page.Params.priceSection }}
-{{ with $priceSection }}
+{{ $pagePrice := strings.TrimSpace (or .Page.Params.priceSection.priceWholesale .Page.Params.priceSection.price "") }}
+{{ $finalPrice := or $pagePrice $dataPrice }}
+{{ if and $priceSection (ne $finalPrice "") }}
 <div id="savingsPrice" class="container-component instance-16 style-15 default">
   <div class="wrapper">
     <div class="inner">
       
-      <h3 id="text16" class="text-component instance-16 style-5">{{ .title }}</h3>
+      <h3 id="text16" class="text-component instance-16 style-5">{{ $priceSection.title }}</h3>
       
-      {{/* Get price from frontmatter or data file */}}
-      {{ $price := or .priceWholesale .price }}
-      {{ $finalPrice := or $price $dataPrice }}
-      {{ with $finalPrice }}
       <h3 id="text52" class="text-component instance-52">
-        {{ $cleanPrice := strings.TrimPrefix "$" . }}
+        {{ $cleanPrice := strings.TrimPrefix "$" $finalPrice }}
         {{ $wholePart := index (split $cleanPrice ".") 0 }}
         <span style="color: #FF5500">${{ $wholePart }}</span>{{ if gt (len (split $cleanPrice ".")) 1 }}.{{ index (split $cleanPrice ".") 1 }}{{ end }}
       </h3>
-      {{ end }}
       
-      {{/* Display caption with fallback logic */}}
       {{ $dataCaptions := index $.Site.Data.products $filename }}
-      {{ $longCaption := or .pricePerCaptionLong (index $dataCaptions "pricePerCaptionLong") }}
+      {{ $longCaption := strings.TrimSpace (or $priceSection.pricePerCaptionLong (index $dataCaptions "pricePerCaptionLong")) }}
       {{ if $longCaption }}
         <h3 id="text53" class="text-component instance-53 style-6">
           {{ $longCaption }}

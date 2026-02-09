@@ -45,7 +45,7 @@
             "amazonLink" $productAmazonLink
             "wholesaleText" (or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry")
           ) }}
-          {{ with or $product.ctaComment "*Buy From Distributor" }}
+          {{ with $product.ctaComment }}
             <p id="{{ index $commentIDMap $key | default (printf "savings4-text-%d" $index) }}" class="text-component{{ with index $commentInstanceMap $key }} {{ . }}{{ end }} style-3">{{ . | markdownify }}</p>
           {{ end }}
         </div>

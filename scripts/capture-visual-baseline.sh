@@ -27,17 +27,17 @@ trap cleanup EXIT
 echo "[capture-visual] report_dir=${REPORT_DIR}"
 echo "[capture-visual] starting local hugo server on ${LOCAL_BASE_URL}"
 
-(cd "${ROOT_DIR}" && hugo server --bind 127.0.0.1 --port "${LOCAL_PORT}" --baseURL "${LOCAL_BASE_URL}/" --disableFastRender --quiet >/tmp/hugo-visual.log 2>&1) &
+(cd "${ROOT_DIR}" && hugo server --bind 127.0.0.1 --port "${LOCAL_PORT}" --baseURL "${LOCAL_BASE_URL}/" --disableFastRender --noBuildLock --quiet >/tmp/hugo-visual.log 2>&1) &
 HUGO_PID=$!
 
 for _ in {1..40}; do
-  if curl -fsS "${LOCAL_BASE_URL}/" >/dev/null 2>&1; then
+  if curl -fsS --max-time 5 "${LOCAL_BASE_URL}/" >/dev/null 2>&1; then
     break
   fi
   sleep 0.5
 done
 
-if ! curl -fsS "${LOCAL_BASE_URL}/" >/dev/null 2>&1; then
+if ! curl -fsS --max-time 5 "${LOCAL_BASE_URL}/" >/dev/null 2>&1; then
   echo "[capture-visual] local hugo server did not start" >&2
   exit 1
 fi

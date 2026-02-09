@@ -17,3 +17,8 @@ hugo.linux
 
 # AI workspace runtime logs
 .ai/logs/*.log
+.ai/logs/*.json
+.ai/logs/*.txt
+
+# AI visual review artifacts
+.ai/reviews/visual-*/

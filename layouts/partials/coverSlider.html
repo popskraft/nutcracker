@@ -96,24 +96,30 @@
           {{ end }}
         </div>
 
-        {{/*  Product price from data/products.yaml  */}}
-        {{ $dataPrice := or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") }}
-        {{ $price := or .Page.Params.priceSection.priceWholesale .Page.Params.priceSection.price $dataPrice }}
-        {{ with $price }}
+        {{/* Product price (render only when an explicit value exists). */}}
+        {{ $dataPrice := strings.TrimSpace (or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") "") }}
+        {{ $pagePrice := strings.TrimSpace (or .Page.Params.priceSection.priceWholesale .Page.Params.priceSection.price "") }}
+        {{ $price := or $pagePrice $dataPrice }}
+        {{ if ne $price "" }}
         <h3 id="text11" class="text-component instance-11 style-15">
-          {{ . }}
+          {{ $price }}
         </h3>
         {{ end }}
         
         {{ $dataCaptions := index $.Site.Data.products $filename }}
-        <h3 id="text03" class="text-component instance-3 style-14">
-          {{ or 
+        {{ if ne $price "" }}
+          {{ $priceCaption := strings.TrimSpace (or 
               $dataCaptions.pricePerCaptionLong 
               $dataCaptions.pricePerCaptionShort 
               .Page.Params.priceSection.pricePerCaptionLong 
               .Page.Params.priceSection.pricePerCaptionShort 
-            }}
-        </h3>
+            ) }}
+          {{ with $priceCaption }}
+          <h3 id="text03" class="text-component instance-3 style-14">
+            {{ . }}
+          </h3>
+          {{ end }}
+        {{ end }}
         
       </div>
     </div>

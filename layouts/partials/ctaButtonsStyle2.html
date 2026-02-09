@@ -1,16 +1,22 @@
 {{ $ctx := .context }}
-{{ $id := .id | default "buttons21" }}
+{{ $id := strings.TrimSpace (or .id "") }}
 {{ $instance := .instance | default "instance-21" }}
 {{ $filename := $ctx.File.BaseFileName }}
 {{ $productLink := partial "rawProductLink" $ctx }}
 {{ $amazonLink := or (index $ctx.Site.Data.products $filename "amazonLink") $ctx.Page.Params.amazonLink }}
+{{ $hasID := ne $id "" }}
+{{ if not $hasID }}
+  {{ $id = "buttons21" }}
+{{ end }}
 {{ if or $productLink (ne (strings.TrimSpace $amazonLink) "") $ctx.Site.Params.formWholesaleUrl }}
-<ul id="{{ $id }}" class="buttons-component {{ $instance }} style-2">
+<ul{{ if $hasID }} id="{{ $id }}"{{ end }} class="buttons-component {{ $instance }} style-2">
   {{ if $productLink }}
   <li>
     <a href="{{ $productLink }}" class="n01" role="button">
-      <svg aria-labelledby="{{ $id }}-icon-1-title">
+      <svg{{ if $hasID }} aria-labelledby="{{ $id }}-icon-1-title"{{ else }} aria-hidden="true"{{ end }}>
+        {{ if $hasID }}
         <title id="{{ $id }}-icon-1-title">Cart (Alt)</title>
+        {{ end }}
         <use xlink:href="/icons.svg#cart-alt"></use>
       </svg><span class="label">Buy on AK Dealer Services</span></a>
   </li>
@@ -18,8 +24,10 @@
   {{ if ne (strings.TrimSpace $amazonLink) "" }}
   <li>
     <a href="{{ $amazonLink }}" class="n02" role="button">
-      <svg aria-labelledby="{{ $id }}-icon-2-title">
+      <svg{{ if $hasID }} aria-labelledby="{{ $id }}-icon-2-title"{{ else }} aria-hidden="true"{{ end }}>
+        {{ if $hasID }}
         <title id="{{ $id }}-icon-2-title">Amazon</title>
+        {{ end }}
         <use xlink:href="/icons.svg#amazon"></use>
       </svg><span class="label">Buy on Amazon</span></a>
   </li>
@@ -27,8 +35,10 @@
   {{ if $ctx.Site.Params.formWholesaleUrl }}
   <li>
     <a href="{{ $ctx.Site.Params.formWholesaleUrl | relURL }}" class="n03" role="button">
-      <svg aria-labelledby="{{ $id }}-icon-3-title">
+      <svg{{ if $hasID }} aria-labelledby="{{ $id }}-icon-3-title"{{ else }} aria-hidden="true"{{ end }}>
+        {{ if $hasID }}
         <title id="{{ $id }}-icon-3-title">Form</title>
+        {{ end }}
         <use xlink:href="/icons.svg#form"></use>
       </svg><span class="label">{{ or $ctx.Page.Params.buttonWholesaleText $ctx.Site.Params.products.defaultButtonWholesaleText | markdownify }}</span></a>
   </li>

@@ -16,8 +16,16 @@
       {{ $key := printf "%d" $index }}
       {{ $productLink := or $product.productLink $baseProductLink }}
       {{ $productAmazonLink := strings.TrimSpace (or $product.amazonLink "") }}
+      {{ $pageRetailPrice := strings.TrimSpace (or $.Page.Params.priceSection.price "") }}
+      {{ $pageWholesalePrice := strings.TrimSpace (or $.Page.Params.priceSection.priceWholesale "") }}
+      {{ $dataRetailPrice := strings.TrimSpace (or (index $.Site.Data.products $filename "price") "") }}
+      {{ $dataWholesalePrice := strings.TrimSpace (or (index $.Site.Data.products $filename "priceWholesale") "") }}
+      {{ $displayPrice := or $pageRetailPrice $dataRetailPrice }}
       {{ if $product.wholesaleProductLink }}
         {{ $productLink = index $.Site.Data.products $filename "productLinkWholesale" }}
+      {{ end }}
+      {{ if $product.wholesalePrice }}
+        {{ $displayPrice = or $pageWholesalePrice $dataWholesalePrice }}
       {{ end }}
         <div>
           <div id="{{ index $imageIDMap $key | default (printf "savingsFooter2-image-%d" $index) }}" class="image-component{{ with index $imageInstanceMap $key }} {{ . }}{{ end }} style-2">
@@ -46,21 +54,12 @@
           {{ with $product.priceText }}
           <p id="{{ index $textIDMap $key | default (printf "savingsFooter2-text-%d" $index) }}" class="text-component{{ with index $textInstanceMap $key }} {{ . }}{{ end }} style-6">
             {{ . | markdownify }}
-            {{/* Get price from frontmatter or data file */}}
-            {{ $dataPrice := or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") }}
-            {{ $priceType := cond (ne $product.buttonText false) "price" "priceWholesale" }}
-            {{ $displayPrice := "" }}
-            {{ if $product.wholesalePrice }}
-              {{ $displayPrice = index $.Site.Data.products $filename "priceWholesale" }}
-            {{ else }}
-              {{ $displayPrice = index $.Site.Data.products $filename $priceType }}
-            {{ end }}
 
-            {{ with $displayPrice }}
+            {{ if ne $displayPrice "" }}
               <br>
               <strong>&ensp;
-                <span style="color: #FF5500">{{ . }}</span>
-                {{ with $caption := index $.Site.Data.products $filename "pricePerCaptionShort" }}
+                <span style="color: #FF5500">{{ $displayPrice }}</span>
+                {{ with $caption := strings.TrimSpace (or (index $.Site.Data.products $filename "pricePerCaptionShort") "") }}
                 {{ $caption }}
                 {{ end }}
               </strong>

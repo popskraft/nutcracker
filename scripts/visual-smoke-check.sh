@@ -63,10 +63,10 @@ overall=0
 check_ids public/index.html pageHeader product2Cols-1 benefitsContent3Cols faqHeader faqBody contactBody footerTop || overall=1
 check_assets_exist public/index.html || overall=1
 
-check_ids public/nitrile-gloves/index.html coverSlider CoverBottom benefitsHeader container39 savingsPrice faqHeader faqBody contactBody || overall=1
+check_ids public/nitrile-gloves/index.html coverSlider CoverBottom benefitsHeader container39 faqHeader faqBody contactBody || overall=1
 check_assets_exist public/nitrile-gloves/index.html || overall=1
 
-check_ids public/hand-cleaner/index.html coverSlider CoverBottom benefitsHeader container39 savingsPrice faqHeader faqBody contactBody || overall=1
+check_ids public/hand-cleaner/index.html coverSlider CoverBottom benefitsHeader container39 faqHeader faqBody contactBody || overall=1
 check_assets_exist public/hand-cleaner/index.html || overall=1
 
 check_ids public/about/index.html aboutContentTop aboutFooter aboutContent2Col footerTop || overall=1

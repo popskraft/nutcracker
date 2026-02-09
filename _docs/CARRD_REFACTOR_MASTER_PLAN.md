@@ -2,8 +2,8 @@
 
 ## Status
 - Owner: AI agents (Claude Code + Codex/GPT-5.3+)
-- Last updated (UTC): 2026-02-08
-- Phase: 3 (home/product migration and runtime hardening in progress)
+- Last updated (UTC): 2026-02-09
+- Phase: 3 (home/product migration in progress, remediation track started)
 - Rule: this file is the migration source of truth and must be updated at each phase boundary.
 
 ## Mission
@@ -24,6 +24,23 @@ Move the entire project to the new Carrd naming/runtime contract so future templ
 2. Visual parity with baseline pages on desktop/mobile.
 3. Functional parity for navigation, forms, slider/video, and key interactions.
 4. Build and contract checks pass.
+
+## Current Execution Snapshot (2026-02-09)
+- Build:
+  - `npm run build` passes.
+- Carrd contract gate:
+  - `npm run ai:check:carrd-contract` passes (report mode).
+  - `npm run ai:check:carrd-contract:strict` passes with current thresholds and allowlist.
+- Core Carrd asset sync:
+  - `npm run ai:verify:carrd-assets` passes with documented allowlisted `main.js` normalization diff.
+- Visual smoke:
+  - `npm run ai:visual:smoke` passes for key pages.
+- Markup quality:
+  - Duplicate CTA IDs on product pages fixed.
+- Final acceptance cycle:
+  - `dev:all` startup check, `build`, strict contract, asset verify, visual smoke/capture/report, and baseline availability checks are green.
+- Deferred:
+  - none in immediate remediation track.
 
 ## Implementation Phases
 1. Phase 1 (in progress): baseline and quality gates.
@@ -48,6 +65,28 @@ Move the entire project to the new Carrd naming/runtime contract so future templ
 8. Phase 8: final acceptance.
    - Execute real asset replacement flow.
    - Validate parity and stability.
+
+## Immediate Remediation Track (Phase 3.1)
+1. Remove duplicate IDs on product pages. `[done]`
+   - Ensure `ctaButtonsStyle2` instances rendered in `coverSlider` and `benefitsCTA` use unique IDs per block.
+   - Add a deterministic ID strategy for repeated CTA partial invocations.
+2. Recover strict Carrd contract metrics to gate thresholds. `[done]`
+   - Remove/replace remaining non-Carrd IDs on contract pages.
+   - Raise `home.id_intersection` and `style-*` contract coverage to thresholds.
+3. Resolve `assets/main.js` sync policy. `[done]`
+   - Decide and document one of:
+     - full byte-equality with `carrd/assets/main.js`, or
+     - controlled patch policy + allowlisted verification logic.
+4. Implement conditional product price rendering across product templates. `[done]`
+   - Hide price and price-caption blocks when `price`/`priceWholesale` are empty in front matter/data.
+   - Keep non-price descriptive product text visible.
+   - Ensure behavior is consistent in `coverSlider`, `savingsPrice`, savings footer variants, and schema offer output.
+5. Harden visual capture automation for deterministic execution. `[done]`
+   - Update `scripts/capture-visual-baseline.sh` to avoid build lock contention (`--noBuildLock`) and add explicit request timeouts.
+6. Repository hygiene for generated artifacts. `[done]`
+   - Keep runtime/generated logs and bulky review binaries out of normal commits unless explicitly required.
+7. Tooling hygiene. `[done]`
+   - Refresh Browserslist DB and address current dev dependency audit findings.
 
 ## Current Baseline (2026-02-08)
 - Home ID intersection (Carrd vs `public/index.html`): `97 / 319`

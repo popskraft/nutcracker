@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated (UTC): 2026-02-08
+Last updated (UTC): 2026-02-09
 Mode: autonomous
 Active profile: carrd-hugo-corporate
 IDE stack: vscode,gpt-5.3+-extension,claude-code-extension
@@ -67,7 +67,31 @@ Baseline site: https://nutcrackerpro.com/
   - `npm run ai:verify:carrd-assets`
   - `npm run ai:visual:smoke`
 - Manual review: product hero sections are visually aligned with production baseline on desktop/mobile.
+- Remediation recovery completed on `main`:
+  - `npm run ai:check:carrd-contract:strict` is now PASS.
+  - `npm run ai:verify:carrd-assets` is now PASS with documented allowlisted `main.js` path normalization.
+  - Duplicate product CTA IDs (`buttons21*`) fixed.
+  - `scripts/capture-visual-baseline.sh` hardened with `--noBuildLock` and explicit local readiness timeouts.
+- Price visibility policy completed:
+  - Prices are now conditionally hidden when `price`/`priceWholesale` are empty.
+  - Product data prices are blanked for all current products in `data/products/*.yaml`.
+- Final acceptance bundle executed successfully:
+  - `npm run dev:all` startup check
+  - `npm run build` (x2)
+  - `npm run ai:check:carrd-contract`
+  - `npm run ai:check:carrd-contract:strict`
+  - `npm run ai:verify:carrd-assets`
+  - `npm run ai:visual:smoke`
+  - `npm run ai:visual:capture`
+  - `npm run ai:visual:report`
+  - baseline checks: `carrd/index.html` present, production `curl -I -L` PASS.
+- Repository generated-artifact hygiene cleanup completed:
+  - `.gitignore` now excludes `.ai/reviews/visual-*/`, `.ai/logs/*.json`, `.ai/logs/*.txt`.
+  - Historical visual/log artifacts were removed from git tracking and kept as local ignored files.
+- Tooling hygiene pass completed:
+  - `npx --yes update-browserslist-db@latest` applied (`caniuse-lite` refreshed in lockfile).
+  - `npm audit fix` applied for transitive dev issues (`brace-expansion`, `glob`, `lodash` in `package-lock.json`).
+  - `npm audit --package-lock-only --json` reports `0` vulnerabilities.
 
 ## Next
-1. Final review of `.ai/handoff/2026-02-08-1045-utc-codex-final.md`.
-2. Merge/handoff package to main workflow branch.
+1. Continue main Carrd migration phases (3-8) with the existing contract/visual gates.

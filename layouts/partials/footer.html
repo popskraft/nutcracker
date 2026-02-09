@@ -67,7 +67,10 @@
     <div class="wrapper">
       <div class="inner">
         <p id="text42" class="text-component instance-42">
-          <span class="p">&copy;{{ now.Format "2006" }}{{ .Site.Params.footer.copyright }}<br />{{ .Site.Params.footer.terms_text }} <a href="{{ .Site.Params.footer.terms_link }}">{{ .Site.Params.footer.terms_link_text }}</a></span>
+          <span class="p">&copy;{{ now.Format "2006" }}{{ .Site.Params.footer.copyright }}<br />{{ .Site.Params.footer.terms_text }} 
+            <a href="{{ .Site.Params.footer.terms_link }}">{{ .Site.Params.footer.terms_link_text }}</a>
+            <a href="/sitemap">Site map</a>
+          </span>
         </p>
         <hr id="divider03" class="divider-component instance-3 style-3">
       </div>

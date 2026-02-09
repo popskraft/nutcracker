@@ -1,5 +1,101 @@
 # Nutcracker Pro - Hugo Website
 
+## Content Editing (RU)
+
+Этот раздел для людей, которые впервые открыли проект и хотят менять контент (тексты, товары, цены, FAQ) без погружения в шаблоны.
+
+### 1) Как устроен контент
+
+- **Данные товара (одно место на весь сайт):** `data/products/*.yaml`
+  - Здесь правят название товара, наборы/варианты, характеристики, ссылки, цены (если они включены), изображения (пути), тексты для блоков, которые идут "везде одинаково".
+- **Тексты страниц (много страниц на один товар):** `content/**/*.md`
+  - Базовая страница товара: `content/<product>.md`
+  - Страницы товара для штатов: `content/<state>/<product>.md`
+  - Здесь правят заголовки/описания/SEO, локальные вариации текста, блоки страницы (например FAQ в front matter), при необходимости отличаются по штату.
+
+Ключевое правило: если надо поменять что-то **одинаково для всех штатов** (например список фич, карточки вариантов, цены) обычно это `data/products/<product>.yaml`. Если надо поменять **текст на конкретной странице/штате** это `content/.../*.md`.
+
+### 2) Самые частые правки (по шагам)
+
+1. **Поменять название/фичи/варианты товара:** открой `data/products/<product>.yaml` и измени нужные поля.
+2. **Поменять заголовок/описание на странице товара:** открой `content/<product>.md` (или `content/<state>/<product>.md`) и измени `title`, `description`, `seo*`.
+3. **Поменять FAQ:** обычно это front matter в `content/<product>.md` или `content/<state>/<product>.md` (секция `faq:`).
+4. **Поменять картинку:**
+   - Если путь начинается с `/images/...`, файл должен лежать в `static/images/...` (чтобы URL совпадал).
+   - После замены убедись, что путь в YAML/Markdown указывает на существующий файл.
+
+### 3) Что нельзя делать (частые ошибки)
+
+- Не редактируй `public/` (это сгенерированный билд).
+- Не правь `layouts/`, `assets/`, `carrd/`, `.ai/` если задача про контент (это уже разработка/миграция).
+- В YAML нельзя использовать табы: только пробелы. Любая ошибка отступов ломает билд.
+- Не переименовывай файлы товаров/страниц без необходимости: имя файла = URL-слуг (`hand-cleaner.md` -> `/hand-cleaner/`).
+
+### 4) Минимальный GitHub-процесс для контент-правок
+
+1. Создай ветку от `main` (например `content/hand-cleaner-faq-fix`).
+2. Внеси правки, сделай commit с понятным сообщением.
+3. Открой Pull Request в `main`.
+4. Дождись Netlify Deploy Preview (если включен) и проверь страницу глазами.
+5. Смёржи PR в `main` (продакшн-деплой обычно стартует автоматически после merge).
+
+### 5) Если деплой не работает (быстрый чеклист)
+
+1. Посмотри логи билда в Netlify: обычно там прямо указано файл/строка (часто YAML/front matter).
+2. Прогони локально то же самое, что делает Netlify: `npm install` и `npm run build`.
+3. Типовые причины:
+   - Ошибка YAML в `data/products/*.yaml` (отступы, двоеточия, кавычки).
+   - Сломан front matter в `content/**/*.md` (нет закрывающего `---`, неправильный YAML внутри).
+   - Ссылка на картинку ведёт на несуществующий файл (`/images/...` нет в `static/images/...`).
+   - Не совпала версия Hugo: в `netlify.toml` задано `HUGO_VERSION = "0.140.2"`.
+
+### 6) YAML и Markdown: что важно знать (коротко)
+
+**YAML (`data/products/*.yaml`)** это структурированные данные. Это очень важно: одна маленькая ошибка в YAML часто ломает сборку/деплой.
+
+- Отступы: только пробелы (обычно 2), табы нельзя.
+- Строки с двоеточиями/символами лучше брать в кавычки: `"text: like this"`.
+- Списки начинаются с `-` и должны быть ровно выровнены по отступам.
+- Многострочный текст делай через `>-` (склеивает строки) или `|` (сохраняет переносы):
+  - `description: >-` удобно для длинных описаний.
+- Быстрый sanity-check: после правки YAML прогоняй `npm run build`.
+
+**Markdown (`content/**/*.md`)** это текст страниц + front matter (в начале файла).
+
+- Front matter в Hugo обычно YAML между строками `---` в самом верху файла. Если забыть закрыть `---`, билд упадёт.
+- Внутри Markdown можно использовать `**жирный**`, списки `-`, заголовки `#`, ссылки `[текст](url)`.
+- Если в front matter используются многострочные поля, предпочитай `>-\n  ...` и следи за отступами.
+
+Типовые проблемы, на которые смотреть в первую очередь:
+- YAML/front matter: отступы, лишние/пропущенные `:`, незакрытые кавычки.
+- Пути к картинкам: `/images/...` должны соответствовать файлам в `static/images/...`.
+- Непреднамеренные изменения URL: переименование `content/<slug>.md` меняет адрес страницы.
+
+## Content Editing (EN)
+
+This is a short guide for content editors (texts, products, FAQ) without touching templates.
+
+### YAML and Markdown (quick notes)
+
+**YAML (`data/products/*.yaml`)** stores structured product data. This is critical: a small YAML syntax mistake often breaks the build/deploy.
+
+- Indentation: spaces only (usually 2). Tabs will break YAML.
+- Quote risky strings (especially with `:`): `"text: like this"`.
+- Lists use `-` and must align by indentation.
+- For long text use `>-` (folded) or `|` (literal newlines).
+- After edits, run `npm run build` to catch errors early.
+
+**Markdown (`content/**/*.md`)** stores page text plus front matter at the top of the file.
+
+- Hugo front matter is usually YAML between `---` lines at the very top. Missing the closing `---` will fail the build.
+- Markdown supports `**bold**`, lists `-`, headings `#`, links `[text](url)`.
+- For multi-line front matter fields, prefer `>-\n  ...` and keep indentation consistent.
+
+Common pitfalls:
+- YAML/front matter indentation, missing `:`, unclosed quotes.
+- Broken image paths: `/images/...` must exist under `static/images/...`.
+- Renaming files changes URLs (`content/<slug>.md` -> `/slug/`).
+
 ## Quick Start Guide
 
 This is a [Hugo](https://gohugo.io)-based website that uses templates and YAML data files to generate product pages for different US states. 
@@ -34,6 +130,8 @@ This is a [Hugo](https://gohugo.io)-based website that uses templates and YAML d
 ```
 
 ## Table of Contents
+- [Content Editing (RU)](#content-editing-ru)
+- [Content Editing (EN)](#content-editing-en)
 - [Project Structure](#project-structure)
 - [Managing Product Data](#managing-product-data)
 - [Content Management](#content-management)

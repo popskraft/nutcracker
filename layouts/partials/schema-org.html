@@ -52,7 +52,7 @@
 "@type": "Offer",
 "url": "{{ with .Params.productLink }}{{ . }}{{ else }}{{ $baseURL }}#benefits{{ end }}",
 "priceCurrency": "{{ .Site.Params.products.defaultCurrency }}",
-"price": "{{ $filename := .File.BaseFileName }}{{ $dataPrice := or (index .Site.Data.products $filename "priceWholesale") (index .Site.Data.products $filename "price") }}{{ $price := or .Params.priceSection.priceWholesale .Params.priceSection.price }}{{ with or $price $dataPrice }}{{ replace . "$" "" }}{{ else }}{{ .Site.Params.products.defaultPrice }}{{ end }}",
+"price": "{{ $filename := .File.BaseFileName }}{{ $dataPrice := strings.TrimSpace (or (index .Site.Data.products $filename "priceWholesale") (index .Site.Data.products $filename "price") "") }}{{ $price := strings.TrimSpace (or .Params.priceSection.priceWholesale .Params.priceSection.price "") }}{{ with or $price $dataPrice }}{{ replace . "$" "" }}{{ end }}",
 "priceValidUntil": "{{ .Site.Params.schema.priceValidUntil }}",
 "itemCondition": "{{ .Site.Params.products.defaultItemCondition }}",
 "availability": "{{ .Site.Params.products.defaultAvailability }}",

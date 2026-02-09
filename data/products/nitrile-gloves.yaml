@@ -1,7 +1,7 @@
 weight: "2"
 productName: "8-mil Nitrile Gloves"
-price: "$4.99"
-priceWholesale: "$3.99"
+price: ""
+priceWholesale: ""
 pricePerCaptionLong: "Per 100-glove box (wholesale price, pallet)"
 pricePerCaptionShort: "Per box"
 productLink: https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil
@@ -55,7 +55,7 @@ products:
     buttonWholesaleText: ""
     priceText: "100 Gloves per box • 20 boxes min"
     priceTextWholesale: "100 Gloves per box • 960 boxes per pallet"
-    ctaComment: "*Buy From Distributor"
+    ctaComment: ""
   - size: "L"
     image: /images/gloves/product-3.jpg
     imageAlt: "Buy Large Size Nitrile Gloves"
@@ -65,7 +65,7 @@ products:
     buttonWholesaleText: ""
     priceText: "100 Gloves per box • 20 boxes min"
     priceTextWholesale: "100 Gloves per box • 960 boxes per pallet"
-    ctaComment: "*Buy From Distributor"
+    ctaComment: ""
   - size: "XL"
     image: /images/gloves/product-2.jpg
     imageAlt: "Buy XL Size Nitrile Gloves"
@@ -75,7 +75,7 @@ products:
     buttonWholesaleText: ""
     priceText: "100 Gloves per box • 20 boxes min"
     priceTextWholesale: "100 Gloves per box • 960 boxes per pallet"
-    ctaComment: "*Buy From Distributor"
+    ctaComment: ""
   - size: "XXL"
     image: /images/gloves/product-1.jpg
     imageAlt: "Buy XXL Size Nitrile Gloves"
@@ -85,7 +85,7 @@ products:
     buttonWholesaleText: ""
     priceText: "100 Gloves per box • 20 boxes min"
     priceTextWholesale: "100 Gloves per box • 960 boxes per pallet"
-    ctaComment: "*Buy From Distributor"
+    ctaComment: ""
 # Benefits Content
 benefitsImages:
   - image: /images/gloves/product-main.jpg
