@@ -3826,22 +3826,22 @@
 					delay: 5000,
 				},
 				images: [
-					{
-						src: 'assets/images/coverSlider-94d36aab.jpg',
+						{
+							src: '/assets/images/coverSlider-94d36aab.jpg',
 						position: 'center',
 						motion: 'none',
 						speed: 1,
 						caption: 'Nutcracker Professional Hand Cleaner',
 					},
-					{
-						src: 'assets/images/coverSlider-4bfb4893.jpg',
+						{
+							src: '/assets/images/coverSlider-4bfb4893.jpg',
 						position: 'center',
 						motion: 'none',
 						speed: 1,
 						caption: 'Nutcracker Professional Hand Cleaner',
 					},
-					{
-						src: 'assets/images/coverSlider-76da13cd.jpg',
+						{
+							src: '/assets/images/coverSlider-76da13cd.jpg',
 						position: 'center',
 						motion: 'none',
 						speed: 1,
