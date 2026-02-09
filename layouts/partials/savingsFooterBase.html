@@ -1,10 +1,10 @@
 {{ define "savingsFooterBase" }}
-<div id="savingsFooter{{ .Count }}goods" class="style13 container columns span-{{ .Count }}">
+<div id="savingsFooter{{ .Count }}goods" class="style13 style-13 container container-component columns span-{{ .Count }}">
   <div class="wrapper">
     <div class="inner">
       {{ range $index, $product := .Products }}
         <div>
-          <div id="image{{ add 5 $index }}" class="style2 image">
+          <div id="image{{ add 5 $index }}" class="style2 style-2 image image-component">
             {{ with resources.Get $product.image }}
               {{ $image := . }}
               {{ $filter := images.UnsharpMask .5 .5 0 }}
@@ -20,14 +20,14 @@
               </a>
             {{ end }}
           </div>
-          <ul id="buttons{{ add 23 $index }}" class="style7 buttons">
-            <li>
-              <a href="{{ $product.productLink }}" class="button n01" role="button">{{ $product.buttonText | default "Buy now" }}</a>
-            </li>
-            <li>
-              <a href="{{ $.Site.Params.formWholesaleUrl  }}" class="button n02" role="button">Wholesale</a>
-            </li>
-          </ul>
+          {{ partial "ctaButtonsStyle7.html" (dict
+            "context" $
+            "id" (printf "buttons%d" (add 23 $index))
+            "productLink" $product.productLink
+            "amazonLink" (or $product.amazonLink "")
+            "wholesaleLink" $.Site.Params.formWholesaleUrl
+            "wholesaleText" (or $product.buttonWholesaleText "Wholesale Inquiry")
+          ) }}
         </div>
       {{ end }}
     </div>

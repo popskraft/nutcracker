@@ -5,6 +5,7 @@ priceWholesale: "$3.99"
 pricePerCaptionLong: "Per 100-glove box (wholesale price, pallet)"
 pricePerCaptionShort: "Per box"
 productLink: https://akdealerservices.com/product/1000526-mechanic-gloves-8-mil
+amazonLink: "https://www.amazon.com/dp/B0GMD67PBF/"
 
 # Media
 ogImage: /images/gloves/ogimage.jpg
@@ -49,6 +50,7 @@ products:
     image: /images/gloves/product-4.jpg
     imageAlt: "Buy Medium Size Nitrile Gloves"
     productLink: https://akdealerservices.com/product/1000527-mechanic-gloves-medium
+    amazonLink: "https://www.amazon.com/dp/B0GM1KDLVY/"
     buttonText: "Buy M size*"
     buttonWholesaleText: ""
     priceText: "100 Gloves per box • 20 boxes min"
@@ -58,6 +60,7 @@ products:
     image: /images/gloves/product-3.jpg
     imageAlt: "Buy Large Size Nitrile Gloves"
     productLink: https://akdealerservices.com/product/1000528-mechanic-gloves-large
+    amazonLink: "https://www.amazon.com/dp/B0GMD67PBF/"
     buttonText: "Buy L size*"
     buttonWholesaleText: ""
     priceText: "100 Gloves per box • 20 boxes min"
@@ -67,6 +70,7 @@ products:
     image: /images/gloves/product-2.jpg
     imageAlt: "Buy XL Size Nitrile Gloves"
     productLink: https://akdealerservices.com/product/1000529-mechanic-gloves-x-large
+    amazonLink: "https://www.amazon.com/dp/B0GMDCMQ6M/"
     buttonText: "Buy XL size*"
     buttonWholesaleText: ""
     priceText: "100 Gloves per box • 20 boxes min"
@@ -76,6 +80,7 @@ products:
     image: /images/gloves/product-1.jpg
     imageAlt: "Buy XXL Size Nitrile Gloves"
     productLink: https://akdealerservices.com/product/1000530-mechanic-gloves-xx-large
+    amazonLink: ""
     buttonText: "Buy XXL size*"
     buttonWholesaleText: ""
     priceText: "100 Gloves per box • 20 boxes min"

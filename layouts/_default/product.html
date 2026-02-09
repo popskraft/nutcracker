@@ -2,7 +2,7 @@
 
 {{ partial "pageAboutIntro.html" . }}
 {{ partial "coverSlider.html" . }}
-<hr id="divider10" class="style4">
+<hr id="divider10" class="divider-component instance-10 style-4">
 {{ partial "benefitsHeader.html" . }}
 {{ partial "video.html" . }}
 {{ partial "benefitsContent.html" . }}
@@ -11,8 +11,8 @@
 {{ $filename := .File.BaseFileName }}
 {{ $gallery := or (index $.Site.Data.products $filename).gallery .Page.Params.gallery }}
 {{ if $gallery }}
-  {{ partial "gallery.html" (dict "context" . "items" $gallery.items) }}
-  <hr id="divider-gallery" class="style2">
+  {{ partial "gallery.html" (dict "context" . "id" "product-gallery" "instance" "instance-7" "style" "style-4" "class" "full" "items" $gallery.items) }}
+  <hr class="divider-component instance-11 style-3">
 {{ end }}
 
 {{ partial "savingsHeader.html" . }}

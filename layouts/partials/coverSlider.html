@@ -2,11 +2,11 @@
 {{ $productName := partial "productName" . | markdownify | plainify }}
 {{ $productLink := partial "rawProductLink" . }}
 {{ $imageAlt := or $.Page.Params.coverImageAlt $productName $.Page.Title | markdownify | plainify }}
-<div id="coverSlider" class="container columns">
+<div id="coverSlider" class="container-component instance-14 columns">
   <div class="wrapper">
     <div class="inner">
       <div>
-        <h1 class="style7">
+        <h1 id="text08" class="text-component instance-8 style-7">
           {{ with .Page.Params.titlePrefix }}
             <span class="text-base block tracking-normal mb-4">{{ . | markdownify }}</span>
           {{ end }}
@@ -14,7 +14,7 @@
         </h1>
       </div>
       <div>
-        <div id="coverSliderImageDesctop" class="image full" data-visibility="desktop">
+        <div id="coverSliderImageDesctop" class="image-component instance-2 full" data-visibility="desktop">
           <a href="{{ $productLink }}" class="frame">
             {{ $sigma := $.Site.Params.coverImage.filter.unsharpMask.sigma }}
             {{ $amount := $.Site.Params.coverImage.filter.unsharpMask.amount }}
@@ -43,10 +43,10 @@
   </div>
 </div>
 
-<div id="container09" class="container default" data-visibility="mobile">
+<div id="container09" class="container-component instance-9 default" data-visibility="mobile">
   <div class="wrapper">
     <div class="inner">
-      <div id="coverSliderImageMobile" class="image" data-visibility="mobile">
+      <div id="coverSliderImageMobile" class="image-component instance-16" data-visibility="mobile">
         <a href="{{ $productLink }}" class="frame">
           {{ $sigma := $.Site.Params.coverImage.filter.unsharpMask.sigma }}
             {{ $amount := $.Site.Params.coverImage.filter.unsharpMask.amount }}
@@ -73,17 +73,17 @@
   </div>
 </div>
 
-<div id="CoverBottom" class="style20 container columns">
+<div id="CoverBottom" class="container-component instance-7 style-20 columns">
   <div class="wrapper">
     <div class="inner">
       <div>
-        <p class="style11">{{ .Page.Params.subtitle | default .Site.Params.tagline | markdownify }}</p>
-        <p class="style16">{{ .Page.Params.description | markdownify }}</p>
+        <p id="text97" class="text-component instance-97 style-11">{{ .Page.Params.subtitle | default .Site.Params.tagline | markdownify }}</p>
+        <p id="text41" class="text-component instance-41 style-16">{{ .Page.Params.description | markdownify }}</p>
         {{ partial "CTAGroup.html" . }}
       </div>
       <div>
 
-        <div id="list02" class="style2 list">
+        <div id="list02" class="list-component instance-2 style-2">
           {{ $features := or (index $.Site.Data.products $filename "features") .Page.Params.features }}
           {{ with $features }}
           <ul>
@@ -100,20 +100,20 @@
         {{ $dataPrice := or (index $.Site.Data.products $filename "priceWholesale") (index $.Site.Data.products $filename "price") }}
         {{ $price := or .Page.Params.priceSection.priceWholesale .Page.Params.priceSection.price $dataPrice }}
         {{ with $price }}
-        <p class="style15">
+        <h3 id="text11" class="text-component instance-11 style-15">
           {{ . }}
-        </p>
+        </h3>
         {{ end }}
         
         {{ $dataCaptions := index $.Site.Data.products $filename }}
-        <p class="style14">
+        <h3 id="text03" class="text-component instance-3 style-14">
           {{ or 
               $dataCaptions.pricePerCaptionLong 
               $dataCaptions.pricePerCaptionShort 
               .Page.Params.priceSection.pricePerCaptionLong 
               .Page.Params.priceSection.pricePerCaptionShort 
             }}
-        </p>
+        </h3>
         
       </div>
     </div>

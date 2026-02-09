@@ -9,11 +9,17 @@
     {{ $questions = $faq.questions }}
   {{ end }}
 {{ end }}
-<div id="faqHeader" class="style16 container default">
+{{ $questionTitleIDMap := dict "0" "text122" "1" "text36" "2" "text06" }}
+{{ $questionTitleInstanceMap := dict "0" "instance-122" "1" "instance-36" "2" "instance-6" }}
+{{ $questionAnswerIDMap := dict "0" "text18" "1" "text37" "2" "text09" }}
+{{ $questionAnswerInstanceMap := dict "0" "instance-18" "1" "instance-37" "2" "instance-9" }}
+{{ $questionDividerIDMap := dict "0" "divider28" "1" "divider29" "2" "divider27" }}
+{{ $questionDividerInstanceMap := dict "0" "instance-28" "1" "instance-29" "2" "instance-27" }}
+<div id="faqHeader" class="container-component instance-21 style-16 default">
   <div class="wrapper">
     <div class="inner">
-      <hr id="divider08" class="style3">
-      <h2 class="style18">
+      <hr id="divider08" class="divider-component instance-8 style-3">
+      <h2 id="text57" class="text-component instance-57 style-1">
         {{ $productName := partial "productName" . | markdownify }}
         {{ $title := $productName }}
         {{ if reflect.IsMap $faq }}
@@ -27,15 +33,22 @@
     </div>
   </div>
 </div>
-<div id="faqBody" class="style12 container default">
+<div id="faqBody" class="container-component instance-5 style-12 default">
   <div class="wrapper">
     <div class="inner">
       {{ range $index, $question := $questions }}
-      <hr class="style9 full screen">
-      <h3 class="style2 faqTitle">
+      {{ $questionKey := printf "%d" $index }}
+      {{ $titleID := index $questionTitleIDMap $questionKey }}
+      {{ $titleInstance := index $questionTitleInstanceMap $questionKey }}
+      {{ $answerID := index $questionAnswerIDMap $questionKey }}
+      {{ $answerInstance := index $questionAnswerInstanceMap $questionKey }}
+      {{ $dividerID := index $questionDividerIDMap $questionKey }}
+      {{ $dividerInstance := index $questionDividerInstanceMap $questionKey }}
+      <hr{{ with $dividerID }} id="{{ . }}"{{ end }} class="divider-component{{ with $dividerInstance }} {{ . }}{{ end }} style-9 full screen">
+      <p{{ with $titleID }} id="{{ . }}"{{ end }} class="text-component{{ with $titleInstance }} {{ . }}{{ end }} style-2 faqTitle">
         <span style="color: #FFB800">Q.</span> {{ $question.question }}
-      </h3>
-      <p class="style6 faqAnswer">{{ $question.answer | markdownify }}</p>
+      </p>
+      <p{{ with $answerID }} id="{{ . }}"{{ end }} class="text-component{{ with $answerInstance }} {{ . }}{{ end }} style-6 faqAnswer">{{ $question.answer | markdownify }}</p>
       {{ end }}
     </div>
   </div>

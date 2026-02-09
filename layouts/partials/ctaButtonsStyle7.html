@@ -1,0 +1,25 @@
+{{ $ctx := .context }}
+{{ $id := .id }}
+{{ $productLink := strings.TrimSpace (or .productLink "") }}
+{{ $amazonLink := strings.TrimSpace (or .amazonLink "") }}
+{{ $wholesaleLink := strings.TrimSpace (or .wholesaleLink $ctx.Site.Params.formWholesaleUrl "") }}
+{{ $wholesaleText := or .wholesaleText "Wholesale Inquiry" }}
+{{ if or $productLink $amazonLink $wholesaleLink }}
+<ul class="buttons-component instance-18 style-7">
+  {{ if $productLink }}
+  <li>
+    <a href="{{ $productLink }}" class="n01" role="button">Buy on AK Dealer Services</a>
+  </li>
+  {{ end }}
+  {{ if $amazonLink }}
+  <li>
+    <a href="{{ $amazonLink }}" class="n02" role="button">Buy on Amazon</a>
+  </li>
+  {{ end }}
+  {{ if $wholesaleLink }}
+  <li>
+    <a href="{{ $wholesaleLink }}" class="n03" role="button">{{ $wholesaleText | markdownify }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

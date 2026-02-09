@@ -1,27 +1,36 @@
-<div id="benefitsContent3Cols" class="style8 container columns">
+{{ $columns := .Page.Params.benefitsColumns }}
+{{ if not $columns }}
+  {{ $columns = .Site.Params.benefits.defaultColumns }}
+{{ end }}
+{{ $titleIDMap := dict "0-0" "text96" "0-1" "text27" "1-0" "text13" "1-1" "text17" "2-0" "text02" "2-1" "text23" }}
+{{ $titleInstanceMap := dict "0-0" "instance-96" "0-1" "instance-27" "1-0" "instance-13" "1-1" "instance-17" "2-0" "instance-2" "2-1" "instance-23" }}
+{{ $textIDMap := dict "0-0" "text12" "0-1" "text28" "1-0" "text15" "1-1" "text19" "2-0" "text65" "2-1" "text24" }}
+{{ $textInstanceMap := dict "0-0" "instance-12" "0-1" "instance-28" "1-0" "instance-15" "1-1" "instance-19" "2-0" "instance-65" "2-1" "instance-24" }}
+{{ $dividerIDMap := dict "0-0" "divider16" "0-1" "divider02" "1-0" "divider01" "1-1" "divider25" "2-0" "divider17" "2-1" "divider07" }}
+{{ $dividerInstanceMap := dict "0-0" "instance-16" "0-1" "instance-2" "1-0" "instance-1" "1-1" "instance-25" "2-0" "instance-17" "2-1" "instance-7" }}
+<div id="benefitsContent3Cols" class="container-component instance-8 style-8 columns">
   <div class="wrapper">
     <div class="inner">
-      {{ with .Page.Params.benefitsColumns }}
+      {{ with $columns }}
         {{ range $columnIndex, $column := . }}
         <div>
           {{ range $benefitIndex, $benefit := $column }}
-          <h2 id="benefit-title-{{ $columnIndex }}-{{ $benefitIndex }}" class="style5">{{ $benefit.title }}</h2>
-          <p id="benefit-text-{{ $columnIndex }}-{{ $benefitIndex }}" class="style3">{{ $benefit.content | markdownify }}</p>
-          {{ if ne (add $benefitIndex 1) (len $column) }}<hr id="benefit-divider-{{ $columnIndex }}-{{ $benefitIndex }}" class="style1">{{ end }}
+          {{ $key := printf "%d-%d" $columnIndex $benefitIndex }}
+          {{ $titleID := index $titleIDMap $key | default (printf "benefit-title-%d-%d" $columnIndex $benefitIndex) }}
+          {{ $titleInstance := index $titleInstanceMap $key }}
+          {{ $textID := index $textIDMap $key | default (printf "benefit-text-%d-%d" $columnIndex $benefitIndex) }}
+          {{ $textInstance := index $textInstanceMap $key }}
+          {{ $dividerID := index $dividerIDMap $key }}
+          {{ $dividerInstance := index $dividerInstanceMap $key }}
+          <h2 id="{{ $titleID }}" class="text-component{{ with $titleInstance }} {{ . }}{{ end }} style-5">{{ $benefit.title }}</h2>
+          <p id="{{ $textID }}" class="text-component{{ with $textInstance }} {{ . }}{{ end }} style-3">{{ $benefit.content | markdownify }}</p>
+          {{ if $dividerID }}
+          <hr id="{{ $dividerID }}" class="divider-component{{ with $dividerInstance }} {{ . }}{{ end }} style-1">
+          {{ else if ne (add $benefitIndex 1) (len $column) }}
+          <hr id="benefit-divider-{{ $columnIndex }}-{{ $benefitIndex }}" class="divider-component style-1">
+          {{ end }}
           {{ end }}
         </div>
-        {{ end }}
-      {{ else }}
-        {{ with .Site.Params.benefits.defaultColumns }}
-          {{ range $columnIndex, $column := . }}
-          <div>
-            {{ range $benefitIndex, $benefit := $column }}
-            <h2 id="benefit-title-{{ $columnIndex }}-{{ $benefitIndex }}" class="style5">{{ $benefit.title }}</h2>
-            <p id="benefit-text-{{ $columnIndex }}-{{ $benefitIndex }}" class="style3">{{ $benefit.content | markdownify }}</p>
-            {{ if ne (add $benefitIndex 1) (len $column) }}<hr id="benefit-divider-{{ $columnIndex }}-{{ $benefitIndex }}" class="style1">{{ end }}
-            {{ end }}
-          </div>
-          {{ end }}
         {{ end }}
       {{ end }}
     </div>

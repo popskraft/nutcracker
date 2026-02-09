@@ -5,6 +5,7 @@ priceWholesale: "$19.99"
 pricePerCaptionLong: "Per container (wholesale price, pallet)"
 pricePerCaptionShort: "Per container"
 productLink: https://akdealerservices.com/product/1001255-professional-hand-cleaner
+amazonLink: "https://www.amazon.com/Nutcracker-Solvent-Industrial-Hand-Cleaner/dp/B0G36J55FY/"
 # productLinkWholesale: https://akdealerservices.com/product/1001257-professional-hand-cleaner-1-pallet
 
 # Media
@@ -47,6 +48,7 @@ products:
   - size: ""
     image: /images/handcleaner/product-1.jpg
     imageAlt: "Buy a Small batch of"
+    amazonLink: "https://www.amazon.com/Nutcracker-Solvent-Industrial-Hand-Cleaner/dp/B0G36J55FY/"
     buttonText: ""
     buttonWholesaleText: false
     priceText: "120 OZ (3.55L) per container • 4 containers min (1 case)"
@@ -54,6 +56,7 @@ products:
   - size: ""
     image: /images/handcleaner/product-2.jpg
     imageAlt: "Order wholesale Batch of"
+    amazonLink: ""
     buttonText: false
     buttonWholesaleText: ""
     wholesalePrice: true

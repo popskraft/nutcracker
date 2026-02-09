@@ -86,6 +86,11 @@ function initCoverSlider() {
         return;
     }
 
+    // Carrd main.js may initialize its own slideshow for #coverSlider.
+    // Remove existing instances so product pages keep a single deterministic background.
+    const existingSlideshows = target.querySelectorAll(':scope > .slideshow-background');
+    existingSlideshows.forEach((el) => el.remove());
+
     console.log('Creating slideshow background...');
     const slideshowBackground = document.createElement('div');
     slideshowBackground.className = 'slideshow-background';

@@ -1,0 +1,13 @@
+# Preserve project-specific extension assets that are not part of carrd/assets.
+custom.css
+tailwindstyle.css
+tailwind/
+js/theme.js
+js/coverSlider.js
+images/abspads/
+images/articles/
+images/gloves/
+images/handcleaner/
+images/wipes/
+images/carflag.jpg
+images/ogimage.jpg

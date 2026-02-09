@@ -1,10 +1,10 @@
 {{ define "main" }}
 <section id="about-section">
-  <div id="aboutContentTop" class="style6 container default">
+  <div id="aboutContentTop" class="style6 style-6 container container-component instance-28 default">
     <div class="wrapper">
       <div class="inner">
-        <h1 class="style1">{{ .Params.headerTitle | markdownify }}</h1>
-        <p class="description style9">{{ .Params.headerSubtitle | markdownify }}</p>
+        <h1 class="style1 style-1 text-component">{{ .Params.headerTitle | markdownify }}</h1>
+        <p class="description style9 style-9 text-component">{{ .Params.headerSubtitle | markdownify }}</p>
         <div class="txt">
           {{ .Content }}
         </div>
@@ -12,10 +12,10 @@
     </div>
   </div>
 
-  <div id="aboutFooter" class="style10 container default">
+  <div id="aboutFooter" class="style10 style-10 container container-component instance-26 default">
     <div class="wrapper">
       <div class="inner">
-        <ul id="buttons07" class="style2 buttons">
+        <ul id="buttons07" class="style2 style-2 buttons buttons-component instance-7">
           <li>
             <a href="{{ .Params.contactEmail }}" class="button n01" role="button"><svg
                 aria-labelledby="buttons07-icon-1-title">
@@ -38,13 +38,13 @@
   </div>
   
   {{ if or .Params.primaryOperationsList .Params.forBusinessesList }}
-  <div id="aboutContent2Col" class="style6 container columns">
+  <div id="aboutContent2Col" class="style6 style-6 container container-component instance-29 columns">
     <div class="wrapper">
       <div class="inner">
         {{ if .Params.primaryOperationsList }}
         <div>
-          <p class="style2">{{ .Params.primaryOperationsTitle | default "Primary Operations" | markdownify }}</p>
-          <div id="list08" class="style3 list">
+          <p class="style2 style-2 text-component">{{ .Params.primaryOperationsTitle | default "Primary Operations" | markdownify }}</p>
+          <div id="list08" class="style3 style-3 list list-component instance-8">
             <ul>
               {{ range .Params.primaryOperationsList }}
               <li>
@@ -57,8 +57,8 @@
         {{ end }}
         {{ if .Params.forBusinessesList }}
         <div>
-          <p class="style2">{{ .Params.forBusinessesTitle | default "For Businesses" | markdownify }}</p>
-          <div id="list07" class="style3 list">
+          <p class="style2 style-2 text-component">{{ .Params.forBusinessesTitle | default "For Businesses" | markdownify }}</p>
+          <div id="list07" class="style3 style-3 list list-component instance-7">
             <ul>
               {{ range .Params.forBusinessesList }}
               <li>

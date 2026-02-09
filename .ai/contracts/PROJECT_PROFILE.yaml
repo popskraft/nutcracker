@@ -1,0 +1,16 @@
+project_type: carrd-hugo-corporate
+project_name: "Corporate Website"
+project_family: "Corporate Website"
+markup_source: "Carrd"
+cms: "Hugo"
+css_stack: "Tailwind"
+automation_mode: "autonomous"
+ide_stack: "vscode,gpt-5.3+-extension,claude-code-extension"
+reference_dir: "carrd"
+reference_path: "/Users/popskraft/hugo/nutcracker/carrd"
+baseline_url: "https://nutcrackerpro.com/"
+commands:
+  dev: "npm run dev:all"
+  build: "npm run build"
+  validate: "npm run build"
+  tests: "No dedicated tests configured"

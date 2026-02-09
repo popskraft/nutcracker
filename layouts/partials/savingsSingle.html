@@ -1,16 +1,16 @@
 {{ if .Page.Params.savings }}
 {{ $savings := .Page.Params.savings }}
-<div id="savingsHeader" class="style2 container columns">
+<div id="savingsHeader" class="container-component instance-1 style-2 columns">
 	<div class="wrapper">
 		<div class="inner">
 			<div>
-				<h2 id="text04" class="style4">{{ $savings.title }}</h2>
-				<h3 id="text14" class="style5"><span style="color: #FF5500">{{ $savings.subtitle }}</span></h3>
-				<p id="text07" class="style6">{{ $savings.description | markdownify }}</p>
+				<h2 id="text04" class="text-component instance-4 style-4">{{ $savings.title }}</h2>
+				<h3 id="text14" class="text-component instance-14 style-5"><span style="color: #FF5500">{{ $savings.subtitle }}</span></h3>
+				<p id="text07" class="text-component instance-7 style-6">{{ $savings.description | markdownify }}</p>
 			</div>
 			<div>
 				{{ with .Page.Params.savings }}
-				<div id="image03" class="style3 image full">
+				<div id="image03" class="image-component instance-3 style-3 full">
 					{{ with resources.Get .image }}
 					{{ $image := . }}
 					{{ $filter := images.UnsharpMask .5 .5 0 }}
@@ -26,5 +26,5 @@
 		</div>
 	</div>
 </div>
-<hr id="divider26" class="style7">
+<hr id="divider26" class="style7 style-7 divider-component">
 {{ end }}

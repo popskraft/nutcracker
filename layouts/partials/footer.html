@@ -1,14 +1,14 @@
 <footer id="footer">
-  <div id="footerTop" class="container columns">
+  <div id="footerTop" class="container container-component instance-27 columns">
     <div class="wrapper">
       <div class="inner">
         <div>
-          <div id="logoHeader" class="image">
+          <div id="logoHeader" class="image image-component instance-28">
             <a href="#home" class="frame">
               <img src="{{ "logo.svg" | relURL }}" alt="{{ .Site.Params.companyName }} Logo">
             </a>
           </div>
-          {{/*  <ul id="buttons01" class="style1 buttons">
+          {{/*  <ul id="buttons01" class="style1 style-1 buttons buttons-component">
             <li>
               <a href="tel:{{ replaceRE "[^0-9]" "" .Site.Params.contact.phone }}" class="button n01" role="button"><svg
                   aria-labelledby="buttons01-icon-1-title">
@@ -26,7 +26,7 @@
           </ul>  */}}
         </div>
         <div>
-          <ul id="links02" class="style2 links">
+          <ul id="links02" class="style2 style-2 links links-component instance-2">
             {{ range .Site.Menus.main }}
             <li class="{{ .Identifier | default "n01" }}">
               <a href="{{ .URL }}">{{ .Name }}</a>
@@ -42,8 +42,8 @@
           </ul>
         </div>
         <div>
-          <p class="style6">Subscribe to special offers</p>
-          <form data-netlify="true" data-netlify-honeypot="bot-field" name="subscribe" id="form02" method="POST" action="/thank-you/" class="style2">
+          <p class="style6 style-6 text-component instance-58">Subscribe to special offers</p>
+          <form data-netlify="true" data-netlify-honeypot="bot-field" name="subscribe" id="form02" method="POST" action="/thank-you/" class="style2 style-2 form-component instance-2">
             <input type="hidden" name="form-name" value="subscribe" />
             <p class="hidden">
               <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -63,18 +63,17 @@
       </div>
     </div>
   </div>
-  <div id="footerBottom" class="container default">
+  <div id="footerBottom" class="container-component instance-17 default">
     <div class="wrapper">
       <div class="inner">
-        <p id="text42">
-          <span class="p">{{ now.Format "2006" }} {{ .Site.Params.companyName }} {{ .Site.Params.footer.copyright }}<br />{{ .Site.Params.footer.terms_text }} 
-          <a href="{{ .Site.Params.footer.terms_link }}">{{ .Site.Params.footer.terms_link_text }}</a></span>
-          {{ with .Site.GetPage "sitemap" }}
-          <span class="p"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></span>
-          {{ end }}
+        <p id="text42" class="text-component instance-42">
+          <span class="p">&copy;{{ now.Format "2006" }}{{ .Site.Params.footer.copyright }}<br />{{ .Site.Params.footer.terms_text }} <a href="{{ .Site.Params.footer.terms_link }}">{{ .Site.Params.footer.terms_link_text }}</a></span>
         </p>
-        <hr id="divider03" class="style3">
+        <hr id="divider03" class="divider-component instance-3 style-3">
       </div>
     </div>
   </div>
+  <script>
+  /* No-loadwaiting v0.1.9 (2026-02-08) */(function () { 'use strict'; const DEFAULTS = { animationDuration: 750, observerTimeout: 5000, scrollPulseInterval: 60, scrollPulseCount: 10, rafPulseCount: 4 }; const externalOptions = (typeof window !== 'undefined' && window.CarrdPluginOptions && window.CarrdPluginOptions.noLoadwaiting) || {}; const CONFIG = {}; for (const key in DEFAULTS) { CONFIG[key] = Object.prototype.hasOwnProperty.call(externalOptions, key) ? externalOptions[key] : DEFAULTS[key]; } let initialized = false; let cachedBody = null; function getBody() { if (cachedBody && cachedBody.isConnected) return cachedBody; cachedBody = document.body; return cachedBody; } function markReadyNow() { const body = getBody(); if (!body) return; body.classList.remove('is-loading', 'with-loader'); if (!body.classList.contains('is-ready')) { body.classList.add('is-ready'); body.classList.add('is-playing'); setTimeout(function () { body.classList.remove('is-playing'); }, CONFIG.animationDuration); } } function hideLoaderIfPresent() { const loader = document.getElementById('loader'); if (!loader) return false; loader.style.cssText = 'display:none !important; visibility:hidden !important; opacity:0 !important; pointer-events:none !important;'; return true; } function kickScrollHandlers() { let pulses = 0; const timer = setInterval(function () { if (++pulses >= CONFIG.scrollPulseCount) { clearInterval(timer); return; } dispatchLayoutEvents(); }, CONFIG.scrollPulseInterval); let rafPulses = 0; (function rafTick() { dispatchLayoutEvents(); if (++rafPulses < CONFIG.rafPulseCount) requestAnimationFrame(rafTick); })(); } function dispatchLayoutEvents() { try { window.dispatchEvent(new Event('resize')); window.dispatchEvent(new Event('scroll')); } catch (e) { } } function setupObservers() { const body = getBody(); if (!body) return; const classObserver = new MutationObserver(function () { if (body.classList.contains('with-loader')) { body.classList.remove('with-loader'); } }); const childObserver = new MutationObserver(function () { if (hideLoaderIfPresent()) { childObserver.disconnect(); } }); classObserver.observe(body, { attributes: true, attributeFilter: ['class'], }); childObserver.observe(body, { childList: true }); setTimeout(function () { classObserver.disconnect(); childObserver.disconnect(); }, CONFIG.observerTimeout); } function init() { if (initialized) return; initialized = true; try { markReadyNow(); hideLoaderIfPresent(); setupObservers(); kickScrollHandlers(); } catch (e) { console.warn('early-animate-override failed:', e); } } if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init, { once: true }); } else { init(); } })();
+  </script>
 </footer>

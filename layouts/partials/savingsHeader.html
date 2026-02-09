@@ -2,22 +2,22 @@
 {{ $dataSavings := or .Page.Params.savings (index .Site.Data.products $filename "savings") }}
 {{ $productName := partial "productName" . | markdownify | plainify }}
 {{ $imageAlt := or $.Page.Params.savings.imageAlt $productName $.Page.Title | markdownify | plainify }}
-<div id="container39" class="style3 container columns">
+<div id="container39" class="container-component instance-39 style-3 columns">
   <div class="wrapper">
     <div class="inner">
       <div>
         {{ with $dataSavings }}
-          <h2 id="text119" class="style4">{{ .title }}</h2>
-          <h3 id="text120" class="style5">
+          <h2 id="text119" class="text-component instance-119 style-4">{{ .title }}</h2>
+          <h3 id="text120" class="text-component instance-120 style-5">
             <span style="color: #FF5500">{{ or .subtitle "Special offer for car dealerships!" }}</span>
           </h3>
-          <p id="text121" class="style6">{{ .description | markdownify }}</p>
+          <p id="text121" class="text-component instance-121 style-6">{{ .description | markdownify }}</p>
         {{ end }}
       </div>
       <div>
         {{ $image := or $.Page.Params.savings.image $dataSavings.image "/images/carflag.jpg" }}
         {{ with $image }}
-          <div id="image03" class="style3 image full">
+          <div id="image01" class="image-component instance-1 style-3 full">
             {{ with resources.Get . }}
               {{ $image := . }}
               {{ $filter := images.UnsharpMask .5 .5 0 }}

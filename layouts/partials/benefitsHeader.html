@@ -1,10 +1,20 @@
-<div id="benefitsHeader" class="style4 container default">
+{{ if eq .Type "product" }}
+<div id="benefitsHeader" class="container-component instance-37 style-4 default">
   <div class="wrapper">
     <div class="inner">
-      <h2 id="text10" class="style1">
+      <h2 id="text46" class="text-component instance-46 style-1">
         {{ $productName := partial "productName" . | markdownify }}
         {{ or .Page.Params.benefitsHeaderTitle (printf "Why choose **%s**" $productName) | markdownify }}
       </h2>
     </div>
   </div>
 </div>
+{{ else }}
+<div id="benefitsHeader" class="container-component instance-37 style-4 default">
+  <div class="wrapper">
+    <div class="inner">
+      <h2 id="text10" class="text-component instance-10 style-1">{{ .Page.Params.benefitsHeaderTitle | default "Why choose **Nutcracker Pro**?" | markdownify }}</h2>
+    </div>
+  </div>
+</div>
+{{ end }}

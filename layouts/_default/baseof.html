@@ -95,9 +95,9 @@
 
 </head>
 
-<body class="is-loadin type-{{ .Type }} {{ with .Layout }}layout-{{.}}{{end}} {{ with .Section }}section-{{.}}{{end}}">
-  <div id="wrapper">
-    <div id="main">
+<body class="is-loading is-loadin type-{{ .Type }} {{ with .Layout }}layout-{{ . }}{{ end }} {{ with .Section }}section-{{ . }}{{ end }}">
+  <div class="site-wrapper">
+    <div class="site-main">
       <div class="inner">
         {{ partial "header" . }}
         <section id="home-section">
@@ -110,6 +110,8 @@
     </div>
   </div>
   
+  <script src="{{ "js/carrd-runtime-adapter.js" | relURL }}"></script>
+
   {{ with resources.Get "main.js" }}
     {{ $script := .  | minify  }}
     <script src="{{ $script.RelPermalink }}"></script>
@@ -144,7 +146,9 @@
   <script defer src="{{ $themeScript.RelPermalink }}" integrity="{{ $themeScript.Data.Integrity }}" crossorigin="anonymous"></script>
   {{ end }}
 
+  {{ if not hugo.IsServer }}
   {{ template "_internal/google_analytics.html" . }}
+  {{ end }}
   
 </body>
 </html>

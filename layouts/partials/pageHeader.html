@@ -1,18 +1,18 @@
-<div id="pageHeader" class="container columns">
+<div id="pageHeader" class="container container-component instance-35 columns">
   <div class="wrapper">
     <div class="inner">
       
       <div>
-        <h1 class="style4">{{ .Params.headerTitle |markdownify }}</h1>
+        <h1 id="text83" class="style4 style-4 text-component instance-83">{{ .Params.headerTitle |markdownify }}</h1>
       </div>
 
       <div>
-        <p class="style20">{{ .Site.Params.header.description | markdownify }}</p>
+        <p id="text45" class="style20 style-20 text-component instance-45">{{ .Site.Params.header.description | markdownify }}</p>
         {{/*  {{ with .Site.Params.header.customersTitle }}
-        <p class="style2">{{ . | markdownify }}</p>
+        <p class="style2 style-2 text-component">{{ . | markdownify }}</p>
         {{ end }}  */}}
         {{ with .Site.Params.header.customers }}
-        <p class="style19">
+        <p id="text48" class="style19 style-19 text-component instance-48">
           {{ range . }}
             <span class="p">{{ . | markdownify }}</span>
           {{ end }}

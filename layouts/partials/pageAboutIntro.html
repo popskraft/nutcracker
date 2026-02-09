@@ -1,11 +1,11 @@
-<div id="pageAboutIntro" class="container columns">
+<div id="pageAboutIntro" class="container-component instance-3 columns">
   <div class="wrapper">
     <div class="inner">
       <div>
-        <p class="style20">{{ .Site.Params.header.description | markdownify }}</p>
+        <p id="text39" class="text-component instance-39 style-20">{{ .Site.Params.header.description | markdownify }}</p>
       </div>
       <div>
-        <p class="style19">
+        <p id="text43" class="text-component instance-43 style-19">
           {{ range .Site.Params.header.customers }}
             <span class="p">{{ . | markdownify }}</span>
           {{ end }}

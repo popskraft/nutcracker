@@ -1,15 +1,26 @@
 {{ $productName := partial "productName" . | markdownify | plainify }}
-{{ $productLink := partial "rawProductLink" . }}
+{{ $baseProductLink := partial "rawProductLink" . }}
 {{ $imageAlt := or $productName $.Page.Title | markdownify | plainify }}
-<div id="savingsFooter4goods" class="style13 products container columns">
+{{ $imageIDMap := dict "0" "image05" "1" "image08" "2" "image21" "3" "image22" }}
+{{ $imageInstanceMap := dict "0" "instance-5" "1" "instance-8" "2" "instance-21" "3" "instance-22" }}
+{{ $buttonsIDMap := dict "0" "buttons23" "1" "buttons24" "2" "buttons25" "3" "buttons26" }}
+{{ $buttonsInstanceMap := dict "0" "instance-23" "1" "instance-24" "2" "instance-25" "3" "instance-26" }}
+{{ $commentIDMap := dict "0" "text49" "1" "text50" "2" "text51" "3" "text47" }}
+{{ $commentInstanceMap := dict "0" "instance-49" "1" "instance-50" "2" "instance-51" "3" "instance-47" }}
+<div id="savingsFooter4goods" class="container-component instance-30 style-13 columns">
   <div class="wrapper">
     <div class="inner">
       {{ $filename := .Page.File.BaseFileName }}
       {{ $products := or (index $.Site.Data.products $filename "products") .Page.Params.products }}
-      {{ range $index, $product := $products }}
-      {{ $productLink := or $product.productLink $productLink }}
+      {{ range $index, $product := first 4 $products }}
+      {{ $key := printf "%d" $index }}
+      {{ $productLink := or $product.productLink $baseProductLink }}
+      {{ $productAmazonLink := strings.TrimSpace (or $product.amazonLink "") }}
+      {{ if and $product.wholesaleProductLink (index $.Site.Data.products $filename "productLinkWholesale") }}
+        {{ $productLink = index $.Site.Data.products $filename "productLinkWholesale" }}
+      {{ end }}
         <div>
-          <div id="savings4-image-{{ $index }}" class="style2 image">
+          <div id="{{ index $imageIDMap $key | default (printf "savings4-image-%d" $index) }}" class="image-component{{ with index $imageInstanceMap $key }} {{ . }}{{ end }} style-2">
             {{ with resources.Get $product.image }}
               {{ $image := . }}
               {{ $filter := images.UnsharpMask .5 .5 0 }}
@@ -25,51 +36,17 @@
               </a>
             {{ end }}
           </div>
-          
-          <p id="savings4-text-{{ $index }}" class="style3 product-description">
-            {{ with $product.priceText }}
-            <span>
-              {{ . | markdownify }}
-              {{ with $dataPrice := index $.Site.Data.products $filename "price" }}
-                <strong>&ensp;
-                  {{ $dataPrice }}
-                  {{ with $caption := index $.Site.Data.products $filename "pricePerCaptionShort" }}
-                  {{ $caption }}
-                  {{ end }}
-                </strong>
-              {{ end }}
-            </span>
-            {{ end }}
-            {{ with $product.priceTextWholesale }}
-            <br>
-            <span>
-              {{ . | markdownify }}
-              {{ with $dataPrice := index $.Site.Data.products $filename "priceWholesale" }}
-                <strong>&ensp;
-                  <span style="color: #FF5500">{{ $dataPrice }}</span>
-                  {{ with $caption := index $.Site.Data.products $filename "pricePerCaptionShort" }}
-                  {{ $caption }}
-                  {{ end }}
-                </strong>
-              {{ end }}
-            </span>
-            {{ end }}
-          </p>
 
-          <ul id="savings4-buttons-{{ $index }}" class="style7 buttons">
-            {{ if ne $product.buttonText false }}
-            <li>
-              <a href="{{ $productLink }}" class="button n01" role="button">{{ or (index $.Site.Data.products $filename "buttonCartText") $product.buttonText $.Page.Params.buttonCartText $.Site.Params.products.defaultButtonCartText }}</a>
-            </li>
-            {{ end }}
-            {{ if ne $product.buttonWholesaleText false }}
-            <li>
-              <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button n02" role="button">{{ or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale" }}</a>
-            </li>
-            {{ end }}
-          </ul>
-          {{ with $product.ctaComment }}
-            <p class="style3 product-description">{{ . | markdownify }}</p>
+          {{ partial "ctaButtonsStyle7.html" (dict
+            "context" $
+            "id" (index $buttonsIDMap $key | default (printf "savings4-buttons-%d" $index))
+            "instance" (index $buttonsInstanceMap $key)
+            "productLink" $productLink
+            "amazonLink" $productAmazonLink
+            "wholesaleText" (or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry")
+          ) }}
+          {{ with or $product.ctaComment "*Buy From Distributor" }}
+            <p id="{{ index $commentIDMap $key | default (printf "savings4-text-%d" $index) }}" class="text-component{{ with index $commentInstanceMap $key }} {{ . }}{{ end }} style-3">{{ . | markdownify }}</p>
           {{ end }}
         </div>
       {{ end }}

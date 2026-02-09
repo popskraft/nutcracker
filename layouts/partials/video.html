@@ -1,22 +1,22 @@
 {{ $filename := .File.BaseFileName }}
 {{ $video := or (index $.Site.Data.products $filename).video .Page.Params.video }}
 {{ with $video }}
-<hr id="divider-video" class="style2">
-<div id="container40" class="style1 container default">
+<hr class="divider-component instance-11 style-3">
+<div class="container-component instance-40 style-1 default">
   <div class="wrapper">
     <div class="inner">
-      <div id="video02" class="style1 video is-active">
+      <div class="video-component instance-2 style-1 is-active">
         <div class="frame">
-          <video 
-            class="player" 
-            src="{{ .src }}" 
-            poster="{{ .poster }}" 
-            preload="auto" 
-            playsinline 
-            webkit-playsinline 
-            autoplay 
-            loop 
-            muted 
+          <video
+            class="player"
+            src="{{ .src | relURL }}"
+            poster="{{ .poster | relURL }}"
+            preload="auto"
+            playsinline
+            webkit-playsinline
+            autoplay
+            loop
+            muted
             controls>
           </video>
         </div>

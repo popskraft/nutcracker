@@ -1,9 +1,9 @@
-<div id="contactBody" class="style17 container default">
+<div id="contactBody" class="container-component instance-10 style-17 default">
   <div class="wrapper">
     <div class="inner">
-      <p id="text22" class="style1">{{ .Site.Params.contactBody.title | default "How to order?" | markdownify }}</p>
-      <p id="text25" class="style6 collapse-target">{{ .Site.Params.contactBody.description | default "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries." | markdownify }}</p>
-      <ul id="buttons03" class="style1 buttons">
+      <p id="text22" class="text-component instance-22 style-1">{{ .Site.Params.contactBody.title | default "How to order?" | markdownify }}</p>
+      <p id="text25" class="text-component instance-25 style-6 collapse-target">{{ .Site.Params.contactBody.description | default "**AK Dealer Services** is an authorized distributor of Nutcracker Pro. You can purchase the product directly from the company's website or contact by phone or email for inquiries." | markdownify }}</p>
+      <ul id="buttons03" class="buttons-component instance-3 style-1">
         <li>
           <a href="tel:{{ replaceRE "[^0-9]" "" .Site.Params.contact.phone }}" class="button n01" role="button"><svg aria-labelledby="buttons03-icon-1-title">
               <title id="buttons03-icon-1-title">Phone</title>
@@ -18,19 +18,19 @@
             </svg><span class="label">{{ .Site.Params.contact.email }}</span></a>
         </li>
       </ul>
-      <ul id="buttons22" class="style2 buttons">
+      <ul id="buttons22" class="buttons-component instance-22 style-2">
         {{ range .Site.Params.contactBody.buttons }}
         <li>
           {{ if eq .class "n01" }}
           <a href="{{ $.Site.Params.formContactUrl }}" class="button {{ .class }}" role="button"><svg
-              aria-labelledby="buttons22-icon-{{ .class }}-title">
-              <title id="buttons22-icon-{{ .class }}-title">{{ .icon | title }}</title>
+              aria-labelledby="buttons22-icon-1-title">
+              <title id="buttons22-icon-1-title">{{ .icon | title }}</title>
               <use xlink:href="{{ "icons.svg" | relURL }}#{{ .icon }}"></use>
             </svg><span class="label">{{ .label | markdownify }}</span></a>
           {{ else if eq .class "n02" }}
           <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button {{ .class }}" role="button"><svg
-              aria-labelledby="buttons22-icon-{{ .class }}-title">
-              <title id="buttons22-icon-{{ .class }}-title">{{ .icon | title }}</title>
+              aria-labelledby="buttons22-icon-2-title">
+              <title id="buttons22-icon-2-title">{{ .icon | title }}</title>
               <use xlink:href="{{ "icons.svg" | relURL }}#{{ .icon }}"></use>
             </svg><span class="label">{{ .label | markdownify }}</span></a>
           {{ end }}

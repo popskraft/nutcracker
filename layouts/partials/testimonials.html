@@ -1,22 +1,31 @@
 {{ $testimonials := .Page.Params.testimonials }}
 {{ if $testimonials }}
-<div id="testimonialsHeader" class="container default">
+{{ $starIDMap := dict "0" "image10" "1" "image11" "2" "image12" "3" "image13" "4" "image14" "5" "image15" }}
+{{ $starInstanceMap := dict "0" "instance-10" "1" "instance-11" "2" "instance-12" "3" "instance-13" "4" "instance-14" "5" "instance-15" }}
+{{ $nameIDMap := dict "0" "text92" "1" "text86" "2" "text90" "3" "text94" "4" "text20" "5" "text88" }}
+{{ $nameInstanceMap := dict "0" "instance-92" "1" "instance-86" "2" "instance-90" "3" "instance-94" "4" "instance-20" "5" "instance-88" }}
+{{ $reviewIDMap := dict "0" "text91" "1" "text89" "2" "text95" "3" "text87" "4" "text26" "5" "text93" }}
+{{ $reviewInstanceMap := dict "0" "instance-91" "1" "instance-89" "2" "instance-95" "3" "instance-87" "4" "instance-26" "5" "instance-93" }}
+{{ $dividerIDMap := dict "1" "divider13" "3" "divider14" "5" "divider12" }}
+{{ $dividerInstanceMap := dict "1" "instance-13" "3" "instance-14" "5" "instance-12" }}
+<div id="testimonialsHeader" class="container-component instance-25 default">
   <div class="wrapper">
     <div class="inner">
-      <hr id="divider23" class="style5">
-      <h2 class="style5">
+      <hr id="divider23" class="divider-component instance-23 style-5">
+      <h2 id="text05" class="text-component instance-5 style-5">
         {{ $productName := partial "productName" . | markdownify }}
         {{ or $testimonials.title (printf "Customer reviews of the %s" $productName) | markdownify }}
       </h2>
-      <hr id="divider04" class="style3">
+      <hr id="divider04" class="divider-component instance-4 style-3">
     </div>
   </div>
 </div>
 
-<div id="testimonials" class="style14 container columns">
+<div id="testimonials" class="container-component instance-2 style-14 columns">
   <div class="wrapper">
     <div class="inner">
-      {{ $total := len $testimonials.items }}
+      {{ $items := first 6 $testimonials.items }}
+      {{ $total := len $items }}
       {{ $perColumn := div (add $total 2) 3 }}
       
       {{ range $colIndex := (seq 3) }}
@@ -28,15 +37,17 @@
         {{ end }}
         
         <div>
-          {{ range $index, $review := (first (sub $end $start) (after $start $testimonials.items)) }}
+          {{ range $index, $review := (first (sub $end $start) (after $start $items)) }}
+            {{ $absoluteIndex := add $start $index }}
+            {{ $key := printf "%d" $absoluteIndex }}
             {{ if gt $index 0 }}
-            <hr class="style6 full screen">
+            <hr{{ with index $dividerIDMap $key }} id="{{ . }}"{{ end }} class="divider-component{{ with index $dividerInstanceMap $key }} {{ . }}{{ end }} style-6 full screen">
             {{ end }}
-            <div class="style1 image">
+            <div id="{{ index $starIDMap $key | default (printf "testimonials-star-%d" $absoluteIndex) }}" class="image-component{{ with index $starInstanceMap $key }} {{ . }}{{ end }} style-1">
               <span class="frame"><img src="{{ "/stars.svg" | relURL }}" alt="Stars"></span>
             </div>
-            <p class="style2">{{ $review.name }}</p>
-            <p class="style3">{{ $review.text }}</p>
+            <h2 id="{{ index $nameIDMap $key | default (printf "testimonials-name-%d" $absoluteIndex) }}" class="text-component{{ with index $nameInstanceMap $key }} {{ . }}{{ end }} style-2">{{ $review.name }}</h2>
+            <p id="{{ index $reviewIDMap $key | default (printf "testimonials-review-%d" $absoluteIndex) }}" class="text-component{{ with index $reviewInstanceMap $key }} {{ . }}{{ end }} style-3">{{ $review.text }}</p>
           {{ end }}
         </div>
       {{ end }}
@@ -44,5 +55,5 @@
   </div>
 </div>
 
-<hr id="divider09" class="style5">
+<hr id="divider09" class="divider-component instance-9 style-5">
 {{ end }}

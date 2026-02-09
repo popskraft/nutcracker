@@ -1,0 +1,27 @@
+{
+  "timestamp_utc": "2026-02-09T05:55:46Z",
+  "home": {
+    "carrd_ids": 303,
+    "public_ids": 105,
+    "id_intersection": 86,
+    "id_missing": 217,
+    "carrd_classes": 170,
+    "public_classes": 116,
+    "class_intersection": 93,
+    "class_missing": 77
+  },
+  "layouts": {
+    "legacy_style_class_count": 85,
+    "new_style_dash_class_count": 176,
+    "component_class_count": 183
+  },
+  "public": {
+    "pages_total": 5,
+    "pages_with_non_carrd_ids": 5,
+    "max_non_carrd_ids_per_page": 18,
+    "missing_contract_pages": 0
+  },
+  "assets": {
+    "core_assets_sync": 0
+  }
+}

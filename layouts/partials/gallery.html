@@ -1,23 +1,40 @@
-{{- $id := .id | default "product-gallery" -}}
-{{- $style := .style | default "style4" -}}
+{{- $id := .id | default "" -}}
+{{- $instance := .instance | default "" -}}
+{{- $style := .style | default "style-4" -}}
+{{- if gt (len (findRE "^style[0-9]+$" $style)) 0 -}}
+  {{- $style = replaceRE "^style([0-9]+)$" "style-$1" $style -}}
+{{- end -}}
 {{- $class := .class | default "full" -}}
-{{- $title := .title | default "" -}}
 {{- $items := .items -}}
 
-<div id="{{ $id }}" class="{{ $style }} gallery {{ $class }}">
+<div{{ with $id }} id="{{ . }}"{{ end }} class="gallery-component{{ with $instance }} {{ . }}{{ end }} {{ $style }}{{ with $class }} {{ . }}{{ end }}">
   <div class="inner">
     <ul>
+      {{- $itemsLen := len $items -}}
       {{- range $index, $item := $items -}}
         {{- $imgSrc := $item.image | default "" -}}
         {{- $imgAlt := $item.alt | default "Image" -}}
         {{- $caption := $item.caption | default "" -}}
-        {{- $link := $item.link | default "#" -}}
+        {{- $link := $item.link | default "" -}}
+        {{- if and (eq $link "") (lt $index (sub $itemsLen 1)) -}}
+          {{- $link = "#link" -}}
+        {{- end -}}
         {{- $thumbnailClass := printf "n%02d" (add $index 1) -}}
         
         <li>
-          {{- if ne $link "#" -}}
-            <a href="{{ $link }}">
-          {{- end -}}
+          {{- if ne $link "" -}}
+            <a href="{{ $link }}" class="thumbnail {{ $thumbnailClass }}">
+              <span class="frame">
+                {{ $image := resources.Get $imgSrc }}
+                {{ with $image }}
+                  {{ $filter := images.UnsharpMask .5 .5 0 }}
+                  {{ $processed := $image.Filter $filter }}
+                  {{ $final := $processed.Fill "598x598 webp picture Center" }}
+                  <img src="{{ $final.RelPermalink }}" alt="{{ $imgAlt }}" loading="lazy">
+                {{ end }}
+              </span>
+            </a>
+          {{- else -}}
             <span class="thumbnail {{ $thumbnailClass }}">
               <span class="frame">
                 {{ $image := resources.Get $imgSrc }}
@@ -29,13 +46,11 @@
                 {{ end }}
               </span>
             </span>
-            {{- with $caption -}}
+          {{- end -}}
+          {{- with (strings.TrimSpace $caption) -}}
             <div class="caption">
               <p>{{ . }}</p>
             </div>
-            {{- end -}}
-          {{- if ne $link "#" -}}
-            </a>
           {{- end -}}
         </li>
       {{- end -}}

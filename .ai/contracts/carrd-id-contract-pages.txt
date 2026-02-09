@@ -1,0 +1,6 @@
+# Key pages that must remain Carrd-id compatible.
+/
+/nitrile-gloves/
+/hand-cleaner/
+/industrial-wipes-roll/
+/industrial-absorbent-pads/

@@ -57,11 +57,11 @@ params:
   # Main and common pages header settings
   header:
     description: >
-      Nutcracker Pro is a B2B supplier of professional-grade products, serving the United States. Our core mission is to provide high-quality supplies at consistently low prices.
+      **Nutcracker Pro is a B2B supplier** of professional-grade products, serving the United States market. Our core mission is to provide high-quality supplies at consistently low prices.
     customersTitle: "There is two way you can purchase it:"
     customers:
-      - "**Retail customers** can purchase through authorized distributor AK Dealer Services."
-      - "**Wholesalers or Bulk Purchasers** can purchase it by contacting us directly."
+      - "**Retail customer** can purchase it through authorized distributor AK&nbsp;Dealer Services."
+      - "**Wholesaler or Bulk Purchaser** can be purchase it by contacting us directly."
 
   # Contact settings
   contact:

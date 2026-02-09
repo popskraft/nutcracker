@@ -124,36 +124,36 @@ productItems:
 benefitsHeaderTitle: Why Choose **Nutcracker Pro**?
 benefitsColumns:
   - # column 1
-    - title: Streamlined Procurement and Cost Control
+    - title: Exceptional Cost Savings
       content: >
-        A transparent pricing model, bulk ordering options, and a user-friendly platform help you secure high-quality products while staying on budget. Fewer administrative hoops mean quicker approvals and smoother purchasing cycles.
-    - title: Long-Term Value and Partnership
+        **Bulk Price of $4.99** — roughly half the average market price allows workers to replace gloves more often without straining budgets. This means improved hygiene and better overall protection.
+    - title: Unrestricted Movement
       content: >
-        Durable products, bulk-buy advantages, and ongoing consultations form a true partnership, ensuring that your operations run smoothly and your investment pays off over the long haul.
+        Despite the heavier 8-mil build, the gloves are designed to not restrict movement, allowing technicians to handle small fasteners and delicate components with ease and dexterity.
   - # column 2
-    - title: Consistent Availability and Fast Delivery
+    - title: Enhanced Durability and Protection
       content: >
-        With a robust logistics network and emergency fulfillment options, Nutcracker Pro ensures that essential items are readily available and seamlessly delivered. The result? Minimal disruptions and maximum uptime.
-    - title: Scalable Solutions for Multi-Site Operations
+        The 8-mil thickness and puncture-resistant nitrile material stand up to sharp parts and tools. Technicians can work confidently around oil and chemicals without gloves tearing prematurely.
+    - title: Trusted Safety and Regulatory Compliance
       content: >
-        From small repair shops to multi-facility corporations, Nutcracker Pro’s scalable procurement systems adapt as you expand. Centralized oversight ensures consistent quality, pricing, and delivery, regardless of location.
+        FDA, 510K, ASTM, CE approved, ensuring these gloves meet rigorous safety and quality standards. Automotive service centers can confidently comply with regulations while providing superior hand protection.
   - # column 3
-    - title: Compliance and Safety Assurance
+    - title: Versatile Sizing Options
       content: >
-        Each product meets rigorous industry standards, reducing compliance risks and safeguarding your workforce. By choosing Nutcracker Pro, you protect both your employees and your reputation.
-    - title: Bulk Bundles for Long-Term Savings
+        Offering four sizes (M, L, XL, and XXL) ensures each technician gets a proper fit, reducing the risk of gloves that are too loose or too tight — thereby improving both safety and comfort.
+    - title: All-Day Comfort and Allergen-Free
       content: >
-        Strategic bulk purchasing packages allow you to stretch your budget further while ensuring consistent stock levels, lowering overall expenses and boosting return on investment.
+        Latex-free construction eliminates the risk of latex-related allergies. The ergonomic fit reduces hand fatigue, making it easier for staff to wear gloves consistently throughout their shifts.
 
 
 # savings section
 savings:
-  title: Save up to $6,500 a year
+  title: Save up to $3,500 a year
   subtitle: Special offer for car dealerships!
   image: /images/carflag.jpg
   imageAlt: Big Savings
   description: >
-    At Nutcracker Pro, we understand the value of steady, consistent savings. Our carefully designed pricing and bulk order options can help you save up to $6,500 each year. Whether you choose our trusted hand cleaner, our dependable nitrile gloves or other Nutcracker Pro products, every purchase supports a smoother, more efficient procurement process. Enjoy a calm, measured approach to managing expenses while nurturing the growth of your business.
+    Every dollar matters in a competitive market, and we’re thrilled to share a cost-saving opportunity that can make a real difference in your bottom line. As an example, on gloves alone, our team analyzed the numbers and found that by reducing the standard $12 per box price to just $4.99, businesses can save up to $1,850 annually. Depending on usage, **total savings range from $875 to $3,500&nbsp;per&nbsp;year**.
 
 
 # FAQ section

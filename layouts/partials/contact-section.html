@@ -1,13 +1,13 @@
 <section id="contact-section">
-  <div id="formContainerContact" class="style18 container default">
+  <div id="formContainerContact" class="style18 style-18 container container-component default">
     <div class="wrapper">
       <div class="inner">
-        <p class="style13">{{ .Site.Params.contactSection.title | default "Contact Us" }}</p>
-        <p class="style3">
+        <p class="style13 style-13">{{ .Site.Params.contactSection.title | default "Contact Us" }}</p>
+        <p class="style3 style-3">
           {{ .Site.Params.contactSection.description | markdownify }}
         </p>
         {{ partial "formContact" . }}
-        <ul class="style6 buttons">
+        <ul class="style6 style-6 buttons buttons-component">
           <li>
             <a href="#home" class="button n01" role="button"><svg aria-labelledby="buttons16-icon-1-title-contact">
                 <title id="buttons16-icon-1-title-contact">Cancel (Light)</title>

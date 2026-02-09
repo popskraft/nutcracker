@@ -1,10 +1,10 @@
 {{ define "main" }}
-<div id="articleContentTop" class="style6 container default">
+<div id="articleContentTop" class="style6 style-6 container container-component default">
   <div class="wrapper">
     <div class="inner">
-      <h1 class="style1">{{ .Title | markdownify }}</h1>
+      <h1 class="style1 style-1 text-component">{{ .Title | markdownify }}</h1>
       {{ with .Params.description }}
-      <p class="style6">{{ . | markdownify }}</p>
+      <p class="style6 style-6 text-component">{{ . | markdownify }}</p>
       {{ end }}
      
       <div class="txt">

@@ -3,20 +3,39 @@
   {{ $totalItems := len $items }}
   {{ $isOdd := eq (mod $totalItems 2) 1 }}
   {{ $mainContainerCount := div $totalItems 2 }}
+  {{ $containerInstanceMap := dict "1" "instance-12" "2" "instance-23" "3" "instance-11" }}
+  {{ $homeTitleIdMap := dict "0" "text102" "1" "text105" "2" "text100" "3" "text106" }}
+  {{ $homeTitleInstanceMap := dict "0" "instance-102" "1" "instance-105" "2" "instance-100" "3" "instance-106" }}
+  {{ $homeImageIdMap := dict "0" "image29" "1" "image34" "2" "image27" "3" "image31" }}
+  {{ $homeImageInstanceMap := dict "0" "instance-29" "1" "instance-34" "2" "instance-27" "3" "instance-31" }}
+  {{ $homeGalleryIdMap := dict "0" "gallery01" "1" "gallery08" "2" "gallery03" "3" "gallery05" }}
+  {{ $homeGalleryInstanceMap := dict "0" "instance-1" "1" "instance-8" "2" "instance-3" "3" "instance-5" }}
+  {{ $homeDescIdMap := dict "0" "text103" "1" "text123" "2" "text101" "3" "text107" }}
+  {{ $homeDescInstanceMap := dict "0" "instance-103" "1" "instance-123" "2" "instance-101" "3" "instance-107" }}
   
   <!-- Regular containers with pairs of items -->
   {{ range $containerIndex := seq 1 $mainContainerCount }}
     {{ $startIndex := mul (sub $containerIndex 1) 2 }}
-    <div id="product2Cols-{{ $containerIndex }}" class="style19 products container columns">
+    {{ $containerInstance := index $containerInstanceMap (printf "%d" $containerIndex) | default "instance-12" }}
+    <div id="product2Cols-{{ $containerIndex }}" class="style19 style-19 products container container-component {{ $containerInstance }} columns">
       <div class="wrapper">
         <div class="inner">
           {{ range $itemIndex := seq $startIndex (add $startIndex 1) }}
             {{ $item := index $items $itemIndex }}
+            {{ $itemKey := printf "%d" $itemIndex }}
+            {{ $titleID := index $homeTitleIdMap $itemKey | default (printf "product-title-%d" $itemIndex) }}
+            {{ $titleInstance := index $homeTitleInstanceMap $itemKey }}
+            {{ $imageID := index $homeImageIdMap $itemKey | default (printf "product-image-%d" $itemIndex) }}
+            {{ $imageInstance := index $homeImageInstanceMap $itemKey }}
+            {{ $galleryID := index $homeGalleryIdMap $itemKey | default (printf "product-gallery-%d" $itemIndex) }}
+            {{ $galleryInstance := index $homeGalleryInstanceMap $itemKey }}
+            {{ $descID := index $homeDescIdMap $itemKey | default (printf "product-desc-%d" $itemIndex) }}
+            {{ $descInstance := index $homeDescInstanceMap $itemKey }}
             <div>
-              <p id="product-title-{{ $itemIndex }}" class="style18">
+              <p id="{{ $titleID }}" class="style18 style-18 text-component{{ with $titleInstance }} {{ . }}{{ end }}">
                 <a href="{{ $item.url }}">{{ $item.title | markdownify }}</a>
               </p>
-              <div id="product-image-{{ $itemIndex }}" class="style4 image full">
+              <div id="{{ $imageID }}" class="style4 style-4 image image-component full{{ with $imageInstance }} {{ . }}{{ end }}">
                 <a href="{{ $item.url }}" class="frame">
                   {{ $mainImage := resources.Get $item.mainImage.src }}
                   {{ if $mainImage }}
@@ -28,7 +47,7 @@
                   {{ end }}
                 </a>
               </div>
-              <div id="product-gallery-{{ $itemIndex }}" class="style2 gallery full">
+              <div id="{{ $galleryID }}" class="style2 style-2 gallery gallery-component full{{ with $galleryInstance }} {{ . }}{{ end }}">
                 <div class="inner">
                   <ul>
                     {{ range $galleryIndex, $galleryItem := $item.gallery }}
@@ -50,21 +69,68 @@
                   </ul>
                 </div>
               </div>
-              <p id="product-desc-{{ $itemIndex }}" class="product-description style3">
+              <p id="{{ $descID }}" class="product-description style3 style-3 text-component{{ with $descInstance }} {{ . }}{{ end }}">
                 {{ $item.description | markdownify }}
               </p>
-              <ul class="style5 buttons">
-                {{ range $buttonIndex, $button := $item.buttons }}
+              {{ $productSlug := strings.TrimSuffix "/" (strings.TrimPrefix "/" $item.url) }}
+              {{ $productData := index $.Site.Data.products $productSlug }}
+              {{ $akLink := "" }}
+              {{ with $productData }}
+                {{ with index . "productLink" }}
+                  {{ $akLink = . }}
+                {{ end }}
+              {{ end }}
+              {{ $amazonLink := "" }}
+              {{ with $productData }}
+                {{ with index . "amazonLink" }}
+                  {{ $amazonLink = . }}
+                {{ end }}
+              {{ end }}
+              <ul class="buttons-component instance-30 style-5">
+                {{ $akIconTitleID := printf "home-buttons-icon-%d-1-title" $itemIndex }}
+                {{ $amazonIconTitleID := printf "home-buttons-icon-%d-2-title" $itemIndex }}
+                {{ $wholesaleIconTitleID := printf "home-buttons-icon-%d-3-title" $itemIndex }}
+                {{ $readMoreIconTitleID := printf "home-buttons-icon-%d-4-title" $itemIndex }}
+                {{ if $akLink }}
                 <li>
-                  <a href="{{ $button.url }}" class="button {{ $button.class }}" role="button">
-                    <svg aria-labelledby="buttons{{ add 1 $itemIndex }}-icon-{{ add 1 $buttonIndex }}-title">
-                      <title id="product-btn-{{ $itemIndex }}-icon-{{ $buttonIndex }}-title">{{ $button.label }}</title>
-                      <use xlink:href="{{ "icons.svg" | relURL }}#{{ $button.icon }}"></use>
+                  <a href="{{ $akLink }}" class="n01" role="button">
+                    <svg aria-labelledby="{{ $akIconTitleID }}">
+                      <title id="{{ $akIconTitleID }}">Cart (Alt)</title>
+                      <use xlink:href="{{ "icons.svg" | relURL }}#cart-alt"></use>
                     </svg>
-                    <span class="label">{{ $button.label }}</span>
+                    <span class="label">Buy on AK Dealer Services</span>
                   </a>
                 </li>
                 {{ end }}
+                {{ if ne (strings.TrimSpace $amazonLink) "" }}
+                <li>
+                  <a href="{{ $amazonLink }}" class="n02" role="button">
+                    <svg aria-labelledby="{{ $amazonIconTitleID }}">
+                      <title id="{{ $amazonIconTitleID }}">Amazon</title>
+                      <use xlink:href="{{ "icons.svg" | relURL }}#amazon"></use>
+                    </svg>
+                    <span class="label">Buy on Amazon</span>
+                  </a>
+                </li>
+                {{ end }}
+                <li>
+                  <a href="{{ $.Site.Params.formWholesaleUrl | default "#wholesale" }}" class="n03" role="button">
+                    <svg aria-labelledby="{{ $wholesaleIconTitleID }}">
+                      <title id="{{ $wholesaleIconTitleID }}">Form</title>
+                      <use xlink:href="{{ "icons.svg" | relURL }}#form"></use>
+                    </svg>
+                    <span class="label">Wholesale Inquiry</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ $item.url }}" class="n04" role="button">
+                    <svg aria-labelledby="{{ $readMoreIconTitleID }}">
+                      <title id="{{ $readMoreIconTitleID }}">Arrow Right (Light)</title>
+                      <use xlink:href="{{ "icons.svg" | relURL }}#arrow-right-light"></use>
+                    </svg>
+                    <span class="label">Read more</span>
+                  </a>
+                </li>
               </ul>
             </div>
           {{ end }}
@@ -77,13 +143,17 @@
   {{ if $isOdd }}
     {{ $lastIndex := sub $totalItems 1 }}
     {{ $lastItem := index $items $lastIndex }}
-    <div id="product2Cols-last" class="products container default">
+    {{ $lastTitleID := "text78" }}
+    {{ $lastImageID := "image30" }}
+    {{ $lastGalleryID := "gallery04" }}
+    {{ $lastDescID := "text104" }}
+    <div id="product2Cols-last" class="products container container-component instance-22 default">
       <div class="wrapper">
         <div class="inner">
-          <p id="product-title-{{ $lastIndex }}" class="style18">
+          <p id="{{ $lastTitleID }}" class="style18 style-18 text-component instance-78">
             <a href="{{ $lastItem.url }}">{{ $lastItem.title | markdownify }}</a>
           </p>
-          <div id="product-image-{{ $lastIndex }}" class="style4 image full">
+          <div id="{{ $lastImageID }}" class="style4 style-4 image image-component full instance-30">
             <a href="{{ $lastItem.url }}" class="frame">
               {{ $mainImage := resources.Get $lastItem.mainImage.src }}
               {{ if $mainImage }}
@@ -95,7 +165,7 @@
               {{ end }}
             </a>
           </div>
-          <div id="product-gallery-{{ $lastIndex }}" class="style2 gallery full">
+          <div id="{{ $lastGalleryID }}" class="style2 style-2 gallery gallery-component full instance-4">
             <div class="inner">
               <ul>
                 {{ range $galleryIndex, $galleryItem := $lastItem.gallery }}
@@ -117,21 +187,68 @@
               </ul>
             </div>
           </div>
-          <p id="product-desc-{{ $lastIndex }}" class="product-description style3">
+          <p id="{{ $lastDescID }}" class="product-description style3 style-3 text-component instance-104">
             {{ $lastItem.description | markdownify }}
           </p>
-          <ul class="style5 buttons">
-            {{ range $buttonIndex, $button := $lastItem.buttons }}
+          {{ $lastProductSlug := strings.TrimSuffix "/" (strings.TrimPrefix "/" $lastItem.url) }}
+          {{ $lastProductData := index $.Site.Data.products $lastProductSlug }}
+          {{ $lastAkLink := "" }}
+          {{ with $lastProductData }}
+            {{ with index . "productLink" }}
+              {{ $lastAkLink = . }}
+            {{ end }}
+          {{ end }}
+          {{ $lastAmazonLink := "" }}
+          {{ with $lastProductData }}
+            {{ with index . "amazonLink" }}
+              {{ $lastAmazonLink = . }}
+            {{ end }}
+          {{ end }}
+          <ul class="buttons-component instance-30 style-5">
+            {{ $lastAkIconTitleID := "home-buttons-last-icon-1-title" }}
+            {{ $lastAmazonIconTitleID := "home-buttons-last-icon-2-title" }}
+            {{ $lastWholesaleIconTitleID := "home-buttons-last-icon-3-title" }}
+            {{ $lastReadMoreIconTitleID := "home-buttons-last-icon-4-title" }}
+            {{ if $lastAkLink }}
             <li>
-              <a href="{{ $button.url }}" class="button {{ $button.class }}" role="button">
-                <svg aria-labelledby="buttons{{ add 1 $lastIndex }}-icon-{{ add 1 $buttonIndex }}-title">
-                  <title id="product-btn-{{ $lastIndex }}-icon-{{ $buttonIndex }}-title">{{ $button.label }}</title>
-                  <use xlink:href="{{ "icons.svg" | relURL }}#{{ $button.icon }}"></use>
+              <a href="{{ $lastAkLink }}" class="n01" role="button">
+                <svg aria-labelledby="{{ $lastAkIconTitleID }}">
+                  <title id="{{ $lastAkIconTitleID }}">Cart (Alt)</title>
+                  <use xlink:href="{{ "icons.svg" | relURL }}#cart-alt"></use>
                 </svg>
-                <span class="label">{{ $button.label }}</span>
+                <span class="label">Buy on AK Dealer Services</span>
               </a>
             </li>
             {{ end }}
+            {{ if ne (strings.TrimSpace $lastAmazonLink) "" }}
+            <li>
+              <a href="{{ $lastAmazonLink }}" class="n02" role="button">
+                <svg aria-labelledby="{{ $lastAmazonIconTitleID }}">
+                  <title id="{{ $lastAmazonIconTitleID }}">Amazon</title>
+                  <use xlink:href="{{ "icons.svg" | relURL }}#amazon"></use>
+                </svg>
+                <span class="label">Buy on Amazon</span>
+              </a>
+            </li>
+            {{ end }}
+            <li>
+              <a href="{{ $.Site.Params.formWholesaleUrl | default "#wholesale" }}" class="n03" role="button">
+                <svg aria-labelledby="{{ $lastWholesaleIconTitleID }}">
+                  <title id="{{ $lastWholesaleIconTitleID }}">Form</title>
+                  <use xlink:href="{{ "icons.svg" | relURL }}#form"></use>
+                </svg>
+                <span class="label">Wholesale Inquiry</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ $lastItem.url }}" class="n04" role="button">
+                <svg aria-labelledby="{{ $lastReadMoreIconTitleID }}">
+                  <title id="{{ $lastReadMoreIconTitleID }}">Arrow Right (Light)</title>
+                  <use xlink:href="{{ "icons.svg" | relURL }}#arrow-right-light"></use>
+                </svg>
+                <span class="label">Read more</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

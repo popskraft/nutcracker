@@ -1,15 +1,30 @@
-<div id="savingsFooter3goods" class="style13 products container columns">
+{{ $filename := .File.BaseFileName }}
+{{ $baseProductLink := partial "rawProductLink" . }}
+{{ $products := or (index $.Site.Data.products $filename).products .Page.Params.products }}
+{{ $imageIDMap := dict "0" "image19" "1" "image23" "2" "image17" }}
+{{ $imageInstanceMap := dict "0" "instance-19" "1" "instance-23" "2" "instance-17" }}
+{{ $textIDMap := dict "0" "text70" "1" "text80" "2" "text68" }}
+{{ $textInstanceMap := dict "0" "instance-70" "1" "instance-80" "2" "instance-68" }}
+{{ $buttonsIDMap := dict "0" "buttons06" "1" "buttons27" "2" "buttons15" }}
+{{ $buttonsInstanceMap := dict "0" "instance-6" "1" "instance-27" "2" "instance-15" }}
+<div id="savingsFooter3goods" class="container-component instance-31 style-13 columns">
   <div class="wrapper">
     <div class="inner">
-      {{ range $index, $product := .Page.Params.products }}
+      {{ range $index, $product := first 3 $products }}
+      {{ $key := printf "%d" $index }}
+      {{ $productLink := or $product.productLink $baseProductLink }}
+      {{ $productAmazonLink := strings.TrimSpace (or $product.amazonLink "") }}
+      {{ if and $product.wholesaleProductLink (index $.Site.Data.products $filename "productLinkWholesale") }}
+        {{ $productLink = index $.Site.Data.products $filename "productLinkWholesale" }}
+      {{ end }}
         <div>
-          <div id="savings3-image-{{ $index }}" class="style2 image">
+          <div id="{{ index $imageIDMap $key | default (printf "savings3-image-%d" $index) }}" class="image-component{{ with index $imageInstanceMap $key }} {{ . }}{{ end }} style-2">
             {{ with resources.Get $product.image }}
               {{ $image := . }}
               {{ $filter := images.UnsharpMask .5 .5 0 }}
               {{ $processed := $image.Filter $filter }}
               {{ $final := $processed.Resize "900x webp picture Center" }}
-              <a href="{{ if $product.productLink }}{{ $product.productLink }}{{ else }}{{ $.Page.Params.productLink }}{{ end }}" class="frame">
+              <a href="{{ $productLink }}" class="frame">
                 <img 
                   src="{{ $final.RelPermalink }}" 
                   alt="{{ $product.imageAlt | default $.Page.Title }}" 
@@ -20,20 +35,16 @@
             {{ end }}
           </div>
           {{ with $product.priceText }}
-          <p id="savings3-text-{{ $index }}" class="style3">{{ . | markdownify }}</p>
+          <p id="{{ index $textIDMap $key | default (printf "savings3-text-%d" $index) }}" class="text-component{{ with index $textInstanceMap $key }} {{ . }}{{ end }} style-3">{{ . | markdownify }}</p>
           {{ end }}
-          <ul id="savings3-buttons-{{ $index }}" class="style7 buttons">
-            {{ if ne $product.buttonText false }}
-            <li>
-              <a href="{{ if $product.productLink }}{{ $product.productLink }}{{ else }}{{ $.Page.Params.productLink }}{{ end }}" class="button n01" role="button">{{ or $product.buttonText $.Page.Params.buttonCartText "Buy now" }}</a>
-            </li>
-            {{ end }}
-            {{ if ne $product.buttonWholesaleText false }}
-            <li>
-              <a href="{{ $.Site.Params.formWholesaleUrl }}" class="button n02" role="button">{{ or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry" }}</a>
-            </li>
-            {{ end }}
-          </ul>
+          {{ partial "ctaButtonsStyle7.html" (dict
+            "context" $
+            "id" (index $buttonsIDMap $key | default (printf "savings3-buttons-%d" $index))
+            "instance" (index $buttonsInstanceMap $key)
+            "productLink" $productLink
+            "amazonLink" $productAmazonLink
+            "wholesaleText" (or $product.buttonWholesaleText $.Page.Params.buttonWholesaleText "Wholesale Inquiry")
+          ) }}
         </div>
       {{ end }}
     </div>

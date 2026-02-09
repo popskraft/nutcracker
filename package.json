@@ -7,7 +7,15 @@
     "build": "hugo --gc --minify",
     "tailwind:watch": "npx tailwindcss -i ./assets/tailwind/src/base.css -o ./assets/tailwindstyle.css --watch --config ./assets/tailwind/tailwind.config.js",
     "tailwind:build": "npx tailwindcss -i ./assets/tailwind/src/base.css -o ./assets/tailwindstyle.css --minify --config ./assets/tailwind/tailwind.config.js",
-    "dev:all": "concurrently \"npm run dev\" \"npm run tailwind:watch\""
+    "dev:all": "concurrently \"npm run dev\" \"npm run tailwind:watch\"",
+    "ai:sync:carrd-assets": "bash scripts/sync-carrd-assets.sh",
+    "ai:verify:carrd-assets": "bash scripts/verify-carrd-assets-sync.sh",
+    "ai:check:carrd-contract": "bash scripts/carrd-contract-check.sh",
+    "ai:check:carrd-contract:build": "bash scripts/carrd-contract-check.sh --build",
+    "ai:check:carrd-contract:strict": "bash scripts/carrd-contract-check.sh --strict",
+    "ai:visual:smoke": "bash scripts/visual-smoke-check.sh",
+    "ai:visual:capture": "bash scripts/capture-visual-baseline.sh",
+    "ai:visual:report": "bash scripts/visual-diff-report.sh"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Get all FAQ titles within faqBody
-  const faqTitles = document.querySelectorAll('#faqBody .style2');
+  // Support both legacy Carrd classes (style2/style6) and current contract (style-2/style-6).
+  const faqTitles = document.querySelectorAll('#faqBody .style-2, #faqBody .style2');
 
   // Add click event listener to each title
   faqTitles.forEach(title => {
@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
       // Get the next element (answer)
       const answer = this.nextElementSibling;
 
-      // If it's not an answer (style6), skip it
-      if (!answer.classList.contains('style6')) {
+      // If the next element is not an answer block, skip it.
+      if (!answer.classList.contains('style-6') && !answer.classList.contains('style6')) {
         return;
       }
 

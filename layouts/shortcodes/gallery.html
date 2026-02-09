@@ -13,7 +13,7 @@
 <h2>{{ . }}</h2>
 {{- end -}}
 
-<div id="{{ $id }}" class="{{ $style }} gallery {{ $class }}">
+<div id="{{ $id }}" class="{{ $style }} gallery gallery-component $class">
   <div class="inner">
     <ul>
       {{- $galleryItems := split .Inner "|||" -}}

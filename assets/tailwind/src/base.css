@@ -53,6 +53,7 @@
 
 
 /* FAQ Styles */
+#faqBody .style-6,
 #faqBody .style6 {
   max-height: 0;
   overflow: hidden;
@@ -62,6 +63,7 @@
   opacity: 0;
 }
 
+#faqBody .style-6.active,
 #faqBody .style6.active {
   max-height: 500px;
   /* Adjust based on your content */
@@ -70,12 +72,14 @@
   transition: max-height 0.3s ease-in, opacity 0.3s ease-in;
 }
 
+#faqBody .style-2,
 #faqBody .style2 {
   cursor: pointer;
   position: relative;
   padding-right: 30px;
 }
 
+#faqBody .style-2::after,
 #faqBody .style2::after {
   content: '+';
   position: absolute;
@@ -86,10 +90,12 @@
   color: #FFB800;
 }
 
+#faqBody .style-2.active::after,
 #faqBody .style2.active::after {
   transform: translateY(-50%) rotate(45deg);
 }
 
+#faqBody .style-9.full.screen,
 #faqBody .style9.full.screen {
   opacity: 0.3;
   margin: 1.5em 0;

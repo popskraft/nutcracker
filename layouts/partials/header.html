@@ -1,9 +1,9 @@
 <header id="header">
-  <div id="siteHeaderStatic" class="container columns">
+  <div id="siteHeaderStatic" class="container container-component instance-4 columns">
     <div class="wrapper">
       <div class="inner">
         <div>
-          <div id="image06" class="image">
+          <div id="image06" class="image image-component instance-6">
 
             {{ if not $.IsHome }}
             <a class="frame" href="{{ absURL .Site.BaseURL }}">
@@ -20,7 +20,7 @@
           </div>
         </div>
         <div>
-          <ul id="links03" class="style1 links">
+          <ul id="links03" class="style1 style-1 links links-component instance-3">
             {{ range .Site.Menus.main }}
             <li class="n01">
               <a href="{{ .URL }}">{{ .Name }}</a>
@@ -30,7 +30,7 @@
         </div>
         
         <div>
-          <ul id="buttons02" class="style3 buttons">
+          <ul id="buttons02" class="style3 style-3 buttons buttons-component instance-2">
             <li>
               <a href="{{ .Site.Params.formContactUrl | default "/contacts" }}" class="button n01" role="button">
                 {{/*  <svg aria-labelledby="buttons02-icon-1-title">
